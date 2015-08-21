@@ -201,6 +201,7 @@ INSTALLED_APPS = (
     "rapidsms.contrib.messaging",
     "rapidsms.contrib.registration",
     'core',
+    'hm',
     #"rapidsms.contrib.echo",
     "rapidsms.contrib.default",  # Must be last
 )
