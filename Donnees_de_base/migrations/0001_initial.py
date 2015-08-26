@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
                 ('sectionCommunale', models.CharField(max_length=45)),
                 ('description', models.TextField(max_length=100)),
-                ('commune', models.ForeignKey(to='core.Commune')),
+                ('commune', models.ForeignKey(to='Donnees_de_base.Commune')),
             ],
         ),
         migrations.CreateModel(
@@ -43,12 +43,12 @@ class Migration(migrations.Migration):
                 ('latitude', models.CharField(max_length=45)),
                 ('longitude', models.CharField(max_length=45)),
                 ('hauteur', models.CharField(max_length=45)),
-                ('sectionCommunale', models.ForeignKey(to='core.SectionCommunale')),
+                ('sectionCommunale', models.ForeignKey(to='Donnees_de_base.SectionCommunale')),
             ],
         ),
         migrations.AddField(
             model_name='commune',
             name='departement',
-            field=models.ForeignKey(to='core.Departement'),
+            field=models.ForeignKey(to='Donnees_de_base.Departement'),
         ),
     ]

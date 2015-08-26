@@ -200,8 +200,8 @@ INSTALLED_APPS = (
     "rapidsms.contrib.messagelog",
     "rapidsms.contrib.messaging",
     "rapidsms.contrib.registration",
-    'core',
-    'hm',
+    'Donnees_de_base',
+    'Donnees_hydrometeologique',
     #"rapidsms.contrib.echo",
     "rapidsms.contrib.default",  # Must be last
 )
@@ -210,13 +210,40 @@ INSTALLED_BACKENDS = {
     "message_tester": {
         "ENGINE": "rapidsms.backends.database.DatabaseBackend",
     },
+    "kannel-fake-smsc" : {
+        "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
+        "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
+        "sendsms_params": {"smsc": "FAKE",
+                           "from": "123", # not set automatically by SMSC
+                           "username": "esdras",
+                           "password": "esdras1995"}, # or set in localsettings.py
+        "coding": 0,
+        "charset": "ascii",
+        "encode_errors": "ignore", # strip out unknown (unicode) characters
+    },
 }
+
+# INSTALLED_BACKENDS = {
+#     # ...
+#     # other backends, if any
+#     "kannel-fake-smsc" : {
+#         "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
+#         "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
+#         "sendsms_params": {"smsc": "FAKE",
+#                            "from": "123", # not set automatically by SMSC
+#                            "username": "rapidsms",
+#                            "password": "CHANGE-ME"}, # or set in localsettings.py
+#         "coding": 0,
+#         "charset": "ascii",
+#         "encode_errors": "ignore", # strip out unknown (unicode) characters
+#     },
+# }
 
 LOGIN_REDIRECT_URL = '/'
 
 RAPIDSMS_HANDLERS = (
-    #'rapidsms.contrib.echo.handlers.echo.EchoHandler',
-    #'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    'rapidsms.contrib.echo.handlers.echo.EchoHandler',
+    'rapidsms.contrib.echo.handlers.ping.PingHandler',
 )
 
 SUIT_CONFIG = {

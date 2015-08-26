@@ -3,7 +3,7 @@ from django.db import models
 
 
 # Create your models here.
-from core.models import SiteSentinelle
+from Donnees_de_base.models import SiteSentinelle
 
 class TypeStationPluviometrique(models.Model):
     typeStation = models.CharField(max_length=45, primary_key=True)
@@ -58,6 +58,7 @@ class ObservationHumidite(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         return self.valider
+
 
 
 
