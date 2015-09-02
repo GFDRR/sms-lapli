@@ -239,11 +239,14 @@ INSTALLED_BACKENDS = {
 #     },
 # }
 
+DEFAULT_RESPONSE = "Message incorrect!"
 LOGIN_REDIRECT_URL = '/'
 
 RAPIDSMS_HANDLERS = (
     'rapidsms.contrib.echo.handlers.echo.EchoHandler',
-    'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    #'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    'tut.myhandlers.HelpHandler',
+    'tut.myhandlers.SumHandler',
 )
 
 SUIT_CONFIG = {

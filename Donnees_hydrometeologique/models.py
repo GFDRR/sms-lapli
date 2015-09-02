@@ -9,8 +9,8 @@ class TypeStationPluviometrique(models.Model):
     typeStation = models.CharField(max_length=45, primary_key=True)
     description = models.TextField(max_length=100, blank=True)
 
-    def __str__(self):              # __unicode__ on Python 2
-        return self.description
+    # def __str__(self):              # __unicode__ on Python 2
+    #     return "%s %s" %(self.typeStation, self.description)
 
 class StationPluviometrique(models.Model):
     latitude = models.CharField(max_length=45)
@@ -20,8 +20,8 @@ class StationPluviometrique(models.Model):
     nomStation = models.CharField(max_length=45)
     typeStation = models.ForeignKey(TypeStationPluviometrique)
 
-    def __str__(self):              # __unicode__ on Python 2
-        return self.latitude
+    # def __str__(self):              # __unicode__ on Python 2
+    #     return self.latitude
 
 
 class ObservationTemperature(models.Model):
@@ -30,11 +30,11 @@ class ObservationTemperature(models.Model):
     idStation = models.ForeignKey(StationPluviometrique)
     valider = models.IntegerField()
 
-    def __str__(self):              # __unicode__ on Python 2
-        return self.temperatureMax
+    # def __str__(self):              # __unicode__ on Python 2
+    #     return self.temperatureMax
 
 class ObservationPluviometrique(models.Model):
-    quantite = models.DecimalField(max_digits=15, decimal_places=5, default=0)
+    quantite = models.DecimalField(max_digits=15, decimal_places=2, default=0)
     dateDebut = models.DateField()
     dateFin = models.DateField()
     description = models.TextField(max_length=100, blank=True)
@@ -42,22 +42,22 @@ class ObservationPluviometrique(models.Model):
     numeroJour = models.IntegerField()
     valider = models.IntegerField()
 
-    def __str__(self):              # __unicode__ on Python 2
-        return self.description
+    # def __str__(self):              # __unicode__ on Python 2
+    #     return self.description
 
 class ObservationDirectionVent(models.Model):
     idStation = models.ForeignKey(StationPluviometrique)
     valider = models.IntegerField()
 
-    def __str__(self):              # __unicode__ on Python 2
-        return self.valider
+    # def __str__(self):              # __unicode__ on Python 2
+    #     return self.valider
 
 class ObservationHumidite(models.Model):
     idStation = models.ForeignKey(StationPluviometrique)
     valider = models.IntegerField()
 
-    def __str__(self):              # __unicode__ on Python 2
-        return self.valider
+    # def __str__(self):              # __unicode__ on Python 2
+    #     return self.valider
 
 
 
