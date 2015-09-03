@@ -1,7 +1,7 @@
 from rapidsms.apps.base import AppBase
 from Donnees_de_base.models import *   # importing all models from Donnees_de_Base where data about Contacts are stored
 from Donnees_hydrometeologique.models import *
-from datetime import datetime
+from datetime import *
 import re
 
 
@@ -19,7 +19,7 @@ class SmsGateway(AppBase):
         for tel in PersonneContact.objects.all():
             valid_numbers.append(tel.telephonePersonnel)# Getting all personnal Phone
 
-        if '50937612070' not in valid_numbers:
+        if msg.peer not in valid_numbers:
             #msg.respond('TEst')
             return False #Return false because we don't want to answer an unknow number
                          #We must shut the default messge from the default app in this case
@@ -28,8 +28,9 @@ class SmsGateway(AppBase):
                 val_float = float(msg.text)
                 #Ici operation avec les unites disponibles
                 dt = datetime.now()
-                date = str(dt.year)+'-'+str(dt.month)+'-'+str(dt.day) # now date
-
+                datex = str(dt.year)+'-'+str(dt.month)+'-'+str(dt.day) # now date
+                dtD=date.today() - timedelta(days=1)
+                dateD = str(dtD.year)+'-'+str(dtD.month)+'-'+str(dtD.day) # now date
                 #getting the Personne's id
                 pers_id = 0
                 for pers in PersonneContact.objects.filter(telephonePersonnel=msg.peer):
@@ -41,10 +42,10 @@ class SmsGateway(AppBase):
                     if pers_id == station.cfPersCnt.id:
                         stat_id = station
                 #Will Save here
-                obsv= ObservationPluviometrique(quantite=val_float,dateDebut=date,dateFin=date,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0)
+                obsv= ObservationPluviometrique(quantite=val_float,dateDebut=dateD,dateFin=datex,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0)
                 obsv.save()
 
-                msg.respond('Donnees sauvegardees! Merci!'+str(dt.year)+' '+str(pers_id))
+                msg.respond('Donnees sauvegardees! Merci!'s)
                 return True
             else:
                 msg.respond('Bad Entry')
