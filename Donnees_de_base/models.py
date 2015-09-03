@@ -1,9 +1,18 @@
+from django.core.validators import RegexValidator
 from django.db import models
 
 # Create your models here.
+
+#  -------------------------------------------
+#  Models for this app
+#  -------------------------------------------
+
 class Departement(models.Model):
     departement = models.CharField(max_length=40)
     description = models.TextField(max_length=100, blank=True)
+
+    def __str__(self):              # __unicode__ on Python 2
+         return self.departement
 
 
 
@@ -12,6 +21,9 @@ class Commune(models.Model):
     commune = models.CharField(max_length=45)
     description = models.TextField(max_length=100, blank=True)
 
+    def __str__(self):              # __unicode__ on Python 2
+         return self.commune
+
 
 
 class SectionCommunale(models.Model):
@@ -19,14 +31,19 @@ class SectionCommunale(models.Model):
     sectionCommunale = models.CharField(max_length=45)
     description = models.TextField(max_length=100, blank=True)
 
+    def __str__(self):              # __unicode__ on Python 2
+         return self.sectionCommunale
 
 
 class SiteSentinelle(models.Model):
     sectionCommunale = models.ForeignKey(SectionCommunale)
     localite = models.CharField(max_length=45)
-    latitude = models.CharField(max_length=45, blank=True)
-    longitude = models.CharField(max_length=45, blank=True)
-    hauteur = models.CharField(max_length=45, blank=True)
+    latitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+    longitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+    hauteur = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+
+    def __int__(self):              # __unicode__ on Python 2
+        return self.id
 
 
 
@@ -35,6 +52,8 @@ class Poste(models.Model):
     nomPoste = models.CharField(max_length=45, primary_key= True)
     description = models.CharField(max_length=45)
 
+    def __str__(self):              # __unicode__ on Python 2
+         return self.nomPoste
 
 
 
@@ -64,5 +83,9 @@ class PersonneContact(models.Model):
 #     def __str__(self):              # __unicode__ on Python 2
 #         return self.dateAffectation
 
-
+ # validators=[
+ #      RegexValidator(
+ #            regex= r'^[a-zA-Z\'-]+\s$', #r'^\[a-zA-Z]["\'|-]?\[a-zA-Z]$',
+ #            message= ('Username must be Alphanumeric'),
+ #        ),]
 

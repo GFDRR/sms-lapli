@@ -1,12 +1,17 @@
 from django.contrib import admin
 
 # Register your models here.
-
+from .forms import *
 from .models import *
 
-class StationPluviometriqueAdmin(admin.ModelAdmin):
-    list_display = ("id__SiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "type__Station")
 
+class StationPluviometriqueAdmin(admin.ModelAdmin):
+
+    #Called my form in the admin and set a column for each fields
+    list_display = ("id__SiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "type__Station")
+    form = StationPluviometriqueForm
+
+    #return id, typeStation of the foreignkey(s) in list_display and it will show it
     def id__SiteSeninnelle(self, instance):
         return instance.idSiteSeninnelle.id
 
@@ -15,14 +20,20 @@ class StationPluviometriqueAdmin(admin.ModelAdmin):
 
 
 class ObservationPluviometriqueAdmin(admin.ModelAdmin):
-    list_display = ("quantite", "dateDebut", "dateFin", "description", "id_Station", "valider")
 
+    #Called my form in the admin and set a column for each fields
+    list_display = ("quantite", "dateDebut", "dateFin", "description", "id_Station", "valider")
+    form = ObservationPluviometriqueForm
+
+    #return id of the foreignkey(s) in list_display and it will show it
     def id_Station(self, instance):
         return instance.idStation.id
 
 
 class TypeStationPluviometriqueAdmin(admin.ModelAdmin):
+    #Called my form in the admin and set a column for each fields
     list_display = ("typeStation", "description")
+    form = TypeStationPluviometriqueForm
 
 # class ObservationTemperatureAdmin(admin.ModelAdmin):
 #
@@ -32,9 +43,11 @@ class TypeStationPluviometriqueAdmin(admin.ModelAdmin):
 # class ObservationHumiditeAdmin(admin.ModelAdmin):
 
 
+#Added all in the register
 admin.site.register(StationPluviometrique, StationPluviometriqueAdmin)
 admin.site.register(TypeStationPluviometrique, TypeStationPluviometriqueAdmin)
-# admin.site.register(ObservationTemperature)
 admin.site.register(ObservationPluviometrique, ObservationPluviometriqueAdmin)
+
+# admin.site.register(ObservationTemperature)
 # admin.site.register(ObservationDirectionVent)
 # admin.site.register(ObservationHumidite)
