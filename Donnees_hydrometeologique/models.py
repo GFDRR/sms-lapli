@@ -3,7 +3,7 @@ from django.db import models
 
 
 # Create your models here.
-from Donnees_de_base.models import SiteSentinelle
+from Donnees_de_base.models import *
 
 class TypeStationPluviometrique(models.Model):
     typeStation = models.CharField(max_length=45, primary_key=True)
@@ -19,6 +19,7 @@ class StationPluviometrique(models.Model):
     idSiteSeninnelle = models.ForeignKey(SiteSentinelle)
     nomStation = models.CharField(max_length=45)
     typeStation = models.ForeignKey(TypeStationPluviometrique)
+    cfPersCnt = models.ForeignKey(PersonneContact)
 
     def __str__(self):              # __unicode__ on Python 2
         return self.latitude

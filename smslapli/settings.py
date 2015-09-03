@@ -192,7 +192,7 @@ INSTALLED_APPS = (
     "django_tables2",
     "selectable",
     # RapidSMS
-    "tut",
+    #"tut", Tut RapidSMS removed
     "rapidsms",
     "rapidsms.backends.database",
     "rapidsms.contrib.handlers",
@@ -203,6 +203,7 @@ INSTALLED_APPS = (
     'Donnees_de_base',
     'Donnees_hydrometeologique',
     #"rapidsms.contrib.echo",
+    'sms_gateway', #This is the one who will be used to handle sms
     "rapidsms.contrib.default",  # Must be last
 )
 

@@ -72,6 +72,3 @@ class AffectationSiteSentinelle(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         return self.dateAffectation
-
-
-
