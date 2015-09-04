@@ -1,6 +1,7 @@
-
 Smslapli
 ========================
+
+Haiti Code for Resilience SMS Rainfall Data Collection Project based on RapidSMS
 
 Below you will find basic setup instructions for the ``smslapli``
 project. To begin you should have the following applications installed on your
