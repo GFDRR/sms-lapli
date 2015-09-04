@@ -202,6 +202,7 @@ INSTALLED_APPS = (
     "rapidsms.contrib.registration",
     'Donnees_de_base',
     'Donnees_hydrometeologique',
+    'sms_gateway', #This is the one who will be used to handle sms
     #"rapidsms.contrib.echo",
     "rapidsms.contrib.default",  # Must be last
 )

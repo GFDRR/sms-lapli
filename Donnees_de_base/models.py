@@ -42,8 +42,8 @@ class SiteSentinelle(models.Model):
     longitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     hauteur = models.DecimalField(max_digits=8, decimal_places=2, default=0)
 
-    def __int__(self):              # __unicode__ on Python 2
-        return self.id
+    def __str__(self):              # __unicode__ on Python 2
+        return self.localite
 
 
 
@@ -70,7 +70,8 @@ class PersonneContact(models.Model):
     cin = models.CharField(max_length=45, blank=True)
     dateEmbauche = models.DateField()
 
-
+    def __str__(self):              # __unicode__ on Python 2
+         return self.telephonePersonnel
 
 # class AffectationSiteSentinelle(models.Model):
 #     PersonneContact_idPersonneContact = models.IntegerField(blank=False,null=False)

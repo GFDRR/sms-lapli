@@ -8,7 +8,7 @@ from .models import *
 class StationPluviometriqueAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
-    list_display = ("id__SiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "type__Station")
+    list_display = ("id__SiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "type__Station", "Get_cfPersCnt")
     form = StationPluviometriqueForm
 
     #return id, typeStation of the foreignkey(s) in list_display and it will show it
@@ -18,16 +18,19 @@ class StationPluviometriqueAdmin(admin.ModelAdmin):
     def type__Station(self, instance):
         return instance.typeStation.typeStation
 
+    def Get_cfPersCnt(self, instance):
+        return instance.cfPersCnt.telephonePersonnel
+
 
 class ObservationPluviometriqueAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
-    list_display = ("quantite", "dateDebut", "dateFin", "description", "id_Station", "valider")
+    list_display = ("quantite", "dateDebut", "dateFin", "description", "Nom_station", "valider")
     form = ObservationPluviometriqueForm
 
     #return id of the foreignkey(s) in list_display and it will show it
-    def id_Station(self, instance):
-        return instance.idStation.id
+    def Nom_station(self, instance):
+        return instance.idStation.nomStation
 
 
 class TypeStationPluviometriqueAdmin(admin.ModelAdmin):

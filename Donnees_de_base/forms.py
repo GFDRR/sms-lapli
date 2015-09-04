@@ -4,6 +4,45 @@ from django import forms
 from .models import *
 
 
+#Here test all input for string and security card (cin, nif).
+class ValidationInput:
+
+    #test if string valid
+    def isValidInput(self, value):
+        if value.isdigit():
+            return False
+
+        else:
+            charSpeciaux = [ord(' '), ord('-'), ord("'")]
+            value = value.upper()
+
+            for i in range(0, len(value)-1):
+                if ord(value[i]) < ord('A') and ord(value[i]) not in charSpeciaux or ord(value[i])>ord('Z'):
+                    return False
+            return True
+
+    #test if the id of security card is valid
+    def isvalidIdPersonne(self, value, forme):
+
+        if value.count("-") != forme.count("-") or len(value) != len(forme):
+            return False
+        else:
+            for i in range(0, len(value)-1):
+                if value[i] == "-":
+                    if value[i] != forme[i]:
+                        return False
+                else:
+                    if not self.isInt(value[i]):
+                        return False
+                return True
+
+    #private method for testing if int
+    def isInt(self, char):
+        try:
+            int(char)
+            return True
+        except ValueError:
+            return False
 
 class DepartementForm(forms.ModelForm):
     class Meta:
@@ -33,7 +72,7 @@ class CommuneForm(forms.ModelForm):
     #Test input Commune before validation
     def clean_commune(self):
         dataInput = self.cleaned_data.get('commune')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Commune invalid!")
@@ -50,7 +89,7 @@ class SectionCommunaleForm(forms.ModelForm):
     #Test input SectionCommunale before validation
     def clean_sectionCommunale(self):
         dataInput = self.cleaned_data.get('sectionCommunale')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Section communale invalide!")
@@ -67,7 +106,7 @@ class SiteSentinelleForm(forms.ModelForm):
     #Test input SiteSentinelle before validation
     def clean_localite(self):
         dataInput = self.cleaned_data.get('localite')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Localite incorrect!")
@@ -84,7 +123,7 @@ class PosteForm(forms.ModelForm):
     #Test input Poste before validation
     def clean_nomPoste(self):
         dataInput = self.cleaned_data.get('nomPoste')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Nom de Poste incorrect!")
@@ -104,7 +143,7 @@ class PersonneContactForm(forms.ModelForm):
     #Test input nomPersonne before validation
     def clean_nomPersonne(self):
         dataInput = self.cleaned_data.get('nomPersonne')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Nom incorrect!")
@@ -114,7 +153,7 @@ class PersonneContactForm(forms.ModelForm):
     #Test input prenomPersonne before validation
     def clean_prenomPersonne(self):
         dataInput = self.cleaned_data.get('prenomPersonne')
-        valid = ValidationInput
+        valid = ValidationInput()
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Prenom incorrect!")
 
@@ -142,7 +181,7 @@ class PersonneContactForm(forms.ModelForm):
     #Test input cin before validation
     def clean_cin(self):
         cin = self.cleaned_data.get('cin')
-        valid = ValidationInput
+        valid = ValidationInput()
         if cin:
             if not valid.isvalidIdPersonne(cin, "XX-XX-XX-XXXX-XX-XXXXX"):
                 raise forms.ValidationError("Format cin incorrect ou il y a erreur saisie. format:(XX-XX-XX-XXXX-XX-XXXXX)")
@@ -152,7 +191,7 @@ class PersonneContactForm(forms.ModelForm):
     #Test input nif before validation
     def clean_nif(self):
         nif = self.cleaned_data.get('nif')
-        valid = ValidationInput
+        valid = ValidationInput()
         if nif:
             if not valid.isvalidIdPersonne(nif, "XXX-XXX-XXX-X"):
                 raise forms.ValidationError("Format nif incorrect ou il y a erreur saisie. format:(XXX-XXX-XXX-X)")
@@ -166,43 +205,3 @@ class PersonneContactForm(forms.ModelForm):
 
         if PersonneContact.objects.filter(nomPersonne = nom).exists() and PersonneContact.objects.filter(prenomPersonne = prenom).exists():
             raise forms.ValidationError("Cette personne existe deja!")
-
-#Here test all input for string and security card (cin, nif).
-class ValidationInput:
-
-    #test if string valid
-    def isValidInput(value):
-        if value.isdigit():
-            return False
-
-        else:
-            charSpeciaux = [ord(' '), ord('-'), ord("'")]
-            value = value.upper()
-
-            for i in range(0, len(value)-1):
-                if ord(value[i]) < ord('A') and ord(value[i]) not in charSpeciaux or ord(value[i])>ord('Z'):
-                    return False
-            return True
-
-    #test if the id of security card is valid
-    def isvalidIdPersonne(self, value, format):
-
-        if value.count("-") != format.count("-") or len(value) != len(format):
-            return False
-        else:
-            for i in range(0, len(value)-1):
-                if value[i] == "-":
-                    if value[i] != format[i]:
-                        return False
-                else:
-                    if not self.isInt(value[i]):
-                        return False
-                return True
-
-    #private method for testing if int
-    def isInt(char):
-        try:
-            int(char)
-            return True
-        except ValueError:
-            return False

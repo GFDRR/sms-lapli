@@ -9,13 +9,13 @@ class StationPluviometriqueForm(forms.ModelForm):
     class Meta:
         #Added the fields of StationPluviometrique manually for the validation test
         model = StationPluviometrique
-        fields = ["latitude", "longitude", "hauteur", "idSiteSeninnelle", "nomStation", "typeStation"]
+        fields = ["latitude", "longitude", "hauteur", "idSiteSeninnelle", "nomStation", "typeStation", "cfPersCnt"]
 
     #Test input nomStation before validation
     def clean_nomStation(self):
 
         dataInput = self.cleaned_data.get('nomStation')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Nom station incorrect!")
@@ -33,7 +33,7 @@ class TypeStationPluviometriqueForm(forms.ModelForm):
     def clean_typeStation(self):
 
         dataInput = self.cleaned_data.get('typeStation')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Type station incorrect!")
