@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0002_auto_20150819_0836'),
+        ('Donnees_de_base', '0002_auto_20150819_0836'),
     ]
 
     operations = [
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('cin', models.CharField(blank=True, max_length=45)),
                 ('nomPoste', models.CharField(blank=True, max_length=45)),
                 ('dateEmbauche', models.DateField()),
-                ('sectionCommunale', models.ForeignKey(to='core.SectionCommunale')),
+                ('sectionCommunale', models.ForeignKey(to='Donnees_de_base.SectionCommunale')),
             ],
         ),
         migrations.AlterField(
