@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46931cfb-66f5-4510-8163-450c263c1520" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sms_gateway/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donnees_hydrometeologique/admin.py" afterPath="$PROJECT_DIR$/Donnees_hydrometeologique/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tut/app.py" afterPath="$PROJECT_DIR$/tut/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donnees_de_base/forms.py" afterPath="$PROJECT_DIR$/Donnees_de_base/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donnees_hydrometeologique/forms.py" afterPath="$PROJECT_DIR$/Donnees_hydrometeologique/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donnees_de_base/models.py" afterPath="$PROJECT_DIR$/Donnees_de_base/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Donnees_hydrometeologique/models.py" afterPath="$PROJECT_DIR$/Donnees_hydrometeologique/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smslapli/settings.py" afterPath="$PROJECT_DIR$/smslapli/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="46931cfb-66f5-4510-8163-450c263c1520" name="Default" comment="" />
     <ignored path="smslapli.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -595,7 +585,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24462152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
