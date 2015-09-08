@@ -19,9 +19,11 @@ class SmsGateway(AppBase):
         for tel in PersonneContact.objects.all():
             valid_numbers.append(tel.telephonePersonnel)# Getting all personnal Phone
 
+       
         if msg.peer not in valid_numbers:
             #msg.respond('TEst')
-            return False #Return false because we don't want to answer an unknow number
+            msg.respond('Not in  '+msg.peer)
+            return True #Return false because we don't want to answer an unknow number
                          #We must shut the default messge from the default app in this case
         else: #If this number is in the list, will work with the text message
             if isFloat(msg.text):
@@ -45,7 +47,7 @@ class SmsGateway(AppBase):
                 obsv= ObservationPluviometrique(quantite=val_float,dateDebut=dateD,dateFin=datex,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0)
                 obsv.save()
 
-                msg.respond('Donnees sauvegardees! Merci!')
+                msg.respond('Donnees sauvegardees! Merci!'+msg.peer)
                 return True
             else:
                 msg.respond('Bad Entry')

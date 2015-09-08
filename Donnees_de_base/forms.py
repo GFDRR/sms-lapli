@@ -54,7 +54,7 @@ class DepartementForm(forms.ModelForm):
     def clean_departement(self):
 
         dataInput = self.cleaned_data.get('departement')
-        valid = ValidationInput
+        valid = ValidationInput()
 
         if not valid.isValidInput(dataInput):
             raise forms.ValidationError("Departement invalid!")
@@ -158,25 +158,25 @@ class PersonneContactForm(forms.ModelForm):
             raise forms.ValidationError("Prenom incorrect!")
 
         return dataInput
-    #Test input telephoneBureau before validation and say if number exist
-    def clean_telephoneBureau(self):
+    # #Test input telephoneBureau before validation and say if number exist
+    # def clean_telephoneBureau(self):
 
-        telephoneBureau = self.cleaned_data.get('telephoneBureau')
+    #     telephoneBureau = self.cleaned_data.get('telephoneBureau')
 
-        if PersonneContact.objects.filter(telephoneBureau = telephoneBureau).exists():
-            raise forms.ValidationError("Ce numero existe!")
+    #     if PersonneContact.objects.filter(telephoneBureau = telephoneBureau).exists():
+    #         raise forms.ValidationError("Ce numero existe!")
 
-        return telephoneBureau
+    #     return telephoneBureau
 
-    #Test input telephonePersonnel before validation and say if number exist
-    def clean_telephonePersonnel(self):
+    # #Test input telephonePersonnel before validation and say if number exist
+    # def clean_telephonePersonnel(self):
 
-        telephonePersonnel = self.cleaned_data.get('telephonePersonnel')
+    #     telephonePersonnel = self.cleaned_data.get('telephonePersonnel')
 
-        if PersonneContact.objects.filter(telephonePersonnel = telephonePersonnel).exists():
-            raise forms.ValidationError("Ce numero existe!")
+    #     if PersonneContact.objects.filter(telephonePersonnel = telephonePersonnel).exists():
+    #         raise forms.ValidationError("Ce numero existe!")
 
-        return telephonePersonnel
+    #     return telephonePersonnel
 
     #Test input cin before validation
     def clean_cin(self):
@@ -198,10 +198,10 @@ class PersonneContactForm(forms.ModelForm):
 
         return nif
 
-    #Test if person already exist in the db.
-    def clean(self):
-        nom = self.cleaned_data.get('nomPersonne')
-        prenom = self.cleaned_data.get('prenomPersonne')
+    # #Test if person already exist in the db.
+    # def clean(self):
+    #     nom = self.cleaned_data.get('nomPersonne')
+    #     prenom = self.cleaned_data.get('prenomPersonne')
 
-        if PersonneContact.objects.filter(nomPersonne = nom).exists() and PersonneContact.objects.filter(prenomPersonne = prenom).exists():
-            raise forms.ValidationError("Cette personne existe deja!")
+    #     if PersonneContact.objects.filter(nomPersonne = nom).exists() and PersonneContact.objects.filter(prenomPersonne = prenom).exists():
+    #         raise forms.ValidationError("Cette personne existe deja!")
