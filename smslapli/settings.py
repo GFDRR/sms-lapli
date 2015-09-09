@@ -112,6 +112,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'admin_reorder.middleware.ModelAdminReorder',
 )
 
 ROOT_URLCONF = 'smslapli.urls'
@@ -194,6 +195,7 @@ INSTALLED_APPS = (
     # RapidSMS
     "tut",
     "rapidsms",
+    "admin_reorder",
     "rapidsms.backends.database",
     "rapidsms.contrib.handlers",
     "rapidsms.contrib.httptester",
@@ -263,5 +265,18 @@ RAPIDSMS_HANDLERS = (
 )
 
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'SMS Lapli'
+    'ADMIN_NAME': 'SMS Lapli',
+    'SEARCH_URL': '',
+    'MENU': (
+        {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
+        {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('Donnees_hydrometeologique.TypeStationPluviometrique', 'Donnees_hydrometeologique.StationPluviometrique', 'Donnees_hydrometeologique.ObservationPluviometrique',)},
+        {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
+    )
 }
+
+ADMIN_REORDER = (
+    # Reorder app models
+    {'app': 'Donnees_de_base',  'label': 'Structure de base', 'models': ('Donnees_de_base.Departement', 'Donnees_de_base.Commune', 'Donnees_de_base.SectionCommunale', 'Donnees_de_base.SiteSentinelle', 'Donnees_de_base.Poste', 'Donnees_de_base.PersonneContact')},
+    {'app': 'Donnees_hydrometeologique',  'label': 'Collecte Pluviometrique', 'models': ('Donnees_hydrometeologique.TypeStationPluviometrique', 'Donnees_hydrometeologique.StationPluviometrique', 'Donnees_hydrometeologique.ObservationPluviometrique',)},
+    {'app': 'auth',  'label': 'Autorisation',},
+)
