@@ -15,12 +15,9 @@ class DepartementAdmin(admin.ModelAdmin):
 
 class CommuneAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("get_departement", "commune", "description")
+    list_display = ("departement", "commune", "description")
     form = CommuneForm
 
-    #return the departement of the foreignkey(s) in list_display and it will show it
-    def get_departement(self, instance):
-        return instance.departement.departement
 
 
 
@@ -33,12 +30,8 @@ class SectionCommunaleAdmin(admin.ModelAdmin):
 
 class SiteSentinelleAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("get_sectionCommunale", "localite", "latitude", "longitude", "hauteur")
+    list_display = ("sectionCommunale", "localite", "latitude", "longitude", "hauteur")
     form = SiteSentinelleForm
-
-    #return the sectionCommunale of the foreignkey(s) in list_display and it will show it
-    def get_sectionCommunale(self, instance):
-        return instance.sectionCommunale.sectionCommunale
 
 
 
@@ -49,12 +42,11 @@ class PosteAdmin(admin.ModelAdmin):
 
 
 class PersonneContactAdmin(admin.ModelAdmin):
-    list_display = ("get_nomPoste", "cfAtachStation", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "cin", "dateEmbauche")
+    list_display = ("nomPoste", "cfAtachStation", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche")
     form = PersonneContactForm
 
     #return the nomPoste of the foreignkey(s) in list_display and it will show it
-    def get_nomPoste(self, instance):
-        return instance.nomPoste.nomPoste
+
 
 #Added all in the register
 admin.site.register(Departement, DepartementAdmin)

@@ -9,61 +9,60 @@ from django.db import models
 
 
 class Departement(models.Model):
-    departement = models.CharField(max_length=40)
-    description = models.TextField(max_length=100, blank=True)
+    departement = models.CharField(max_length=40, verbose_name="Departement")
+    description = models.TextField(max_length=100, blank=True, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.departement
 
 
 class Commune(models.Model):
-    departement = models.ForeignKey(Departement)
-    commune = models.CharField(max_length=45)
-    description = models.TextField(max_length=100, blank=True)
+    departement = models.ForeignKey(Departement, verbose_name="Departement")
+    commune = models.CharField(max_length=45, verbose_name="Commune")
+    description = models.TextField(max_length=100, blank=True, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.commune
 
 
 class SectionCommunale(models.Model):
-    commune = models.ForeignKey(Commune)
-    sectionCommunale = models.CharField(max_length=45)
-    description = models.TextField(max_length=100, blank=True)
+    commune = models.ForeignKey(Commune, verbose_name="Commune")
+    sectionCommunale = models.CharField(max_length=45, verbose_name="Section Communale")
+    description = models.TextField(max_length=100, blank=True, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.sectionCommunale
 
 
 class SiteSentinelle(models.Model):
-    sectionCommunale = models.ForeignKey(SectionCommunale)
-    localite = models.CharField(max_length=45)
-    latitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
-    longitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
-    hauteur = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+    sectionCommunale = models.ForeignKey(SectionCommunale, verbose_name="Section Communale")
+    localite = models.CharField(max_length=45, verbose_name="Localite")
+    latitude = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name="Latitude")
+    longitude = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name="Longitude")
+    hauteur = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name="Hauteur")
 
     def __str__(self):              # __unicode__ on Python 2
         return self.localite
 
 
 class Poste(models.Model):
-    nomPoste = models.CharField(max_length=45, primary_key= True)
-    description = models.CharField(max_length=45)
+    nomPoste = models.CharField(max_length=45, primary_key=True, verbose_name="Poste")
+    description = models.CharField(max_length=45, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.nomPoste
 
 
 class PersonneContact(models.Model):
-    nomPoste = models.ForeignKey(Poste)
-    nomPersonne = models.CharField(max_length=45)
-    prenomPersonne = models.CharField(max_length=45)
-    telephoneBureau = models.CharField(max_length=45, blank=True)
-    telephonePersonnel = models.CharField(max_length=45)
-    emailPersonnel = models.CharField(max_length=45)
-    adressePersonnelle = models.CharField(max_length=45)
-    nif = models.CharField(max_length=45, blank=True)
-    cin = models.CharField(max_length=45, blank=True)
-    dateEmbauche = models.DateField()
+    nomPoste = models.ForeignKey(Poste, verbose_name="Poste")
+    nomPersonne = models.CharField(max_length=45, verbose_name="Nom")
+    prenomPersonne = models.CharField(max_length=45, verbose_name="Prenom")
+    telephoneBureau = models.CharField(max_length=45, blank=True, verbose_name="Telephone (Bureau)")
+    telephonePersonnel = models.CharField(max_length=45, verbose_name="Telephone (Personnel)")
+    emailPersonnel = models.CharField(max_length=45, verbose_name="Email (Personnel)")
+    adressePersonnelle = models.CharField(max_length=45, verbose_name="Adresse (Personnlle)")
+    nif = models.CharField(max_length=45, unique=True, verbose_name="NIF/CIN")
+    dateEmbauche = models.DateField(verbose_name="Date d'embauche")
     cfAtachStation = models.ForeignKey('Donnees_hydrometeologique.StationPluviometrique', verbose_name="Affectation Station")
 
     def __str__(self):              # __unicode__ on Python 2
