@@ -9,7 +9,7 @@ class StationPluviometriqueForm(forms.ModelForm):
     class Meta:
         #Added the fields of StationPluviometrique manually for the validation test
         model = StationPluviometrique
-        fields = ["latitude", "longitude", "hauteur", "idSiteSeninnelle", "nomStation", "typeStation", "cfPersCnt"]
+        fields = ["latitude", "longitude", "hauteur", "idSiteSeninnelle", "nomStation", "typeStation"]
 
     #Test input nomStation before validation
     def clean_nomStation(self):

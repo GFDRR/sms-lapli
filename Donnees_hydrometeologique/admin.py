@@ -8,7 +8,7 @@ from .models import *
 class StationPluviometriqueAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
-    list_display = ("id__SiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "type__Station", "Get_cfPersCnt")
+    list_display = ("id__SiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "type__Station")
     form = StationPluviometriqueForm
 
     #return id, typeStation of the foreignkey(s) in list_display and it will show it
