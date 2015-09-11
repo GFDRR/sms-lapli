@@ -6,19 +6,34 @@ from .models import *
 
 #Here test all input for string and security card (cin, nif).
 class ValidationInput:
-
     #test if string valid
-    def isValidInput(self, value):
+    def isValidInput(self, value, canContentDigit):
+
         if value.isdigit():
             return False
 
         else:
-            charSpeciaux = [ord(' '), ord('-'), ord("'")]
             value = value.upper()
 
-            for i in range(0, len(value)-1):
-                if ord(value[i]) < ord('A') and ord(value[i]) not in charSpeciaux or ord(value[i])>ord('Z'):
+            if value.count(' ') == 0:
+                value += " "
+
+            inputField = value.split(' ')
+
+            for i in range(0, len(inputField)):
+                nbUnionChar = inputField[i].count("-")
+                nbApostropheChar = inputField[i].count("'")
+
+                if nbUnionChar > 1 or nbApostropheChar > 1:
                     return False
+
+                if canContentDigit == 'False':
+                     if not self.isValidStr(inputField[i]):
+                        return False
+                else:
+                    if not (self.isValidStr(inputField[i]) or inputField[i].isdigit()):
+                        return False
+
             return True
 
     #test if the id of security card is valid
@@ -26,6 +41,7 @@ class ValidationInput:
 
         if value.count("-") != forme.count("-") or len(value) != len(forme):
             return False
+
         else:
             for i in range(0, len(value)-1):
                 if value[i] == "-":
@@ -44,6 +60,13 @@ class ValidationInput:
         except ValueError:
             return False
 
+    def isValidStr(self, value):
+        charSpeciaux = [ord('-'), ord("'"), ord(".")]
+        for i in range(0, len(value)):
+            if ord(value[i]) < ord('A') and ord(value[i]) not in charSpeciaux or ord(value[i])>ord('Z'):
+                return False
+        return True
+
 class DepartementForm(forms.ModelForm):
     class Meta:
         #Added the fields of Departement manually for the validation test
@@ -56,7 +79,7 @@ class DepartementForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('departement')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, 'False'):
             raise forms.ValidationError("Departement invalid!")
 
         return dataInput
@@ -74,7 +97,7 @@ class CommuneForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('commune')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, 'False'):
             raise forms.ValidationError("Commune invalid!")
 
         return dataInput
@@ -91,7 +114,7 @@ class SectionCommunaleForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('sectionCommunale')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "True"):
             raise forms.ValidationError("Section communale invalide!")
 
         return dataInput
@@ -108,7 +131,7 @@ class SiteSentinelleForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('localite')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "True"):
             raise forms.ValidationError("Localite incorrect!")
 
         return dataInput
@@ -125,7 +148,7 @@ class PosteForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('nomPoste')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "False"):
             raise forms.ValidationError("Nom de Poste incorrect!")
 
         return dataInput
@@ -145,16 +168,36 @@ class PersonneContactForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('nomPersonne')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "False"):
             raise forms.ValidationError("Nom incorrect!")
 
         return dataInput
 
+    #Test input telephoneBureau before validation and say if number exist
+    def clean_telephoneBureau(self):
+
+        telephoneBureau = self.cleaned_data.get('telephoneBureau')
+
+        if telephoneBureau:
+            if telephoneBureau[0] != "+":
+                raise forms.ValidationError("Format incorrect. (Valid format: +XXX....)")
+
+        return telephoneBureau
+
+    #Test input telephonePersonnel before validation and say if number exist
+    def clean_telephonePersonnel(self):
+
+        telephonePersonnel = self.cleaned_data.get('telephonePersonnel')
+
+        if telephonePersonnel[0] != "+":
+            raise forms.ValidationError("Format incorrect. (Valid format: +XXX....)")
+
+        return telephonePersonnel
     #Test input prenomPersonne before validation
     def clean_prenomPersonne(self):
         dataInput = self.cleaned_data.get('prenomPersonne')
         valid = ValidationInput()
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "False"):
             raise forms.ValidationError("Prenom incorrect!")
 
         return dataInput
@@ -165,7 +208,7 @@ class PersonneContactForm(forms.ModelForm):
         nif = self.cleaned_data.get('nif')
         valid = ValidationInput()
         if nif:
-            if not valid.isvalidIdPersonne(nif, "XXX-XXX-XXX-X") or valid.isvalidIdPersonne(nif, "XX-XX-XX-XXXX-XX-XXXXX"):
+            if not (valid.isvalidIdPersonne(nif, "XXX-XXX-XXX-X") or valid.isvalidIdPersonne(nif, "XX-XX-XX-XXXX-XX-XXXXX")):
                 raise forms.ValidationError("Format nif incorrect ou il y a erreur saisie. format:(XXX-XXX-XXX-X) ou (XX-XX-XX-XXXX-XX-XXXXX)")
 
         return nif

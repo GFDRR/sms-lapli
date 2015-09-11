@@ -17,7 +17,7 @@ class StationPluviometriqueForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('nomStation')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "True"):
             raise forms.ValidationError("Nom station incorrect!")
 
         return dataInput
@@ -35,7 +35,7 @@ class TypeStationPluviometriqueForm(forms.ModelForm):
         dataInput = self.cleaned_data.get('typeStation')
         valid = ValidationInput()
 
-        if not valid.isValidInput(dataInput):
+        if not valid.isValidInput(dataInput, "True"):
             raise forms.ValidationError("Type station incorrect!")
 
         return dataInput
