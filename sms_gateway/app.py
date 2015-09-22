@@ -21,7 +21,8 @@ class SmsGateway(AppBase):
         for tel in PersonneContact.objects.all():
             valid_numbers.append(tel.telephonePersonnel)# Getting all personnal Phone
 
-        if msg.peer not in valid_numbers:
+        tel = msg.peer.strip("+")
+        if tel not in valid_numbers:
             # msg.respond('TEst')
             msg.respond('Not in  '+msg.peer)
             return True  # Return false because we don't want to answer an unknow number
@@ -43,7 +44,7 @@ class SmsGateway(AppBase):
 
                 #getting the StationPluviometrique's id
                 stat_id = 0
-                for pers in PersonneContact.objects.filter(telephonePersonnel=msg.peer):
+                for pers in PersonneContact.objects.filter(telephonePersonnel=tel):
                     stat_id = pers.cfAtachStation
                 #Will Save here
                 obsv= ObservationPluviometrique(quantite=val_float,dateDebut=dateD,dateFin=datex,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0)

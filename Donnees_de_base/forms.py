@@ -173,26 +173,26 @@ class PersonneContactForm(forms.ModelForm):
 
         return dataInput
 
-    #Test input telephoneBureau before validation and say if number exist
-    def clean_telephoneBureau(self):
+    # #Test input telephoneBureau before validation and say if number exist
+    # def clean_telephoneBureau(self):
 
-        telephoneBureau = self.cleaned_data.get('telephoneBureau')
+    #     telephoneBureau = self.cleaned_data.get('telephoneBureau')
 
-        if telephoneBureau:
-            if telephoneBureau[0] != "+":
-                raise forms.ValidationError("Format incorrect. (Valid format: +XXX....)")
+    #     if telephoneBureau:
+    #         if telephoneBureau[0] != "+":
+    #             raise forms.ValidationError("Format incorrect. (Valid format: +XXX....)")
 
-        return telephoneBureau
+    #     return telephoneBureau
 
-    #Test input telephonePersonnel before validation and say if number exist
-    def clean_telephonePersonnel(self):
+    # #Test input telephonePersonnel before validation and say if number exist
+    # def clean_telephonePersonnel(self):
 
-        telephonePersonnel = self.cleaned_data.get('telephonePersonnel')
+    #     telephonePersonnel = self.cleaned_data.get('telephonePersonnel')
 
-        if telephonePersonnel[0] != "+":
-            raise forms.ValidationError("Format incorrect. (Valid format: +XXX....)")
+    #     if telephonePersonnel[0] != "+":
+    #         raise forms.ValidationError("Format incorrect. (Valid format: +XXX....)")
 
-        return telephonePersonnel
+    #     return telephonePersonnel
     #Test input prenomPersonne before validation
     def clean_prenomPersonne(self):
         dataInput = self.cleaned_data.get('prenomPersonne')
