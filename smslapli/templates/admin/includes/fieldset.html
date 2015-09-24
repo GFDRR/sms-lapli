@@ -7,7 +7,7 @@
         <div class="form-row{% if line.fields|length_is:'1' and line.errors %} errors{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% endfor %}">
             {% if line.fields|length_is:'1' %}{{ line.errors }}{% endif %}
             {% for field in line %}
-                <div {% if not line.fields|length_is:'1' %} class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}"{% elif field.is_checkbox %} class="checkbox-row"{% endif %}>
+                <div class ="fieldset-group" {% if not line.fields|length_is:'1' %} class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}"{% elif field.is_checkbox %} class="checkbox-row"{% endif %}>
                     {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
                     {% if field.is_checkbox %}
                         {{ field.field }}{{ field.label_tag }}
@@ -26,17 +26,65 @@
             {% endfor %}
         </div>
     {% endfor %}
-</fieldset>
 <style>
-    .module{
-        margin: auto;
-        width: 500px;
-        border: 0.5px solid #DDD;
+    .fieldset-group div{
+{#        background-color: yellow;#}
+{#        width: 400px;#}
+        display: inline-block;
     }
-    .module input{
+    .fieldset-group input{
+        width: 400px;
+        height: 35px;
+    }
+    .fieldset-group input:focus, .fieldset-group textarea:focus{
+  outline: none;
+  color: #525864;
+  border-color: #84c0ee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+}
+    .fieldset-group input, .fieldset-group textarea{
+        background: #ffffff;
+        border: 0.5px solid #ddd;
+        padding: 10px;
+        -webkit-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);
+        -moz-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);
+        box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);
+
+    }
+    .change-related{
+        margin-left: 20px;
+        background: dodgerblue;
+        color: #FFFFFF;
+
+    }
+    .fieldset-group select{
         height: 30px;
-        border: 1px solid #DDDDDD;
-        background: white;
+    }
+    .submit-row{
+        text-align: center;
+{#        background-color: yellow;#}
+    }
+    .fieldset-group{
+        margin-bottom: 10px;
+    }
+    .submit-row input{
+        display: inline-block;
+
     }
 </style>
+<script>
+$(document).ready(function() {
+    $('.change-related').addClass('btn btn-primary btn-sm');
+    $('.change-related').append("<span class="+'"glyphicon glyphicon-edit">'+"</span>");
+    $('.add-related').addClass('btn btn-success btn-sm');
+    $('.add-related').append("<span class="+'"glyphicon glyphicon-plus">'+"</span>");
+    $('input[name="_save"]').addClass('btn btn-primary');
+    $('input[name="_addanother"]').addClass('btn btn-default');
+    $('input[name="_continue"]').addClass('btn btn-default');
+});
+</script>
+</fieldset>
+
 

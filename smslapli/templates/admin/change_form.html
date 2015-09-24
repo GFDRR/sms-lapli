@@ -1,120 +1,232 @@
-{% extends "admin/base_site.html" %}
+{% extends "admin/index.html" %}
 {% load i18n admin_urls admin_static admin_modify %}
 
-{% block extrahead %}{{ block.super }}
-<script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
-{{ media }}
+{% block content1 %}
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+{#                    <h2>Form Des<small>different form elements</small></h2>#}
+                    {% if not is_popup %}
+                    {% block breadcrumbs %}
+                    {#<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>#}
+                    {#link accueil#}
+                    {#&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>#}
+                    <h2>{% if has_change_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
+                    &rsaquo; <small>{% if add %}{% trans 'Add' %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}</small></h2>
+
+                    {% endblock %}
+                    {% endif %}
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a>
+                                </li>
+                                <li><a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    {% block extrahead %}{{ block.super }}
+                    <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+                    {{ media }}
+                    {% endblock %}
+{# {% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}#}
+
+{#{% block coltype %}colM{% endblock %}#}
+                    <div class = "change-style">
+                    {% block bodyclass %}&nbsp;{% endblock %}
+                    {% block content %}<div id="content-main">
+                    {% block object-tools %}
+                    {% if change %}{% if not is_popup %}
+                      <ul class="object-tools">
+                        {% block object-tools-items %}
+                        <li>
+                            {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
+                            <a href="{% add_preserved_filters history_url %}" class="historylink">{% trans "History" %}</a>
+                        </li>
+                        {% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
+                        {% endblock %}
+                      </ul>
+                    {% endif %}{% endif %}
+                    {% endblock %}
+
+
+                    <form class = "form-style" {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
+                    <div>
+                    {% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1" />{% endif %}
+                    {% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}" />{% endif %}
+                    {% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+                    {% if errors %}
+                        <p class="errornote">
+                        {% if errors|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+                        </p>
+                        {{ adminform.form.non_field_errors }}
+                    {% endif %}
+
+                    {% block field_sets %}
+                    {% for fieldset in adminform %}
+                      {% include "admin/includes/fieldset.html" %}
+                    {% endfor %}
+                    {% endblock %}
+                    {% block after_field_sets %}{% endblock %}
+
+                    {% block inline_field_sets %}
+                    {% for inline_admin_formset in inline_admin_formsets %}
+                        {% include inline_admin_formset.opts.template %}
+                    {% endfor %}
+                    {% endblock %}
+
+                    {% block after_related_objects %}{% endblock %}
+
+                    {% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
+
+                    {% block admin_change_form_document_ready %}
+                        <script type="text/javascript">
+                            (function($) {
+                                $(document).ready(function() {
+                                    $('.add-another').click(function(e) {
+                                        e.preventDefault();
+                                        var event = $.Event('django:add-another-related');
+                                        $(this).trigger(event);
+                                        if (!event.isDefaultPrevented()) {
+                                            showAddAnotherPopup(this);
+                                        }
+                                    });
+                                    $('.related-lookup').click(function(e) {
+                                        e.preventDefault();
+                                        var event = $.Event('django:lookup-related');
+                                        $(this).trigger(event);
+                                        if (!event.isDefaultPrevented()) {
+                                            showRelatedObjectLookupPopup(this);
+                                        }
+                                    });
+                                    $('body').on('click', '.related-widget-wrapper-link', function(e) {
+                                        e.preventDefault();
+                                        if (this.href) {
+                                            var event = $.Event('django:show-related', {href: this.href});
+                                            $(this).trigger(event);
+                                            if (!event.isDefaultPrevented()) {
+                                                showRelatedObjectPopup(this);
+                                            }
+                                        }
+                                    });
+                                    $('body').on('change', '.related-widget-wrapper select', function(e) {
+                                        var event = $.Event('django:update-related');
+                                        $(this).trigger(event);
+                                        if (!event.isDefaultPrevented()) {
+                                            updateRelatedObjectLinks(this);
+                                        }
+                                    });
+                                    $('.related-widget-wrapper select').trigger('change');
+
+                                {% if adminform and add %}
+                                    $('form#{{ opts.model_name }}_form :input:visible:enabled:first').focus()
+                                {% endif %}
+                                });
+                            })(django.jQuery);
+                        </script>
+                    {% endblock %}
+
+                     JavaScript for prepopulated fields
+                    {% prepopulated_fields_js %}
+
+                    </div>
+                    </form></div>
+                    {% endblock %}
+                    </div>
+{#                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">#}
+{##}
+{#                        <div class="form-group">#}
+{#                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>#}
+{#                            </label>#}
+{#                            <div class="col-md-6 col-sm-6 col-xs-12">#}
+{#                                <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>#}
+{#                            </label>#}
+{#                            <div class="col-md-6 col-sm-6 col-xs-12">#}
+{#                                <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>#}
+{#                            <div class="col-md-6 col-sm-6 col-xs-12">#}
+{#                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>#}
+{#                            <div class="col-md-6 col-sm-6 col-xs-12">#}
+{#                                <div id="gender" class="btn-group" data-toggle="buttons">#}
+{#                                    <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">#}
+{#                                        <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;#}
+{#                                    </label>#}
+{#                                    <label class="btn btn-primary active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">#}
+{#                                        <input type="radio" name="gender" value="female" checked=""> Female#}
+{#                                    </label>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>#}
+{#                            </label>#}
+{#                            <div class="col-md-6 col-sm-6 col-xs-12">#}
+{#                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="ln_solid"></div>#}
+{#                        <div class="form-group">#}
+{#                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">#}
+{#                                <button type="submit" class="btn btn-primary">Cancel</button>#}
+{#                                <button type="submit" class="btn btn-success">Submit</button>#}
+{#                            </div>#}
+{#                        </div>#}
+{##}
+{#                    </form>#}
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+{#    .form-style input{#}
+{#        width: 400px;#}
+{#        height: 35px;#}
+{#        background: #ffffff;#}
+{#        border: 0.5px solid #ddd;#}
+{#        padding: 10px;#}
+{#        -webkit-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);#}
+{#        -moz-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);#}
+{#        box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);#}
+{##}
+{#    }#}
+    .form-style label{
+        width: 100px;
+{#        background-color: #777;#}
+    }
+    .form-style{
+{#        background: #DDD;#}
+        width: 700px;
+        margin: auto;
+        padding: 20px;
+
+    }
+    .form-style select{
+        width: 110px;
+        display: inline-block;
+        top: 0px;
+    }
+</style>
 {% endblock %}
-{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />{% endblock %}
 
-{% block coltype %}colM{% endblock %}
-
-{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-form{% endblock %}
-
-{% if not is_popup %}
-{% block breadcrumbs %}
-<div class="breadcrumbs">
-{#<h1>Page Change</h1>#}
-<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
-&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
-&rsaquo; {% if has_change_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
-&rsaquo; {% if add %}{% trans 'Add' %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}
-</div>
-{% endblock %}
-{% endif %}
-{% block content %}<div id="content-main">
-{% block object-tools %}
-{% if change %}{% if not is_popup %}
-  <ul class="object-tools">
-    {% block object-tools-items %}
-    <li>
-        {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
-        <a href="{% add_preserved_filters history_url %}" class="historylink">{% trans "History" %}</a>
-    </li>
-    {% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
-    {% endblock %}
-  </ul>
-{% endif %}{% endif %}
-{% endblock %}
-<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
-<div>
-{% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1" />{% endif %}
-{% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}" />{% endif %}
-{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
-{% if errors %}
-    <p class="errornote">
-    {% if errors|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
-    </p>
-    {{ adminform.form.non_field_errors }}
-{% endif %}
-
-{% block field_sets %}
-{% for fieldset in adminform %}
-  {% include "admin/includes/fieldset.html" %}
-{% endfor %}
-{% endblock %}
-{% block after_field_sets %}{% endblock %}
-
-{% block inline_field_sets %}
-{% for inline_admin_formset in inline_admin_formsets %}
-    {% include inline_admin_formset.opts.template %}
-{% endfor %}
-{% endblock %}
-
-{% block after_related_objects %}{% endblock %}
-
-{% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
-
-{% block admin_change_form_document_ready %}
-    <script type="text/javascript">
-        (function($) {
-            $(document).ready(function() {
-                $('.add-another').click(function(e) {
-                    e.preventDefault();
-                    var event = $.Event('django:add-another-related');
-                    $(this).trigger(event);
-                    if (!event.isDefaultPrevented()) {
-                        showAddAnotherPopup(this);
-                    }
-                });
-                $('.related-lookup').click(function(e) {
-                    e.preventDefault();
-                    var event = $.Event('django:lookup-related');
-                    $(this).trigger(event);
-                    if (!event.isDefaultPrevented()) {
-                        showRelatedObjectLookupPopup(this);
-                    }
-                });
-                $('body').on('click', '.related-widget-wrapper-link', function(e) {
-                    e.preventDefault();
-                    if (this.href) {
-                        var event = $.Event('django:show-related', {href: this.href});
-                        $(this).trigger(event);
-                        if (!event.isDefaultPrevented()) {
-                            showRelatedObjectPopup(this);
-                        }
-                    }
-                });
-                $('body').on('change', '.related-widget-wrapper select', function(e) {
-                    var event = $.Event('django:update-related');
-                    $(this).trigger(event);
-                    if (!event.isDefaultPrevented()) {
-                        updateRelatedObjectLinks(this);
-                    }
-                });
-                $('.related-widget-wrapper select').trigger('change');
-
-            {% if adminform and add %}
-                $('form#{{ opts.model_name }}_form :input:visible:enabled:first').focus()
-            {% endif %}
-            });
-        })(django.jQuery);
-    </script>
-{% endblock %}
-
- JavaScript for prepopulated fields
-{% prepopulated_fields_js %}
-
-</div>
-</form></div>
-{% endblock %}
