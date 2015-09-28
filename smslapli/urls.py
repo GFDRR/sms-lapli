@@ -21,6 +21,7 @@ urlpatterns = [
     # Third party URLs
     url(r'^selectable/', include('selectable.urls')),
     url(r"^backend/kannel-usb0-smsc/$", KannelBackendView.as_view(backend_name="kannel-usb0-smsc")),
+    url(r"public","public.views.rpluie"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
