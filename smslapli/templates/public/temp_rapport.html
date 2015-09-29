@@ -4,12 +4,19 @@
 	<head>
 		<title>Rapport</title>
 		<link rel="stylesheet" type="text/css" href="{% static "public/bootstrap/dist/css/bootstrap.min.css" %}">
-		<script src="bootstrap-3.3.5/assets/js/ie-emulation-modes-warning.js"></script>
-		<link rel="stylesheet" type="text/css" href="{% static "css/css.css" %}">
-		<script src="bootstrap-3.3.5/dist/js/Chart.js"></script>
-    	<script src="jquery/jquery-1.11.3.min.js"></script>
-		<script src="bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
-		<script src="bootstrap-3.3.5/js/graphe.js"></script>
+
+
+		<link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
+
+
+		<script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
+
+
+    	<script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
+
+		<script src="{% static "public/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+
+		<script src="{% static "public/bootstrap/js/graphe.js" %}"></script>
 
 		<script type="text/javascript">
 			$(document).ready(function(){ 
@@ -69,8 +76,8 @@
 
 				<div class="bs-example">
 		            <ul class="nav nav-tabs" id="myTab">
-		                <li class="active"><a href="#sectionA">Tableau</a></li>
-		                <li><a href="#sectionB">Graphe</a></li>
+		                <li class="active"><a href="#sectionA">Graphe</a></li>
+		                <li><a href="#sectionB">Tableau</a></li>
 		                <li><a href="#section">Carte</a></li>
 		            </ul>
 		            <div class="tab-content">
