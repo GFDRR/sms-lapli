@@ -7,6 +7,8 @@
 
 
 		<link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
 
 
 		<script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
@@ -30,35 +32,7 @@
 
 	<body>
 		<!--===================================Menu Principal=======================================================-->
-	    <nav class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="/public">CNSA</a>
-	        </div>
-	        <div id="navbar" class="navbar-collapse collapse">
-	            <ul class="nav navbar-nav">
-	                <li class="active"><a href="/public">Accueil</a></li>
-	                <li><a href="#about">Pluviometrie</a></li>
-	                <li><a href="/rapport">Marche</a></li>
-	            </ul>
-	          <form class="navbar-form navbar-right">
-	            <div class="form-group">
-	              <input type="text" placeholder="Email" class="form-control">
-	            </div>
-	            <div class="form-group">
-	              <input type="password" placeholder="Password" class="form-control">
-	            </div>
-	            <button type="submit" class="btn btn-success">Sign in</button>
-	          </form>
-	        </div>
-	      </div>
-	    </nav>
+	   {% include "public/include/menu.html" %}
 
  
 
@@ -131,8 +105,6 @@
 	      </div>
 	    </div>
 
-    <footer class="pied">
-			<p>CNSA 2015</p>
-    </footer>
+    {% include "public/include/footer.html" %}
 	</body>
 </html>

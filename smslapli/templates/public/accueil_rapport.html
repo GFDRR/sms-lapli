@@ -9,7 +9,13 @@
 		<link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
 
 
+		<link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
+
+		<link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
+
+
 		<script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
+		{# <script src="{% static "bootstrap/dist/css/bootstrap-theme.min.css" %}"></script>#}
 
 
     	<script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
@@ -24,40 +30,20 @@
 			    	e.preventDefault();
 			    	$(this).tab('show');
 			    });
+			    $('.show-modal').click(function(){
+			    	$('#myModal').modal('show');
+			 	});  
+				$('.hide-modal').click(function(){
+			    	$('#myModal').modal('hide');
+			 	}); 
 			});
 		</script>
+
+		
 	</head>
 <body>
     <!--===================================Menu Principal=======================================================-->
-	    <nav class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="/ihaiti">CNSA</a>
-	        </div>
-	        <div id="navbar" class="navbar-collapse collapse">
-	            <ul class="nav navbar-nav">
-	                <li class="active"><a href="/public">Accueil</a></li>
-	                <li><a href="#about">Pluviometrie</a></li>
-	                <li><a href="/rapport">Marche</a></li>
-	            </ul>
-	          <form class="navbar-form navbar-right">
-	            <div class="form-group">
-	              <input type="text" placeholder="Email" class="form-control">
-	            </div>
-	            <div class="form-group">
-	              <input type="password" placeholder="Password" class="form-control">
-	            </div>
-	            <button type="submit" class="btn btn-success">Sign in</button>
-	          </form>
-	        </div>
-	      </div>
-	    </nav>
+	    {% include "public/include/menu.html" %}
     <!--===================================Menu Principal=======================================================-->
         <section class="jumbotron">
             <div class="container ">
@@ -69,21 +55,55 @@
 							Nous mettons a la disposition du public des donnees fiables sur la quantite de pluie et egalement l'etat de la disponibilite de la nourriture dans le pays.
 						</p>
 					</div>
-					<br /><br /><br /><br />
-	            	<div class="col-lg-6">
-				            <a href="/rapport/pluie" class="btn btn-default btn btn-info btn-lg"><span class="glyphicon glyphicon-stats">&nbsp;</span>Donnees Pluviometrique</a>
-	            	</div>
-	            	<div class="col-lg-6">
-				            <a class="btn btn-default btn btn-info btn-lg"><span class="glyphicon glyphicon-stats">&nbsp;</span>Donnees Prix de marche</a>
-	            	</div>
+					  <div class="bs-example">
+						    <!-- Modal HTML -->
+						    <div id="myModal" class="modal fade">
+						      <div class="modal-dialog">
+						        <div class="modal-content">
+						          <div class="modal-header">
+						            <button type="button" class="close" data-dismiss="modal"
+						              aria-hidden="true">&times;</button>
+						            <h4 class="modal-title">Login </h4>
+						          </div>
+						          <div class="modal-body">
+						            <form  action="/admin/" method="post" id="login-form" class="form-inline" role="form">{% csrf_token %}	
+							            <center>
+										    <div class="form-group">
+										      <input type="text" class="form-control" id="email" placeholder="Username">
+										    </div>
+										    <div class="form-group">
+										      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+										    </div>
+									    </center>
+									      <br />
+								          <div class="modal-footer">
+								            <input class="btn btn-success" type="submit" value="Connexion" id="submit">
+								            <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+								          </div>
+									  </form>
+									  
+						          </div>
+						        </div>
+						        <!-- /.modal-content -->
+						      </div>
+						      <!-- /.modal-dialog -->
+						    </div>
+						    <!-- /.modal -->
+						  </div>
+					<center>
+		            	<div class="col-lg-6 col-md-6 col-sm-6">
+					            <a href="/rapport/pluie" class="btn btn-default btn btn-info btn-lg"><span class="glyphicon glyphicon-stats">&nbsp;</span>Donnees Pluviometrique</a>
+		            	</div>
+		            	<div class="col-lg-6 col-md-6 col-sm-6">
+					            <a class="btn btn-default btn btn-info btn-lg"><span class="glyphicon glyphicon-stats">&nbsp;</span>Donnees Prix de marche</a>
+		            	</div>
+	            	</center>
 
             	</div>
             </div>
             <br />
         </section>
 
-        <footer class="pied">
-			<p>CNSA 2015</p>
-		</footer>
+		{% include "public/include/footer.html" %}	
 </body>
 </html>
