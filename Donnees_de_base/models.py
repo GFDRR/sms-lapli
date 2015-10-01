@@ -11,6 +11,7 @@ from django.db import models
 class Departement(models.Model):
     departement = models.CharField(max_length=40, verbose_name="Departement")
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
+    ihsi = models.CharField(max_length=10, verbose_name="Code IHSI")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.departement

@@ -24,7 +24,7 @@ class ValidationInput:
                 nbUnionChar = inputField[i].count("-")
                 nbApostropheChar = inputField[i].count("'")
 
-                if nbUnionChar > 1 or nbApostropheChar > 1:
+                if nbUnionChar > 3 or nbApostropheChar > 1:
                     return False
 
                 if canContentDigit == 'False':
@@ -71,7 +71,7 @@ class DepartementForm(forms.ModelForm):
     class Meta:
         #Added the fields of Departement manually for the validation test
         model = Departement
-        fields = ["departement", "description"]
+        fields = ["departement", "ihsi", "description"]
 
     #Test input departement before validation
     def clean_departement(self):

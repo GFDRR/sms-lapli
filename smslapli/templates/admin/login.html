@@ -12,19 +12,24 @@
 {% block nav-global %}{% endblock %}
 
 {% block content_title %}{% endblock %}
-
-{% block breadcrumbs %}{% endblock %}
-
-{% block content %}
+{% block top_body %}
 {% if form.errors and not form.non_field_errors %}
-<p class="errornote">
+<p class="errornote alert alert-danger" role="alert">
 {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
 </p>
 {% endif %}
-
+{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block base_header %}
+    <div class="header-login">
+        <span class="glyphicon glyphicon-lock" style="color: white;">&nbsp;</span>Connexion
+    </div>
+{% endblock %}
+{% block content %}
+<div class="login-content">
 {% if form.non_field_errors %}
 {% for error in form.non_field_errors %}
-<p class="errornote">
+<p class="errornote alert alert-danger" role="alert">
     {{ error }}
 </p>
 {% endfor %}
@@ -33,15 +38,17 @@
 <div id="content-main">
 
 {% if user.is_authenticated %}
-<p class="errornote">
+<p class="errornote alert alert-danger" role="alert">
 {% blocktrans with username=request.user.username trimmed %}
-    You are authenticated as {{ username }}, but are not authorized to
-    access this page. Would you like to login to a different account?
+    <div class="alert alert-danger" role="alert">
+        You are authenticated as {{ username }}, but are not authorized to
+        access this page. Would you like to login to a different account?
+    </div>
 {% endblocktrans %}
 </p>
 {% endif %}
 
-<form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+<form class = "form-login" action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
   <div class="form-row">
     {{ form.username.errors }}
     {{ form.username.label_tag }} {{ form.username }}
@@ -58,7 +65,7 @@
   </div>
   {% endif %}
   <div class="submit-row">
-    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}" />
+    <label>&nbsp;</label><input class = "btn-login" type="submit" value="{% trans 'Log in' %}" />
   </div>
 </form>
 
@@ -66,4 +73,59 @@
 document.getElementById('id_username').focus()
 </script>
 </div>
+</div>
+    <style>
+       .login-content{
+{#           background: #ddd;#}
+           padding: 10px;
+       }
+
+    .container{
+{#        padding: 10px;#}
+        border-radius: 5px;
+    }
+    
+    .form-row input{
+        background: #ffffff;
+        border: 1px solid #ddd;
+        padding: 10px;
+{#        -webkit-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);#}
+{#        -moz-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);#}
+{#        box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);#}
+    }
+
+    .form-login input:focus{
+        outline: none;
+      color: #525864;
+      border-color: #84c0ee;
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+    }
+    .header-login{
+{#        background: rgb(126, 160, 255);#}
+        height: 40px;
+        padding-left: 15px;
+        padding-top: 10px;
+        color: white;
+        background-color: #5096B0;
+        background-image: linear-gradient(#81B1C2, #5496B0);
+    }
+    .btn-login{
+        background-color: #5096B0;
+        background-image: linear-gradient(#30BCD6, #0099B4);
+        width: 110px;
+        height: 30px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        color: white;
+{#        text-shadow: 1px 1px #444;#}
+    }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.errorlist li').addClass('alert alert-danger');
+        });
+    </script>
 {% endblock %}
+
