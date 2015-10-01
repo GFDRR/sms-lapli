@@ -1,27 +1,20 @@
-var randomScalingFactor = function(){ return Math.round(Math.random()*10)};
+$(document).ready(function(){
+    $.get('/json_graph',function(data,status){
+				//alert(data);
+            //alert(data.table[0].dep)
+        var i;
+        var objs = data.table
+
+		labl =[]
+		datasz = []
+
+		for(i=0;i<objs.length;i++){
+            labl.push(objs[i].dates)
+			datasz.push(objs[i].qtt)
+        }
 		var lineChartData = {
-			labels : ["January","February","March","April","May","June","July","August","September","October","November","December"],
+			labels : labl,
 			datasets : [
-				{
-					label: "My First dataset",
-					fillColor : "rgba(220,220,220,0.2)",
-					strokeColor : "rgba(220,220,220,1)",
-					pointColor : "rgba(220,220,220,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(220,220,220,1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-				},
-				{
-					label: "My Second dataset",
-					fillColor : "rgba(151,187,205,0.2)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(151,187,205,1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-				},
 				{
 					label: "My Second dataset",
 					fillColor : "rgba(101,178,200,0.2)",
@@ -30,15 +23,14 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*10)};
 					pointStrokeColor : "#fff",
 					pointHighlightFill : "#fff",
 					pointHighlightStroke : "rgba(101,178,200,1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					data : datasz
 				}
 			]
 
 		}
-
-		window.onload = function(){
-			var ctx = document.getElementById("canvas").getContext("2d");
-			window.myLine = new Chart(ctx).Line(lineChartData, {
-				responsive: false
-			});
-		}
+		var ctx = $("#canvas").get(0).getContext("2d");
+		var myNewChart = new Chart(ctx).Line(lineChartData, {
+			bezierCurve: false
+		});
+    });
+});
