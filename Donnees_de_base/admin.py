@@ -7,7 +7,7 @@ from .models import *
 
 class DepartementAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("departement", "ihsi", "description")
+    list_display = ("departement", "description")
     form = DepartementForm
 
 

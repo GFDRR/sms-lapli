@@ -113,7 +113,41 @@
                                                    </li>
                                         {% endfor %}
                                     {% else %}
-{#                                        <p>{% trans "You don't have permission to edit anything." %}</p>#}
+                                        <li><a><i class="fa fa-edit"></i>Structure de base<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu" style="display: none">
+                                                    <li><a href="/admin/Donnees_de_base/departement/">Departements</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_de_base/commune/">Communes</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_de_base/sectioncommunale/">Section communales</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_de_base/sitesentinelle/">Sites sentinnelles</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_de_base/poste/">Postes</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_de_base/personnecontact/">Personne contacts</a>
+                                                    </li>
+                                                </ul>
+                                          </li>
+                                          <li><a><i class="fa fa-edit"></i>Collecte Pluviometrique<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu" style="display: none">
+                                                    <li><a href="/admin/Donnees_hydrometeologique/typestationpluviometrique/">Type station pluviometrique</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_hydrometeologique/stationpluviometrique/">Station pluviometriques</a>
+                                                    </li>
+                                                    <li><a href="/admin/Donnees_hydrometeologique/observationpluviometrique/">Observation pluviometriques</a>
+                                                    </li>
+
+                                                </ul>
+                                          </li>
+                                          <li><a><i class="fa fa-edit"></i>Autorisation<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu" style="display: none">
+                                                    <li><a href="/admin/auth/group/">Groupes</a>
+                                                    </li>
+                                                    <li><a href="/admin/auth/user/">Utilisateurs</a>
+                                                    </li>
+                                                </ul>
+                                          </li>
                                     {% endif %}
                             </ul>
                         </div>
