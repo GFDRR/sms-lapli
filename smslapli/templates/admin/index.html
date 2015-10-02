@@ -65,7 +65,7 @@
                     <!-- menu prile quick info -->
                     <div class="profile">
                         <div class="profile_pic">
-                            <img src=" {% static "images/user.png" %}" alt="..." class="img-circle profile_img">
+                            <img src=" {% static "images/img_user.png" %}" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
 {#                            <span>Welcome,</span>#}
@@ -189,7 +189,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="{% static "images/user.png" %}" alt="">{% firstof user.get_short_name user.get_username %}
+                                    <img src="{% static "images/img_user.png" %}" alt="">{% firstof user.get_short_name user.get_username %}
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
@@ -222,9 +222,9 @@
                             <li role="presentation" class="dropdown">
                                 <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                     <i class="fa fa-envelope-o"></i>
-                                    <span class="badge bg-green">6</span>
+                                    <!-- <span class="badge bg-green">6</span> -->
                                 </a>
-                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list animated fadeInDown" role="menu">
+                                <!-- <ul id="menu1" class="dropdown-menu list-unstyled msg_list animated fadeInDown" role="menu">
                                     <li>
                                         <a>
                                             <span class="image">
@@ -289,8 +289,8 @@
                                             </a>
                                         </div>
                                     </li>
-                                </ul>
-                            </li>
+                                </ul>-->
+                            </li> 
 
                         </ul>
                     </nav>
@@ -306,7 +306,7 @@
             <div class="right_col" role="main">
                 {% block content1 %}
                 <!-- top tiles -->
-                <div class="row tile_count">
+                <!-- <div class="row tile_count">
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
@@ -356,7 +356,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
                 <!-- /top tiles -->
 
                 <div class="row">
@@ -396,7 +396,7 @@
                                 
                             <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
                                 <div class="x_title">
-                                    <h2>{% trans 'Recent Actions' %}<small>{% trans 'My Actions' %} </small></h2>
+                                    <h2>{% trans 'Recent Actions' %}<small>{% trans 'My Actions' %}</small></h2>
                                     <div class="clearfix"></div>
                                 </div>
 
@@ -406,11 +406,20 @@
                                     {% if not admin_log %}
                                     <p>{% trans 'None available' %}</p>
                                     {% else %}
-                                    <ul class="actionlist" style="background: #DDD; padding: 1px">
+                                    <ul class="actionlist" style="background: #EEEEEE; padding: 2px; overflow-y: scroll; height: 300px;">
                                     {% for entry in admin_log %}
-                                    <li class="{% if entry.is_addition %}addlink{% endif %}{% if entry.is_change %}changelink{% endif %}{% if entry.is_deletion %}deletelink{% endif %}" style="list-style: none; padding: 10px 0px 10px 10px; backgrond: #FFFFFF;">
+                                    <li style="list-style: none; background: #fff; margin-bottom: 5px; padding: 10px 0px 10px 10px
+                                    ;" class="{% if entry.is_addition %}addlink{% endif %}{% if entry.is_change %}changelink{% endif %}{% if entry.is_deletion %}deletelink{% endif %}">
                                         {% if entry.content_type %}
-                                            <span class="mini quiet">{% filter capfirst %}{{ entry.content_type }}{% endfilter %}</span>
+                                            {% if entry.is_addition %}
+                                                <span class="glyphicon glyphicon-plus" style="color: #00C365"> {% trans "Add" %} </span><span class="mini quiet" style="color: #00C365"> {% filter capfirst %}{{ entry.content_type }} {% endfilter %}</span>|
+                                            {% endif %}
+                                            {% if entry.is_change %}
+                                                <span class="glyphicon glyphicon-edit" style="color: #38C0DA"> {% trans "Change" %} </span><span class="mini quiet" style="color: #38C0DA"> {% filter capfirst %}{{ entry.content_type }} {% endfilter %}</span>|
+                                            {% endif %}
+                                            {% if entry.is_deletion %}
+                                                <span class="glyphicon glyphicon-trash" style="color: #E93B54"> {% trans "Delete" %} </span><span class="mini quiet" style="color: #E93B54"> {% filter capfirst %}{{ entry.content_type }} {% endfilter %}</span>|
+                                            {% endif %}
                                         {% else %}
                                             <span class="mini quiet">{% trans 'Unknown content' %}</span>
                                         {% endif %}
@@ -424,6 +433,7 @@
                                     </ul>
                                     {% endif %}
                                 </div>
+
 
                             </div>
 
