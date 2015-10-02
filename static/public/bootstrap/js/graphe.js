@@ -32,5 +32,6 @@ $(document).ready(function(){
 		var myNewChart = new Chart(ctx).Line(lineChartData, {
 			bezierCurve: false
 		});
+
     });
 });
