@@ -243,7 +243,7 @@ INSTALLED_BACKENDS = {
 
     "kannel-usb0-smsc" : {
         "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
-        "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
+        "sendsms_url": "http://127.0.0.1:14000/cgi-bin/sendsms",
         "sendsms_params": {"smsc": "usb0-modem",
                            "from": "+50934772370", # not set automatically by SMSC
                            "username": "rapidsms",
