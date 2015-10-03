@@ -1,0 +1,7762 @@
+[
+  {
+    "fields": {
+      "departement": "Ouest",
+      "description": "",
+      "id_code": "1"
+    },
+    "model": "base.departement",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "departement": "Sud-Est",
+      "description": "",
+      "id_code": "2"
+    },
+    "model": "base.departement",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "departement": "Nord",
+      "description": "",
+      "id_code": "3"
+    },
+    "model": "base.departement",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "departement": "Nord-Est",
+      "description": "",
+      "id_code": "4"
+    },
+    "model": "base.departement",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "departement": "Artibonite",
+      "description": "",
+      "id_code": "5"
+    },
+    "model": "base.departement",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "departement": "Centre",
+      "description": "",
+      "id_code": "6"
+    },
+    "model": "base.departement",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "departement": "Sud",
+      "description": "",
+      "id_code": "7"
+    },
+    "model": "base.departement",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "departement": "Grande-Anse",
+      "description": "",
+      "id_code": "8"
+    },
+    "model": "base.departement",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "departement": "Nord-Ouest",
+      "description": "",
+      "id_code": "9"
+    },
+    "model": "base.departement",
+    "pk": 9
+  },
+  {
+    "fields": {
+      "departement": "Nippes",
+      "description": "",
+      "id_code": "10"
+    },
+    "model": "base.departement",
+    "pk": 10
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Delmas",
+      "description": "",
+      "id_code": "112"
+    },
+    "model": "base.commune",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Port-au-Prince",
+      "description": "",
+      "id_code": "111"
+    },
+    "model": "base.commune",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Petion-Ville",
+      "description": "",
+      "id_code": "114"
+    },
+    "model": "base.commune",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Carrefour",
+      "description": "",
+      "id_code": "113"
+    },
+    "model": "base.commune",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Cornillon/Grd Bois",
+      "description": "",
+      "id_code": "134"
+    },
+    "model": "base.commune",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Kenscoff",
+      "description": "",
+      "id_code": "115"
+    },
+    "model": "base.commune",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Gressier",
+      "description": "",
+      "id_code": "116"
+    },
+    "model": "base.commune",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Cite Soleil",
+      "description": "",
+      "id_code": "117"
+    },
+    "model": "base.commune",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Tabarre",
+      "description": "",
+      "id_code": "118"
+    },
+    "model": "base.commune",
+    "pk": 9
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Leogane",
+      "description": "",
+      "id_code": "121"
+    },
+    "model": "base.commune",
+    "pk": 10
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Fonds Verrettes",
+      "description": "",
+      "id_code": "135"
+    },
+    "model": "base.commune",
+    "pk": 11
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Grand-Goave",
+      "description": "",
+      "id_code": "123"
+    },
+    "model": "base.commune",
+    "pk": 12
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Petit Goave",
+      "description": "",
+      "id_code": "122"
+    },
+    "model": "base.commune",
+    "pk": 13
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Ganthier",
+      "description": "",
+      "id_code": "133"
+    },
+    "model": "base.commune",
+    "pk": 14
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Thiotte",
+      "description": "",
+      "id_code": "233"
+    },
+    "model": "base.commune",
+    "pk": 15
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Cabaret",
+      "description": "",
+      "id_code": "142"
+    },
+    "model": "base.commune",
+    "pk": 16
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Grand Gosier",
+      "description": "",
+      "id_code": "232"
+    },
+    "model": "base.commune",
+    "pk": 17
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Pointe A Raquette",
+      "description": "",
+      "id_code": "152"
+    },
+    "model": "base.commune",
+    "pk": 18
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Jacmel",
+      "description": "",
+      "id_code": "211"
+    },
+    "model": "base.commune",
+    "pk": 19
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Anse A Galet",
+      "description": "",
+      "id_code": "151"
+    },
+    "model": "base.commune",
+    "pk": 20
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Marigot",
+      "description": "",
+      "id_code": "212"
+    },
+    "model": "base.commune",
+    "pk": 21
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Cayes-Jacmel",
+      "description": "",
+      "id_code": "213"
+    },
+    "model": "base.commune",
+    "pk": 22
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "La Vallee",
+      "description": "",
+      "id_code": "214"
+    },
+    "model": "base.commune",
+    "pk": 23
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Cotes de Fer",
+      "description": "",
+      "id_code": "222"
+    },
+    "model": "base.commune",
+    "pk": 24
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Belle Anse",
+      "description": "",
+      "id_code": "231"
+    },
+    "model": "base.commune",
+    "pk": 25
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Cap Haitien",
+      "description": "",
+      "id_code": "311"
+    },
+    "model": "base.commune",
+    "pk": 26
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Plaisance",
+      "description": "",
+      "id_code": "371"
+    },
+    "model": "base.commune",
+    "pk": 27
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Anse A Pitre",
+      "description": "",
+      "id_code": "234"
+    },
+    "model": "base.commune",
+    "pk": 28
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Perches",
+      "description": "",
+      "id_code": "413"
+    },
+    "model": "base.commune",
+    "pk": 29
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Carice",
+      "description": "",
+      "id_code": "442"
+    },
+    "model": "base.commune",
+    "pk": 30
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Mombin Crochu",
+      "description": "",
+      "id_code": "443"
+    },
+    "model": "base.commune",
+    "pk": 31
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Gonaives",
+      "description": "",
+      "id_code": "511"
+    },
+    "model": "base.commune",
+    "pk": 32
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Quartier Morin",
+      "description": "",
+      "id_code": "312"
+    },
+    "model": "base.commune",
+    "pk": 33
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Limonade",
+      "description": "",
+      "id_code": "313"
+    },
+    "model": "base.commune",
+    "pk": 34
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Acul du Nord",
+      "description": "",
+      "id_code": "321"
+    },
+    "model": "base.commune",
+    "pk": 35
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Plaine du Nord",
+      "description": "",
+      "id_code": "322"
+    },
+    "model": "base.commune",
+    "pk": 36
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Milot",
+      "description": "",
+      "id_code": "323"
+    },
+    "model": "base.commune",
+    "pk": 37
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Grande Riviere Du Nord",
+      "description": "",
+      "id_code": "331"
+    },
+    "model": "base.commune",
+    "pk": 38
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Saint Louis du Nord",
+      "description": "",
+      "id_code": "921"
+    },
+    "model": "base.commune",
+    "pk": 39
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "St. Raphael",
+      "description": "",
+      "id_code": "341"
+    },
+    "model": "base.commune",
+    "pk": 40
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Bahon",
+      "description": "",
+      "id_code": "332"
+    },
+    "model": "base.commune",
+    "pk": 41
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Ranquitte",
+      "description": "",
+      "id_code": "343"
+    },
+    "model": "base.commune",
+    "pk": 42
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Pignon",
+      "description": "",
+      "id_code": "344"
+    },
+    "model": "base.commune",
+    "pk": 43
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Dondon",
+      "description": "",
+      "id_code": "342"
+    },
+    "model": "base.commune",
+    "pk": 44
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Belladere",
+      "description": "",
+      "id_code": "632"
+    },
+    "model": "base.commune",
+    "pk": 45
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "La Victoire",
+      "description": "",
+      "id_code": "345"
+    },
+    "model": "base.commune",
+    "pk": 46
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Borgne",
+      "description": "",
+      "id_code": "351"
+    },
+    "model": "base.commune",
+    "pk": 47
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Port Margot",
+      "description": "",
+      "id_code": "352"
+    },
+    "model": "base.commune",
+    "pk": 48
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Limbe",
+      "description": "",
+      "id_code": "361"
+    },
+    "model": "base.commune",
+    "pk": 49
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Savanette",
+      "description": "",
+      "id_code": "633"
+    },
+    "model": "base.commune",
+    "pk": 50
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Bas Limbe",
+      "description": "",
+      "id_code": "362"
+    },
+    "model": "base.commune",
+    "pk": 51
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Saut d'Eau",
+      "description": "",
+      "id_code": "622"
+    },
+    "model": "base.commune",
+    "pk": 52
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Fort Liberte",
+      "description": "",
+      "id_code": "411"
+    },
+    "model": "base.commune",
+    "pk": 53
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Ferrier",
+      "description": "",
+      "id_code": "412"
+    },
+    "model": "base.commune",
+    "pk": 54
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "St. Jean du Sud",
+      "description": "",
+      "id_code": "722"
+    },
+    "model": "base.commune",
+    "pk": 55
+  },
+  {
+    "fields": {
+      "departement": 3,
+      "commune": "Pilate",
+      "description": "",
+      "id_code": "372"
+    },
+    "model": "base.commune",
+    "pk": 56
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Ile A Vache",
+      "description": "",
+      "id_code": "716"
+    },
+    "model": "base.commune",
+    "pk": 57
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Ouanaminthe",
+      "description": "",
+      "id_code": "421"
+    },
+    "model": "base.commune",
+    "pk": 58
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Capotille",
+      "description": "",
+      "id_code": "422"
+    },
+    "model": "base.commune",
+    "pk": 59
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Maniche",
+      "description": "",
+      "id_code": "715"
+    },
+    "model": "base.commune",
+    "pk": 60
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Mont Organise",
+      "description": "",
+      "id_code": "423"
+    },
+    "model": "base.commune",
+    "pk": 61
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Trou du Nord",
+      "description": "",
+      "id_code": "431"
+    },
+    "model": "base.commune",
+    "pk": 62
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Sainte Suzanne",
+      "description": "",
+      "id_code": "432"
+    },
+    "model": "base.commune",
+    "pk": 63
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "La Chapelle",
+      "description": "",
+      "id_code": "533"
+    },
+    "model": "base.commune",
+    "pk": 64
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Dessalines/Marchandes",
+      "description": "",
+      "id_code": "541"
+    },
+    "model": "base.commune",
+    "pk": 65
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Petite Riviere de l'Art",
+      "description": "",
+      "id_code": "542"
+    },
+    "model": "base.commune",
+    "pk": 66
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Terrier Rouge",
+      "description": "",
+      "id_code": "433"
+    },
+    "model": "base.commune",
+    "pk": 67
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Caracol",
+      "description": "",
+      "id_code": "434"
+    },
+    "model": "base.commune",
+    "pk": 68
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Thomonde",
+      "description": "",
+      "id_code": "613"
+    },
+    "model": "base.commune",
+    "pk": 69
+  },
+  {
+    "fields": {
+      "departement": 4,
+      "commune": "Valliere",
+      "description": "",
+      "id_code": "441"
+    },
+    "model": "base.commune",
+    "pk": 70
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Ennery",
+      "description": "",
+      "id_code": "512"
+    },
+    "model": "base.commune",
+    "pk": 71
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Port-Salut",
+      "description": "",
+      "id_code": "721"
+    },
+    "model": "base.commune",
+    "pk": 72
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "L'Estere",
+      "description": "",
+      "id_code": "513"
+    },
+    "model": "base.commune",
+    "pk": 73
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Coteaux",
+      "description": "",
+      "id_code": "741"
+    },
+    "model": "base.commune",
+    "pk": 74
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Anse Rouge",
+      "description": "",
+      "id_code": "523"
+    },
+    "model": "base.commune",
+    "pk": 75
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Saint-Marc",
+      "description": "",
+      "id_code": "531"
+    },
+    "model": "base.commune",
+    "pk": 76
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Verrettes",
+      "description": "",
+      "id_code": "532"
+    },
+    "model": "base.commune",
+    "pk": 77
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Gros Morne",
+      "description": "",
+      "id_code": "521"
+    },
+    "model": "base.commune",
+    "pk": 78
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Port-a-Piment",
+      "description": "",
+      "id_code": "742"
+    },
+    "model": "base.commune",
+    "pk": 79
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Arnaud",
+      "description": "",
+      "id_code": "1024"
+    },
+    "model": "base.commune",
+    "pk": 80
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Saint-Michel de l'Attal",
+      "description": "",
+      "id_code": "551"
+    },
+    "model": "base.commune",
+    "pk": 81
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Terre Neuve",
+      "description": "",
+      "id_code": "522"
+    },
+    "model": "base.commune",
+    "pk": 82
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Grande Saline",
+      "description": "",
+      "id_code": "543"
+    },
+    "model": "base.commune",
+    "pk": 83
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Roche-A-Bateau",
+      "description": "",
+      "id_code": "743"
+    },
+    "model": "base.commune",
+    "pk": 84
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Desdunes",
+      "description": "",
+      "id_code": "544"
+    },
+    "model": "base.commune",
+    "pk": 85
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Mirebalais",
+      "description": "",
+      "id_code": "621"
+    },
+    "model": "base.commune",
+    "pk": 86
+  },
+  {
+    "fields": {
+      "departement": 5,
+      "commune": "Marmelade",
+      "description": "",
+      "id_code": "552"
+    },
+    "model": "base.commune",
+    "pk": 87
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Chardonnieres",
+      "description": "",
+      "id_code": "751"
+    },
+    "model": "base.commune",
+    "pk": 88
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Hinche",
+      "description": "",
+      "id_code": "611"
+    },
+    "model": "base.commune",
+    "pk": 89
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Maissade",
+      "description": "",
+      "id_code": "612"
+    },
+    "model": "base.commune",
+    "pk": 90
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Les Anglais",
+      "description": "",
+      "id_code": "752"
+    },
+    "model": "base.commune",
+    "pk": 91
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Cerca La Source",
+      "description": "",
+      "id_code": "641"
+    },
+    "model": "base.commune",
+    "pk": 92
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Cerca Carvajal",
+      "description": "",
+      "id_code": "614"
+    },
+    "model": "base.commune",
+    "pk": 93
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Bombardopolis",
+      "description": "",
+      "id_code": "933"
+    },
+    "model": "base.commune",
+    "pk": 94
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Boucan Carre",
+      "description": "",
+      "id_code": "623"
+    },
+    "model": "base.commune",
+    "pk": 95
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Lascahobas",
+      "description": "",
+      "id_code": "631"
+    },
+    "model": "base.commune",
+    "pk": 96
+  },
+  {
+    "fields": {
+      "departement": 6,
+      "commune": "Thomassique",
+      "description": "",
+      "id_code": "642"
+    },
+    "model": "base.commune",
+    "pk": 97
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Les Cayes",
+      "description": "",
+      "id_code": "711"
+    },
+    "model": "base.commune",
+    "pk": 98
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Arniquet",
+      "description": "",
+      "id_code": "723"
+    },
+    "model": "base.commune",
+    "pk": 99
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Aquin",
+      "description": "",
+      "id_code": "731"
+    },
+    "model": "base.commune",
+    "pk": 100
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "St. Louis du Sud",
+      "description": "",
+      "id_code": "732"
+    },
+    "model": "base.commune",
+    "pk": 101
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Torbeck",
+      "description": "",
+      "id_code": "712"
+    },
+    "model": "base.commune",
+    "pk": 102
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Chantal",
+      "description": "",
+      "id_code": "713"
+    },
+    "model": "base.commune",
+    "pk": 103
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Camp Perrin",
+      "description": "",
+      "id_code": "714"
+    },
+    "model": "base.commune",
+    "pk": 104
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Cavaillon",
+      "description": "",
+      "id_code": "733"
+    },
+    "model": "base.commune",
+    "pk": 105
+  },
+  {
+    "fields": {
+      "departement": 7,
+      "commune": "Tiburon",
+      "description": "",
+      "id_code": "753"
+    },
+    "model": "base.commune",
+    "pk": 106
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Jeremie",
+      "description": "",
+      "id_code": "811"
+    },
+    "model": "base.commune",
+    "pk": 107
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Abricots",
+      "description": "",
+      "id_code": "812"
+    },
+    "model": "base.commune",
+    "pk": 108
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Bonbon",
+      "description": "",
+      "id_code": "813"
+    },
+    "model": "base.commune",
+    "pk": 109
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Moron",
+      "description": "",
+      "id_code": "814"
+    },
+    "model": "base.commune",
+    "pk": 110
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Chambellan",
+      "description": "",
+      "id_code": "815"
+    },
+    "model": "base.commune",
+    "pk": 111
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Anse d'Hainault",
+      "description": "",
+      "id_code": "821"
+    },
+    "model": "base.commune",
+    "pk": 112
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Dame-Marie",
+      "description": "",
+      "id_code": "822"
+    },
+    "model": "base.commune",
+    "pk": 113
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Les Irois",
+      "description": "",
+      "id_code": "823"
+    },
+    "model": "base.commune",
+    "pk": 114
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Pestel",
+      "description": "",
+      "id_code": "834"
+    },
+    "model": "base.commune",
+    "pk": 115
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Corail",
+      "description": "",
+      "id_code": "831"
+    },
+    "model": "base.commune",
+    "pk": 116
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Roseaux",
+      "description": "",
+      "id_code": "832"
+    },
+    "model": "base.commune",
+    "pk": 117
+  },
+  {
+    "fields": {
+      "departement": 8,
+      "commune": "Beaumont",
+      "description": "",
+      "id_code": "833"
+    },
+    "model": "base.commune",
+    "pk": 118
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Bassin Bleu",
+      "description": "",
+      "id_code": "913"
+    },
+    "model": "base.commune",
+    "pk": 119
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Port De Paix",
+      "description": "",
+      "id_code": "911"
+    },
+    "model": "base.commune",
+    "pk": 120
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "La Tortue",
+      "description": "",
+      "id_code": "912"
+    },
+    "model": "base.commune",
+    "pk": 121
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Chamsolme",
+      "description": "",
+      "id_code": "914"
+    },
+    "model": "base.commune",
+    "pk": 122
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Miragoane",
+      "description": "",
+      "id_code": "1011"
+    },
+    "model": "base.commune",
+    "pk": 123
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Anse A Foleur",
+      "description": "",
+      "id_code": "922"
+    },
+    "model": "base.commune",
+    "pk": 124
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Baie de Henne",
+      "description": "",
+      "id_code": "932"
+    },
+    "model": "base.commune",
+    "pk": 125
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Mole Saint Nicolas",
+      "description": "",
+      "id_code": "931"
+    },
+    "model": "base.commune",
+    "pk": 126
+  },
+  {
+    "fields": {
+      "departement": 9,
+      "commune": "Jean Rabel",
+      "description": "",
+      "id_code": "934"
+    },
+    "model": "base.commune",
+    "pk": 127
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Petite Riviere de Nippes",
+      "description": "",
+      "id_code": "1012"
+    },
+    "model": "base.commune",
+    "pk": 128
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Fonds Des Negres",
+      "description": "",
+      "id_code": "1013"
+    },
+    "model": "base.commune",
+    "pk": 129
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Paillant",
+      "description": "",
+      "id_code": "1014"
+    },
+    "model": "base.commune",
+    "pk": 130
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Anse A Veau",
+      "description": "",
+      "id_code": "1021"
+    },
+    "model": "base.commune",
+    "pk": 131
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Petit Trou De Nippes",
+      "description": "",
+      "id_code": "1022"
+    },
+    "model": "base.commune",
+    "pk": 132
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Thomazeau",
+      "description": "",
+      "id_code": "132"
+    },
+    "model": "base.commune",
+    "pk": 133
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Baraderes",
+      "description": "",
+      "id_code": "1031"
+    },
+    "model": "base.commune",
+    "pk": 134
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "L'Asile",
+      "description": "",
+      "id_code": "1023"
+    },
+    "model": "base.commune",
+    "pk": 135
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Croix-Des-Bouquets",
+      "description": "",
+      "id_code": "131"
+    },
+    "model": "base.commune",
+    "pk": 136
+  },
+  {
+    "fields": {
+      "departement": 1,
+      "commune": "Arcahaie",
+      "description": "",
+      "id_code": "141"
+    },
+    "model": "base.commune",
+    "pk": 137
+  },
+  {
+    "fields": {
+      "departement": 2,
+      "commune": "Bainet",
+      "description": "",
+      "id_code": "221"
+    },
+    "model": "base.commune",
+    "pk": 138
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Plaisance du Sud",
+      "description": "",
+      "id_code": "1025"
+    },
+    "model": "base.commune",
+    "pk": 139
+  },
+  {
+    "fields": {
+      "departement": 10,
+      "commune": "Grand Boucan",
+      "description": "",
+      "id_code": "1032"
+    },
+    "model": "base.commune",
+    "pk": 140
+  },
+  {
+    "fields": {
+      "commune": 82,
+      "nomOfficiel": "1\u00e8re Dolan",
+      "sectionCommunale": "DOLAND",
+      "description": "",
+      "id_code": "522-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "commune": 82,
+      "nomOfficiel": "3\u00e8me Lagon",
+      "sectionCommunale": "LAGON",
+      "description": "",
+      "id_code": "522-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "5\u00e8me Trou Canari",
+      "sectionCommunale": "TROU CANARI",
+      "description": "",
+      "id_code": "122-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "6\u00e8me Savane Carr\u00e9e",
+      "sectionCommunale": "SAVANE CAREE",
+      "description": "",
+      "id_code": "521-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "commune": 120,
+      "nomOfficiel": "3\u00e8me Aubert",
+      "sectionCommunale": "AUBERT",
+      "description": "",
+      "id_code": "911-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "commune": 48,
+      "nomOfficiel": "4\u00e8me Haut Petit Borgne",
+      "sectionCommunale": "HAUT PETIT BORGNE",
+      "description": "",
+      "id_code": "352-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "commune": 45,
+      "nomOfficiel": "3\u00e8me Riaribes",
+      "sectionCommunale": "RIARIBES",
+      "description": "",
+      "id_code": "632-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "commune": 91,
+      "nomOfficiel": "1\u00e8re V\u00e9rone",
+      "sectionCommunale": "VERONE",
+      "description": "",
+      "id_code": "752-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "commune": 91,
+      "nomOfficiel": "2\u00e8me Edelin",
+      "sectionCommunale": "EDELIN",
+      "description": "",
+      "id_code": "752-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 9
+  },
+  {
+    "fields": {
+      "commune": 20,
+      "nomOfficiel": "3\u00e8me Grande Source",
+      "sectionCommunale": "GRANDE SOURCE",
+      "description": "",
+      "id_code": "151-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 10
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "1\u00e8re Grands Fonds",
+      "sectionCommunale": "GRAND FONDS",
+      "description": "",
+      "id_code": "732-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 11
+  },
+  {
+    "fields": {
+      "commune": 125,
+      "nomOfficiel": "2\u00e8me Dos d'Ane",
+      "sectionCommunale": "DOS D'ANE",
+      "description": "",
+      "id_code": "932-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 12
+  },
+  {
+    "fields": {
+      "commune": 45,
+      "nomOfficiel": "1\u00e8re Renth Mathe",
+      "sectionCommunale": "RENTHE MATHE",
+      "description": "",
+      "id_code": "632-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 13
+  },
+  {
+    "fields": {
+      "commune": 124,
+      "nomOfficiel": "2\u00e8me Mayance",
+      "sectionCommunale": "MAYANCE",
+      "description": "",
+      "id_code": "922-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 14
+  },
+  {
+    "fields": {
+      "commune": 48,
+      "nomOfficiel": "1\u00e8re Grande Plaine",
+      "sectionCommunale": "GRANDE PLAINE",
+      "description": "",
+      "id_code": "352-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 15
+  },
+  {
+    "fields": {
+      "commune": 104,
+      "nomOfficiel": "3\u00e8me Tibi Davezac",
+      "sectionCommunale": "TIBI DAVEZA",
+      "description": "",
+      "id_code": "714-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 16
+  },
+  {
+    "fields": {
+      "commune": 66,
+      "nomOfficiel": "2\u00e8me Bas Coursin",
+      "sectionCommunale": "BAS COURSIN",
+      "description": "",
+      "id_code": "542-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 17
+  },
+  {
+    "fields": {
+      "commune": 49,
+      "nomOfficiel": "4\u00e8me Chabotte",
+      "sectionCommunale": "CHABOTTE",
+      "description": "",
+      "id_code": "361-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 18
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "6\u00e8me Bas de Lacroix",
+      "sectionCommunale": "BAS DE LA CROIX",
+      "description": "",
+      "id_code": "221-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 19
+  },
+  {
+    "fields": {
+      "commune": 99,
+      "nomOfficiel": "1\u00e8re Lazare",
+      "sectionCommunale": "LAZARRE",
+      "description": "",
+      "id_code": "723-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 20
+  },
+  {
+    "fields": {
+      "commune": 14,
+      "nomOfficiel": "1\u00e8re Galette Chambon",
+      "sectionCommunale": "GALETTE CHAMBON",
+      "description": "",
+      "id_code": "133-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 21
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "7\u00e8me des Platons",
+      "sectionCommunale": "DES PLATONS",
+      "description": "",
+      "id_code": "122-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 22
+  },
+  {
+    "fields": {
+      "commune": 65,
+      "nomOfficiel": "2\u00e8me Foss\u00e9 Naboth",
+      "sectionCommunale": "DUVALLON",
+      "description": "",
+      "id_code": "541-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 23
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "6\u00e8me La Colline",
+      "sectionCommunale": "LA COLLINE",
+      "description": "",
+      "id_code": "731-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 24
+  },
+  {
+    "fields": {
+      "commune": 6,
+      "nomOfficiel": "4\u00e8me Belle Fontaine",
+      "sectionCommunale": "BELLE FONTAINE",
+      "description": "",
+      "id_code": "115-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 25
+  },
+  {
+    "fields": {
+      "commune": 86,
+      "nomOfficiel": "5\u00e8me Gascogne",
+      "sectionCommunale": "GASCOGNE",
+      "description": "",
+      "id_code": "621-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 26
+  },
+  {
+    "fields": {
+      "commune": 89,
+      "nomOfficiel": "2\u00e8me Marmont",
+      "sectionCommunale": "MARMONT",
+      "description": "",
+      "id_code": "611-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 27
+  },
+  {
+    "fields": {
+      "commune": 106,
+      "nomOfficiel": "4\u00e8me Dalmette",
+      "sectionCommunale": "DALMETTE",
+      "description": "",
+      "id_code": "753-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 28
+  },
+  {
+    "fields": {
+      "commune": 119,
+      "nomOfficiel": "1\u00e8re La  Plate",
+      "sectionCommunale": "LA PLATE",
+      "description": "",
+      "id_code": "913-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 29
+  },
+  {
+    "fields": {
+      "commune": 105,
+      "nomOfficiel": "3\u00e8me Gros Marin",
+      "sectionCommunale": "GROS MARIN",
+      "description": "",
+      "id_code": "733-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 30
+  },
+  {
+    "fields": {
+      "commune": 84,
+      "nomOfficiel": "3\u00e8me Beauclos",
+      "sectionCommunale": "BOCLOS",
+      "description": "",
+      "id_code": "743-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 31
+  },
+  {
+    "fields": {
+      "commune": 125,
+      "nomOfficiel": "1\u00e8re Citerne R\u00e9my",
+      "sectionCommunale": "CITERNE REMY",
+      "description": "",
+      "id_code": "932-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 32
+  },
+  {
+    "fields": {
+      "commune": 108,
+      "nomOfficiel": "1\u00e8re Anse du Clerc",
+      "sectionCommunale": "ANSE DU CLERC",
+      "description": "",
+      "id_code": "812-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 33
+  },
+  {
+    "fields": {
+      "commune": 133,
+      "nomOfficiel": "2\u00e8me Grande Plaine",
+      "sectionCommunale": "GRANDE PLAINE",
+      "description": "",
+      "id_code": "132-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 34
+  },
+  {
+    "fields": {
+      "commune": 39,
+      "nomOfficiel": "1\u00e8re Rivi\u00e8re des N\u00e8gres",
+      "sectionCommunale": "RIVIERE DES NEGRES",
+      "description": "",
+      "id_code": "921-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 35
+  },
+  {
+    "fields": {
+      "commune": 20,
+      "nomOfficiel": "1\u00e8re Palma",
+      "sectionCommunale": "PALMA",
+      "description": "",
+      "id_code": "151-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 36
+  },
+  {
+    "fields": {
+      "commune": 22,
+      "nomOfficiel": "3\u00e8me Haut Cap Rouge",
+      "sectionCommunale": "HAUT CAP-ROUGE",
+      "description": "",
+      "id_code": "213-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 37
+  },
+  {
+    "fields": {
+      "commune": 51,
+      "nomOfficiel": "2\u00e8me Petit Howars",
+      "sectionCommunale": "PETIT HOVARA / LA FA",
+      "description": "",
+      "id_code": "362-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 38
+  },
+  {
+    "fields": {
+      "commune": 48,
+      "nomOfficiel": "6\u00e8me Bras Gauche",
+      "sectionCommunale": "BRAS GAUCHE",
+      "description": "",
+      "id_code": "352-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 39
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "2\u00e8me Petit Bois",
+      "sectionCommunale": "PETIT BOIS",
+      "description": "",
+      "id_code": "131-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 40
+  },
+  {
+    "fields": {
+      "commune": 74,
+      "nomOfficiel": "6\u00e8me Quentin",
+      "sectionCommunale": "QUANTIN",
+      "description": "",
+      "id_code": "741-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 41
+  },
+  {
+    "fields": {
+      "commune": 35,
+      "nomOfficiel": "4\u00e8me Grande Ravine",
+      "sectionCommunale": "GRANDE RIVIERE",
+      "description": "",
+      "id_code": "321-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 42
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "7\u00e8me Bassin",
+      "sectionCommunale": "BASSIN",
+      "description": "",
+      "id_code": "371-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 43
+  },
+  {
+    "fields": {
+      "commune": 49,
+      "nomOfficiel": "7\u00e8me Ravine Desroches",
+      "sectionCommunale": "RAVINE DESROCHES",
+      "description": "",
+      "id_code": "361-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 44
+  },
+  {
+    "fields": {
+      "commune": 51,
+      "nomOfficiel": "1\u00e8re Garde Champ\u00eatre",
+      "sectionCommunale": "GARDE CHAMPETRE",
+      "description": "",
+      "id_code": "362-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 45
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "8e Fonds Rouge Dahere",
+      "sectionCommunale": "FOND ROUGE DAIYER",
+      "description": "",
+      "id_code": "811-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 46
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "8\u00e8me Corail-Henry",
+      "sectionCommunale": "CORAIL HENRY",
+      "description": "",
+      "id_code": "732-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 47
+  },
+  {
+    "fields": {
+      "commune": 98,
+      "nomOfficiel": "3\u00e8me Laborde",
+      "sectionCommunale": "LABORDE",
+      "description": "",
+      "id_code": "711-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 48
+  },
+  {
+    "fields": {
+      "commune": 133,
+      "nomOfficiel": "6\u00e8me Trou d'Eau",
+      "sectionCommunale": "TROU D'EAU",
+      "description": "",
+      "id_code": "132-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 49
+  },
+  {
+    "fields": {
+      "commune": 35,
+      "nomOfficiel": "1\u00e8re Coupe \u00e0David",
+      "sectionCommunale": "COUP A DAVID",
+      "description": "",
+      "id_code": "321-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 50
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "6\u00e8me Molas",
+      "sectionCommunale": "MOLAS",
+      "description": "",
+      "id_code": "351-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 51
+  },
+  {
+    "fields": {
+      "commune": 76,
+      "nomOfficiel": "3\u00e8me Goyavier",
+      "sectionCommunale": "GOYAVIER",
+      "description": "",
+      "id_code": "531-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 52
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "9\u00e8me Bizoton",
+      "sectionCommunale": "BIZOTON",
+      "description": "",
+      "id_code": "113-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 53
+  },
+  {
+    "fields": {
+      "commune": 7,
+      "nomOfficiel": "24\u00e8me Petit Boucan",
+      "sectionCommunale": "PETIT BOUCAN",
+      "description": "",
+      "id_code": "116-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 54
+  },
+  {
+    "fields": {
+      "commune": 37,
+      "nomOfficiel": "1\u00e8re Perches du Bonnet",
+      "sectionCommunale": "PERCHES DU BONNET",
+      "description": "",
+      "id_code": "323-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 55
+  },
+  {
+    "fields": {
+      "commune": 48,
+      "nomOfficiel": "2\u00e8me Bas Petit Borgne",
+      "sectionCommunale": "BAS PETIT BORGNE",
+      "description": "",
+      "id_code": "352-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 56
+  },
+  {
+    "fields": {
+      "commune": 86,
+      "nomOfficiel": "6\u00e8me Sarazin",
+      "sectionCommunale": "SARAZIN",
+      "description": "",
+      "id_code": "621-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 57
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "3\u00e8me Rivi\u00e8re Blanche",
+      "sectionCommunale": "RIVIERE BLANCHE",
+      "description": "",
+      "id_code": "521-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 58
+  },
+  {
+    "fields": {
+      "commune": 88,
+      "nomOfficiel": "3\u00e8me Bony",
+      "sectionCommunale": "BONY",
+      "description": "",
+      "id_code": "751-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 59
+  },
+  {
+    "fields": {
+      "commune": 5,
+      "nomOfficiel": "2\u00e8me Boucan Bois Pin",
+      "sectionCommunale": "BOUCAN BOIS PIN",
+      "description": "",
+      "id_code": "134-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 60
+  },
+  {
+    "fields": {
+      "commune": 77,
+      "nomOfficiel": "6\u00e8me Terre Natte",
+      "sectionCommunale": "TERRE NETTE",
+      "description": "",
+      "id_code": "532-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 61
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "13\u00e8me Corail Thor",
+      "sectionCommunale": "CORAIL THOR",
+      "description": "",
+      "id_code": "113-13"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 62
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "3\u00e8me Vielle Hatte",
+      "sectionCommunale": "GUINAUDEE",
+      "description": "",
+      "id_code": "934-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 63
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "8\u00e8me Grande Rivi\u00e8re",
+      "sectionCommunale": "GRANDE RIVIERE",
+      "description": "",
+      "id_code": "371-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 64
+  },
+  {
+    "fields": {
+      "commune": 69,
+      "nomOfficiel": "2\u00e8me Tierra Muscady",
+      "sectionCommunale": "TIERRA MOUSCADY",
+      "description": "",
+      "id_code": "613-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 65
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "8\u00e8me Bas Coq Chante",
+      "sectionCommunale": "BAS COQ CHANTE",
+      "description": "",
+      "id_code": "211-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 66
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "2\u00e8me Bellevue",
+      "sectionCommunale": "BELLEVUE",
+      "description": "",
+      "id_code": "731-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 67
+  },
+  {
+    "fields": {
+      "commune": 49,
+      "nomOfficiel": "5\u00e8me Camp Coq",
+      "sectionCommunale": "CAMP COQ",
+      "description": "",
+      "id_code": "361-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 68
+  },
+  {
+    "fields": {
+      "commune": 6,
+      "nomOfficiel": "2\u00e8me Nouvelle Tourraine",
+      "sectionCommunale": "NOUVELLE TOURAINE",
+      "description": "",
+      "id_code": "115-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 69
+  },
+  {
+    "fields": {
+      "commune": 115,
+      "nomOfficiel": "3e Jn Belune",
+      "sectionCommunale": "JEAN BELLUNE",
+      "description": "",
+      "id_code": "834-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 70
+  },
+  {
+    "fields": {
+      "commune": 126,
+      "nomOfficiel": "1\u00e8re Cote de Fer",
+      "sectionCommunale": "COTE DE FER",
+      "description": "",
+      "id_code": "931-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 71
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "7\u00e8me Rivi\u00e8re La Porte",
+      "sectionCommunale": "RIVIERE LAPORTE",
+      "description": "",
+      "id_code": "372-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 72
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "6\u00e8me Oranger",
+      "sectionCommunale": "ORANGERS",
+      "description": "",
+      "id_code": "121-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 73
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "2\u00e8me Guinaud\u00e9e",
+      "sectionCommunale": "GUINAUDEE",
+      "description": "",
+      "id_code": "934-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 74
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "11\u00e8me  Ravine S\u00e8che",
+      "sectionCommunale": "RAVINE SECHE",
+      "description": "",
+      "id_code": "122-11"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 75
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "2\u00e8me Champagne",
+      "sectionCommunale": "CHAMPAGNE",
+      "description": "",
+      "id_code": "371-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 76
+  },
+  {
+    "fields": {
+      "commune": 137,
+      "nomOfficiel": "2\u00e8me des Vases",
+      "sectionCommunale": "DES VASES",
+      "description": "",
+      "id_code": "141-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 77
+  },
+  {
+    "fields": {
+      "commune": 124,
+      "nomOfficiel": "3\u00e8me Cote de Fer",
+      "sectionCommunale": "COTE DE FER",
+      "description": "",
+      "id_code": "922-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 78
+  },
+  {
+    "fields": {
+      "commune": 58,
+      "nomOfficiel": "5\u00e8me Gens de Nantes",
+      "sectionCommunale": "GENS DE NANTES",
+      "description": "",
+      "id_code": "421-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 79
+  },
+  {
+    "fields": {
+      "commune": 38,
+      "nomOfficiel": "1\u00e8re Grand Gilles",
+      "sectionCommunale": "GRAND GILLES",
+      "description": "",
+      "id_code": "331-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 80
+  },
+  {
+    "fields": {
+      "commune": 88,
+      "nomOfficiel": "1\u00e8re Randel",
+      "sectionCommunale": "RANDEL",
+      "description": "",
+      "id_code": "751-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 81
+  },
+  {
+    "fields": {
+      "commune": 113,
+      "nomOfficiel": "3e D\u00e9sormeau",
+      "sectionCommunale": "DESORMEAU",
+      "description": "",
+      "id_code": "822-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 82
+  },
+  {
+    "fields": {
+      "commune": 34,
+      "nomOfficiel": "3\u00e8me Roucou",
+      "sectionCommunale": "ROUCOU",
+      "description": "",
+      "id_code": "313-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 83
+  },
+  {
+    "fields": {
+      "commune": 91,
+      "nomOfficiel": "3\u00e8me Cosse",
+      "sectionCommunale": "COSSE",
+      "description": "",
+      "id_code": "752-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 84
+  },
+  {
+    "fields": {
+      "commune": 121,
+      "nomOfficiel": "2\u00e8me Mare Rouge",
+      "sectionCommunale": "MARE ROUGE",
+      "description": "",
+      "id_code": "912-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 85
+  },
+  {
+    "fields": {
+      "commune": 37,
+      "nomOfficiel": "3\u00e8me G\u00e9nipailler",
+      "sectionCommunale": "GENIE PAILLER",
+      "description": "",
+      "id_code": "323-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 86
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "13\u00e8me Petit Harpon",
+      "sectionCommunale": "PETIT HARPON",
+      "description": "",
+      "id_code": "121-13"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 87
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "3\u00e8me Ravine Trompette",
+      "sectionCommunale": "RAVINE TROMPETTE",
+      "description": "",
+      "id_code": "372-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 88
+  },
+  {
+    "fields": {
+      "commune": 117,
+      "nomOfficiel": "4e les Gomiers",
+      "sectionCommunale": "LES GOMMIERS",
+      "description": "",
+      "id_code": "832-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 89
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "16\u00e8me Taifer",
+      "sectionCommunale": "TAIFER",
+      "description": "",
+      "id_code": "113-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 90
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "2\u00e8me Rivi\u00e8re Mancelle",
+      "sectionCommunale": "RIVIERE MANCELLE",
+      "description": "",
+      "id_code": "521-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 91
+  },
+  {
+    "fields": {
+      "commune": 99,
+      "nomOfficiel": "2\u00e8me Anse \u00e0 Drick",
+      "sectionCommunale": "ANSE A DRICK",
+      "description": "",
+      "id_code": "723-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 92
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "8\u00e8me Ravine Gros Morne",
+      "sectionCommunale": "RAVINE GROS MORNE",
+      "description": "",
+      "id_code": "521-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 93
+  },
+  {
+    "fields": {
+      "commune": 22,
+      "nomOfficiel": "1\u00e8re Ravine Normande",
+      "sectionCommunale": "RAVINE NORMANDE",
+      "description": "",
+      "id_code": "213-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 94
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "5\u00e8me L'Ermite",
+      "sectionCommunale": "L'ERMITE",
+      "description": "",
+      "id_code": "551-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 95
+  },
+  {
+    "fields": {
+      "commune": 21,
+      "nomOfficiel": "1\u00e8re Corail Soult",
+      "sectionCommunale": "CORAIL SOULT",
+      "description": "",
+      "id_code": "212-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 96
+  },
+  {
+    "fields": {
+      "commune": 71,
+      "nomOfficiel": "4\u00e8me Puiloreau",
+      "sectionCommunale": "PUILBOREAU",
+      "description": "",
+      "id_code": "512-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 97
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "5\u00e8me Mare \u00e0Coiffe",
+      "sectionCommunale": "MARE A COIFFE",
+      "description": "",
+      "id_code": "731-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 98
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "5\u00e8me Marbial",
+      "sectionCommunale": "MARBIAL",
+      "description": "",
+      "id_code": "211-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 99
+  },
+  {
+    "fields": {
+      "commune": 69,
+      "nomOfficiel": "3\u00e8me Baille Tourrible",
+      "sectionCommunale": "BAILLE TOURRIBLE",
+      "description": "",
+      "id_code": "613-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 100
+  },
+  {
+    "fields": {
+      "commune": 50,
+      "nomOfficiel": "1\u00e8re Colombier",
+      "sectionCommunale": "SAVANETTE (COLOMBIER",
+      "description": "",
+      "id_code": "633-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 101
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "7\u00e8me Cherette",
+      "sectionCommunale": "CHERETTE",
+      "description": "",
+      "id_code": "732-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 102
+  },
+  {
+    "fields": {
+      "commune": 74,
+      "nomOfficiel": "4\u00e8me Cond\u00e9",
+      "sectionCommunale": "CONDE",
+      "description": "",
+      "id_code": "741-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 103
+  },
+  {
+    "fields": {
+      "commune": 84,
+      "nomOfficiel": "1\u00e8re Beaulieu",
+      "sectionCommunale": "BEAULIEU",
+      "description": "",
+      "id_code": "743-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 104
+  },
+  {
+    "fields": {
+      "commune": 35,
+      "nomOfficiel": "1\u00e8re Camp louise",
+      "sectionCommunale": "CHAMP LOUISE",
+      "description": "",
+      "id_code": "321-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 105
+  },
+  {
+    "fields": {
+      "commune": 133,
+      "nomOfficiel": "1\u00e8re Crochus",
+      "sectionCommunale": "CROCHUS",
+      "description": "",
+      "id_code": "132-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 106
+  },
+  {
+    "fields": {
+      "commune": 60,
+      "nomOfficiel": "10\u00e8me Dory",
+      "sectionCommunale": "DORY",
+      "description": "",
+      "id_code": "715-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 107
+  },
+  {
+    "fields": {
+      "commune": 84,
+      "nomOfficiel": "2\u00e8me Renaudin",
+      "sectionCommunale": "RENAUDIN",
+      "description": "",
+      "id_code": "743-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 108
+  },
+  {
+    "fields": {
+      "commune": 55,
+      "nomOfficiel": "2\u00e8me D\u00e9bouchette",
+      "sectionCommunale": "DEBOUCHETTE",
+      "description": "",
+      "id_code": "722-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 109
+  },
+  {
+    "fields": {
+      "commune": 106,
+      "nomOfficiel": "2\u00e8me Nan Sevr\u00e9",
+      "sectionCommunale": "SEVRE",
+      "description": "",
+      "id_code": "753-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 110
+  },
+  {
+    "fields": {
+      "commune": 117,
+      "nomOfficiel": "3e Grand Vicent",
+      "sectionCommunale": "GRAND VINCENT",
+      "description": "",
+      "id_code": "832-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 111
+  },
+  {
+    "fields": {
+      "commune": 36,
+      "nomOfficiel": "3\u00e8me Grand Boucan",
+      "sectionCommunale": "GRAND BOUCAN",
+      "description": "",
+      "id_code": "322-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 112
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "19\u00e8me Bouvier",
+      "sectionCommunale": "BOUVIER",
+      "description": "",
+      "id_code": "113-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 113
+  },
+  {
+    "fields": {
+      "commune": 39,
+      "nomOfficiel": "2\u00e8me Derouvray",
+      "sectionCommunale": "DEROUVRAY",
+      "description": "",
+      "id_code": "921-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 114
+  },
+  {
+    "fields": {
+      "commune": 48,
+      "nomOfficiel": "3\u00e8me Corail",
+      "sectionCommunale": "CORAIL PORT MARGOT",
+      "description": "",
+      "id_code": "352-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 115
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "17\u00e8me Procy",
+      "sectionCommunale": "PROCY",
+      "description": "",
+      "id_code": "113-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 116
+  },
+  {
+    "fields": {
+      "commune": 26,
+      "nomOfficiel": "2\u00e8me Haut du Cap",
+      "sectionCommunale": "HAUT DU CAP",
+      "description": "",
+      "id_code": "311-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 117
+  },
+  {
+    "fields": {
+      "commune": 22,
+      "nomOfficiel": "2\u00e8me Gaillard",
+      "sectionCommunale": "GAILLARD",
+      "description": "",
+      "id_code": "213-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 118
+  },
+  {
+    "fields": {
+      "commune": 87,
+      "nomOfficiel": "1\u00e8re Cr\u00eate \u00e0Pins",
+      "sectionCommunale": "CRETE A PINS",
+      "description": "",
+      "id_code": "552-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 119
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "4\u00e8me L'Acul",
+      "sectionCommunale": "L'ACUL",
+      "description": "",
+      "id_code": "521-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 120
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "1\u00e8re Boucan Richard",
+      "sectionCommunale": "BOUCAN RICHARD",
+      "description": "",
+      "id_code": "521-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 121
+  },
+  {
+    "fields": {
+      "commune": 54,
+      "nomOfficiel": "3\u00e8me Bas Maribahoux",
+      "sectionCommunale": "BAS MARIBAJOUX",
+      "description": "",
+      "id_code": "412-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 122
+  },
+  {
+    "fields": {
+      "commune": 41,
+      "nomOfficiel": "6\u00e8me Montagne Noire",
+      "sectionCommunale": "MONTAGNE NOIRE",
+      "description": "",
+      "id_code": "332-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 123
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "1\u00e8re Gobert",
+      "sectionCommunale": "COLLINE GOBERT",
+      "description": "",
+      "id_code": "371-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 124
+  },
+  {
+    "fields": {
+      "commune": 65,
+      "nomOfficiel": "5\u00e8me Fi\u00e9f\u00e9",
+      "sectionCommunale": "FIEFIE",
+      "description": "",
+      "id_code": "541-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 125
+  },
+  {
+    "fields": {
+      "commune": 5,
+      "nomOfficiel": "1\u00e8re Boucan Bois Pin",
+      "sectionCommunale": "BOUCAN BOIS PIN",
+      "description": "",
+      "id_code": "134-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 126
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "1\u00e8re Lacoma",
+      "sectionCommunale": "LACOMA",
+      "description": "",
+      "id_code": "934-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 127
+  },
+  {
+    "fields": {
+      "commune": 94,
+      "nomOfficiel": "3\u00e8me Plaine d'Oranges",
+      "sectionCommunale": "PLAINE D'ORANGERS",
+      "description": "",
+      "id_code": "933-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 128
+  },
+  {
+    "fields": {
+      "commune": 39,
+      "nomOfficiel": "3\u00e8me des Granges",
+      "sectionCommunale": "DES GRANGES",
+      "description": "",
+      "id_code": "921-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 129
+  },
+  {
+    "fields": {
+      "commune": 38,
+      "nomOfficiel": "2\u00e8me Solon",
+      "sectionCommunale": "SOLON",
+      "description": "",
+      "id_code": "331-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 130
+  },
+  {
+    "fields": {
+      "commune": 44,
+      "nomOfficiel": "3\u00e8me Matador",
+      "sectionCommunale": "MATADOR",
+      "description": "",
+      "id_code": "342-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 131
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "3\u00e8me Haut Martineau",
+      "sectionCommunale": "MARTINEAU",
+      "description": "",
+      "id_code": "371-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 132
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "6\u00e8me Piment",
+      "sectionCommunale": "PIMENT",
+      "description": "",
+      "id_code": "372-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 133
+  },
+  {
+    "fields": {
+      "commune": 36,
+      "nomOfficiel": "1\u00e8re Morne rouge",
+      "sectionCommunale": "MORNE ROUGE",
+      "description": "",
+      "id_code": "322-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 134
+  },
+  {
+    "fields": {
+      "commune": 126,
+      "nomOfficiel": "3\u00e8me Dam\u00e9",
+      "sectionCommunale": "DAME",
+      "description": "",
+      "id_code": "931-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 135
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "5\u00e8me Dubourgs",
+      "sectionCommunale": "DUBOURGS",
+      "description": "",
+      "id_code": "372-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 136
+  },
+  {
+    "fields": {
+      "commune": 33,
+      "nomOfficiel": "1\u00e8re Basse Plaine",
+      "sectionCommunale": "BASSE PLAINE",
+      "description": "",
+      "id_code": "312-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 137
+  },
+  {
+    "fields": {
+      "commune": 35,
+      "nomOfficiel": "2\u00e8me Bas de l'Acul",
+      "sectionCommunale": "BAS DE L'ACUL",
+      "description": "",
+      "id_code": "321-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 138
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "5\u00e8me Pendu",
+      "sectionCommunale": "PENDU",
+      "description": "",
+      "id_code": "521-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 139
+  },
+  {
+    "fields": {
+      "commune": 52,
+      "nomOfficiel": "4\u00e8me Montagne Terrible",
+      "sectionCommunale": "MONTAGNE TERRIBLE",
+      "description": "",
+      "id_code": "622-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 140
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "3\u00e8me Petit Bourg Du Borgne",
+      "sectionCommunale": "PETIT BOURG DE BORGN",
+      "description": "",
+      "id_code": "351-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 141
+  },
+  {
+    "fields": {
+      "commune": 116,
+      "nomOfficiel": "2e Fonds d' Icaque",
+      "sectionCommunale": "FONDS D'ICAQUE",
+      "description": "",
+      "id_code": "831-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 142
+  },
+  {
+    "fields": {
+      "commune": 76,
+      "nomOfficiel": "6\u00e8me Charrette",
+      "sectionCommunale": "CHARRETTE",
+      "description": "",
+      "id_code": "531-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 143
+  },
+  {
+    "fields": {
+      "commune": 94,
+      "nomOfficiel": "2\u00e8me des Forges",
+      "sectionCommunale": "DES FORGES",
+      "description": "",
+      "id_code": "933-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 144
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "10\u00e8me Thor",
+      "sectionCommunale": "THOR",
+      "description": "",
+      "id_code": "113-10"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 145
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "7\u00e8me Diondion",
+      "sectionCommunale": "DIONDION",
+      "description": "",
+      "id_code": "934-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 146
+  },
+  {
+    "fields": {
+      "commune": 120,
+      "nomOfficiel": "1\u00e8re Baudin",
+      "sectionCommunale": "BAUDIN",
+      "description": "",
+      "id_code": "911-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 147
+  },
+  {
+    "fields": {
+      "commune": 52,
+      "nomOfficiel": "2\u00e8me La Selle",
+      "sectionCommunale": "LA SELLE",
+      "description": "",
+      "id_code": "622-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 148
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "6\u00e8me La Ville",
+      "sectionCommunale": "LA VILLE",
+      "description": "",
+      "id_code": "371-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 149
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "7\u00e8me Fond Lagrange",
+      "sectionCommunale": "COTE DE FER / FOND L",
+      "description": "",
+      "id_code": "351-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 150
+  },
+  {
+    "fields": {
+      "commune": 122,
+      "nomOfficiel": "2\u00e8me Source Beauvoir",
+      "sectionCommunale": "SOURCE BEAUVOIR",
+      "description": "",
+      "id_code": "914-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 151
+  },
+  {
+    "fields": {
+      "commune": 39,
+      "nomOfficiel": "6\u00e8me Chamoise",
+      "sectionCommunale": "LAFAGNE / CHAMOISE",
+      "description": "",
+      "id_code": "921-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 152
+  },
+  {
+    "fields": {
+      "commune": 49,
+      "nomOfficiel": "3\u00e8me Acul Jeannot",
+      "sectionCommunale": "HAUT LIMBE / ACUL JE",
+      "description": "",
+      "id_code": "361-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 153
+  },
+  {
+    "fields": {
+      "commune": 77,
+      "nomOfficiel": "1\u00e8re Liancourt",
+      "sectionCommunale": "LIANCOURT",
+      "description": "",
+      "id_code": "532-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 154
+  },
+  {
+    "fields": {
+      "commune": 68,
+      "nomOfficiel": "1\u00e8re Champin",
+      "sectionCommunale": "CHAMPIN",
+      "description": "",
+      "id_code": "434-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 155
+  },
+  {
+    "fields": {
+      "commune": 124,
+      "nomOfficiel": "1\u00e8re Bas de Sainte Anne",
+      "sectionCommunale": "RIVIERE DES NEGRES",
+      "description": "",
+      "id_code": "922-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 156
+  },
+  {
+    "fields": {
+      "commune": 24,
+      "nomOfficiel": "2\u00e8me La Biche",
+      "sectionCommunale": "LA BICHE",
+      "description": "",
+      "id_code": "222-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 157
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "1\u00e8re Margot",
+      "sectionCommunale": "MARGOT",
+      "description": "",
+      "id_code": "351-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 158
+  },
+  {
+    "fields": {
+      "commune": 29,
+      "nomOfficiel": "2\u00e8me Haut des Perches",
+      "sectionCommunale": "HAUT DES PERCHES",
+      "description": "",
+      "id_code": "413-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 159
+  },
+  {
+    "fields": {
+      "commune": 37,
+      "nomOfficiel": "2\u00e8me Bonnet \u00e0l'Ev\u00eaque",
+      "sectionCommunale": "BONNET A L'EVEQUE",
+      "description": "",
+      "id_code": "323-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 160
+  },
+  {
+    "fields": {
+      "commune": 48,
+      "nomOfficiel": "5\u00e8me Bas Quartier",
+      "sectionCommunale": "BAS QUARTIER",
+      "description": "",
+      "id_code": "352-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 161
+  },
+  {
+    "fields": {
+      "commune": 20,
+      "nomOfficiel": "2\u00e8me Petite Source",
+      "sectionCommunale": "PETITE SOURCE",
+      "description": "",
+      "id_code": "151-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 162
+  },
+  {
+    "fields": {
+      "commune": 26,
+      "nomOfficiel": "3\u00e8me Petite Anse",
+      "sectionCommunale": "PETITE ANSE",
+      "description": "",
+      "id_code": "311-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 163
+  },
+  {
+    "fields": {
+      "commune": 20,
+      "nomOfficiel": "10\u00e8me Pickmy",
+      "sectionCommunale": "PICMY",
+      "description": "",
+      "id_code": "151-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 164
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "1\u00e8re Ballon",
+      "sectionCommunale": "BALLON",
+      "description": "",
+      "id_code": "372-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 165
+  },
+  {
+    "fields": {
+      "commune": 39,
+      "nomOfficiel": "4\u00e8me Rivi\u00e8re de Barre",
+      "sectionCommunale": "RIVIERE DE BARRE",
+      "description": "",
+      "id_code": "921-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 166
+  },
+  {
+    "fields": {
+      "commune": 120,
+      "nomOfficiel": "7\u00e8me Mahoti\u00e8re",
+      "sectionCommunale": "MAHOTIERE",
+      "description": "",
+      "id_code": "911-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 167
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "4\u00e8me Joly",
+      "sectionCommunale": "JOLY",
+      "description": "",
+      "id_code": "372-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 168
+  },
+  {
+    "fields": {
+      "commune": 119,
+      "nomOfficiel": "3\u00e8me Haut des Moustiques",
+      "sectionCommunale": "HAUT DES MOUSTIQUES",
+      "description": "",
+      "id_code": "913-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 169
+  },
+  {
+    "fields": {
+      "commune": 44,
+      "nomOfficiel": "1\u00e8re Brostage",
+      "sectionCommunale": "BROTAGE",
+      "description": "",
+      "id_code": "342-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 170
+  },
+  {
+    "fields": {
+      "commune": 120,
+      "nomOfficiel": "6\u00e8me La Corne",
+      "sectionCommunale": "LA CORNE",
+      "description": "",
+      "id_code": "911-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 171
+  },
+  {
+    "fields": {
+      "commune": 63,
+      "nomOfficiel": "1\u00e8re Foulon",
+      "sectionCommunale": "FOULON",
+      "description": "",
+      "id_code": "432-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 172
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "8\u00e8me Margot",
+      "sectionCommunale": "MARGOT",
+      "description": "",
+      "id_code": "372-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 173
+  },
+  {
+    "fields": {
+      "commune": 69,
+      "nomOfficiel": "1\u00e8re Cabral",
+      "sectionCommunale": "CABRAL",
+      "description": "",
+      "id_code": "613-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 174
+  },
+  {
+    "fields": {
+      "commune": 67,
+      "nomOfficiel": "2\u00e8me Grand Bassin",
+      "sectionCommunale": "GRAND BASSIN",
+      "description": "",
+      "id_code": "433-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 175
+  },
+  {
+    "fields": {
+      "commune": 121,
+      "nomOfficiel": "1\u00e8re Pointe des Oiseaux",
+      "sectionCommunale": "LA TORTUE / POINTE D",
+      "description": "",
+      "id_code": "912-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 176
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "4\u00e8me La Montagne",
+      "sectionCommunale": "LA MONTAGNE",
+      "description": "",
+      "id_code": "934-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 177
+  },
+  {
+    "fields": {
+      "commune": 49,
+      "nomOfficiel": "6\u00e8me Soufri\u00e8re",
+      "sectionCommunale": "SOUFRIERE",
+      "description": "",
+      "id_code": "361-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 178
+  },
+  {
+    "fields": {
+      "commune": 16,
+      "nomOfficiel": "1\u00e8re Boucassin",
+      "sectionCommunale": "BOUCASSIN",
+      "description": "",
+      "id_code": "142-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 179
+  },
+  {
+    "fields": {
+      "commune": 34,
+      "nomOfficiel": "2\u00e8me Bois de Lance",
+      "sectionCommunale": "BOIS DE LANCE",
+      "description": "",
+      "id_code": "313-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 180
+  },
+  {
+    "fields": {
+      "commune": 53,
+      "nomOfficiel": "2\u00e8me Haut Madeleine",
+      "sectionCommunale": "HAUT MADELAINE",
+      "description": "",
+      "id_code": "411-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 181
+  },
+  {
+    "fields": {
+      "commune": 125,
+      "nomOfficiel": "4\u00e8me Est\u00e8re D\u00e9r\u00e9e",
+      "sectionCommunale": "L'ESTHERE DERE",
+      "description": "",
+      "id_code": "932-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 182
+  },
+  {
+    "fields": {
+      "commune": 28,
+      "nomOfficiel": "2\u00e8me Bois d'Orme",
+      "sectionCommunale": "BOIS D'ORME",
+      "description": "",
+      "id_code": "234-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 183
+  },
+  {
+    "fields": {
+      "commune": 49,
+      "nomOfficiel": "8\u00e8me Ilot \u00e0Cornes",
+      "sectionCommunale": "ILLOT A CORNES",
+      "description": "",
+      "id_code": "361-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 184
+  },
+  {
+    "fields": {
+      "commune": 126,
+      "nomOfficiel": "2\u00e8me Mare Rouge",
+      "sectionCommunale": "MARE ROUGE",
+      "description": "",
+      "id_code": "931-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 185
+  },
+  {
+    "fields": {
+      "commune": 62,
+      "nomOfficiel": "1\u00e8re Garcin",
+      "sectionCommunale": "GARCIN",
+      "description": "",
+      "id_code": "431-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 186
+  },
+  {
+    "fields": {
+      "commune": 44,
+      "nomOfficiel": "5\u00e8me Haut du Trou",
+      "sectionCommunale": "HAUT DU TROU",
+      "description": "",
+      "id_code": "342-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 187
+  },
+  {
+    "fields": {
+      "commune": 14,
+      "nomOfficiel": "2\u00e8me Balan",
+      "sectionCommunale": "BALAN",
+      "description": "",
+      "id_code": "133-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 188
+  },
+  {
+    "fields": {
+      "commune": 65,
+      "nomOfficiel": "1\u00e8re Villars",
+      "sectionCommunale": "VILLARS",
+      "description": "",
+      "id_code": "541-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 189
+  },
+  {
+    "fields": {
+      "commune": 32,
+      "nomOfficiel": "5\u00e8me Labranle",
+      "sectionCommunale": "LA BRANLE",
+      "description": "",
+      "id_code": "511-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 190
+  },
+  {
+    "fields": {
+      "commune": 120,
+      "nomOfficiel": "8\u00e8me Bas des Moustiques",
+      "sectionCommunale": "BAS DES MOUSTIQUES",
+      "description": "",
+      "id_code": "911-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 191
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "5\u00e8me La trouble",
+      "sectionCommunale": "LA TROUBLE",
+      "description": "",
+      "id_code": "371-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 192
+  },
+  {
+    "fields": {
+      "commune": 52,
+      "nomOfficiel": "3\u00e8me Coupe Mardi Gras",
+      "sectionCommunale": "COUPE MARDI GRAS",
+      "description": "",
+      "id_code": "622-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 193
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "1\u00e8re Dessources",
+      "sectionCommunale": "DESSSOURCES",
+      "description": "",
+      "id_code": "121-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 194
+  },
+  {
+    "fields": {
+      "commune": 119,
+      "nomOfficiel": "2\u00e8me Carreau Datty",
+      "sectionCommunale": "CARREAU DATTY",
+      "description": "",
+      "id_code": "913-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 195
+  },
+  {
+    "fields": {
+      "commune": 18,
+      "nomOfficiel": "5\u00e8me Gros Mangle",
+      "sectionCommunale": "POINTE A RAQUETTE",
+      "description": "",
+      "id_code": "152-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 196
+  },
+  {
+    "fields": {
+      "commune": 94,
+      "nomOfficiel": "1\u00e8re Plate Forme",
+      "sectionCommunale": "PLATE FORME",
+      "description": "",
+      "id_code": "933-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 197
+  },
+  {
+    "fields": {
+      "commune": 86,
+      "nomOfficiel": "3\u00e8me Grand Boucan",
+      "sectionCommunale": "GRAND BOUCAN",
+      "description": "",
+      "id_code": "621-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 198
+  },
+  {
+    "fields": {
+      "commune": 36,
+      "nomOfficiel": "4\u00e8me Bassin Diamant",
+      "sectionCommunale": "BASSIN DIAMANT",
+      "description": "",
+      "id_code": "322-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 199
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "7\u00e8me Parques",
+      "sectionCommunale": "PARQUES",
+      "description": "",
+      "id_code": "121-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 200
+  },
+  {
+    "fields": {
+      "commune": 29,
+      "nomOfficiel": "1\u00e8re Haut des Perches",
+      "sectionCommunale": "HAUT DES PERCHES",
+      "description": "",
+      "id_code": "413-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 201
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "5\u00e8me Champagne",
+      "sectionCommunale": "CHAMPAGNE",
+      "description": "",
+      "id_code": "351-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 202
+  },
+  {
+    "fields": {
+      "commune": 63,
+      "nomOfficiel": "2\u00e8me Bois Blanc",
+      "sectionCommunale": "BOIS BLANC",
+      "description": "",
+      "id_code": "432-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 203
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "21\u00e8me Berly",
+      "sectionCommunale": "BERLY",
+      "description": "",
+      "id_code": "113-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 204
+  },
+  {
+    "fields": {
+      "commune": 87,
+      "nomOfficiel": "3\u00e8me Platon",
+      "sectionCommunale": "PLATON",
+      "description": "",
+      "id_code": "552-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 205
+  },
+  {
+    "fields": {
+      "commune": 63,
+      "nomOfficiel": "4\u00e8me Sarazin",
+      "sectionCommunale": "SARAZIN",
+      "description": "",
+      "id_code": "432-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 206
+  },
+  {
+    "fields": {
+      "commune": 95,
+      "nomOfficiel": "2\u00e8me Boucan Carr\u00e9",
+      "sectionCommunale": "Boucan-Carre",
+      "description": "",
+      "id_code": "623-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 207
+  },
+  {
+    "fields": {
+      "commune": 62,
+      "nomOfficiel": "2\u00e8me Roucou",
+      "sectionCommunale": "ROUCOU",
+      "description": "",
+      "id_code": "431-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 208
+  },
+  {
+    "fields": {
+      "commune": 96,
+      "nomOfficiel": "2\u00e8me Juampas",
+      "sectionCommunale": "JUAMPAS",
+      "description": "",
+      "id_code": "631-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 209
+  },
+  {
+    "fields": {
+      "commune": 20,
+      "nomOfficiel": "11\u00e8me Petite Anse",
+      "sectionCommunale": "PETITE ANSE",
+      "description": "",
+      "id_code": "151-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 210
+  },
+  {
+    "fields": {
+      "commune": 86,
+      "nomOfficiel": "4\u00e8me Cr\u00eate Br\u00b9l\u00e9e",
+      "sectionCommunale": "CRETE BRULEE",
+      "description": "",
+      "id_code": "621-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 211
+  },
+  {
+    "fields": {
+      "commune": 50,
+      "nomOfficiel": "2\u00e8me La Haye",
+      "sectionCommunale": "LA HAYE",
+      "description": "",
+      "id_code": "633-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 212
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "2\u00e8me Crochus",
+      "sectionCommunale": "CROCHUS",
+      "description": "",
+      "id_code": "131-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 213
+  },
+  {
+    "fields": {
+      "commune": 44,
+      "nomOfficiel": "2\u00e8me Bassin Caiman",
+      "sectionCommunale": "BASSIN CAIMAN",
+      "description": "",
+      "id_code": "342-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 214
+  },
+  {
+    "fields": {
+      "commune": 95,
+      "nomOfficiel": "1\u00e8re Petite Montagne",
+      "sectionCommunale": "PETITE MONTAGNE",
+      "description": "",
+      "id_code": "623-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 215
+  },
+  {
+    "fields": {
+      "commune": 110,
+      "nomOfficiel": "1e Anotte",
+      "sectionCommunale": "ANOTE / TAPION",
+      "description": "",
+      "id_code": "814-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 216
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "3\u00e8me Grande Riv\u00e8re",
+      "sectionCommunale": "GRANDE RIVIERE",
+      "description": "",
+      "id_code": "121-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 217
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "14\u00e8me Morne Chandelle",
+      "sectionCommunale": "MARE ROSEAUX",
+      "description": "",
+      "id_code": "113-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 218
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "4\u00e8me Trou d'Enfer",
+      "sectionCommunale": "TROU D'ENFER",
+      "description": "",
+      "id_code": "351-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 219
+  },
+  {
+    "fields": {
+      "commune": 26,
+      "nomOfficiel": "1\u00e8re Bande du Nord",
+      "sectionCommunale": "BANDE DU NORD",
+      "description": "",
+      "id_code": "311-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 220
+  },
+  {
+    "fields": {
+      "commune": 108,
+      "nomOfficiel": "3\u00e8me Danglise",
+      "sectionCommunale": "DANGLISE",
+      "description": "",
+      "id_code": "812-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 221
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "15\u00e8me Platon Dufr\u00e9n\u00e9",
+      "sectionCommunale": "PLATON DUFRENE",
+      "description": "",
+      "id_code": "113-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 222
+  },
+  {
+    "fields": {
+      "commune": 56,
+      "nomOfficiel": "2\u00e8me Baudin",
+      "sectionCommunale": "BAUDIN",
+      "description": "",
+      "id_code": "372-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 223
+  },
+  {
+    "fields": {
+      "commune": 44,
+      "nomOfficiel": "4\u00e8me Laguille",
+      "sectionCommunale": "LAGUILLE",
+      "description": "",
+      "id_code": "342-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 224
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "11\u00e8me Rivi\u00e8re Froide",
+      "sectionCommunale": "RIVIERE FROIDE",
+      "description": "",
+      "id_code": "113-11"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 225
+  },
+  {
+    "fields": {
+      "commune": 5,
+      "nomOfficiel": "1\u00e8re Plaine C\u00e9leste",
+      "sectionCommunale": "PLAINE CELESTE",
+      "description": "",
+      "id_code": "134-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 226
+  },
+  {
+    "fields": {
+      "commune": 118,
+      "nomOfficiel": "3\u00e8me Chardonette",
+      "sectionCommunale": "CHARDONNETTE",
+      "description": "",
+      "id_code": "833-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 227
+  },
+  {
+    "fields": {
+      "commune": 16,
+      "nomOfficiel": "9\u00e8me Source Matelas",
+      "sectionCommunale": "SOURCE MATELAS",
+      "description": "",
+      "id_code": "142-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 228
+  },
+  {
+    "fields": {
+      "commune": 27,
+      "nomOfficiel": "4\u00e8me Mapou",
+      "sectionCommunale": "MAPOU",
+      "description": "",
+      "id_code": "371-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 229
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "20\u00e8me Laval",
+      "sectionCommunale": "LAVALLE",
+      "description": "",
+      "id_code": "113-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 230
+  },
+  {
+    "fields": {
+      "commune": 32,
+      "nomOfficiel": "3\u00e8me Rivi\u00e8re de Bayonnais",
+      "sectionCommunale": "RIVIERE DE BAYONNAIS",
+      "description": "",
+      "id_code": "511-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 231
+  },
+  {
+    "fields": {
+      "commune": 89,
+      "nomOfficiel": "1\u00e8re Juanaria",
+      "sectionCommunale": "JUANARIA",
+      "description": "",
+      "id_code": "611-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 232
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "1\u00e8re Platana",
+      "sectionCommunale": "PLATANA",
+      "description": "",
+      "id_code": "551-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 233
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "15\u00e8me Palmiste \u00e0Vins",
+      "sectionCommunale": "PALMISTE A VIN",
+      "description": "",
+      "id_code": "121-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 234
+  },
+  {
+    "fields": {
+      "commune": 5,
+      "nomOfficiel": "5\u00e8me G\u00e9nipailler",
+      "sectionCommunale": "GENIPAILLER",
+      "description": "",
+      "id_code": "134-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 235
+  },
+  {
+    "fields": {
+      "commune": 71,
+      "nomOfficiel": "3\u00e8me Chemin Neuf",
+      "sectionCommunale": "CHEMIN NEUF",
+      "description": "",
+      "id_code": "512-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 236
+  },
+  {
+    "fields": {
+      "commune": 42,
+      "nomOfficiel": "2\u00e8me Bois de Lance",
+      "sectionCommunale": "BOIS DE LANCE",
+      "description": "",
+      "id_code": "343-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 237
+  },
+  {
+    "fields": {
+      "commune": 42,
+      "nomOfficiel": "3\u00e8me Cracaraille",
+      "sectionCommunale": "CRACARAILLE",
+      "description": "",
+      "id_code": "343-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 238
+  },
+  {
+    "fields": {
+      "commune": 31,
+      "nomOfficiel": "1\u00e8re Sans Souci",
+      "sectionCommunale": "SANS SOUCI",
+      "description": "",
+      "id_code": "443-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 239
+  },
+  {
+    "fields": {
+      "commune": 32,
+      "nomOfficiel": "4\u00e8me Poteaux",
+      "sectionCommunale": "POTEAU",
+      "description": "",
+      "id_code": "511-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 240
+  },
+  {
+    "fields": {
+      "commune": 68,
+      "nomOfficiel": "2\u00e8me Claudine",
+      "sectionCommunale": "CLAUDINE / JACQUESIL",
+      "description": "",
+      "id_code": "434-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 241
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "8\u00e8me des Platons",
+      "sectionCommunale": "DES PLATONS",
+      "description": "",
+      "id_code": "122-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 242
+  },
+  {
+    "fields": {
+      "commune": 34,
+      "nomOfficiel": "1\u00e8re Basse Plaine",
+      "sectionCommunale": "BASSE PLAINE",
+      "description": "",
+      "id_code": "313-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 243
+  },
+  {
+    "fields": {
+      "commune": 113,
+      "nomOfficiel": "6e Petite Rivi\u00e8re",
+      "sectionCommunale": "PETITE RIVIERE",
+      "description": "",
+      "id_code": "822-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 244
+  },
+  {
+    "fields": {
+      "commune": 38,
+      "nomOfficiel": "8\u00e8me Jolitrou",
+      "sectionCommunale": "JOLY TROU",
+      "description": "",
+      "id_code": "331-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 245
+  },
+  {
+    "fields": {
+      "commune": 33,
+      "nomOfficiel": "3\u00e8me Morne Pel\u00e9",
+      "sectionCommunale": "MORNE PELEE",
+      "description": "",
+      "id_code": "312-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 246
+  },
+  {
+    "fields": {
+      "commune": 53,
+      "nomOfficiel": "1\u00e8re Dumas",
+      "sectionCommunale": "DUMAS",
+      "description": "",
+      "id_code": "411-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 247
+  },
+  {
+    "fields": {
+      "commune": 67,
+      "nomOfficiel": "1\u00e8re Fond Blanc",
+      "sectionCommunale": "FONDS BLANC",
+      "description": "",
+      "id_code": "433-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 248
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "10\u00e8me des Palmes",
+      "sectionCommunale": "DES PALMES",
+      "description": "",
+      "id_code": "122-10"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 249
+  },
+  {
+    "fields": {
+      "commune": 76,
+      "nomOfficiel": "4\u00e8me Lalou\u00e8re",
+      "sectionCommunale": "LALOUERE",
+      "description": "",
+      "id_code": "531-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 250
+  },
+  {
+    "fields": {
+      "commune": 129,
+      "nomOfficiel": "1\u00e8re Bouzi",
+      "sectionCommunale": "COCOYERS (DUCHENES)",
+      "description": "",
+      "id_code": "1013-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 251
+  },
+  {
+    "fields": {
+      "commune": 75,
+      "nomOfficiel": "1\u00e8re L'Arbre",
+      "sectionCommunale": "PLAINE DE L'ARBRE",
+      "description": "",
+      "id_code": "523-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 252
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "4e Basse Guinaud\u00e9e",
+      "sectionCommunale": "BASSE GUINAUDEE",
+      "description": "",
+      "id_code": "811-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 253
+  },
+  {
+    "fields": {
+      "commune": 36,
+      "nomOfficiel": "2\u00e8me Basse Plaine",
+      "sectionCommunale": "BASSE PLAINE",
+      "description": "",
+      "id_code": "322-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 254
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "1\u00e8re Basse Voldrogue",
+      "sectionCommunale": "BASSE VOLDROGUE",
+      "description": "",
+      "id_code": "811-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 255
+  },
+  {
+    "fields": {
+      "commune": 53,
+      "nomOfficiel": "2\u00e8me Bayaha",
+      "sectionCommunale": "BAYAHA",
+      "description": "",
+      "id_code": "411-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 256
+  },
+  {
+    "fields": {
+      "commune": 35,
+      "nomOfficiel": "3\u00e8me Mornet",
+      "sectionCommunale": "MORNET",
+      "description": "",
+      "id_code": "321-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 257
+  },
+  {
+    "fields": {
+      "commune": 62,
+      "nomOfficiel": "3\u00e8me Roche Plate",
+      "sectionCommunale": "ROCHE PLATE",
+      "description": "",
+      "id_code": "431-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 258
+  },
+  {
+    "fields": {
+      "commune": 97,
+      "nomOfficiel": "2\u00e8me Lociane",
+      "sectionCommunale": "LOCIANE",
+      "description": "",
+      "id_code": "642-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 259
+  },
+  {
+    "fields": {
+      "commune": 58,
+      "nomOfficiel": "1\u00e8re Haut Maribahoux",
+      "sectionCommunale": "HAUT MARIBAHOUX",
+      "description": "",
+      "id_code": "421-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 260
+  },
+  {
+    "fields": {
+      "commune": 38,
+      "nomOfficiel": "3\u00e8me Caracol",
+      "sectionCommunale": "CARACOL",
+      "description": "",
+      "id_code": "331-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 261
+  },
+  {
+    "fields": {
+      "commune": 35,
+      "nomOfficiel": "6\u00e8me Soufri\u00e8re",
+      "sectionCommunale": "SOUFRIERE",
+      "description": "",
+      "id_code": "321-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 262
+  },
+  {
+    "fields": {
+      "commune": 63,
+      "nomOfficiel": "3\u00e8me Cotelette",
+      "sectionCommunale": "COTELETTE",
+      "description": "",
+      "id_code": "432-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 263
+  },
+  {
+    "fields": {
+      "commune": 32,
+      "nomOfficiel": "6\u00e8me Bassin",
+      "sectionCommunale": "BASSIN",
+      "description": "",
+      "id_code": "511-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 264
+  },
+  {
+    "fields": {
+      "commune": 87,
+      "nomOfficiel": "2\u00e8me Bassin",
+      "sectionCommunale": "CRETE A PINS",
+      "description": "",
+      "id_code": "552-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 265
+  },
+  {
+    "fields": {
+      "commune": 53,
+      "nomOfficiel": "1\u00e8re L'Oiseau",
+      "sectionCommunale": "LOISEAU",
+      "description": "",
+      "id_code": "411-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 266
+  },
+  {
+    "fields": {
+      "commune": 58,
+      "nomOfficiel": "7\u00e8me Savanne Au Lait",
+      "sectionCommunale": "SAVANE AU LAIT",
+      "description": "",
+      "id_code": "421-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 267
+  },
+  {
+    "fields": {
+      "commune": 38,
+      "nomOfficiel": "7\u00e8me Gambade",
+      "sectionCommunale": "GAMBADE",
+      "description": "",
+      "id_code": "331-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 268
+  },
+  {
+    "fields": {
+      "commune": 59,
+      "nomOfficiel": "4\u00e8me Capotille",
+      "sectionCommunale": "CAPOTILLE",
+      "description": "",
+      "id_code": "422-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 269
+  },
+  {
+    "fields": {
+      "commune": 63,
+      "nomOfficiel": "5\u00e8me Moka-Neuf",
+      "sectionCommunale": "MOKA NEUF",
+      "description": "",
+      "id_code": "432-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 270
+  },
+  {
+    "fields": {
+      "commune": 58,
+      "nomOfficiel": "2\u00e8me Acul des Pins",
+      "sectionCommunale": "ACUL DES PINS",
+      "description": "",
+      "id_code": "421-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 271
+  },
+  {
+    "fields": {
+      "commune": 58,
+      "nomOfficiel": "3\u00e8me Savane Longue",
+      "sectionCommunale": "SAVANE LONGUE",
+      "description": "",
+      "id_code": "421-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 272
+  },
+  {
+    "fields": {
+      "commune": 70,
+      "nomOfficiel": "2\u00e8me Grosse Roche",
+      "sectionCommunale": "ECREVISSE / GROSSE R",
+      "description": "",
+      "id_code": "441-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 273
+  },
+  {
+    "fields": {
+      "commune": 71,
+      "nomOfficiel": "2\u00e8me Passe Reine",
+      "sectionCommunale": "PASSE REINE",
+      "description": "",
+      "id_code": "512-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 274
+  },
+  {
+    "fields": {
+      "commune": 70,
+      "nomOfficiel": "3\u00e8me Corosse",
+      "sectionCommunale": "CAROSSE",
+      "description": "",
+      "id_code": "441-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 275
+  },
+  {
+    "fields": {
+      "commune": 41,
+      "nomOfficiel": "4\u00e8me Bois Pin",
+      "sectionCommunale": "BOIS PIN",
+      "description": "",
+      "id_code": "332-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 276
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "2\u00e8me Camathe",
+      "sectionCommunale": "CAMATHE",
+      "description": "",
+      "id_code": "551-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 277
+  },
+  {
+    "fields": {
+      "commune": 40,
+      "nomOfficiel": "2\u00e8me Mathurin",
+      "sectionCommunale": "MATHURIN",
+      "description": "",
+      "id_code": "341-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 278
+  },
+  {
+    "fields": {
+      "commune": 71,
+      "nomOfficiel": "1\u00e8re Savane Carr\u00e9e",
+      "sectionCommunale": "SAVANNE CARRE",
+      "description": "",
+      "id_code": "512-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 279
+  },
+  {
+    "fields": {
+      "commune": 70,
+      "nomOfficiel": "1\u00e8re Trois Palmistes",
+      "sectionCommunale": "TROIS PALMISTES",
+      "description": "",
+      "id_code": "441-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 280
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "1\u00e8re Petit Bois",
+      "sectionCommunale": "PETIT BOIS",
+      "description": "",
+      "id_code": "131-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 281
+  },
+  {
+    "fields": {
+      "commune": 40,
+      "nomOfficiel": "4\u00e8me Sanyago",
+      "sectionCommunale": "SAN YAGO",
+      "description": "",
+      "id_code": "341-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 282
+  },
+  {
+    "fields": {
+      "commune": 63,
+      "nomOfficiel": "6\u00e8me Fond Bleu",
+      "sectionCommunale": "FOND BLEU",
+      "description": "",
+      "id_code": "432-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 283
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "7\u00e8me Bras Gauche",
+      "sectionCommunale": "BRAS GAUCHE",
+      "description": "",
+      "id_code": "221-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 284
+  },
+  {
+    "fields": {
+      "commune": 41,
+      "nomOfficiel": "5\u00e8me Bailly",
+      "sectionCommunale": "BALLY",
+      "description": "",
+      "id_code": "332-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 285
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "3\u00e8me Bas de Sault",
+      "sectionCommunale": "BAS DE SAULT",
+      "description": "",
+      "id_code": "551-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 286
+  },
+  {
+    "fields": {
+      "commune": 40,
+      "nomOfficiel": "1\u00e8re Bois Neuf",
+      "sectionCommunale": "BOIS NEUF",
+      "description": "",
+      "id_code": "341-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 287
+  },
+  {
+    "fields": {
+      "commune": 32,
+      "nomOfficiel": "1\u00e8re Pont Tamarin",
+      "sectionCommunale": "PONT TAMARIN",
+      "description": "",
+      "id_code": "511-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 288
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "4\u00e8me Lalomas",
+      "sectionCommunale": "LALOMAS",
+      "description": "",
+      "id_code": "551-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 289
+  },
+  {
+    "fields": {
+      "commune": 59,
+      "nomOfficiel": "6\u00e8me Lamine",
+      "sectionCommunale": "LAMINE",
+      "description": "",
+      "id_code": "422-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 290
+  },
+  {
+    "fields": {
+      "commune": 61,
+      "nomOfficiel": "2\u00e8me Bois Poux",
+      "sectionCommunale": "BOIS POUX",
+      "description": "",
+      "id_code": "423-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 291
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "2\u00e8me Petite Rivi\u00e8re",
+      "sectionCommunale": "PETITE RIVIERE",
+      "description": "",
+      "id_code": "121-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 292
+  },
+  {
+    "fields": {
+      "commune": 30,
+      "nomOfficiel": "1\u00e8re Bois Gamelle",
+      "sectionCommunale": "BOIS CAMELLE",
+      "description": "",
+      "id_code": "442-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 293
+  },
+  {
+    "fields": {
+      "commune": 40,
+      "nomOfficiel": "3\u00e8me Bouyaha",
+      "sectionCommunale": "BOUYAHA",
+      "description": "",
+      "id_code": "341-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 294
+  },
+  {
+    "fields": {
+      "commune": 98,
+      "nomOfficiel": "1\u00e8re Bourdet",
+      "sectionCommunale": "BOURDET",
+      "description": "",
+      "id_code": "711-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 295
+  },
+  {
+    "fields": {
+      "commune": 31,
+      "nomOfficiel": "2\u00e8me Bois Laurence",
+      "sectionCommunale": "BOIS LAURENCE",
+      "description": "",
+      "id_code": "443-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 296
+  },
+  {
+    "fields": {
+      "commune": 42,
+      "nomOfficiel": "1\u00e8re Bac \u00e0Soude",
+      "sectionCommunale": "BAC A SOUDE",
+      "description": "",
+      "id_code": "343-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 297
+  },
+  {
+    "fields": {
+      "commune": 7,
+      "nomOfficiel": "23\u00e8me Morne Chandelle",
+      "sectionCommunale": "MORNE CHANDELLE",
+      "description": "",
+      "id_code": "116-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 298
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "7\u00e8me manon",
+      "sectionCommunale": "MAMONT",
+      "description": "",
+      "id_code": "551-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 299
+  },
+  {
+    "fields": {
+      "commune": 61,
+      "nomOfficiel": "1\u00e8re Savanette",
+      "sectionCommunale": "SAVANETTE",
+      "description": "",
+      "id_code": "423-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 300
+  },
+  {
+    "fields": {
+      "commune": 65,
+      "nomOfficiel": "4\u00e8me Poste Pierrot",
+      "sectionCommunale": "POSTE PIERROT",
+      "description": "",
+      "id_code": "541-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 301
+  },
+  {
+    "fields": {
+      "commune": 85,
+      "nomOfficiel": "2\u00e8me Desdunes",
+      "sectionCommunale": "DESDUNES",
+      "description": "",
+      "id_code": "544-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 302
+  },
+  {
+    "fields": {
+      "commune": 43,
+      "nomOfficiel": "1\u00e8re Savannette",
+      "sectionCommunale": "SAVANETTE",
+      "description": "",
+      "id_code": "344-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 303
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "8\u00e8me l'Attalaye",
+      "sectionCommunale": "L'ATTALAYE",
+      "description": "",
+      "id_code": "551-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 304
+  },
+  {
+    "fields": {
+      "commune": 113,
+      "nomOfficiel": "1ere Bariadelle",
+      "sectionCommunale": "BARIADELLE",
+      "description": "",
+      "id_code": "822-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 305
+  },
+  {
+    "fields": {
+      "commune": 30,
+      "nomOfficiel": "2\u00e8me Rose Bonite",
+      "sectionCommunale": "ROSE BONITE",
+      "description": "",
+      "id_code": "442-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 306
+  },
+  {
+    "fields": {
+      "commune": 46,
+      "nomOfficiel": "1\u00e8re La Victoire",
+      "sectionCommunale": "LA VICTOIRE",
+      "description": "",
+      "id_code": "345-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 307
+  },
+  {
+    "fields": {
+      "commune": 43,
+      "nomOfficiel": "2\u00e8me La Belle M\u00e8re",
+      "sectionCommunale": "LA BELLE MERE",
+      "description": "",
+      "id_code": "344-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 308
+  },
+  {
+    "fields": {
+      "commune": 14,
+      "nomOfficiel": "6\u00e8me Mare Roseaux",
+      "sectionCommunale": "MARE ROSEAUX",
+      "description": "",
+      "id_code": "133-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 309
+  },
+  {
+    "fields": {
+      "commune": 81,
+      "nomOfficiel": "6\u00e8me Lacedras",
+      "sectionCommunale": "LACEDRAS",
+      "description": "",
+      "id_code": "551-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 310
+  },
+  {
+    "fields": {
+      "commune": 65,
+      "nomOfficiel": "6\u00e8me La Croix",
+      "sectionCommunale": "LA CROIX",
+      "description": "",
+      "id_code": "541-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 311
+  },
+  {
+    "fields": {
+      "commune": 93,
+      "nomOfficiel": "Rang",
+      "sectionCommunale": "RANG",
+      "description": "",
+      "id_code": "614-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 312
+  },
+  {
+    "fields": {
+      "commune": 92,
+      "nomOfficiel": "2\u00e8me Acajou Bruler",
+      "sectionCommunale": "ACAJOU BRULE No 2",
+      "description": "",
+      "id_code": "641-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 313
+  },
+  {
+    "fields": {
+      "commune": 76,
+      "nomOfficiel": "5\u00e8me Bocozelle",
+      "sectionCommunale": "BOCOZELLE",
+      "description": "",
+      "id_code": "531-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 314
+  },
+  {
+    "fields": {
+      "commune": 65,
+      "nomOfficiel": "3\u00e8me Og\u00e9",
+      "sectionCommunale": "OGE",
+      "description": "",
+      "id_code": "541-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 315
+  },
+  {
+    "fields": {
+      "commune": 66,
+      "nomOfficiel": "1\u00e8re Bas Coursin",
+      "sectionCommunale": "BAS COURSIN",
+      "description": "",
+      "id_code": "542-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 316
+  },
+  {
+    "fields": {
+      "commune": 89,
+      "nomOfficiel": "4\u00e8me Aguahedionde",
+      "sectionCommunale": "AGUAHEDIONDE (Rive gauche)",
+      "description": "",
+      "id_code": "611-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 317
+  },
+  {
+    "fields": {
+      "commune": 45,
+      "nomOfficiel": "2\u00e8me Roye sec",
+      "sectionCommunale": "ROY-SEC",
+      "description": "",
+      "id_code": "632-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 318
+  },
+  {
+    "fields": {
+      "commune": 38,
+      "nomOfficiel": "9\u00e8me Cormiers",
+      "sectionCommunale": "CORMIERS",
+      "description": "",
+      "id_code": "331-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 319
+  },
+  {
+    "fields": {
+      "commune": 90,
+      "nomOfficiel": "3\u00e8me Hatty",
+      "sectionCommunale": "HATTY",
+      "description": "",
+      "id_code": "612-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 320
+  },
+  {
+    "fields": {
+      "commune": 90,
+      "nomOfficiel": "2\u00e8me Narang",
+      "sectionCommunale": "HATTY",
+      "description": "",
+      "id_code": "612-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 321
+  },
+  {
+    "fields": {
+      "commune": 128,
+      "nomOfficiel": "2\u00e8me Cholette",
+      "sectionCommunale": "CHAULETTE",
+      "description": "",
+      "id_code": "1012-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 322
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "3\u00e8me Trou Chouchou",
+      "sectionCommunale": "TROU CHOUCHOU",
+      "description": "",
+      "id_code": "122-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 323
+  },
+  {
+    "fields": {
+      "commune": 92,
+      "nomOfficiel": "3\u00e8me Lamielle",
+      "sectionCommunale": "LA MIELLE",
+      "description": "",
+      "id_code": "641-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 324
+  },
+  {
+    "fields": {
+      "commune": 118,
+      "nomOfficiel": "2\u00e8me Mouline",
+      "sectionCommunale": "MOULINE",
+      "description": "",
+      "id_code": "833-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 325
+  },
+  {
+    "fields": {
+      "commune": 83,
+      "nomOfficiel": "1\u00e8re Poteneau",
+      "sectionCommunale": "POTENEAU",
+      "description": "",
+      "id_code": "543-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 326
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "10\u00e8me Fonds d'Oie",
+      "sectionCommunale": "FOND D'OIE",
+      "description": "",
+      "id_code": "121-10"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 327
+  },
+  {
+    "fields": {
+      "commune": 89,
+      "nomOfficiel": "3\u00e8me Aguahedionde",
+      "sectionCommunale": "AGUAHEDIONDE (Rive droite)",
+      "description": "",
+      "id_code": "611-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 328
+  },
+  {
+    "fields": {
+      "commune": 92,
+      "nomOfficiel": "1er Acajou Bruler",
+      "sectionCommunale": "ACAJOU BRULE No 1",
+      "description": "",
+      "id_code": "641-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 329
+  },
+  {
+    "fields": {
+      "commune": 97,
+      "nomOfficiel": "1\u00e8re Matelgate",
+      "sectionCommunale": "MATELGATE",
+      "description": "",
+      "id_code": "642-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 330
+  },
+  {
+    "fields": {
+      "commune": 66,
+      "nomOfficiel": "5\u00e8me P\u00e9rodin",
+      "sectionCommunale": "PERODIN",
+      "description": "",
+      "id_code": "542-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 331
+  },
+  {
+    "fields": {
+      "commune": 104,
+      "nomOfficiel": "1\u00e8re L\u00e9vy",
+      "sectionCommunale": "LEVY MERSAN",
+      "description": "",
+      "id_code": "714-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 332
+  },
+  {
+    "fields": {
+      "commune": 96,
+      "nomOfficiel": "3\u00e8me La Hoye",
+      "sectionCommunale": "LA HOYE",
+      "description": "",
+      "id_code": "613-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 333
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "1\u00e8re Bais d'Orange",
+      "sectionCommunale": "BAIS D'ORANGE",
+      "description": "",
+      "id_code": "231-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 334
+  },
+  {
+    "fields": {
+      "commune": 66,
+      "nomOfficiel": "3\u00e8me Labady",
+      "sectionCommunale": "LABADY",
+      "description": "",
+      "id_code": "542-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 335
+  },
+  {
+    "fields": {
+      "commune": 64,
+      "nomOfficiel": "1\u00e8re Martineau",
+      "sectionCommunale": "MARTINEAU",
+      "description": "",
+      "id_code": "533-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 336
+  },
+  {
+    "fields": {
+      "commune": 77,
+      "nomOfficiel": "2\u00e8me B\u00e9langer",
+      "sectionCommunale": "BELANGER",
+      "description": "",
+      "id_code": "532-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 337
+  },
+  {
+    "fields": {
+      "commune": 77,
+      "nomOfficiel": "3\u00e8me Guillaume Mog\u00e9",
+      "sectionCommunale": "GUILLAUME MOGE",
+      "description": "",
+      "id_code": "532-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 338
+  },
+  {
+    "fields": {
+      "commune": 66,
+      "nomOfficiel": "6\u00e8me M\u00e9dor",
+      "sectionCommunale": "MEDOR",
+      "description": "",
+      "id_code": "542-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 339
+  },
+  {
+    "fields": {
+      "commune": 76,
+      "nomOfficiel": "2\u00e8me Bois Neuf",
+      "sectionCommunale": "BOIS NEUF",
+      "description": "",
+      "id_code": "531-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 340
+  },
+  {
+    "fields": {
+      "commune": 77,
+      "nomOfficiel": "4\u00e8me D\u00e9sarmes",
+      "sectionCommunale": "DESARMES",
+      "description": "",
+      "id_code": "532-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 341
+  },
+  {
+    "fields": {
+      "commune": 130,
+      "nomOfficiel": "1\u00e8re Salagnac",
+      "sectionCommunale": "SALAGNAC",
+      "description": "",
+      "id_code": "1014-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 342
+  },
+  {
+    "fields": {
+      "commune": 66,
+      "nomOfficiel": "4\u00e8me Savane \u00e0Roche",
+      "sectionCommunale": "SAVANE A ROCHE",
+      "description": "",
+      "id_code": "542-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 343
+  },
+  {
+    "fields": {
+      "commune": 77,
+      "nomOfficiel": "5\u00e8me Bastien",
+      "sectionCommunale": "BASTIEN",
+      "description": "",
+      "id_code": "532-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 344
+  },
+  {
+    "fields": {
+      "commune": 95,
+      "nomOfficiel": "3\u00e8me des Bayes",
+      "sectionCommunale": "DES BAYES",
+      "description": "",
+      "id_code": "623-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 345
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "6\u00e8me Trou Canari",
+      "sectionCommunale": "TROU CANARI",
+      "description": "",
+      "id_code": "122-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 346
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "9e Fonds Rouge Torberck",
+      "sectionCommunale": "FOND ROUGE DE TORBEC",
+      "description": "",
+      "id_code": "811-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 347
+  },
+  {
+    "fields": {
+      "commune": 76,
+      "nomOfficiel": "1\u00e8re D\u00e9lug\u00e9",
+      "sectionCommunale": "DELUGE",
+      "description": "",
+      "id_code": "531-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 348
+  },
+  {
+    "fields": {
+      "commune": 64,
+      "nomOfficiel": "2\u00e8me Bossous",
+      "sectionCommunale": "BOSSOUS",
+      "description": "",
+      "id_code": "533-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 349
+  },
+  {
+    "fields": {
+      "commune": 137,
+      "nomOfficiel": "8\u00e8me Montrouis",
+      "sectionCommunale": "MONTROUIS",
+      "description": "",
+      "id_code": "141-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 350
+  },
+  {
+    "fields": {
+      "commune": 137,
+      "nomOfficiel": "7\u00e8me Fonds Baptiste",
+      "sectionCommunale": "FONDS BAPTISTE",
+      "description": "",
+      "id_code": "141-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 351
+  },
+  {
+    "fields": {
+      "commune": 5,
+      "nomOfficiel": "2\u00e8me Plaine C\u00e9leste",
+      "sectionCommunale": "PLAINE CELESTE",
+      "description": "",
+      "id_code": "134-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 352
+  },
+  {
+    "fields": {
+      "commune": 18,
+      "nomOfficiel": "6\u00e8me La Source",
+      "sectionCommunale": "GROS MANGLE",
+      "description": "",
+      "id_code": "152-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 353
+  },
+  {
+    "fields": {
+      "commune": 137,
+      "nomOfficiel": "6\u00e8me des Matheux",
+      "sectionCommunale": "DES MATHEUX",
+      "description": "",
+      "id_code": "141-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 354
+  },
+  {
+    "fields": {
+      "commune": 60,
+      "nomOfficiel": "11\u00e8me Melon",
+      "sectionCommunale": "MELON",
+      "description": "",
+      "id_code": "715-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 355
+  },
+  {
+    "fields": {
+      "commune": 131,
+      "nomOfficiel": "6\u00e8me Grande Rivi\u00e8re",
+      "sectionCommunale": "GRANDE RIVIERE",
+      "description": "",
+      "id_code": "1021-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 356
+  },
+  {
+    "fields": {
+      "commune": 18,
+      "nomOfficiel": "7\u00e8me Grand Vide",
+      "sectionCommunale": "LA SOURCE",
+      "description": "",
+      "id_code": "152-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 357
+  },
+  {
+    "fields": {
+      "commune": 133,
+      "nomOfficiel": "1\u00e8re Grande Plaine",
+      "sectionCommunale": "GRANDE PLAINE",
+      "description": "",
+      "id_code": "132-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 358
+  },
+  {
+    "fields": {
+      "commune": 20,
+      "nomOfficiel": "4\u00e8me Grand Lagon",
+      "sectionCommunale": "GRAND LAGON",
+      "description": "",
+      "id_code": "151-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 359
+  },
+  {
+    "fields": {
+      "commune": 18,
+      "nomOfficiel": "8\u00e8me Trou Louis",
+      "sectionCommunale": "GRAND VIDE",
+      "description": "",
+      "id_code": "152-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 360
+  },
+  {
+    "fields": {
+      "commune": 18,
+      "nomOfficiel": "9\u00e8me Pointe \u00e0Raquette",
+      "sectionCommunale": "TROU LOUIS",
+      "description": "",
+      "id_code": "152-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 361
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "10\u00e8me des Orangers",
+      "sectionCommunale": "ORANGERS",
+      "description": "",
+      "id_code": "131-10"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 362
+  },
+  {
+    "fields": {
+      "commune": 74,
+      "nomOfficiel": "5\u00e8me Des Pas",
+      "sectionCommunale": "DES PAS",
+      "description": "",
+      "id_code": "741-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 363
+  },
+  {
+    "fields": {
+      "commune": 109,
+      "nomOfficiel": "10e de D\u00e9sormeau",
+      "sectionCommunale": "DESORMEAU (BONBON)",
+      "description": "",
+      "id_code": "813-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 364
+  },
+  {
+    "fields": {
+      "commune": 108,
+      "nomOfficiel": "2\u00e8me Balisiers",
+      "sectionCommunale": "BALISIER",
+      "description": "",
+      "id_code": "812-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 365
+  },
+  {
+    "fields": {
+      "commune": 108,
+      "nomOfficiel": "4e La Seringue",
+      "sectionCommunale": "LA SERINGUE",
+      "description": "",
+      "id_code": "812-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 366
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "7e Marfranc",
+      "sectionCommunale": "MARFRANC / GRANDE RI",
+      "description": "",
+      "id_code": "811-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 367
+  },
+  {
+    "fields": {
+      "commune": 117,
+      "nomOfficiel": "1ere Carrefour Charles",
+      "sectionCommunale": "CARREFOUR CHARLES/JA",
+      "description": "",
+      "id_code": "832-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 368
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "12\u00e8me Cormiers",
+      "sectionCommunale": "CORMIERS",
+      "description": "",
+      "id_code": "121-12"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 369
+  },
+  {
+    "fields": {
+      "commune": 116,
+      "nomOfficiel": "3e Champy",
+      "sectionCommunale": "CHAMPY (NAN CAMPECHE",
+      "description": "",
+      "id_code": "831-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 370
+  },
+  {
+    "fields": {
+      "commune": 14,
+      "nomOfficiel": "3\u00e8me Fonds Parisien",
+      "sectionCommunale": "FOND PARISIEN",
+      "description": "",
+      "id_code": "133-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 371
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "5e Ravine \u00e0Charles",
+      "sectionCommunale": "RAVINE A CHARLES",
+      "description": "",
+      "id_code": "811-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 372
+  },
+  {
+    "fields": {
+      "commune": 16,
+      "nomOfficiel": "2\u00e8me Boucassin",
+      "sectionCommunale": "BOUCASSIN",
+      "description": "",
+      "id_code": "142-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 373
+  },
+  {
+    "fields": {
+      "commune": 120,
+      "nomOfficiel": "2\u00e8me La Pointe",
+      "sectionCommunale": "LA POINTE",
+      "description": "",
+      "id_code": "911-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 374
+  },
+  {
+    "fields": {
+      "commune": 113,
+      "nomOfficiel": "5e Baliverne",
+      "sectionCommunale": "BALIVERNE",
+      "description": "",
+      "id_code": "822-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 375
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "6e Iles Blanches",
+      "sectionCommunale": "ILES BLANCHES",
+      "description": "",
+      "id_code": "811-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 376
+  },
+  {
+    "fields": {
+      "commune": 115,
+      "nomOfficiel": "1ere Bernagousse",
+      "sectionCommunale": "BERNAGOUSSE",
+      "description": "",
+      "id_code": "834-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 377
+  },
+  {
+    "fields": {
+      "commune": 116,
+      "nomOfficiel": "1ere Duquillon",
+      "sectionCommunale": "DUQUILLON",
+      "description": "",
+      "id_code": "831-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 378
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "9\u00e8me Fonds des Blancs",
+      "sectionCommunale": "FONDS DES BLANCS",
+      "description": "",
+      "id_code": "731-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 379
+  },
+  {
+    "fields": {
+      "commune": 111,
+      "nomOfficiel": "1e  D\u00e9jean",
+      "sectionCommunale": "DEJEAN",
+      "description": "",
+      "id_code": "815-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 380
+  },
+  {
+    "fields": {
+      "commune": 114,
+      "nomOfficiel": "7e Garcasse",
+      "sectionCommunale": "CARCASSE",
+      "description": "",
+      "id_code": "823-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 381
+  },
+  {
+    "fields": {
+      "commune": 110,
+      "nomOfficiel": "2e Sources Chaudes",
+      "sectionCommunale": "SOURCES CHAUDES",
+      "description": "",
+      "id_code": "814-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 382
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "3e Haute Guinaud\u00e9e",
+      "sectionCommunale": "HAUTE GUINAUDEE",
+      "description": "",
+      "id_code": "811-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 383
+  },
+  {
+    "fields": {
+      "commune": 98,
+      "nomOfficiel": "2\u00e8me Fonfr\u00e8de",
+      "sectionCommunale": "FONFREDE",
+      "description": "",
+      "id_code": "711-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 384
+  },
+  {
+    "fields": {
+      "commune": 111,
+      "nomOfficiel": "2e Boucan",
+      "sectionCommunale": "BOUCAN",
+      "description": "",
+      "id_code": "815-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 385
+  },
+  {
+    "fields": {
+      "commune": 117,
+      "nomOfficiel": "2e Fonds Cochon",
+      "sectionCommunale": "FOND COCHON",
+      "description": "",
+      "id_code": "832-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 386
+  },
+  {
+    "fields": {
+      "commune": 110,
+      "nomOfficiel": "3e L'Assive",
+      "sectionCommunale": "L'ASSIVE / CHAUMEAU",
+      "description": "",
+      "id_code": "814-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 387
+  },
+  {
+    "fields": {
+      "commune": 115,
+      "nomOfficiel": "2e Espere",
+      "sectionCommunale": "ESPERE",
+      "description": "",
+      "id_code": "834-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 388
+  },
+  {
+    "fields": {
+      "commune": 123,
+      "nomOfficiel": "4\u00e8me Pemerle",
+      "sectionCommunale": "PEMERLE",
+      "description": "",
+      "id_code": "1011-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 389
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "3\u00e8me Belle Fontaine",
+      "sectionCommunale": "BELLE FONTAINE",
+      "description": "",
+      "id_code": "131-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 390
+  },
+  {
+    "fields": {
+      "commune": 98,
+      "nomOfficiel": "9\u00e8me Mercy",
+      "sectionCommunale": "MERCY",
+      "description": "",
+      "id_code": "711-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 391
+  },
+  {
+    "fields": {
+      "commune": 118,
+      "nomOfficiel": "4\u00e8me Beaumont",
+      "sectionCommunale": "BEAUMONT",
+      "description": "",
+      "id_code": "833-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 392
+  },
+  {
+    "fields": {
+      "commune": 106,
+      "nomOfficiel": "1\u00e8re Blactote",
+      "sectionCommunale": "BLACTOTE",
+      "description": "",
+      "id_code": "753-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 393
+  },
+  {
+    "fields": {
+      "commune": 112,
+      "nomOfficiel": "2\u00e8me Boudon",
+      "sectionCommunale": "BOUDON",
+      "description": "",
+      "id_code": "821-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 394
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "2\u00e8me Varreux",
+      "sectionCommunale": "VARREUX",
+      "description": "",
+      "id_code": "131-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 395
+  },
+  {
+    "fields": {
+      "commune": 115,
+      "nomOfficiel": "4e Tozia",
+      "sectionCommunale": "DUCHITY",
+      "description": "",
+      "id_code": "834-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 396
+  },
+  {
+    "fields": {
+      "commune": 112,
+      "nomOfficiel": "1e Grandoit",
+      "sectionCommunale": "GRANDOIT",
+      "description": "",
+      "id_code": "821-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 397
+  },
+  {
+    "fields": {
+      "commune": 112,
+      "nomOfficiel": "3e Ilet Pierre \u00e0Joseph",
+      "sectionCommunale": "ILET A PIERRE JOSEPH",
+      "description": "",
+      "id_code": "821-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 398
+  },
+  {
+    "fields": {
+      "commune": 115,
+      "nomOfficiel": "5e Duchity",
+      "sectionCommunale": "DUCHITY",
+      "description": "",
+      "id_code": "834-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 399
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "11\u00e8me Gros Morne",
+      "sectionCommunale": "GROS MORNE",
+      "description": "",
+      "id_code": "121-11"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 400
+  },
+  {
+    "fields": {
+      "commune": 11,
+      "nomOfficiel": "4\u00e8me Fonds-Verrettes",
+      "sectionCommunale": "FONDS-VERRETTES",
+      "description": "",
+      "id_code": "135-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 401
+  },
+  {
+    "fields": {
+      "commune": 112,
+      "nomOfficiel": "4e Mandou",
+      "sectionCommunale": "MANDOU",
+      "description": "",
+      "id_code": "821-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 402
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "1\u00e8re T\u00eate \u00e0 Boeuf",
+      "sectionCommunale": "TETE A BOUF",
+      "description": "",
+      "id_code": "123-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 403
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "8\u00e8me Beaus\u00e9jour",
+      "sectionCommunale": "BEAUSEJOUR",
+      "description": "",
+      "id_code": "121-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 404
+  },
+  {
+    "fields": {
+      "commune": 98,
+      "nomOfficiel": "12\u00e8me Boulmier",
+      "sectionCommunale": "DOULMIER",
+      "description": "",
+      "id_code": "711-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 405
+  },
+  {
+    "fields": {
+      "commune": 114,
+      "nomOfficiel": "5e Matador",
+      "sectionCommunale": "MATADOR / JORGUE",
+      "description": "",
+      "id_code": "823-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 406
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "7\u00e8me G\u00e9rard",
+      "sectionCommunale": "GERARD",
+      "description": "",
+      "id_code": "123-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 407
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "1\u00e8re Belle Fontaine",
+      "sectionCommunale": "BELLE FONTAINE",
+      "description": "",
+      "id_code": "131-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 408
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "2\u00e8me Belle Fontaine",
+      "sectionCommunale": "BELLE FONTAINE",
+      "description": "",
+      "id_code": "131-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 409
+  },
+  {
+    "fields": {
+      "commune": 96,
+      "nomOfficiel": "1\u00e8re Petit Fond",
+      "sectionCommunale": "PETIT FOND",
+      "description": "",
+      "id_code": "631-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 410
+  },
+  {
+    "fields": {
+      "commune": 105,
+      "nomOfficiel": "4\u00e8me Mare Henry",
+      "sectionCommunale": "MARE HENRY",
+      "description": "",
+      "id_code": "733-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 411
+  },
+  {
+    "fields": {
+      "commune": 114,
+      "nomOfficiel": "6e B\u00e9lair",
+      "sectionCommunale": "BELAIR",
+      "description": "",
+      "id_code": "823-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 412
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "3\u00e8me Petit Bois",
+      "sectionCommunale": "PETIT BOIS",
+      "description": "",
+      "id_code": "131-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 413
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "7\u00e8me Grande Rivi\u00e8re de Jacmel",
+      "sectionCommunale": "GRANDE RIV. DE JACME",
+      "description": "",
+      "id_code": "211-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 414
+  },
+  {
+    "fields": {
+      "commune": 104,
+      "nomOfficiel": "2\u00e8me Champlois",
+      "sectionCommunale": "CHAMPLOIS",
+      "description": "",
+      "id_code": "714-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 415
+  },
+  {
+    "fields": {
+      "commune": 88,
+      "nomOfficiel": "2\u00e8me D\u00e9joie",
+      "sectionCommunale": "DEJOIE",
+      "description": "",
+      "id_code": "751-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 416
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "2\u00e8me T\u00eate \u00e0Boeuf",
+      "sectionCommunale": "TETE A BOUF",
+      "description": "",
+      "id_code": "123-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 417
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "5\u00e8me Grande Colline",
+      "sectionCommunale": "GRANDE COLLINE",
+      "description": "",
+      "id_code": "123-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 418
+  },
+  {
+    "fields": {
+      "commune": 103,
+      "nomOfficiel": "3\u00e8me Carrefour Canon",
+      "sectionCommunale": "CARREFOUR CANON",
+      "description": "",
+      "id_code": "713-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 419
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "12\u00e8me Colline \u00e0Mongon",
+      "sectionCommunale": "GUIRAND",
+      "description": "",
+      "id_code": "731-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 420
+  },
+  {
+    "fields": {
+      "commune": 21,
+      "nomOfficiel": "3\u00e8me Macary",
+      "sectionCommunale": "MACARY",
+      "description": "",
+      "id_code": "212-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 421
+  },
+  {
+    "fields": {
+      "commune": 15,
+      "nomOfficiel": "3\u00e8me Thiotte",
+      "sectionCommunale": "THIOTTE",
+      "description": "",
+      "id_code": "233-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 422
+  },
+  {
+    "fields": {
+      "commune": 52,
+      "nomOfficiel": "1\u00e8re Rivi\u00e8re Canot",
+      "sectionCommunale": "RIVIERE CANOT",
+      "description": "",
+      "id_code": "622-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 423
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "10\u00e8me Guirand",
+      "sectionCommunale": "GUIRAND",
+      "description": "",
+      "id_code": "731-10"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 424
+  },
+  {
+    "fields": {
+      "commune": 137,
+      "nomOfficiel": "5\u00e8me D\u00e9lices",
+      "sectionCommunale": "DES DELICES",
+      "description": "",
+      "id_code": "141-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 425
+  },
+  {
+    "fields": {
+      "commune": 102,
+      "nomOfficiel": "4\u00e8me Moreau",
+      "sectionCommunale": "MOREAU",
+      "description": "",
+      "id_code": "712-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 426
+  },
+  {
+    "fields": {
+      "commune": 21,
+      "nomOfficiel": "4\u00e8me Fond Jean Noel",
+      "sectionCommunale": "FOND JEAN-NOEL",
+      "description": "",
+      "id_code": "212-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 427
+  },
+  {
+    "fields": {
+      "commune": 137,
+      "nomOfficiel": "1\u00e8re Boucassin",
+      "sectionCommunale": "BOUCASSIN",
+      "description": "",
+      "id_code": "141-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 428
+  },
+  {
+    "fields": {
+      "commune": 21,
+      "nomOfficiel": "2\u00e8me Grande Rivi\u00e8re Fesle",
+      "sectionCommunale": "GRANDE RIVIERE FESLE",
+      "description": "",
+      "id_code": "212-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 429
+  },
+  {
+    "fields": {
+      "commune": 105,
+      "nomOfficiel": "2\u00e8me Martineau",
+      "sectionCommunale": "MARTINEAU",
+      "description": "",
+      "id_code": "733-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 430
+  },
+  {
+    "fields": {
+      "commune": 103,
+      "nomOfficiel": "1\u00e8re Fond Palmiste",
+      "sectionCommunale": "FONDS PALMISTE",
+      "description": "",
+      "id_code": "713-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 431
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "9\u00e8me des Palmes",
+      "sectionCommunale": "DES PALMES",
+      "description": "",
+      "id_code": "122-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 432
+  },
+  {
+    "fields": {
+      "commune": 75,
+      "nomOfficiel": "2\u00e8me Sources Chaudes",
+      "sectionCommunale": "SOURCES CHAUDES",
+      "description": "",
+      "id_code": "523-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 433
+  },
+  {
+    "fields": {
+      "commune": 106,
+      "nomOfficiel": "3\u00e8me Loby",
+      "sectionCommunale": "LOBY",
+      "description": "",
+      "id_code": "753-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 434
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "6\u00e8me Montagne La Voute",
+      "sectionCommunale": "MONTAGNE LA VOUTE",
+      "description": "",
+      "id_code": "211-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 435
+  },
+  {
+    "fields": {
+      "commune": 60,
+      "nomOfficiel": "1\u00e8re Maniche",
+      "sectionCommunale": "MANICHE",
+      "description": "",
+      "id_code": "715-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 436
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "11\u00e8me Frangipane",
+      "sectionCommunale": "FRANGIPANE",
+      "description": "",
+      "id_code": "731-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 437
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "18\u00e8me Coupeau",
+      "sectionCommunale": "COUPEAU",
+      "description": "",
+      "id_code": "113-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 438
+  },
+  {
+    "fields": {
+      "commune": 105,
+      "nomOfficiel": "1\u00e8re Boileau",
+      "sectionCommunale": "BOILEAU",
+      "description": "",
+      "id_code": "733-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 439
+  },
+  {
+    "fields": {
+      "commune": 99,
+      "nomOfficiel": "3\u00e8me Arniquet",
+      "sectionCommunale": "ARNIQUET",
+      "description": "",
+      "id_code": "723-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 440
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "3\u00e8me Brodequin",
+      "sectionCommunale": "BRODEQUIN",
+      "description": "",
+      "id_code": "731-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 441
+  },
+  {
+    "fields": {
+      "commune": 128,
+      "nomOfficiel": "4\u00e8me Bezin",
+      "sectionCommunale": "BEZIN",
+      "description": "",
+      "id_code": "1012-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 442
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "1\u00e8re Mac\u00e9an",
+      "sectionCommunale": "MACEAN",
+      "description": "",
+      "id_code": "731-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 443
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "1\u00e8re Bas Cap Rouge",
+      "sectionCommunale": "BAS CAP-ROUGE",
+      "description": "",
+      "id_code": "211-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 444
+  },
+  {
+    "fields": {
+      "commune": 102,
+      "nomOfficiel": "3\u00e8me Solon",
+      "sectionCommunale": "SOLON",
+      "description": "",
+      "id_code": "712-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 445
+  },
+  {
+    "fields": {
+      "commune": 98,
+      "nomOfficiel": "7\u00e8me Laurent",
+      "sectionCommunale": "LAURENT",
+      "description": "",
+      "id_code": "711-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 446
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "6\u00e8me Solon",
+      "sectionCommunale": "SOLON",
+      "description": "",
+      "id_code": "732-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 447
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "4\u00e8me Zanglais",
+      "sectionCommunale": "DES ZANGLAIS",
+      "description": "",
+      "id_code": "732-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 448
+  },
+  {
+    "fields": {
+      "commune": 100,
+      "nomOfficiel": "4\u00e8me Flamands",
+      "sectionCommunale": "FLAMANT",
+      "description": "",
+      "id_code": "731-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 449
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "3\u00e8me Grenodi\u00e8re",
+      "sectionCommunale": "GRENODIERE",
+      "description": "",
+      "id_code": "732-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 450
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "5\u00e8me Sucrerie-Henry",
+      "sectionCommunale": "SUCRERIE HENRY",
+      "description": "",
+      "id_code": "732-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 451
+  },
+  {
+    "fields": {
+      "commune": 21,
+      "nomOfficiel": "5\u00e8me Savane Dubois",
+      "sectionCommunale": "SAVANE DUBOIS",
+      "description": "",
+      "id_code": "212-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 452
+  },
+  {
+    "fields": {
+      "commune": 101,
+      "nomOfficiel": "2\u00e8me Baie Dumesle",
+      "sectionCommunale": "BAIE DUMERLE",
+      "description": "",
+      "id_code": "732-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 453
+  },
+  {
+    "fields": {
+      "commune": 107,
+      "nomOfficiel": "2\u00e8me Haute Voldrogue",
+      "sectionCommunale": "HAUTE VOLDROGUE",
+      "description": "",
+      "id_code": "811-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 454
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "8\u00e8me Oranger",
+      "sectionCommunale": "ORANGERS",
+      "description": "",
+      "id_code": "221-08"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 455
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "12\u00e8me des Fouques",
+      "sectionCommunale": "DES PALMES",
+      "description": "",
+      "id_code": "122-12"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 456
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "5\u00e8me Bas de Grandou",
+      "sectionCommunale": "BAS GRANDOU",
+      "description": "",
+      "id_code": "221-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 457
+  },
+  {
+    "fields": {
+      "commune": 102,
+      "nomOfficiel": "2\u00e8me B\u00e9rault",
+      "sectionCommunale": "BERREAULT",
+      "description": "",
+      "id_code": "712-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 458
+  },
+  {
+    "fields": {
+      "commune": 15,
+      "nomOfficiel": "2\u00e8me Pot de Chambre",
+      "sectionCommunale": "POT DE CHAMBRE",
+      "description": "",
+      "id_code": "233-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 459
+  },
+  {
+    "fields": {
+      "commune": 79,
+      "nomOfficiel": "2\u00e8me Balais",
+      "sectionCommunale": "BALAIS",
+      "description": "",
+      "id_code": "742-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 460
+  },
+  {
+    "fields": {
+      "commune": 103,
+      "nomOfficiel": "2\u00e8me Meloni\u00e8re",
+      "sectionCommunale": "VERONIERE",
+      "description": "",
+      "id_code": "713-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 461
+  },
+  {
+    "fields": {
+      "commune": 72,
+      "nomOfficiel": "5\u00e8me Dumont",
+      "sectionCommunale": "DUMONT",
+      "description": "",
+      "id_code": "721-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 462
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "2\u00e8me Delatre",
+      "sectionCommunale": "DELATRE (DEUXIEME PL",
+      "description": "",
+      "id_code": "122-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 463
+  },
+  {
+    "fields": {
+      "commune": 79,
+      "nomOfficiel": "1\u00e8re Paricot",
+      "sectionCommunale": "PARICOT",
+      "description": "",
+      "id_code": "742-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 464
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "9\u00e8me Bas de Gris-gris",
+      "sectionCommunale": "BAS DE GRIS GRIS",
+      "description": "",
+      "id_code": "221-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 465
+  },
+  {
+    "fields": {
+      "commune": 102,
+      "nomOfficiel": "1\u00e8re Bourry",
+      "sectionCommunale": "BOURY",
+      "description": "",
+      "id_code": "712-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 466
+  },
+  {
+    "fields": {
+      "commune": 3,
+      "nomOfficiel": "7\u00e8me Bellevue Chardonni\u00e8re",
+      "sectionCommunale": "MONTAGNE NOIRE",
+      "description": "",
+      "id_code": "114-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 467
+  },
+  {
+    "fields": {
+      "commune": 55,
+      "nomOfficiel": "3\u00e8me Trichet",
+      "sectionCommunale": "TRICHET",
+      "description": "",
+      "id_code": "722-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 468
+  },
+  {
+    "fields": {
+      "commune": 47,
+      "nomOfficiel": "2\u00e8me Boucan Michel",
+      "sectionCommunale": "BOUCAN MICHEL",
+      "description": "",
+      "id_code": "351-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 469
+  },
+  {
+    "fields": {
+      "commune": 82,
+      "nomOfficiel": "3\u00e8me Bois Neuf",
+      "sectionCommunale": "BOIS NEUF",
+      "description": "",
+      "id_code": "522-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 470
+  },
+  {
+    "fields": {
+      "commune": 105,
+      "nomOfficiel": "5\u00e8me Laroque",
+      "sectionCommunale": "LAROGUE",
+      "description": "",
+      "id_code": "733-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 471
+  },
+  {
+    "fields": {
+      "commune": 4,
+      "nomOfficiel": "22\u00e8me Malanga",
+      "sectionCommunale": "MALANGA",
+      "description": "",
+      "id_code": "113-12"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 472
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "9\u00e8me Citronniers",
+      "sectionCommunale": "CITRONIER",
+      "description": "",
+      "id_code": "121-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 473
+  },
+  {
+    "fields": {
+      "commune": 10,
+      "nomOfficiel": "14\u00e8me Fond de Boudin",
+      "sectionCommunale": "FOND-DE-BOUDIN",
+      "description": "",
+      "id_code": "121-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 474
+  },
+  {
+    "fields": {
+      "commune": 39,
+      "nomOfficiel": "5\u00e8me Bonneau",
+      "sectionCommunale": "BORNEAU",
+      "description": "",
+      "id_code": "921-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 475
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "2\u00e8me Mabriol",
+      "sectionCommunale": "MABRIOLE",
+      "description": "",
+      "id_code": "231-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 476
+  },
+  {
+    "fields": {
+      "commune": 90,
+      "nomOfficiel": "1\u00e8re Savane Grande",
+      "sectionCommunale": "GRANDE SAVANE",
+      "description": "",
+      "id_code": "612-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 477
+  },
+  {
+    "fields": {
+      "commune": 14,
+      "nomOfficiel": "5\u00e8me Pays Pourri",
+      "sectionCommunale": "PAYS POURRI",
+      "description": "",
+      "id_code": "133-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 478
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "4\u00e8me Fonds Arabie",
+      "sectionCommunale": "FOND ARABIE",
+      "description": "",
+      "id_code": "122-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 479
+  },
+  {
+    "fields": {
+      "commune": 72,
+      "nomOfficiel": "4\u00e8me Barbois",
+      "sectionCommunale": "DARBOIS",
+      "description": "",
+      "id_code": "721-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 480
+  },
+  {
+    "fields": {
+      "commune": 113,
+      "nomOfficiel": "2eme  Dallier",
+      "sectionCommunale": "DALLIER",
+      "description": "",
+      "id_code": "822-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 481
+  },
+  {
+    "fields": {
+      "commune": 7,
+      "nomOfficiel": "1\u00e8re Morne \u00e0Bateau",
+      "sectionCommunale": "MORNE A BATEAU",
+      "description": "",
+      "id_code": "116-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 482
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "2\u00e8me Fond Melon",
+      "sectionCommunale": "FOND MELON (Selle et",
+      "description": "",
+      "id_code": "211-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 483
+  },
+  {
+    "fields": {
+      "commune": 115,
+      "nomOfficiel": "6\u00e8me Les Cayemites",
+      "sectionCommunale": "LES CAYEMITES",
+      "description": "",
+      "id_code": "834-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 484
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "3\u00e8me La Vall\u00e9e",
+      "sectionCommunale": "LA VALLEE",
+      "description": "",
+      "id_code": "221-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 485
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "2\u00e8me Trou Mahot",
+      "sectionCommunale": "TROU MAHOT",
+      "description": "",
+      "id_code": "221-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 486
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "1\u00e8re Br\u00e9silienne",
+      "sectionCommunale": "BRESLIENNE",
+      "description": "",
+      "id_code": "221-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 487
+  },
+  {
+    "fields": {
+      "commune": 1,
+      "nomOfficiel": "1\u00e8re Saint martin",
+      "sectionCommunale": "SAINT MARTIN",
+      "description": "",
+      "id_code": "112-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 488
+  },
+  {
+    "fields": {
+      "commune": 22,
+      "nomOfficiel": "4\u00e8me Fond Melon Michineau",
+      "sectionCommunale": "FOND MELON MICHINEAU",
+      "description": "",
+      "id_code": "213-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 489
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "4\u00e8me La Gosseline",
+      "sectionCommunale": "LA GOSSELINE",
+      "description": "",
+      "id_code": "211-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 490
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "12\u00e8me La vanneau",
+      "sectionCommunale": "LAVANEAU",
+      "description": "",
+      "id_code": "211-10"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 491
+  },
+  {
+    "fields": {
+      "commune": 23,
+      "nomOfficiel": "3\u00e8me Ternier",
+      "sectionCommunale": "TERNIER",
+      "description": "",
+      "id_code": "214-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 492
+  },
+  {
+    "fields": {
+      "commune": 23,
+      "nomOfficiel": "10\u00e8me Morne \u00e0Bruler",
+      "sectionCommunale": "MORNE A BRULER",
+      "description": "",
+      "id_code": "214-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 493
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "4\u00e8me Moussambe",
+      "sectionCommunale": "MOUSSAMBE",
+      "description": "",
+      "id_code": "123-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 494
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "13\u00e8me La Montagne",
+      "sectionCommunale": "LA MONTAGNE",
+      "description": "",
+      "id_code": "211-11"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 495
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "9\u00e8me Haut Coq Chante",
+      "sectionCommunale": "HAUT COQ CHANTE",
+      "description": "",
+      "id_code": "211-09"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 496
+  },
+  {
+    "fields": {
+      "commune": 19,
+      "nomOfficiel": "3\u00e8me Cochon Gras",
+      "sectionCommunale": "COCHON GRAS",
+      "description": "",
+      "id_code": "211-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 497
+  },
+  {
+    "fields": {
+      "commune": 123,
+      "nomOfficiel": "3\u00e8me Dessources",
+      "sectionCommunale": "DESSOURCES",
+      "description": "",
+      "id_code": "1011-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 498
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "6\u00e8me Grande Colline",
+      "sectionCommunale": "GRANDE COLLINE",
+      "description": "",
+      "id_code": "123-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 499
+  },
+  {
+    "fields": {
+      "commune": 12,
+      "nomOfficiel": "3\u00e8me Moussambe",
+      "sectionCommunale": "MOUSSAMBE",
+      "description": "",
+      "id_code": "123-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 500
+  },
+  {
+    "fields": {
+      "commune": 138,
+      "nomOfficiel": "4\u00e8me Haut Grandou",
+      "sectionCommunale": "HAUT GRANDOU",
+      "description": "",
+      "id_code": "221-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 501
+  },
+  {
+    "fields": {
+      "commune": 73,
+      "nomOfficiel": "2\u00e8me Petites Desdunes",
+      "sectionCommunale": "PETITES DESDUNES",
+      "description": "",
+      "id_code": "513-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 502
+  },
+  {
+    "fields": {
+      "commune": 23,
+      "nomOfficiel": "11\u00e8me Muzac",
+      "sectionCommunale": "MUZAC",
+      "description": "",
+      "id_code": "214-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 503
+  },
+  {
+    "fields": {
+      "commune": 73,
+      "nomOfficiel": "1\u00e8re Lacroix Perisse",
+      "sectionCommunale": "PONT DE L'ESTERE",
+      "description": "",
+      "id_code": "513-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 504
+  },
+  {
+    "fields": {
+      "commune": 9,
+      "nomOfficiel": "3\u00e8me Bellevue",
+      "sectionCommunale": "BELLEVUE",
+      "description": "",
+      "id_code": "118-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 505
+  },
+  {
+    "fields": {
+      "commune": 9,
+      "nomOfficiel": "4\u00e8me Bellevue",
+      "sectionCommunale": "BELLEVUE",
+      "description": "",
+      "id_code": "118-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 506
+  },
+  {
+    "fields": {
+      "commune": 6,
+      "nomOfficiel": "4\u00e8me Grand Fond",
+      "sectionCommunale": "BELLE FONTAINE",
+      "description": "",
+      "id_code": "115-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 507
+  },
+  {
+    "fields": {
+      "commune": 6,
+      "nomOfficiel": "2\u00e8me Bongars",
+      "sectionCommunale": "BONGARS",
+      "description": "",
+      "id_code": "115-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 508
+  },
+  {
+    "fields": {
+      "commune": 132,
+      "nomOfficiel": "3\u00e8me Li\u00e8ve",
+      "sectionCommunale": "LIEVE",
+      "description": "",
+      "id_code": "1022-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 509
+  },
+  {
+    "fields": {
+      "commune": 6,
+      "nomOfficiel": "3\u00e8me Sourcailles",
+      "sectionCommunale": "SOUCAILLES",
+      "description": "",
+      "id_code": "115-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 510
+  },
+  {
+    "fields": {
+      "commune": 3,
+      "nomOfficiel": "1\u00e8re Montagne Noire",
+      "sectionCommunale": "MONTAGNE NOIRE",
+      "description": "",
+      "id_code": "114-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 511
+  },
+  {
+    "fields": {
+      "commune": 3,
+      "nomOfficiel": "4\u00e8me Bellevue la Montagne",
+      "sectionCommunale": "BELLEVUE LA MONTAGNE",
+      "description": "",
+      "id_code": "114-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 512
+  },
+  {
+    "fields": {
+      "commune": 3,
+      "nomOfficiel": "3\u00e8me Etang du Jong",
+      "sectionCommunale": "ETANG DU JONC",
+      "description": "",
+      "id_code": "114-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 513
+  },
+  {
+    "fields": {
+      "commune": 2,
+      "nomOfficiel": "8\u00e8me Martissant",
+      "sectionCommunale": "MARTISSANT",
+      "description": "",
+      "id_code": "111-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 514
+  },
+  {
+    "fields": {
+      "commune": 135,
+      "nomOfficiel": "8\u00e8me Changeux",
+      "sectionCommunale": "CHANGEUX",
+      "description": "",
+      "id_code": "1023-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 515
+  },
+  {
+    "fields": {
+      "commune": 3,
+      "nomOfficiel": "6\u00e8me Aux Cadets",
+      "sectionCommunale": "AUX CADETS",
+      "description": "",
+      "id_code": "114-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 516
+  },
+  {
+    "fields": {
+      "commune": 2,
+      "nomOfficiel": "7\u00e8me Morne l'Hopital",
+      "sectionCommunale": "MORNE L'HOPITAL",
+      "description": "",
+      "id_code": "111-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 517
+  },
+  {
+    "fields": {
+      "commune": 139,
+      "nomOfficiel": "6\u00e8me Plaisance",
+      "sectionCommunale": "PLAISSANCE",
+      "description": "",
+      "id_code": "1025-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 518
+  },
+  {
+    "fields": {
+      "commune": 140,
+      "nomOfficiel": "2\u00e8me Eaux Basses",
+      "sectionCommunale": "GRAND BOUCAN",
+      "description": "",
+      "id_code": "1032-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 519
+  },
+  {
+    "fields": {
+      "commune": 134,
+      "nomOfficiel": "1\u00e8re G\u00e9rin",
+      "sectionCommunale": "GUERIN / MOUTON",
+      "description": "",
+      "id_code": "1031-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 520
+  },
+  {
+    "fields": {
+      "commune": 8,
+      "nomOfficiel": "1\u00e8re Varreux",
+      "sectionCommunale": "VARREUX",
+      "description": "",
+      "id_code": "117-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 521
+  },
+  {
+    "fields": {
+      "commune": 8,
+      "nomOfficiel": "2\u00e8me Varreux",
+      "sectionCommunale": "VARREUX",
+      "description": "",
+      "id_code": "117-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 522
+  },
+  {
+    "fields": {
+      "commune": 2,
+      "nomOfficiel": "6\u00e8me Turgeau",
+      "sectionCommunale": "TURGEAU",
+      "description": "",
+      "id_code": "111-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 523
+  },
+  {
+    "fields": {
+      "commune": 134,
+      "nomOfficiel": "3\u00e8me Fonds Tortue",
+      "sectionCommunale": "FOND TORTUE",
+      "description": "",
+      "id_code": "1031-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 524
+  },
+  {
+    "fields": {
+      "commune": 134,
+      "nomOfficiel": "4e La Plaine",
+      "sectionCommunale": "LA PLAINE",
+      "description": "",
+      "id_code": "1031-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 525
+  },
+  {
+    "fields": {
+      "commune": 134,
+      "nomOfficiel": "2\u00e8me T\u00eate d'Eau",
+      "sectionCommunale": "TETE D'EAU",
+      "description": "",
+      "id_code": "1031-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 526
+  },
+  {
+    "fields": {
+      "commune": 139,
+      "nomOfficiel": "4\u00e8me Vassale",
+      "sectionCommunale": "VASSALE",
+      "description": "",
+      "id_code": "1025-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 527
+  },
+  {
+    "fields": {
+      "commune": 134,
+      "nomOfficiel": "5\u00e8me Rivi\u00e8re Sal\u00e9e",
+      "sectionCommunale": "RIVIERE SALEE",
+      "description": "",
+      "id_code": "1031-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 528
+  },
+  {
+    "fields": {
+      "commune": 139,
+      "nomOfficiel": "5\u00e8me Anse \u00e0Pins",
+      "sectionCommunale": "ANSE-AUX-PINS",
+      "description": "",
+      "id_code": "1025-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 529
+  },
+  {
+    "fields": {
+      "commune": 132,
+      "nomOfficiel": "2\u00e8me Tiby",
+      "sectionCommunale": "TIBY",
+      "description": "",
+      "id_code": "1022-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 530
+  },
+  {
+    "fields": {
+      "commune": 132,
+      "nomOfficiel": "1\u00e8re Raymond",
+      "sectionCommunale": "RAYMOND",
+      "description": "",
+      "id_code": "1022-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 531
+  },
+  {
+    "fields": {
+      "commune": 135,
+      "nomOfficiel": "1\u00e8re l'Asile",
+      "sectionCommunale": "MORISSEAU",
+      "description": "",
+      "id_code": "1023-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 532
+  },
+  {
+    "fields": {
+      "commune": 135,
+      "nomOfficiel": "3\u00e8me Tournade",
+      "sectionCommunale": "L'AZILE / NAN PAUL",
+      "description": "",
+      "id_code": "1023-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 533
+  },
+  {
+    "fields": {
+      "commune": 135,
+      "nomOfficiel": "4\u00e8me Morisseau",
+      "sectionCommunale": "TOURNADE",
+      "description": "",
+      "id_code": "1023-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 534
+  },
+  {
+    "fields": {
+      "commune": 131,
+      "nomOfficiel": "1\u00e8re Baconnois",
+      "sectionCommunale": "BACONNOIS",
+      "description": "",
+      "id_code": "1021-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 535
+  },
+  {
+    "fields": {
+      "commune": 80,
+      "nomOfficiel": "3\u00e8me Barreau",
+      "sectionCommunale": "BACONNOIS",
+      "description": "",
+      "id_code": "1024-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 536
+  },
+  {
+    "fields": {
+      "commune": 131,
+      "nomOfficiel": "7\u00e8me Sault de Baril",
+      "sectionCommunale": "SAUT DE BARIL",
+      "description": "",
+      "id_code": "1021-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 537
+  },
+  {
+    "fields": {
+      "commune": 125,
+      "nomOfficiel": "3\u00e8me R\u00e9serve",
+      "sectionCommunale": "RESERVE / TI PARADIS",
+      "description": "",
+      "id_code": "932-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 538
+  },
+  {
+    "fields": {
+      "commune": 80,
+      "nomOfficiel": "1\u00e8re Arneau",
+      "sectionCommunale": "BAQUET",
+      "description": "",
+      "id_code": "1024-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 539
+  },
+  {
+    "fields": {
+      "commune": 55,
+      "nomOfficiel": "1\u00e8re Tapion",
+      "sectionCommunale": "TAPION",
+      "description": "",
+      "id_code": "722-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 540
+  },
+  {
+    "fields": {
+      "commune": 80,
+      "nomOfficiel": "2\u00e8me Baquet",
+      "sectionCommunale": "BAQUET",
+      "description": "",
+      "id_code": "1024-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 541
+  },
+  {
+    "fields": {
+      "commune": 128,
+      "nomOfficiel": "3\u00e8me Silegue",
+      "sectionCommunale": "SILLEGUE",
+      "description": "",
+      "id_code": "1012-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 542
+  },
+  {
+    "fields": {
+      "commune": 78,
+      "nomOfficiel": "7\u00e8me Moulin",
+      "sectionCommunale": "MOULIN",
+      "description": "",
+      "id_code": "521-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 543
+  },
+  {
+    "fields": {
+      "commune": 129,
+      "nomOfficiel": "4\u00e8me Pemerle",
+      "sectionCommunale": "PEMERLE",
+      "description": "",
+      "id_code": "1013-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 544
+  },
+  {
+    "fields": {
+      "commune": 129,
+      "nomOfficiel": "2\u00e8me Fonds des N\u00e8gres",
+      "sectionCommunale": "Fonds-des-Negres",
+      "description": "",
+      "id_code": "1013-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 545
+  },
+  {
+    "fields": {
+      "commune": 128,
+      "nomOfficiel": "1\u00e8re Fonds de Lianes",
+      "sectionCommunale": "FONDS DE LIANES",
+      "description": "",
+      "id_code": "1012-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 546
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "3\u00e8me Calumette",
+      "sectionCommunale": "CALUMETTE",
+      "description": "",
+      "id_code": "231-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 547
+  },
+  {
+    "fields": {
+      "commune": 140,
+      "nomOfficiel": "1\u00e8re Grand Boucan",
+      "sectionCommunale": "GRAND BOUCAN",
+      "description": "",
+      "id_code": "1032-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 548
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "6\u00e8me Grande Source",
+      "sectionCommunale": "GRANDE SOURCE",
+      "description": "",
+      "id_code": "934-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 549
+  },
+  {
+    "fields": {
+      "commune": 122,
+      "nomOfficiel": "1\u00e8re Chansolme",
+      "sectionCommunale": "SECTION DE CHANSOLME",
+      "description": "",
+      "id_code": "914-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 550
+  },
+  {
+    "fields": {
+      "commune": 127,
+      "nomOfficiel": "5\u00e8me Dessources",
+      "sectionCommunale": "DESSOURCES",
+      "description": "",
+      "id_code": "934-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 551
+  },
+  {
+    "fields": {
+      "commune": 24,
+      "nomOfficiel": "4\u00e8me Amazone",
+      "sectionCommunale": "AMAZONES",
+      "description": "",
+      "id_code": "222-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 552
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "4\u00e8me Corail Lamothe",
+      "sectionCommunale": "CORAIL LAMOTHE",
+      "description": "",
+      "id_code": "231-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 553
+  },
+  {
+    "fields": {
+      "commune": 130,
+      "nomOfficiel": "2\u00e8me Bouzi",
+      "sectionCommunale": "BOUZI",
+      "description": "",
+      "id_code": "1014-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 554
+  },
+  {
+    "fields": {
+      "commune": 57,
+      "nomOfficiel": "Ile \u00e0 Vache",
+      "sectionCommunale": "Ile-a-Vache",
+      "description": "",
+      "id_code": "716-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 555
+  },
+  {
+    "fields": {
+      "commune": 129,
+      "nomOfficiel": "5\u00e8me Cocoyers",
+      "sectionCommunale": "COCOYERS",
+      "description": "",
+      "id_code": "1013-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 556
+  },
+  {
+    "fields": {
+      "commune": 16,
+      "nomOfficiel": "4\u00e8me Fonds des Blancs",
+      "sectionCommunale": "FONDS DES BLANCS",
+      "description": "",
+      "id_code": "142-04"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 557
+  },
+  {
+    "fields": {
+      "commune": 136,
+      "nomOfficiel": "2\u00e8me Varreux",
+      "sectionCommunale": "VARREUX",
+      "description": "",
+      "id_code": "131-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 558
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "6\u00e8me Pichon",
+      "sectionCommunale": "PICHON",
+      "description": "",
+      "id_code": "231-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 559
+  },
+  {
+    "fields": {
+      "commune": 123,
+      "nomOfficiel": "1\u00e8re Chalon",
+      "sectionCommunale": "CHALON",
+      "description": "",
+      "id_code": "1011-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 560
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "7\u00e8me Mapou",
+      "sectionCommunale": "MAPOU",
+      "description": "",
+      "id_code": "231-07"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 561
+  },
+  {
+    "fields": {
+      "commune": 123,
+      "nomOfficiel": "2\u00e8me Belle Rivi\u00e8re",
+      "sectionCommunale": "BELLE RIVIERE",
+      "description": "",
+      "id_code": "1011-02"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 562
+  },
+  {
+    "fields": {
+      "commune": 25,
+      "nomOfficiel": "5\u00e8me Bel Air",
+      "sectionCommunale": "BELAIR",
+      "description": "",
+      "id_code": "231-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 563
+  },
+  {
+    "fields": {
+      "commune": 13,
+      "nomOfficiel": "1\u00e8re Bino",
+      "sectionCommunale": "BINO (PREMIERE PLAIN",
+      "description": "",
+      "id_code": "122-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 564
+  },
+  {
+    "fields": {
+      "commune": 17,
+      "nomOfficiel": "1\u00e8re Colline des Ch\u00e8nes",
+      "sectionCommunale": "COLLINE DES CHAINES",
+      "description": "",
+      "id_code": "232-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 565
+  },
+  {
+    "fields": {
+      "commune": 24,
+      "nomOfficiel": "3\u00e8me Bras Gauche",
+      "sectionCommunale": "BRAS GAUCHE",
+      "description": "",
+      "id_code": "222-03"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 566
+  },
+  {
+    "fields": {
+      "commune": 24,
+      "nomOfficiel": "1\u00e8re Gris-gris",
+      "sectionCommunale": "GRIS GRIS",
+      "description": "",
+      "id_code": "222-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 567
+  },
+  {
+    "fields": {
+      "commune": 24,
+      "nomOfficiel": "6\u00e8me Jamais Vu",
+      "sectionCommunale": "JAMAIS VU",
+      "description": "",
+      "id_code": "222-06"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 568
+  },
+  {
+    "fields": {
+      "commune": 24,
+      "nomOfficiel": "5\u00e8me Boucan B\u00e9lier",
+      "sectionCommunale": "BOUCAN BELIER",
+      "description": "",
+      "id_code": "222-05"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 569
+  },
+  {
+    "fields": {
+      "commune": 28,
+      "nomOfficiel": "1\u00e8re Boucan Guillaume",
+      "sectionCommunale": "BOUCAN GUILLAUME",
+      "description": "",
+      "id_code": "234-01"
+    },
+    "model": "base.sectioncommunale",
+    "pk": 570
+  }
+]

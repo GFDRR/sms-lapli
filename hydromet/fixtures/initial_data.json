@@ -1,0 +1,1179 @@
+[
+  {
+    "fields": {
+      "description": ""
+    },
+    "model": "hydromet.typestationpluviometrique",
+    "pk": "Pluviometre Manuel"
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.24575082441373,
+      "idStation": "",
+      "nomStation": "Citadelle",
+      "idSiteSeninnelle": null,
+      "latitude": 19.56257377497237,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 91
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.36274228283237,
+      "idStation": "",
+      "nomStation": "Marmelade",
+      "idSiteSeninnelle": null,
+      "latitude": 19.51455936028594,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 92
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.2037512572773,
+      "idStation": "",
+      "nomStation": "Raphael",
+      "idSiteSeninnelle": null,
+      "latitude": 19.43763675506464,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 93
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.92143834066937,
+      "idStation": "",
+      "nomStation": "Valli\u00e8res",
+      "idSiteSeninnelle": null,
+      "latitude": 19.4286859406368,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 94
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.77094901425157,
+      "idStation": "",
+      "nomStation": "Mont Organis\u00e9",
+      "idSiteSeninnelle": null,
+      "latitude": 19.40253842479207,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 95
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.33661738942924,
+      "idStation": "",
+      "nomStation": "Saint-Michel",
+      "idSiteSeninnelle": null,
+      "latitude": 19.3724830194373,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 96
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.51931978315153,
+      "idStation": "",
+      "nomStation": "Dessalines",
+      "idSiteSeninnelle": null,
+      "latitude": 19.25443372560053,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 97
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.14072572788245,
+      "idStation": "",
+      "nomStation": "Ma\u00efssade",
+      "idSiteSeninnelle": null,
+      "latitude": 19.17363315099675,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 98
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.01364346235398,
+      "idStation": "",
+      "nomStation": "Hinche",
+      "idSiteSeninnelle": null,
+      "latitude": 19.14363996527887,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 99
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.79183347177307,
+      "idStation": "",
+      "nomStation": "Cerca-la-source",
+      "idSiteSeninnelle": null,
+      "latitude": 19.16729479161771,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 100
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.73592289301587,
+      "idStation": "",
+      "nomStation": "Saltad\u00e8re",
+      "idSiteSeninnelle": null,
+      "latitude": 19.13499731723255,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 101
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.47710368974123,
+      "idStation": "",
+      "nomStation": "Petite Rivi\u00e8re de l\u2019Artibonite",
+      "idSiteSeninnelle": null,
+      "latitude": 19.12144878884045,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 102
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.46688199951721,
+      "idStation": "",
+      "nomStation": "Verrettes",
+      "idSiteSeninnelle": null,
+      "latitude": 19.04832242258459,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 103
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.28596069474833,
+      "idStation": "",
+      "nomStation": "La Chapelle",
+      "idSiteSeninnelle": null,
+      "latitude": 18.89842986926211,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 104
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.93808254426408,
+      "idStation": "",
+      "nomStation": "Lascahobas",
+      "idSiteSeninnelle": null,
+      "latitude": 18.82804877081173,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 105
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.1028521534286,
+      "idStation": "",
+      "nomStation": "Mirebalais",
+      "idSiteSeninnelle": null,
+      "latitude": 18.83007043183073,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 106
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.76965404974263,
+      "idStation": "",
+      "nomStation": "Grande Saline",
+      "idSiteSeninnelle": null,
+      "latitude": 19.24688361741425,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 107
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.6419821450676,
+      "idStation": "",
+      "nomStation": "Desdunes",
+      "idSiteSeninnelle": null,
+      "latitude": 19.2893648425934,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 108
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.61025371360242,
+      "idStation": "",
+      "nomStation": "Pont-Sond\u00e9",
+      "idSiteSeninnelle": null,
+      "latitude": 19.15648081969195,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 109
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.8143043794609,
+      "idStation": "",
+      "nomStation": "Belladere",
+      "idSiteSeninnelle": null,
+      "latitude": 18.85835202262486,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 110
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.45123210929594,
+      "idStation": "",
+      "nomStation": "Anse d\u2019Hainault",
+      "idSiteSeninnelle": null,
+      "latitude": 18.49070020511937,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 111
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.01485273264807,
+      "idStation": "",
+      "nomStation": "J\u00e9r\u00e9mie",
+      "idSiteSeninnelle": null,
+      "latitude": 18.6013000213286,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 112
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.28888571947752,
+      "idStation": "",
+      "nomStation": "Sources Chaudes",
+      "idSiteSeninnelle": null,
+      "latitude": 18.49525733434571,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 113
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.20210227524436,
+      "idStation": "",
+      "nomStation": "Marfranc",
+      "idSiteSeninnelle": null,
+      "latitude": 18.60076737333268,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 114
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.10820542444598,
+      "idStation": "",
+      "nomStation": "L\u00e9on",
+      "idSiteSeninnelle": null,
+      "latitude": 18.56025694264951,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 115
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.06871754284536,
+      "idStation": "",
+      "nomStation": "Pourcine",
+      "idSiteSeninnelle": null,
+      "latitude": 18.46972083263341,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 116
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.95355107637289,
+      "idStation": "",
+      "nomStation": "Beaumont",
+      "idSiteSeninnelle": null,
+      "latitude": 18.48146450810822,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 117
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.21820074958674,
+      "idStation": "",
+      "nomStation": "Les Anglais",
+      "idSiteSeninnelle": null,
+      "latitude": 18.3047181911896,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 118
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -74.0984790632201,
+      "idStation": "",
+      "nomStation": "Port-\u00e0-Piment",
+      "idSiteSeninnelle": null,
+      "latitude": 18.24818500714856,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 119
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.83838731640056,
+      "idStation": "",
+      "nomStation": "Saut-Mathurine",
+      "idSiteSeninnelle": null,
+      "latitude": 18.36974002802704,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 120
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.85421931946563,
+      "idStation": "",
+      "nomStation": "Camp-Perrin",
+      "idSiteSeninnelle": null,
+      "latitude": 18.31553314444214,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 121
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.87674102656624,
+      "idStation": "",
+      "nomStation": "Chantal",
+      "idSiteSeninnelle": null,
+      "latitude": 18.19444400536614,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 122
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.63598620749812,
+      "idStation": "",
+      "nomStation": "Cavaillon",
+      "idSiteSeninnelle": null,
+      "latitude": 18.29575463168128,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 123
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.55773504364097,
+      "idStation": "",
+      "nomStation": "Saint-Louis-du-Sud",
+      "idSiteSeninnelle": null,
+      "latitude": 18.27277034452668,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 124
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.34226383992878,
+      "idStation": "",
+      "nomStation": "Anse \u00e0 veau",
+      "idSiteSeninnelle": null,
+      "latitude": 18.50005936967271,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 125
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.08877994780589,
+      "idStation": "",
+      "nomStation": "Mirago\u00e2ne",
+      "idSiteSeninnelle": null,
+      "latitude": 18.44461090800782,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 126
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.19340102741383,
+      "idStation": "",
+      "nomStation": "Rochelois",
+      "idSiteSeninnelle": null,
+      "latitude": 18.41018414190348,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 127
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.22025040147221,
+      "idStation": "",
+      "nomStation": "Fond des N\u00e8gres",
+      "idSiteSeninnelle": null,
+      "latitude": 18.36704333499312,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 128
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.86217343881822,
+      "idStation": "",
+      "nomStation": "Petit Go\u00e2ve",
+      "idSiteSeninnelle": null,
+      "latitude": 18.43330364573203,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 129
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.74962816246435,
+      "idStation": "",
+      "nomStation": "Bainet",
+      "idSiteSeninnelle": null,
+      "latitude": 18.18734975488544,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 130
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.23904983906756,
+      "idStation": "",
+      "nomStation": "Croix-des-Bouquets",
+      "idSiteSeninnelle": null,
+      "latitude": 18.58420324132958,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 131
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.11140330097759,
+      "idStation": "",
+      "nomStation": "Despuzau",
+      "idSiteSeninnelle": null,
+      "latitude": 18.56727413692638,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 132
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.29501304833985,
+      "idStation": "",
+      "nomStation": "Damien",
+      "idSiteSeninnelle": null,
+      "latitude": 18.5884284749118,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 133
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.29357766281736,
+      "idStation": "",
+      "nomStation": "P\u00e9tionville",
+      "idSiteSeninnelle": null,
+      "latitude": 18.51973411240028,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 134
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.33979208089141,
+      "idStation": "",
+      "nomStation": "Port-au-Prince",
+      "idSiteSeninnelle": null,
+      "latitude": 18.54412220874776,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 135
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.63246090212668,
+      "idStation": "",
+      "nomStation": "L\u00e9og\u00e2ne",
+      "idSiteSeninnelle": null,
+      "latitude": 18.513183854149,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 136
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.53679889402035,
+      "idStation": "",
+      "nomStation": "Jacmel",
+      "idSiteSeninnelle": null,
+      "latitude": 18.23375196546153,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 137
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.64309274726585,
+      "idStation": "",
+      "nomStation": "Trouin",
+      "idSiteSeninnelle": null,
+      "latitude": 18.36193828235698,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 138
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.63243294210933,
+      "idStation": "",
+      "nomStation": "La Vall\u00e9e",
+      "idSiteSeninnelle": null,
+      "latitude": 18.25268834055497,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 139
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.40505027733663,
+      "idStation": "",
+      "nomStation": "Gaillard",
+      "idSiteSeninnelle": null,
+      "latitude": 18.24436654553611,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 140
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.31537659458802,
+      "idStation": "",
+      "nomStation": "Marigot",
+      "idSiteSeninnelle": null,
+      "latitude": 18.23391877891812,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 141
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.5735471691325,
+      "idStation": "",
+      "nomStation": "Sercey",
+      "idSiteSeninnelle": null,
+      "latitude": 18.49492438159563,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 142
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.28502672171881,
+      "idStation": "",
+      "nomStation": "Kenscoff",
+      "idSiteSeninnelle": null,
+      "latitude": 18.44846345184628,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 143
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.28260965576352,
+      "idStation": "",
+      "nomStation": "Furcy",
+      "idSiteSeninnelle": null,
+      "latitude": 18.41925256403835,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 144
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.21035052981762,
+      "idStation": "",
+      "nomStation": "Seguin",
+      "idSiteSeninnelle": null,
+      "latitude": 18.30649789426097,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 145
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.06465964725297,
+      "idStation": "",
+      "nomStation": "Belle Anse",
+      "idSiteSeninnelle": null,
+      "latitude": 18.23618080601668,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 146
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.76243106066268,
+      "idStation": "",
+      "nomStation": "Anse-\u00e0-Pitres",
+      "idSiteSeninnelle": null,
+      "latitude": 18.03584976793925,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 147
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.79499708682636,
+      "idStation": "",
+      "nomStation": "Banane",
+      "idSiteSeninnelle": null,
+      "latitude": 18.17888562292269,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 148
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.84138509916261,
+      "idStation": "",
+      "nomStation": "Thiotte",
+      "idSiteSeninnelle": null,
+      "latitude": 18.23496538083361,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 149
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.79601405287232,
+      "idStation": "",
+      "nomStation": "Savane Zombi",
+      "idSiteSeninnelle": null,
+      "latitude": 18.28008671167904,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 150
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.78525116633472,
+      "idStation": "",
+      "nomStation": "For\u00eat des Pins",
+      "idSiteSeninnelle": null,
+      "latitude": 18.31797240056409,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 151
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.85976246053964,
+      "idStation": "",
+      "nomStation": "Fond Verrettes",
+      "idSiteSeninnelle": null,
+      "latitude": 18.39454780304249,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 152
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.9683246069313,
+      "idStation": "",
+      "nomStation": "Fond Parisien",
+      "idSiteSeninnelle": null,
+      "latitude": 18.44192103103976,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 153
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.09487292004108,
+      "idStation": "",
+      "nomStation": "Thomazeau",
+      "idSiteSeninnelle": null,
+      "latitude": 18.65093386063197,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 154
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.94221543987605,
+      "idStation": "",
+      "nomStation": "Cornillon",
+      "idSiteSeninnelle": null,
+      "latitude": 18.67879843909471,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 155
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.4187839301549,
+      "idStation": "",
+      "nomStation": "Cabaret",
+      "idSiteSeninnelle": null,
+      "latitude": 18.73889229841777,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 156
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.78787559076952,
+      "idStation": "",
+      "nomStation": "Baptiste",
+      "idSiteSeninnelle": null,
+      "latitude": 18.79575843508831,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 157
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.78227710194047,
+      "idStation": "",
+      "nomStation": "Palmiste",
+      "idSiteSeninnelle": null,
+      "latitude": 20.0301058866538,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 158
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.3770307050926,
+      "idStation": "",
+      "nomStation": "M\u00f4le-Saint-Nicolas",
+      "idSiteSeninnelle": null,
+      "latitude": 19.80520971990071,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 159
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.34032438142388,
+      "idStation": "",
+      "nomStation": "Bombardopolis",
+      "idSiteSeninnelle": null,
+      "latitude": 19.6866889471587,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 160
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -73.18944943466488,
+      "idStation": "",
+      "nomStation": "Jean Rabel",
+      "idSiteSeninnelle": null,
+      "latitude": 19.85216927838869,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 161
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.83020616971447,
+      "idStation": "",
+      "nomStation": "Port de Paix",
+      "idSiteSeninnelle": null,
+      "latitude": 19.94189096277303,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 162
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.6904340278442,
+      "idStation": "",
+      "nomStation": "Saint Louis-du-Nord",
+      "idSiteSeninnelle": null,
+      "latitude": 19.92008789452475,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 163
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.77611652783828,
+      "idStation": "",
+      "nomStation": "Bassin Bleu",
+      "idSiteSeninnelle": null,
+      "latitude": 19.76886238804884,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 164
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.78349567204873,
+      "idStation": "",
+      "nomStation": "Terre Neuve",
+      "idSiteSeninnelle": null,
+      "latitude": 19.59880392569874,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 165
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.69349837004815,
+      "idStation": "",
+      "nomStation": "Gona\u00efves",
+      "idSiteSeninnelle": null,
+      "latitude": 19.44951244758602,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 166
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.46433882638146,
+      "idStation": "",
+      "nomStation": "Ennery",
+      "idSiteSeninnelle": null,
+      "latitude": 19.47351632142671,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 167
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.46638655517845,
+      "idStation": "",
+      "nomStation": "Plaisance",
+      "idSiteSeninnelle": null,
+      "latitude": 19.59736853421103,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 168
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.52545367861799,
+      "idStation": "",
+      "nomStation": "Borgne",
+      "idSiteSeninnelle": null,
+      "latitude": 19.84576903916737,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 169
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.40170725144127,
+      "idStation": "",
+      "nomStation": "Limb\u00e9",
+      "idSiteSeninnelle": null,
+      "latitude": 19.70570847527878,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 170
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.54470912555331,
+      "idStation": "",
+      "nomStation": "Pilate",
+      "idSiteSeninnelle": null,
+      "latitude": 19.67157424841179,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 171
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.67889127744183,
+      "idStation": "",
+      "nomStation": "Gros Morne",
+      "idSiteSeninnelle": null,
+      "latitude": 19.66530285675367,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 172
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.91384996172047,
+      "idStation": "",
+      "nomStation": "Phaeton",
+      "idSiteSeninnelle": null,
+      "latitude": 19.68552722677334,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 173
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.1991659809478,
+      "idStation": "",
+      "nomStation": "Cap-Ha\u00eftien",
+      "idSiteSeninnelle": null,
+      "latitude": 19.75992758106156,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 174
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.93366400842218,
+      "idStation": "",
+      "nomStation": "Grand Bassin",
+      "idSiteSeninnelle": null,
+      "latitude": 19.59525372336024,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 175
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -71.72424196071972,
+      "idStation": "",
+      "nomStation": "Ouanaminthe",
+      "idSiteSeninnelle": null,
+      "latitude": 19.55017474737628,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 176
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.12067402122503,
+      "idStation": "",
+      "nomStation": "Limonade",
+      "idSiteSeninnelle": null,
+      "latitude": 19.67525208973897,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 177
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.15208000836338,
+      "idStation": "",
+      "nomStation": "Grande Rivi\u00e8re du Nord",
+      "idSiteSeninnelle": null,
+      "latitude": 19.57468898354985,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 178
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.69793579005191,
+      "idStation": "",
+      "nomStation": "Saint-Marc",
+      "idSiteSeninnelle": null,
+      "latitude": 19.10305765133359,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 179
+  },
+  {
+    "fields": {
+      "typeStation": "Pluviometre Manuel",
+      "longitude": -72.8617945140971,
+      "idStation": "",
+      "nomStation": "Anse-\u00e0-Galets",
+      "idSiteSeninnelle": null,
+      "latitude": 18.83165707393624,
+      "hauteur": "0.00"
+    },
+    "model": "hydromet.stationpluviometrique",
+    "pk": 180
+  }
+]
