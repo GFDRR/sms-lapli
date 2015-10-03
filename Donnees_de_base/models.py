@@ -9,7 +9,7 @@ from django.db import models
 
 
 class Departement(models.Model):
-    departement = models.CharField(max_length=40, verbose_name="Departement")
+    departement = models.CharField(max_length=40, verbose_name="Departement", unique=True)
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
     # ihsi = models.CharField(max_length=10, verbose_name="Code IHSI")
 
@@ -19,7 +19,7 @@ class Departement(models.Model):
 
 class Commune(models.Model):
     departement = models.ForeignKey(Departement, verbose_name="Departement")
-    commune = models.CharField(max_length=45, verbose_name="Commune")
+    commune = models.CharField(max_length=45, verbose_name="Commune", unique=True)
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
@@ -28,7 +28,7 @@ class Commune(models.Model):
 
 class SectionCommunale(models.Model):
     commune = models.ForeignKey(Commune, verbose_name="Commune")
-    sectionCommunale = models.CharField(max_length=45, verbose_name="Section Communale")
+    sectionCommunale = models.CharField(max_length=45, verbose_name="Section Communale", unique=True)
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
@@ -47,7 +47,7 @@ class SiteSentinelle(models.Model):
 
 
 class Poste(models.Model):
-    nomPoste = models.CharField(max_length=45, primary_key=True, verbose_name="Poste")
+    nomPoste = models.CharField(max_length=45, primary_key=True, verbose_name="Poste", unique=True)
     description = models.CharField(max_length=45, verbose_name="Description")
 
     def __str__(self):              # __unicode__ on Python 2
@@ -59,9 +59,9 @@ class PersonneContact(models.Model):
     nomPersonne = models.CharField(max_length=45, verbose_name="Nom")
     prenomPersonne = models.CharField(max_length=45, verbose_name="Prenom")
     telephoneBureau = models.CharField(max_length=45, blank=True, verbose_name="Telephone (Bureau)")
-    telephonePersonnel = models.CharField(max_length=45, verbose_name="Telephone (Personnel)")
-    emailPersonnel = models.CharField(max_length=45, verbose_name="Email (Personnel)")
-    adressePersonnelle = models.CharField(max_length=45, verbose_name="Adresse (Personnlle)")
+    telephonePersonnel = models.CharField(max_length=45, verbose_name="Telephone (Personnel)", unique=True)
+    emailPersonnel = models.CharField(max_length=45, verbose_name="Email (Personnel)", blank=True)
+    adressePersonnelle = models.CharField(max_length=45, verbose_name="Adresse (Personnlle)", blank=True)
     nif = models.CharField(max_length=45, unique=True, verbose_name="NIF/CIN")
     dateEmbauche = models.DateField(verbose_name="Date d'embauche")
     cfAtachStation = models.ForeignKey('Donnees_hydrometeologique.StationPluviometrique', verbose_name="Affectation Station")

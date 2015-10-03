@@ -2,32 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Rapport</title>
-		<link rel="stylesheet" type="text/css" href="{% static "public/bootstrap/dist/css/bootstrap.min.css" %}">
-
-
-		<link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
-		<link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
-		<link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
-
-
-		<script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
-
-
-    	<script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
-
-		<script src="{% static "public/bootstrap/dist/js/bootstrap.min.js" %}"></script>
-
-		<script src="{% static "public/bootstrap/js/graphe.js" %}"></script>
-
-		<script type="text/javascript">
-			$(document).ready(function(){ 
-			    $("#myTab a").click(function(e){
-			    	e.preventDefault();
-			    	$(this).tab('show');
-			    });
-			});
-		</script>
+		{% include "public/include/head.html" %}
 	</head>
 
 	<body>
@@ -54,51 +29,12 @@
 		                <li><a href="#sectionB">Tableau</a></li>
 		                <li><a href="#section">Carte</a></li>
 		            </ul>
+		            {% include "public/include/modal_body.html" %}
 		            <div class="tab-content">
-		                <div id="sectionA" class="tab-pane fade in active">
-		                    <h2 class="sub-header">Graphe des donnees pluviometriques enregistrees</h2>
-		                    <div class="table-responsive">
-								<canvas id="canvas" height="450" width="1100"></canvas>
-							</div>
-		                </div>
-		                <div id="sectionB" class="tab-pane fade">
-		                    <h2 class="sub-header">Tableau des enregistrements pluviometrique</h2>
-							<div class="table-responsive">
-					            <table class="table table-striped">
-					              <thead>
-					                <tr>
-					                  <th>Departement</th>
-					                  <th>Commune</th>
-					                  <th>Date</th>
-					                  <th>Quantite de pluie</th>
-					                </tr>
-					              </thead>
-					              <tbody>
-					                <tr>
-					                  <td>Nord</td>
-					                  <td>Cap-Haitien</td>
-					                  <td>30/09/2015</td>
-					                  <td>1,001</td>
-					                </tr>
-					                <tr>
-					                  <td>Ouest</td>
-					                  <td>Delmas</td>
-					                  <td>30/09/2015</td>
-					                  <td>3.1</td>
-					                </tr>
-					                <tr>
-					                  <td>Sud</td>
-					                  <td>Camp-Perrin</td>
-					                  <td>30/09/2015</td>
-					                  <td>6.01</td>
-					                </tr>
-					              </tbody>
-					            </table>
-					          </div>
-						</div>
-		                <div id="section" class="tab-pane fade">
-		                    <h2 class="sub-header">Carte des enregistrements pluviometrique</h2>
-		                </div>
+		                {% include "public/include/graphe.html" %}
+		                {% include "public/include/tableau.html" %}
+		                {% include "public/include/carte.html" %}
+		                
 		        	</div>
 	            </div>
 	        </div>

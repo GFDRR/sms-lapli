@@ -45,7 +45,7 @@ class ObservationPluviometrique(models.Model):
     description = models.TextField(max_length=100, blank=True)
     idStation = models.ForeignKey(StationPluviometrique, verbose_name="Nom de la Station")
     numeroJour = models.IntegerField(verbose_name="Numero du Jour")
-    valider = models.IntegerField(verbose_name="Validation")
+    valider = models.BooleanField(verbose_name="Validation")
 
     # def __str__(self):              # __unicode__ on Python 2
     #     return self.description

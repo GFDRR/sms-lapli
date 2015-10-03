@@ -1,45 +1,8 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-		<title>Rapport</title>
-		<link rel="stylesheet" type="text/css" href="{% static "public/bootstrap/dist/css/bootstrap.min.css" %}">
-
-
-		<link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
-
-
-		<link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
-
-		<link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
-
-
-		<script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
-		{# <script src="{% static "bootstrap/dist/css/bootstrap-theme.min.css" %}"></script>#}
-
-
-    	<script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
-
-		<script src="{% static "public/bootstrap/dist/js/bootstrap.min.js" %}"></script>
-
-		<script src="{% static "public/bootstrap/js/graphe.js" %}"></script>
-
-		<script type="text/javascript">
-			$(document).ready(function(){
-			    $("#myTab a").click(function(e){
-			    	e.preventDefault();
-			    	$(this).tab('show');
-			    });
-			    $('.show-modal').click(function(){
-			    	$('#myModal').modal('show');
-			 	});  
-				$('.hide-modal').click(function(){
-			    	$('#myModal').modal('hide');
-			 	}); 
-			});
-		</script>
-
-		
+	<head>
+		{% include "public/include/head.html" %}
 	</head>
 <body>
     <!--===================================Menu Principal=======================================================-->
@@ -55,41 +18,7 @@
 							Nous mettons a la disposition du public des donnees fiables sur la quantite de pluie et egalement l'etat de la disponibilite de la nourriture dans le pays.
 						</p>
 					</div>
-					  <div class="bs-example">
-						    <!-- Modal HTML -->
-						    <div id="myModal" class="modal fade">
-						      <div class="modal-dialog">
-						        <div class="modal-content">
-						          <div class="modal-header">
-						            <button type="button" class="close" data-dismiss="modal"
-						              aria-hidden="true">&times;</button>
-						            <h4 class="modal-title">Login </h4>
-						          </div>
-						          <div class="modal-body">
-						            <form  action="/admin/" method="post" id="login-form" class="form-inline" role="form">{% csrf_token %}	
-							            <center>
-										    <div class="form-group">
-										      <input type="text" class="form-control" id="email" placeholder="Username">
-										    </div>
-										    <div class="form-group">
-										      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-										    </div>
-									    </center>
-									      <br />
-								          <div class="modal-footer">
-								            <input class="btn btn-success" type="submit" value="Connexion" id="submit">
-								            <a href="#" class="btn" data-dismiss="modal">Cancel</a>
-								          </div>
-									  </form>
-									  
-						          </div>
-						        </div>
-						        <!-- /.modal-content -->
-						      </div>
-						      <!-- /.modal-dialog -->
-						    </div>
-						    <!-- /.modal -->
-						  </div>
+					<!-- {% include "public/include/modal_body.html" %} -->
 					<center>
 		            	<div class="col-lg-6 col-md-6 col-sm-6">
 					            <a href="/rapport/pluie" class="btn btn-default btn btn-info btn-lg"><span class="glyphicon glyphicon-stats">&nbsp;</span>Donnees Pluviometrique</a>

@@ -54,3 +54,12 @@ def imp(request):
     for e in recupAll:
         dd.append(e)
     return render(request, "public/test.html", {'val':dd})
+
+def json_graph(request):
+    datas = ObservationPluviometrique.objects.all()
+    tous = []
+    for info in datas:
+        tous.append({'dates': info.dateDebut, 'qtt' : info.quantite})
+
+    responsJson = {'table': tous}
+    return JsonResponse(responsJson)
