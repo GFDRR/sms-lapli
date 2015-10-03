@@ -7,6 +7,7 @@ from rapidsms.backends.kannel.views import KannelBackendView
 
 
 urlpatterns = [
+    url(r'^$', 'public.views.acc'),
     url(r'^admin/', include(admin.site.urls)),
 
     # RapidSMS base URLs
@@ -18,23 +19,14 @@ urlpatterns = [
     url(r'^messagelog/', include('rapidsms.contrib.messagelog.urls')),
     url(r'^messaging/', include('rapidsms.contrib.messaging.urls')),
     url(r'^registration/', include('rapidsms.contrib.registration.urls')),
-    url(r"^backend/kannel-fake-smsc/$",KannelBackendView.as_view(backend_name="kannel-fake-smsc")),
+    url(r'^backend/kannel-fake-smsc/$',KannelBackendView.as_view(backend_name='kannel-fake-smsc')),
 
     # Third party URLs
     url(r'^selectable/', include('selectable.urls')),
-    url(r"^backend/kannel-usb0-smsc/$", KannelBackendView.as_view(backend_name="kannel-usb0-smsc")),
-    url(r"^rapport/pluie","public.views.rpluie"),
-    url(r"^json_rap", "public.views.json_rap"),
-    url(r"^json_graph", "public.views.json_graph"),
-    url(r"^test", "public.views.imp"),
-
-    url(r"^", "public.views.acc"),
+    url(r'^backend/kannel-usb0-smsc/$', KannelBackendView.as_view(backend_name='kannel-usb0-smsc')),
+    url(r'^rapport/pluie','public.views.rpluie'),
+    url(r'^json_rap', 'public.views.json_rap'),
+    url(r'^json_graph', 'public.views.json_graph'),
+    url(r'^test', 'public.views.imp'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-
-# urlpatterns = patterns('',
-#     # ...
-#     url(r"^backend/kannel-fake-smsc/$",KannelBackendView.as_view(backend_name="kannel-fake-smsc")),
-# )
