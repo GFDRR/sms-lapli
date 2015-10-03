@@ -15,6 +15,12 @@ class TypeStationPluviometrique(models.Model):
     def __str__(self):              # __unicode__ on Python 2
         return self.typeStation
 
+class UniteDeMesure(models.Model):
+    uniteMesure = models.CharField(max_length=7, unique=True)
+    description = models.TextField(blank=True)
+
+    def __str__(self):              # __unicode__ on Python 2
+         return self.uniteMesure
 
 class StationPluviometrique(models.Model):
     latitude = models.FloatField()
@@ -24,6 +30,7 @@ class StationPluviometrique(models.Model):
     nomStation = models.CharField(max_length=45, verbose_name="Nom de la Station")
     typeStation = models.ForeignKey(TypeStationPluviometrique, verbose_name="Type de la Station", null=True, blank=True)
     idStation = models.CharField(max_length=5, blank=True)
+    uniteMesure = models.ForeignKey(UniteDeMesure)
 
     def __str__(self):              # __unicode__ on Python 2
         return self.nomStation
@@ -47,6 +54,7 @@ class ObservationPluviometrique(models.Model):
     idStation = models.ForeignKey(StationPluviometrique, verbose_name="Nom de la Station")
     numeroJour = models.IntegerField(verbose_name="Numero du Jour")
     valider = models.BooleanField(verbose_name="Validation")
+    personne = models.CharField(max_length=45, verbose_name="Telephone (Personne)")
 
     # def __str__(self):              # __unicode__ on Python 2
     #     return self.description

@@ -15,7 +15,7 @@ class StationPluviometriqueAdmin(admin.ModelAdmin):
 class ObservationPluviometriqueAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
-    list_display = ("quantite", "dateDebut", "dateFin", "description", "Nom_station", "valider")
+    list_display = ("quantite", "dateDebut", "dateFin", "description", "Nom_station", "personne", "valider")
     form = ObservationPluviometriqueForm
 
     #return id of the foreignkey(s) in list_display and it will show it
@@ -28,6 +28,9 @@ class TypeStationPluviometriqueAdmin(admin.ModelAdmin):
     list_display = ("typeStation", "description")
     form = TypeStationPluviometriqueForm
 
+class UniteDeMesureAdmin(admin.ModelAdmin):
+    list_display = ("uniteMesure", "description")
+    form = UniteDeMesureForm
 # class ObservationTemperatureAdmin(admin.ModelAdmin):
 #
 #
@@ -40,6 +43,7 @@ class TypeStationPluviometriqueAdmin(admin.ModelAdmin):
 admin.site.register(StationPluviometrique, StationPluviometriqueAdmin)
 admin.site.register(TypeStationPluviometrique, TypeStationPluviometriqueAdmin)
 admin.site.register(ObservationPluviometrique, ObservationPluviometriqueAdmin)
+admin.site.register(UniteDeMesure, UniteDeMesureAdmin)
 
 # admin.site.register(ObservationTemperature)
 # admin.site.register(ObservationDirectionVent)

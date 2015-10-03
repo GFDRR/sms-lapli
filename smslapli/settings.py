@@ -191,7 +191,6 @@ LOGGING = {
 }
 
 INSTALLED_APPS = (
-    'suit',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

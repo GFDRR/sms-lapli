@@ -9,7 +9,7 @@ class StationPluviometriqueForm(forms.ModelForm):
     class Meta:
         #Added the fields of StationPluviometrique manually for the validation test
         model = StationPluviometrique
-        fields = ["latitude", "longitude", "hauteur", "idSiteSeninnelle", "nomStation", "typeStation"]
+        fields = ["latitude", "longitude", "hauteur", "uniteMesure", "idSiteSeninnelle", "nomStation", "typeStation"]
 
     #Test input nomStation before validation
     def clean_nomStation(self):
@@ -44,4 +44,9 @@ class ObservationPluviometriqueForm(forms.ModelForm):
     class Meta:
         #Added the fields of ObservationPluviometrique manually for the validation test
         model = ObservationPluviometrique
-        fields = ["quantite", "dateDebut", "dateFin", "description", "idStation", "numeroJour", "valider"]
+        fields = ["quantite", "dateDebut", "dateFin", "description", "idStation", "numeroJour", "personne", "valider"]
+
+class UniteDeMesureForm(forms.ModelForm):
+    class Meta:
+        model = UniteDeMesure
+        fields = ["uniteMesure", "description"]

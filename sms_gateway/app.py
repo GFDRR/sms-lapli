@@ -47,7 +47,7 @@ class SmsGateway(AppBase):
                 for pers in PersonneContact.objects.filter(telephonePersonnel=tel):
                     stat_id = pers.cfAtachStation
                 #Will Save here
-                obsv= ObservationPluviometrique(quantite=val_float,dateDebut=dateD,dateFin=datex,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0)
+                obsv= ObservationPluviometrique(quantite=val_float,dateDebut=dateD,dateFin=datex,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0, personne=tel)
                 obsv.save()
 
                 msg.respond('Donnees sauvegardees! Merci pour le service!')
