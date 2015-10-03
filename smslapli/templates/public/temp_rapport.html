@@ -15,29 +15,59 @@
 	      <div class="row">
 	        <div class="col-sm-3 col-md-2 sidebar">
 	          <ul class="nav nav-sidebar">
-	            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-	            <li><a href="#">Reports</a></li>
-	            <li><a href="#">Analytics</a></li>
-	            <li><a href="#">Export</a></li>
+	            <li class="active">
+                    <a href="#bloc1">Overview <span class="sr-only">(current)</span></a>
+                </li>
+	            <li><a href="#bloc2">Reports</a></li>
+	            <li><a href="#bloc3">Export</a></li>
 	          </ul>
 	        </div>
-	        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <div id="lesblocs">
+                      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="bloc1">
 
-				<div class="bs-example">
-		            <ul class="nav nav-tabs" id="myTab">
-		                <li class="active"><a href="#sectionA">Graphe</a></li>
-		                <li><a href="#sectionB">Tableau</a></li>
-		                <li><a href="#section">Carte</a></li>
-		            </ul>
-		            {% include "public/include/modal_body.html" %}
-		            <div class="tab-content">
-		                {% include "public/include/graphe.html" %}
-		                {% include "public/include/tableau.html" %}
-		                {% include "public/include/carte.html" %}
-		                
-		        	</div>
-	            </div>
-	        </div>
+                        <div class="bs-example">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a href="#sectionA">Graphe</a></li>
+                                <li><a href="#sectionB">Tableau</a></li>
+                                <li><a href="#section">Carte</a></li>
+                            </ul>
+                            {% include "public/include/modal_body.html" %}
+                            <div class="tab-content">
+                                {% include "public/include/graphe.html" %}
+                                {% include "public/include/tableau.html" %}
+                                {% include "public/include/carte.html" %}
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc2">
+                        <div class="bs-example">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a href="#sectionA">Graphe</a></li>
+                                <li><a href="#sectionB">Tableau</a></li>
+                                <li><a href="#section">Carte</a></li>
+                            </ul>
+
+                            </div>
+                        </div>
+                    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc3">
+                        <div class="bs-example">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a href="#sectionA">Graphe</a></li>
+                                <li><a href="#sectionB">Tableau</a></li>
+                                <li><a href="#section">Carte</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    </div>
+
+
+
+                  </div>
+
 	      </div>
 	    </div>
 

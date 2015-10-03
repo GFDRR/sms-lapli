@@ -103,3 +103,46 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+
+/*
+Submen Style
+*/
+
+.submen{
+  width: 250px;
+  float:right;
+}
+
+#canvas{
+    width: 640px;
+    height: 350px;
+    border: 2px solid #428bca;
+    float: left;
+}
+/*
+Submen Style
+*/
+
+.list-group-item{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #0D7BDA;
+    border: 1px solid #428BCA;
+}
+
+#tablo{
+    width: 640px;
+    height: 350px;
+    border: 2px solid #428bca;
+    float: left;
+}
+
+.hidenSubMenuContent{
+	display: none;
+}
+.showSubMenuContent{
+	display: block;
+}
