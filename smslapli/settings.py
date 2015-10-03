@@ -200,25 +200,29 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.sitemaps',
+
     # External apps
-    "django_tables2",
-    "selectable",
+    'django_tables2',
+    'selectable',
+
     # RapidSMS
-    #"tut", Tut RapidSMS removed
-    "rapidsms",
-    "admin_reorder",
-    "rapidsms.backends.database",
-    "rapidsms.contrib.handlers",
-    "rapidsms.contrib.httptester",
-    "rapidsms.contrib.messagelog",
-    "rapidsms.contrib.messaging",
-    "rapidsms.contrib.registration",
+    'rapidsms',
+    'admin_reorder',
+    'rapidsms.backends.database',
+    'rapidsms.contrib.handlers',
+    'rapidsms.contrib.httptester',
+    'rapidsms.contrib.messagelog',
+    'rapidsms.contrib.messaging',
+    'rapidsms.contrib.registration',
+    #"rapidsms.contrib.echo',
+
+    # SMS Lapli Apps
     'Donnees_de_base',
     'Donnees_hydrometeologique',
     'sms_gateway', #This is the one who will be used to handle sms
-    #"rapidsms.contrib.echo",
-    'sms_gateway', #This is the one who will be used to handle sms
-    "rapidsms.contrib.default",  # Must be last
+
+    # Must Be last
+    'rapidsms.contrib.default',
 )
 
 INSTALLED_BACKENDS = {
