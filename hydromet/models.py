@@ -17,12 +17,13 @@ class TypeStationPluviometrique(models.Model):
 
 
 class StationPluviometrique(models.Model):
-    latitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
-    longitude = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+    latitude = models.FloatField()
+    longitude = models.FloatField()
     hauteur = models.DecimalField(max_digits=8, decimal_places=2, default=0)
-    idSiteSeninnelle = models.ForeignKey(SiteSentinelle, verbose_name="Site Sentinelle")
+    idSiteSeninnelle = models.ForeignKey(SiteSentinelle, verbose_name="Site Sentinelle", null=True, blank=True)
     nomStation = models.CharField(max_length=45, verbose_name="Nom de la Station")
-    typeStation = models.ForeignKey(TypeStationPluviometrique, verbose_name="Type de la Station")
+    typeStation = models.ForeignKey(TypeStationPluviometrique, verbose_name="Type de la Station", null=True, blank=True)
+    idStation = models.CharField(max_length=5, blank=True)
 
     def __str__(self):              # __unicode__ on Python 2
         return self.nomStation
