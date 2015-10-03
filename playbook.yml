@@ -1,0 +1,43 @@
+---
+- hosts: sms_lapli
+  remote_user: vagrant
+  sudo: yes
+  tasks:
+     - name: Mise a jour des paquets
+       apt: update_cache=yes
+     - name: Installation pip3
+       apt: name=python3-pip state=present install_recommends=yes force=yes
+     - name: Installation Postgre Etape1
+       apt: name=postgresql state=present install_recommends=yes force=yes
+     - name: Installation Postgre Etape2
+       apt: name=postgresql-contrib state=present install_recommends=yes force=yes
+     - name: Installation python-psycopg2
+       apt: name=python-psycopg2 state=present install_recommends=yes force=yes
+     - name: Installation de Kannel SMS GATEWAY
+       apt: name=kannel state=present install_recommends=yes  force=yes
+     - name: Installation de Kannel extras
+       apt: name=kannel-extras state=present install_recommends=yes  force=yes
+     - name: Installation de git
+       apt: name=git state=present install_recommends=yes force=yes
+     - name: Installation de Django
+       pip: 'name=django version=1.8 executable=pip3'
+     - name: Installation de Rapidsms
+       pip: name=rapidsms executable=pip3
+     - name: Installation de Django Suit
+       pip: name=django-suit version=0.2.13 executable=pip3
+	 - name: Installation de ADMIN_ORDER
+       pip: name=django-modeladmin-reorder executable=pip3
+     - name: Creation de repertoire
+       file: path=/vagrant/projects state=directory
+     - name: Cd Change
+       command: 'chdir=/vagrant/projects git clone -b version-0-fakesms-n-database-set-up https://github.com/GFDRR/sms-lapli.git'
+     - name: 'Installation des requirements'
+       command: 'chdir=/vagrant/projects/sms-lapli/ pip3 install -r requirements/base.txt'
+     - name: 'Kannel Configuration Part 1'
+       shell: 'cp /usr/share/doc/kannel/examples/modems.conf /etc/kannel/'
+     - name: 'Kannel Configuration Part 2 | Delete default kannel.conf'
+       shell: 'rm -rf /etc/kannel/kannel.conf'
+     - name: 'Kannel Configuration Part 3 | Copy good kannel.conf'
+       shell: 'cp /vagrant/projects/sms-lapli/kannel.conf /etc/kannel/'
+     - name: 'Change ownership to a non-root user'
+       file: path=/vagrant owner=vagrant group=vagrant
