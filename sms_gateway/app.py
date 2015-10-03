@@ -1,6 +1,6 @@
 from rapidsms.apps.base import AppBase
-from Donnees_de_base.models import *   # importing all models from Donnees_de_Base where data about Contacts are stored
-from Donnees_hydrometeologique.models import *
+from base.models import *   # importing all models from Donnees_de_Base where data about Contacts are stored
+from hydromet.models import *
 from datetime import *
 import re
 

@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
                 ('sectionCommunale', models.CharField(max_length=45, verbose_name='Section Communale')),
                 ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
-                ('commune', models.ForeignKey(verbose_name='Commune', to='Donnees_de_base.Commune')),
+                ('commune', models.ForeignKey(verbose_name='Commune', to='base.Commune')),
             ],
         ),
         migrations.CreateModel(
@@ -65,7 +65,7 @@ class Migration(migrations.Migration):
                 ('latitude', models.DecimalField(decimal_places=2, default=0, max_digits=8, verbose_name='Latitude')),
                 ('longitude', models.DecimalField(decimal_places=2, default=0, max_digits=8, verbose_name='Longitude')),
                 ('hauteur', models.DecimalField(decimal_places=2, default=0, max_digits=8, verbose_name='Hauteur')),
-                ('sectionCommunale', models.ForeignKey(verbose_name='Section Communale', to='Donnees_de_base.SectionCommunale')),
+                ('sectionCommunale', models.ForeignKey(verbose_name='Section Communale', to='base.SectionCommunale')),
             ],
         ),
     ]

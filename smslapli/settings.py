@@ -217,8 +217,8 @@ INSTALLED_APPS = (
     #"rapidsms.contrib.echo',
 
     # SMS Lapli Apps
-    'Donnees_de_base',
-    'Donnees_hydrometeologique',
+    'base',
+    'hydromet',
     'sms_gateway', #This is the one who will be used to handle sms
 
     # Must Be last
@@ -285,14 +285,14 @@ SUIT_CONFIG = {
     'SEARCH_URL': '',
     'MENU': (
         {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
-        {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('Donnees_hydrometeologique.TypeStationPluviometrique', 'Donnees_hydrometeologique.StationPluviometrique', 'Donnees_hydrometeologique.ObservationPluviometrique',)},
+        {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique',)},
         {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
     )
 }
 
 ADMIN_REORDER = (
     # Reorder app models
-    {'app': 'Donnees_de_base',  'label': 'Structure de base', 'models': ('Donnees_de_base.Departement', 'Donnees_de_base.Commune', 'Donnees_de_base.SectionCommunale', 'Donnees_de_base.SiteSentinelle', 'Donnees_de_base.Poste', 'Donnees_de_base.PersonneContact')},
-    {'app': 'Donnees_hydrometeologique',  'label': 'Collecte Pluviometrique', 'models': ('Donnees_hydrometeologique.TypeStationPluviometrique', 'Donnees_hydrometeologique.StationPluviometrique', 'Donnees_hydrometeologique.ObservationPluviometrique',)},
+    {'app': 'base',  'label': 'Structure de base', 'models': ('base.Departement', 'base.Commune', 'base.SectionCommunale', 'base.SiteSentinelle', 'base.Poste', 'base.PersonneContact')},
+    {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique',)},
     {'app': 'auth',  'label': 'Autorisation',},
 )

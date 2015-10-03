@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Donnees_de_base', '0001_initial'),
+        ('base', '0001_initial'),
     ]
 
     operations = [
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
                 ('longitude', models.DecimalField(decimal_places=2, max_digits=8, default=0)),
                 ('hauteur', models.DecimalField(decimal_places=2, max_digits=8, default=0)),
                 ('nomStation', models.CharField(max_length=45, verbose_name='Nom de la Station')),
-                ('idSiteSeninnelle', models.ForeignKey(verbose_name='Site Sentinelle', to='Donnees_de_base.SiteSentinelle')),
+                ('idSiteSeninnelle', models.ForeignKey(verbose_name='Site Sentinelle', to='base.SiteSentinelle')),
             ],
         ),
         migrations.CreateModel(
@@ -67,26 +67,26 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='stationpluviometrique',
             name='typeStation',
-            field=models.ForeignKey(verbose_name='Type de la Station', to='Donnees_hydrometeologique.TypeStationPluviometrique'),
+            field=models.ForeignKey(verbose_name='Type de la Station', to='hydromet.TypeStationPluviometrique'),
         ),
         migrations.AddField(
             model_name='observationtemperature',
             name='idStation',
-            field=models.ForeignKey(to='Donnees_hydrometeologique.StationPluviometrique'),
+            field=models.ForeignKey(to='hydromet.StationPluviometrique'),
         ),
         migrations.AddField(
             model_name='observationpluviometrique',
             name='idStation',
-            field=models.ForeignKey(verbose_name='Nom de la Station', to='Donnees_hydrometeologique.StationPluviometrique'),
+            field=models.ForeignKey(verbose_name='Nom de la Station', to='hydromet.StationPluviometrique'),
         ),
         migrations.AddField(
             model_name='observationhumidite',
             name='idStation',
-            field=models.ForeignKey(to='Donnees_hydrometeologique.StationPluviometrique'),
+            field=models.ForeignKey(to='hydromet.StationPluviometrique'),
         ),
         migrations.AddField(
             model_name='observationdirectionvent',
             name='idStation',
-            field=models.ForeignKey(to='Donnees_hydrometeologique.StationPluviometrique'),
+            field=models.ForeignKey(to='hydromet.StationPluviometrique'),
         ),
     ]

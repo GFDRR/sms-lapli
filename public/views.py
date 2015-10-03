@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import *
-from Donnees_de_base.models import *
-from Donnees_hydrometeologique.models import *
+from base.models import *
+from hydromet.models import *
 import json
 
 # Create your views here.

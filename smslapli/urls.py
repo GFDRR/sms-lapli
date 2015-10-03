@@ -9,7 +9,7 @@ from rapidsms.backends.kannel.views import KannelBackendView
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
-    # RapidSMS Donnees_de_base URLs
+    # RapidSMS base URLs
     url(r'^accounts/', include('rapidsms.urls.login_logout')),
     url(r'^rapidsms/$', 'rapidsms.views.dashboard', name='rapidsms-dashboard'),
 

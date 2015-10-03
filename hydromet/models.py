@@ -1,5 +1,5 @@
 from django.db import models
-from Donnees_de_base.models import SiteSentinelle, PersonneContact
+from base.models import SiteSentinelle, PersonneContact
 
 
 # Create your models here.
