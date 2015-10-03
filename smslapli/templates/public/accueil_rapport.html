@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include "public/include/head.html" %}
+	</head>
+<body>
+    <!--===================================Menu Principal=======================================================-->
+	    {% include "public/include/menu.html" %}
+    <!--===================================Menu Principal=======================================================-->
+        <section class="jumbotron">
+            <div class="container ">
+            	<div class="row">
+            		<br /><br /><br /><br />
+            		<div class="col-lg-12 obj" >
+						<img class="" src="{% static "public/img/cnsalogo.png" %}" />
+						<p>
+							Nous mettons a la disposition du public des donnees fiables sur la quantite de pluie et egalement l'etat de la disponibilite de la nourriture dans le pays.
+						</p>
+					</div>
+					<!-- {% include "public/include/modal_body.html" %} -->
+					<center>
+		            	<div class="col-lg-6 col-md-6 col-sm-6">
+					            <a href="/rapport/pluie" class="btn btn-default btn btn-info btn-lg"><span class="glyphicon glyphicon-stats">&nbsp;</span>Donnees Pluviometrique</a>
+		            	</div>
+		            	<div class="col-lg-6 col-md-6 col-sm-6">
+					            <a class="btn btn-default  btn-lg"><span class="glyphicon glyphicon-tags">&nbsp;</span>Donnees Prix de marche</a>
+		            	</div>
+	            	</center>
+
+            	</div>
+            </div>
+            <br />
+        </section>
+
+		{% include "public/include/footer.html" %}	
+</body>
+</html>

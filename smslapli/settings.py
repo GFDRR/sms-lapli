@@ -32,6 +32,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'testbase',
+#         'USER': 'esdras',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -74,7 +85,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files to collect
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+    os.path.join(PROJECT_ROOT, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -112,6 +123,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'admin_reorder.middleware.ModelAdminReorder',
 )
 
 ROOT_URLCONF = 'smslapli.urls'
@@ -194,6 +206,7 @@ INSTALLED_APPS = (
     # RapidSMS
     #"tut", Tut RapidSMS removed
     "rapidsms",
+    "admin_reorder",
     "rapidsms.backends.database",
     "rapidsms.contrib.handlers",
     "rapidsms.contrib.httptester",
@@ -202,6 +215,7 @@ INSTALLED_APPS = (
     "rapidsms.contrib.registration",
     'Donnees_de_base',
     'Donnees_hydrometeologique',
+    'sms_gateway', #This is the one who will be used to handle sms
     #"rapidsms.contrib.echo",
     'sms_gateway', #This is the one who will be used to handle sms
     "rapidsms.contrib.default",  # Must be last
@@ -211,13 +225,25 @@ INSTALLED_BACKENDS = {
     "message_tester": {
         "ENGINE": "rapidsms.backends.database.DatabaseBackend",
     },
-    "kannel-fake-smsc" : {
+    # "kannel-fake-smsc" : {
+    #     "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
+    #     "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
+    #     "sendsms_params": {"smsc": "FAKE",
+    #                        "from": "123", # not set automatically by SMSC
+    #                        "username": "esdras",
+    #                        "password": "esdras1995"}, # or set in localsettings.py
+    #     "coding": 0,
+    #     "charset": "ascii",
+    #     "encode_errors": "ignore", # strip out unknown (unicode) characters
+    #},
+
+    "kannel-usb0-smsc" : {
         "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
         "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
-        "sendsms_params": {"smsc": "FAKE",
-                           "from": "123", # not set automatically by SMSC
-                           "username": "esdras",
-                           "password": "esdras1995"}, # or set in localsettings.py
+        "sendsms_params": {"smsc": "usb0-modem",
+                           "from": "+50934772370", # not set automatically by SMSC
+                           "username": "rapidsms",
+                           "password": "CHANGE-ME"}, # or set in localsettings.py
         "coding": 0,
         "charset": "ascii",
         "encode_errors": "ignore", # strip out unknown (unicode) characters
@@ -240,13 +266,29 @@ INSTALLED_BACKENDS = {
 #     },
 # }
 
+DEFAULT_RESPONSE = "Message incorrect!"
 LOGIN_REDIRECT_URL = '/'
 
 RAPIDSMS_HANDLERS = (
     'rapidsms.contrib.echo.handlers.echo.EchoHandler',
-    'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    #'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    'tut.myhandlers.HelpHandler',
+    'tut.myhandlers.SumHandler',
 )
 
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'SMS Lapli'
+    'ADMIN_NAME': 'SMS Lapli',
+    'SEARCH_URL': '',
+    'MENU': (
+        {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
+        {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('Donnees_hydrometeologique.TypeStationPluviometrique', 'Donnees_hydrometeologique.StationPluviometrique', 'Donnees_hydrometeologique.ObservationPluviometrique',)},
+        {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
+    )
 }
+
+ADMIN_REORDER = (
+    # Reorder app models
+    {'app': 'Donnees_de_base',  'label': 'Structure de base', 'models': ('Donnees_de_base.Departement', 'Donnees_de_base.Commune', 'Donnees_de_base.SectionCommunale', 'Donnees_de_base.SiteSentinelle', 'Donnees_de_base.Poste', 'Donnees_de_base.PersonneContact')},
+    {'app': 'Donnees_hydrometeologique',  'label': 'Collecte Pluviometrique', 'models': ('Donnees_hydrometeologique.TypeStationPluviometrique', 'Donnees_hydrometeologique.StationPluviometrique', 'Donnees_hydrometeologique.ObservationPluviometrique',)},
+    {'app': 'auth',  'label': 'Autorisation',},
+)

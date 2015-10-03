@@ -1,0 +1,35 @@
+{# Page Table #}
+{#{% extends "admin/index.html" %}#}
+{% load i18n %}
+
+<div class="actions pull-right">
+    {% for field in action_form %}{% if field.label %}<label>{{ field.label }} {% endif %}{{ field }}{% if field.label %}</label>{% endif %}{% endfor %}
+    <button type="submit" class="btn btn-primary" title="{% trans "Run the selected action" %}" name="index" value="{{ action_index|default:0 }}">{% trans "Go" %}</button>
+    {% if actions_selection_counter %}
+        <script type="text/javascript">var _actions_icnt="{{ cl.result_list|length|default:"0" }}";</script>
+        <span class="action-counter">{{ selection_note }}</span>
+        {% if cl.result_count != cl.result_list|length %}
+        <span class="all">{{ selection_note_all }}</span>
+        <span class="question">
+            <a href="javascript:;" title="{% trans "Click here to select the objects across all pages" %}">{% blocktrans with cl.result_count as total_count %}Select all {{ total_count }} {{ module_name }}{% endblocktrans %}</a>
+        </span>
+        <span class="clear"><a href="javascript:;">{% trans "Clear selection" %}</a></span>
+        {% endif %}
+    {% endif %}
+</div>
+<style>
+    .actions select{
+        background-color: #ddd;
+        background-image: linear-gradient(#fff, #ddd);
+        height: 30px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        font-size: 0.8em;
+    }
+    .actions button{
+        height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+    }
+
+</style>

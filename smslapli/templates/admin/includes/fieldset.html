@@ -1,0 +1,80 @@
+<fieldset class="module aligned {{ fieldset.classes }}">
+    {% if fieldset.name %}<h2>{{ fieldset.name }}</h2>{% endif %}
+    {% if fieldset.description %}
+        <div class="description">{{ fieldset.description|safe }}</div>
+    {% endif %}
+    {% for line in fieldset %}
+        <div class="form-row{% if line.fields|length_is:'1' and line.errors %} errors{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% endfor %}">
+            {% if line.fields|length_is:'1' %}{{ line.errors }}{% endif %}
+            {% for field in line %}
+                <div class ="fieldset-group" {% if not line.fields|length_is:'1' %} class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}"{% elif field.is_checkbox %} class="checkbox-row"{% endif %}>
+                    {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
+                    {% if field.is_checkbox %}
+                        {{ field.field }}{{ field.label_tag }}
+                    {% else %}
+                        {{ field.label_tag }}
+                        {% if field.is_readonly %}
+                            <p>{{ field.contents }}</p>
+                        {% else %}
+                            {{ field.field }}
+                        {% endif %}
+                    {% endif %}
+                    {% if field.field.help_text %}
+                        <p class="help">{{ field.field.help_text|safe }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+<style>
+    .fieldset-group div{
+{#        background-color: yellow;#}
+{#        width: 400px;#}
+        display: inline-block;
+    }
+.fieldset-group input{
+    width: 400px;
+    height: 35px;
+}
+.fieldset-group input[type="checkbox"]{
+    width: 20px;
+    height: 10px;
+}
+.fieldset-group input:focus, .fieldset-group textarea:focus{
+  outline: none;
+  color: #525864;
+  border-color: #84c0ee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+}
+.fieldset-group input, .fieldset-group textarea{
+    background: #ffffff;
+    border: 0.5px solid #ddd;
+    padding: 10px;
+    -webkit-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0.5px 0.5px rgba(100, 100, 100, 0.25), 0 0.5px rgba(255, 255, 255, 0.4);
+
+}
+
+.selector{
+    width: 900px;
+}
+.selector div{
+    width: 300px;
+{#    background: #DDD;#}
+    display: inline-block;
+{#    width: 700px;#}
+}
+{#    .fieldset-group select{#}
+{#        height: 30px;#}
+{#    }#}
+
+.fieldset-group{
+    margin-bottom: 10px;
+}
+</style>
+</fieldset>
+
+
