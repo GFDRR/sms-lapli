@@ -5,28 +5,28 @@ from .forms import *
 from .models import *
 
 
-class StationPluviometriqueAdmin(admin.ModelAdmin):
+class StationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
     list_display = ("idSiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "typeStation")
-    form = StationPluviometriqueForm
+    form = StationForm
 
 
-class ObservationPluviometriqueAdmin(admin.ModelAdmin):
+class ObservationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
-    list_display = ("quantite", "dateDebut", "dateFin", "description", "Nom_station", "personne", "valider")
-    form = ObservationPluviometriqueForm
+    list_display = ("quantitePluie", "dateDebut", "dateFin", "description", "valider")
+    form = ObservationForm
 
     #return id of the foreignkey(s) in list_display and it will show it
     def Nom_station(self, instance):
         return instance.idStation.nomStation
 
 
-class TypeStationPluviometriqueAdmin(admin.ModelAdmin):
+class TypeStationAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
     list_display = ("typeStation", "description")
-    form = TypeStationPluviometriqueForm
+    form = TypeStationForm
 
 class UniteDeMesureAdmin(admin.ModelAdmin):
     list_display = ("uniteMesure", "description")
@@ -40,9 +40,9 @@ class UniteDeMesureAdmin(admin.ModelAdmin):
 
 
 #Added all in the register
-admin.site.register(StationPluviometrique, StationPluviometriqueAdmin)
-admin.site.register(TypeStationPluviometrique, TypeStationPluviometriqueAdmin)
-admin.site.register(ObservationPluviometrique, ObservationPluviometriqueAdmin)
+admin.site.register(Station, StationAdmin)
+admin.site.register(TypeStation, TypeStationAdmin)
+admin.site.register(Observation, ObservationAdmin)
 admin.site.register(UniteDeMesure, UniteDeMesureAdmin)
 
 # admin.site.register(ObservationTemperature)
