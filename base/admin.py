@@ -7,7 +7,7 @@ from .models import *
 
 class DepartementAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("departement", "description")
+    list_display = ("departement", "description", "id_code")
     form = DepartementForm
 
 
@@ -43,6 +43,8 @@ class PosteAdmin(admin.ModelAdmin):
 
 class PersonneContactAdmin(admin.ModelAdmin):
     list_display = ("nomPoste", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche", "isactif")
+    list_filter = (('isactif',))
+    search_fields = ["nomPoste", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche"]
     form = PersonneContactForm
 
     #return the nomPoste of the foreignkey(s) in list_display and it will show it
