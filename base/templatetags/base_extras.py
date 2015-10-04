@@ -1,5 +1,5 @@
 from base.models import PersonneContact
-from hydromet.models import ObservationPluviometrique
+from hydromet.models import Observation
 
 __author__ = 'alexing'
 
@@ -10,7 +10,7 @@ register = template.Library()
 @register.filter
 def notification(texte):
     nmbAgent = PersonneContact.objects.all().count();
-    msgNotValidate = ObservationPluviometrique.objects.filter(valider = False).count()
+    msgNotValidate = Observation.objects.filter(valider = False).count()
     listQueryDash = {"nbAgent":str(nmbAgent), "msgNotValidate":str(msgNotValidate)}
     result = listQueryDash[texte]
     return result

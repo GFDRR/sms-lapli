@@ -50,3 +50,8 @@ class UniteDeMesureForm(forms.ModelForm):
     class Meta:
         model = UniteDeMesure
         fields = ["uniteMesure", "description"]
+
+class StationObserversForm(forms.ModelForm):
+    class Meta:
+        model = StationObservers
+        fields = ["station", "observer"]
