@@ -80,7 +80,7 @@ def json_map(request):
     for station in stations_lst_db:
         observation = Observation.objects.filter(idStation=station.id).order_by('-id')
         if not observation:
-            quantitePluie = 0
+            quantitePluie = '-'
         else:
             quantitePluie = observation.first().quantitePluie
 
