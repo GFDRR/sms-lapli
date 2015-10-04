@@ -22,7 +22,7 @@ def json_rap(request):
         Recuperation des donnes et
         Encodage en JSON
     """
-    obsv = ObservationPluviometrique.objects.select_related('idStation') # getting all Observation entries in all relationship
+    obsv = Observation.objects.select_related('idStation') # getting all Observation entries in all relationship
     foundCommune = [] #list of all found Commune
     numberFound = [] # occurence of a commune
     sumOfRead = [] # store the sum of rain's quantity
@@ -51,14 +51,14 @@ def json_rap(request):
 
 
 def imp(request):
-    recupAll = ObservationPluviometrique.objects.select_related('idStation')
+    recupAll = Observation.objects.select_related('idStation')
     dd = []
     for e in recupAll:
         dd.append(e)
     return render(request, "public/test.html", {'val':dd})
 
 def json_graph(request):
-    datas = ObservationPluviometrique.objects.all()
+    datas = Observation.objects.all()
     tous = []
     for info in datas:
         tous.append({'dates': info.dateDebut, 'qtt' : info.quantite})
@@ -75,12 +75,16 @@ def json_map(request):
 
     #stations = serializers.serialize("json", StationPluviometrique.objects.all(), fields=('latitude','longitude', 'nomStation'))
 
-    datas = StationPluviometrique.objects.all()
-    stationLst = []
-    for info in datas:
-        stationLst.append({'nomStation': info.nomStation, 'lat' : info.latitude, 'long' : info.longitude })
+    stations_lst_db = Station.objects.all()
+    stations_list = []
+    for station in stations_lst_db:
+        observation = Observation.objects.filter(idStation=station.id).order_by('-id')
+        if not observation:
+            quantitePluie = 0
+        else:
+            quantitePluie = observation.first().quantitePluie
 
-    #responsJson =
+        stations_list.append({'nomStation': station.nomStation, 'latitude' : station.latitude, 'longitude' : station.longitude, 'qt': quantitePluie })
 
-    return JsonResponse({'stations': stationLst})
+    return JsonResponse({'stations_lst': stations_list})
     #return HttpResponse(stations)
