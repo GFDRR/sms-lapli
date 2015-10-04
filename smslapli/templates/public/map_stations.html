@@ -1,0 +1,81 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include "public/include/head.html" %}
+		<script src="{% static "public/leaflet/leaflet.js" %}"></script>
+		<script src="{% static "public/leaflet/cluster/leaflet.markercluster.js" %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static "public/leaflet/leaflet.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "public/leaflet/cluster/MarkerCluster.css" %}">
+	</head>
+
+	<body>
+
+	<style>
+		#Map {
+		width: 100%;
+		min-height: 500px;
+		}
+	</style>
+		<!--===================================Menu Principal=======================================================-->
+	   {% include "public/include/menu.html" %}
+
+ <div id="Map">
+
+
+ </div>
+
+
+
+    {% include "public/include/footer.html" %}
+	<script>
+	$('document').ready(function(){
+
+
+
+
+
+		var map = L.map('Map').setView([18.834610, -72.288237], 8);
+
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
+
+		var cartoCdn = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {});
+
+		cartoCdn.addTo(map);
+
+		loadStations(map);
+
+
+
+	});
+
+	function loadStations(map) {
+		$.ajax({
+  			method: "GET",
+  			type: 'json',
+  			url: "/rapport/json_map/",
+  			success : function(data) {
+				dataLen = data.stations.length;
+
+				var markers = new L.MarkerClusterGroup();
+
+				for(var i=0; i < dataLen; i++){
+					var marker = L.marker([ data.stations[i]['lat'], data.stations[i]['long'] ]);
+					marker.bindPopup(data.stations[i]['nomStation']);
+
+					markers.addLayer(marker);
+				}
+
+				map.addLayer(markers);
+
+  			}
+		})
+
+	}
+
+
+
+
+	</script>
+	</body>
+</html>
