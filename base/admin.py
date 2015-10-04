@@ -42,7 +42,7 @@ class PosteAdmin(admin.ModelAdmin):
 
 
 class PersonneContactAdmin(admin.ModelAdmin):
-    list_display = ("nomPoste", "cfAtachStation", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche")
+    list_display = ("nomPoste", "cfAtachStation", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche", "isactif")
     form = PersonneContactForm
 
     #return the nomPoste of the foreignkey(s) in list_display and it will show it

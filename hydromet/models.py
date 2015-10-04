@@ -16,7 +16,7 @@ class TypeStationPluviometrique(models.Model):
         return self.typeStation
 
 class UniteDeMesure(models.Model):
-    uniteMesure = models.CharField(max_length=7, unique=True)
+    uniteMesure = models.CharField(max_length=7, unique=True, verbose_name="Unite de mesure")
     description = models.TextField(blank=True)
 
     def __str__(self):              # __unicode__ on Python 2
@@ -30,7 +30,7 @@ class StationPluviometrique(models.Model):
     nomStation = models.CharField(max_length=45, verbose_name="Nom de la Station")
     typeStation = models.ForeignKey(TypeStationPluviometrique, verbose_name="Type de la Station", null=True, blank=True)
     idStation = models.CharField(max_length=5, blank=True)
-    uniteMesure = models.ForeignKey(UniteDeMesure)
+    uniteMesure = models.ForeignKey(UniteDeMesure, verbose_name="Unite de mesure")
 
     def __str__(self):              # __unicode__ on Python 2
         return self.nomStation

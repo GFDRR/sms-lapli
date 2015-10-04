@@ -292,6 +292,6 @@ SUIT_CONFIG = {
 ADMIN_REORDER = (
     # Reorder app models
     {'app': 'base',  'label': 'Structure de base', 'models': ('base.Departement', 'base.Commune', 'base.SectionCommunale', 'base.SiteSentinelle', 'base.Poste', 'base.PersonneContact')},
-    {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique',)},
+    {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.UniteDeMesure',)},
     {'app': 'auth',  'label': 'Autorisation',},
 )

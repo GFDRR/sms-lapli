@@ -161,7 +161,7 @@ class PersonneContactForm(forms.ModelForm):
     class Meta:
         #Added the fields of PersonneContact manually for the validation test
         model = PersonneContact
-        fields = ["nomPoste", "cfAtachStation", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche"]
+        fields = ["nomPoste", "cfAtachStation", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche", "isactif"]
 
     #Test input nomPersonne before validation
     def clean_nomPersonne(self):
