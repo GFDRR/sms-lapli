@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import *
 from base.models import *
 from hydromet.models import *
+from django.core import serializers
+
 import json
 
 # Create your views here.
@@ -63,3 +65,22 @@ def json_graph(request):
 
     responsJson = {'table': tous}
     return JsonResponse(responsJson)
+
+
+def station_map(request):
+    return render(request, "public/map_stations.html", {})
+
+
+def json_map(request):
+
+    #stations = serializers.serialize("json", StationPluviometrique.objects.all(), fields=('latitude','longitude', 'nomStation'))
+
+    datas = StationPluviometrique.objects.all()
+    stationLst = []
+    for info in datas:
+        stationLst.append({'nomStation': info.nomStation, 'lat' : info.latitude, 'long' : info.longitude })
+
+    #responsJson =
+
+    return JsonResponse({'stations': stationLst})
+    #return HttpResponse(stations)
