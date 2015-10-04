@@ -1,9 +1,6 @@
 from django.db import models
 from base.models import SiteSentinelle, PersonneContact
 
-
-# Create your models here.
-
 #  -------------------------------------------
 #  Models for Hm
 #  -------------------------------------------
