@@ -42,13 +42,18 @@ class SmsGateway(AppBase):
                 dtD=date.today() - timedelta(days=1)
                 dateD = str(dtD.year)+'-'+str(dtD.month)+'-'+str(dtD.day) # now date
 
-                #getting the StationPluviometrique's id
-                stat_id = 0
-                for pers in PersonneContact.objects.filter(telephonePersonnel=tel):
-                    stat_id = pers.cfAtachStation
-                #Will Save here
-                obsv= ObservationPluviometrique(quantite=val_float,dateDebut=dateD,dateFin=datex,description="Un texte comme ca",idStation=stat_id,numeroJour=23,valider=0, personne=tel)
-                obsv.save()
+                person = PersonneContact.objects.get(telephonePersonnel=tel)
+                station = StationObservers.objects.get(observer=person).station
+
+                o = Observation()
+                o.idStation = station
+                o.observer = person
+                o.timestamp = datetime.now()
+                o.quantitePluie = val_float
+                o.dateDebut = dateD
+                o.dateFin = datex
+                o.valider = False
+                o.save()
 
                 msg.respond('Donnees sauvegardees! Merci pour le service!')
                 return True
