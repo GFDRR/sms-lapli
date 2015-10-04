@@ -68,7 +68,7 @@ class PersonneContact(models.Model):
     adressePersonnelle = models.CharField(max_length=45, verbose_name="Adresse (Personnlle)", blank=True)
     nif = models.CharField(max_length=45, unique=True, verbose_name="NIF/CIN")
     dateEmbauche = models.DateField(verbose_name="Date d'embauche")
-    cfAtachStation = models.ForeignKey('hydromet.StationPluviometrique', verbose_name="Affectation Station")
+    isactif = models.BooleanField(verbose_name="Active")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.telephonePersonnel

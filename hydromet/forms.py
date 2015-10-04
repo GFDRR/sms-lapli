@@ -5,11 +5,11 @@ from .models import *
 __author__ = 'esdras'
 
 
-class StationPluviometriqueForm(forms.ModelForm):
+class StationForm(forms.ModelForm):
     class Meta:
-        #Added the fields of StationPluviometrique manually for the validation test
-        model = StationPluviometrique
-        fields = ["latitude", "longitude", "hauteur", "idSiteSeninnelle", "nomStation", "typeStation"]
+        #Added the fields of Station manually for the validation test
+        model = Station
+        fields = ["latitude", "longitude", "hauteur", "uniteMesure", "idSiteSeninnelle", "nomStation", "typeStation"]
 
     #Test input nomStation before validation
     def clean_nomStation(self):
@@ -23,10 +23,10 @@ class StationPluviometriqueForm(forms.ModelForm):
         return dataInput
 
 
-class TypeStationPluviometriqueForm(forms.ModelForm):
+class TypeStationForm(forms.ModelForm):
     class Meta:
-        #Added the fields of TypeStationPluviometrique manually for the validation test
-        model = TypeStationPluviometrique
+        #Added the fields of TypeStation manually for the validation test
+        model = TypeStation
         fields = ["typeStation", "description"]
 
     #Test input typeStation before validation
@@ -40,8 +40,13 @@ class TypeStationPluviometriqueForm(forms.ModelForm):
 
         return dataInput
 
-class ObservationPluviometriqueForm(forms.ModelForm):
+class ObservationForm(forms.ModelForm):
     class Meta:
-        #Added the fields of ObservationPluviometrique manually for the validation test
-        model = ObservationPluviometrique
-        fields = ["quantite", "dateDebut", "dateFin", "description", "idStation", "numeroJour", "valider"]
+        #Added the fields of Observation manually for the validation test
+        model = Observation
+        fields = ["quantitePluie", "dateDebut", "dateFin", "description", "idStation", "valider"]
+
+class UniteDeMesureForm(forms.ModelForm):
+    class Meta:
+        model = UniteDeMesure
+        fields = ["uniteMesure", "description"]

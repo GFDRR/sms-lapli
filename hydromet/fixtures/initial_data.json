@@ -3,7 +3,7 @@
     "fields": {
       "description": ""
     },
-    "model": "hydromet.typestationpluviometrique",
+    "model": "hydromet.typestation",
     "pk": "Pluviometre Manuel"
   },
   {
@@ -16,7 +16,7 @@
       "latitude": 19.56257377497237,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 91
   },
   {
@@ -29,7 +29,7 @@
       "latitude": 19.51455936028594,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 92
   },
   {
@@ -42,7 +42,7 @@
       "latitude": 19.43763675506464,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 93
   },
   {
@@ -55,7 +55,7 @@
       "latitude": 19.4286859406368,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 94
   },
   {
@@ -68,7 +68,7 @@
       "latitude": 19.40253842479207,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 95
   },
   {
@@ -81,7 +81,7 @@
       "latitude": 19.3724830194373,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 96
   },
   {
@@ -94,7 +94,7 @@
       "latitude": 19.25443372560053,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 97
   },
   {
@@ -107,7 +107,7 @@
       "latitude": 19.17363315099675,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 98
   },
   {
@@ -120,7 +120,7 @@
       "latitude": 19.14363996527887,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 99
   },
   {
@@ -133,7 +133,7 @@
       "latitude": 19.16729479161771,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 100
   },
   {
@@ -146,7 +146,7 @@
       "latitude": 19.13499731723255,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 101
   },
   {
@@ -159,7 +159,7 @@
       "latitude": 19.12144878884045,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 102
   },
   {
@@ -172,7 +172,7 @@
       "latitude": 19.04832242258459,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 103
   },
   {
@@ -185,7 +185,7 @@
       "latitude": 18.89842986926211,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 104
   },
   {
@@ -198,7 +198,7 @@
       "latitude": 18.82804877081173,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 105
   },
   {
@@ -211,7 +211,7 @@
       "latitude": 18.83007043183073,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 106
   },
   {
@@ -224,7 +224,7 @@
       "latitude": 19.24688361741425,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 107
   },
   {
@@ -237,7 +237,7 @@
       "latitude": 19.2893648425934,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 108
   },
   {
@@ -250,7 +250,7 @@
       "latitude": 19.15648081969195,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 109
   },
   {
@@ -263,7 +263,7 @@
       "latitude": 18.85835202262486,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 110
   },
   {
@@ -276,7 +276,7 @@
       "latitude": 18.49070020511937,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 111
   },
   {
@@ -289,7 +289,7 @@
       "latitude": 18.6013000213286,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 112
   },
   {
@@ -302,7 +302,7 @@
       "latitude": 18.49525733434571,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 113
   },
   {
@@ -315,7 +315,7 @@
       "latitude": 18.60076737333268,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 114
   },
   {
@@ -328,7 +328,7 @@
       "latitude": 18.56025694264951,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 115
   },
   {
@@ -341,7 +341,7 @@
       "latitude": 18.46972083263341,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 116
   },
   {
@@ -354,7 +354,7 @@
       "latitude": 18.48146450810822,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 117
   },
   {
@@ -367,7 +367,7 @@
       "latitude": 18.3047181911896,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 118
   },
   {
@@ -380,7 +380,7 @@
       "latitude": 18.24818500714856,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 119
   },
   {
@@ -393,7 +393,7 @@
       "latitude": 18.36974002802704,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 120
   },
   {
@@ -406,7 +406,7 @@
       "latitude": 18.31553314444214,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 121
   },
   {
@@ -419,7 +419,7 @@
       "latitude": 18.19444400536614,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 122
   },
   {
@@ -432,7 +432,7 @@
       "latitude": 18.29575463168128,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 123
   },
   {
@@ -445,7 +445,7 @@
       "latitude": 18.27277034452668,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 124
   },
   {
@@ -458,7 +458,7 @@
       "latitude": 18.50005936967271,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 125
   },
   {
@@ -471,7 +471,7 @@
       "latitude": 18.44461090800782,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 126
   },
   {
@@ -484,7 +484,7 @@
       "latitude": 18.41018414190348,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 127
   },
   {
@@ -497,7 +497,7 @@
       "latitude": 18.36704333499312,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 128
   },
   {
@@ -510,7 +510,7 @@
       "latitude": 18.43330364573203,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 129
   },
   {
@@ -523,7 +523,7 @@
       "latitude": 18.18734975488544,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 130
   },
   {
@@ -536,7 +536,7 @@
       "latitude": 18.58420324132958,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 131
   },
   {
@@ -549,7 +549,7 @@
       "latitude": 18.56727413692638,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 132
   },
   {
@@ -562,7 +562,7 @@
       "latitude": 18.5884284749118,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 133
   },
   {
@@ -575,7 +575,7 @@
       "latitude": 18.51973411240028,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 134
   },
   {
@@ -588,7 +588,7 @@
       "latitude": 18.54412220874776,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 135
   },
   {
@@ -601,7 +601,7 @@
       "latitude": 18.513183854149,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 136
   },
   {
@@ -614,7 +614,7 @@
       "latitude": 18.23375196546153,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 137
   },
   {
@@ -627,7 +627,7 @@
       "latitude": 18.36193828235698,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 138
   },
   {
@@ -640,7 +640,7 @@
       "latitude": 18.25268834055497,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 139
   },
   {
@@ -653,7 +653,7 @@
       "latitude": 18.24436654553611,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 140
   },
   {
@@ -666,7 +666,7 @@
       "latitude": 18.23391877891812,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 141
   },
   {
@@ -679,7 +679,7 @@
       "latitude": 18.49492438159563,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 142
   },
   {
@@ -692,7 +692,7 @@
       "latitude": 18.44846345184628,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 143
   },
   {
@@ -705,7 +705,7 @@
       "latitude": 18.41925256403835,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 144
   },
   {
@@ -718,7 +718,7 @@
       "latitude": 18.30649789426097,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 145
   },
   {
@@ -731,7 +731,7 @@
       "latitude": 18.23618080601668,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 146
   },
   {
@@ -744,7 +744,7 @@
       "latitude": 18.03584976793925,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 147
   },
   {
@@ -757,7 +757,7 @@
       "latitude": 18.17888562292269,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 148
   },
   {
@@ -770,7 +770,7 @@
       "latitude": 18.23496538083361,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 149
   },
   {
@@ -783,7 +783,7 @@
       "latitude": 18.28008671167904,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 150
   },
   {
@@ -796,7 +796,7 @@
       "latitude": 18.31797240056409,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 151
   },
   {
@@ -809,7 +809,7 @@
       "latitude": 18.39454780304249,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 152
   },
   {
@@ -822,7 +822,7 @@
       "latitude": 18.44192103103976,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 153
   },
   {
@@ -835,7 +835,7 @@
       "latitude": 18.65093386063197,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 154
   },
   {
@@ -848,7 +848,7 @@
       "latitude": 18.67879843909471,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 155
   },
   {
@@ -861,7 +861,7 @@
       "latitude": 18.73889229841777,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 156
   },
   {
@@ -874,7 +874,7 @@
       "latitude": 18.79575843508831,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 157
   },
   {
@@ -887,7 +887,7 @@
       "latitude": 20.0301058866538,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 158
   },
   {
@@ -900,7 +900,7 @@
       "latitude": 19.80520971990071,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 159
   },
   {
@@ -913,7 +913,7 @@
       "latitude": 19.6866889471587,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 160
   },
   {
@@ -926,7 +926,7 @@
       "latitude": 19.85216927838869,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 161
   },
   {
@@ -939,7 +939,7 @@
       "latitude": 19.94189096277303,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 162
   },
   {
@@ -952,7 +952,7 @@
       "latitude": 19.92008789452475,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 163
   },
   {
@@ -965,7 +965,7 @@
       "latitude": 19.76886238804884,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 164
   },
   {
@@ -978,7 +978,7 @@
       "latitude": 19.59880392569874,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 165
   },
   {
@@ -991,7 +991,7 @@
       "latitude": 19.44951244758602,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 166
   },
   {
@@ -1004,7 +1004,7 @@
       "latitude": 19.47351632142671,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 167
   },
   {
@@ -1017,7 +1017,7 @@
       "latitude": 19.59736853421103,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 168
   },
   {
@@ -1030,7 +1030,7 @@
       "latitude": 19.84576903916737,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 169
   },
   {
@@ -1043,7 +1043,7 @@
       "latitude": 19.70570847527878,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 170
   },
   {
@@ -1056,7 +1056,7 @@
       "latitude": 19.67157424841179,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 171
   },
   {
@@ -1069,7 +1069,7 @@
       "latitude": 19.66530285675367,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 172
   },
   {
@@ -1082,7 +1082,7 @@
       "latitude": 19.68552722677334,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 173
   },
   {
@@ -1095,7 +1095,7 @@
       "latitude": 19.75992758106156,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 174
   },
   {
@@ -1108,7 +1108,7 @@
       "latitude": 19.59525372336024,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 175
   },
   {
@@ -1121,7 +1121,7 @@
       "latitude": 19.55017474737628,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 176
   },
   {
@@ -1134,7 +1134,7 @@
       "latitude": 19.67525208973897,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 177
   },
   {
@@ -1147,7 +1147,7 @@
       "latitude": 19.57468898354985,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 178
   },
   {
@@ -1160,7 +1160,7 @@
       "latitude": 19.10305765133359,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 179
   },
   {
@@ -1173,7 +1173,7 @@
       "latitude": 18.83165707393624,
       "hauteur": "0.00"
     },
-    "model": "hydromet.stationpluviometrique",
+    "model": "hydromet.station",
     "pk": 180
   }
 ]

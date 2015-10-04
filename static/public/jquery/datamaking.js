@@ -13,3 +13,21 @@ $(document).ready(function(){
         }
     });
 });
+
+/*
+* Assure le changement de blocs dans la partie publique
+* */
+
+$(document).ready(function(){
+    $('.nav-sidebar li').click(function(){
+        //alert("On m'a clique!!");
+        var sltedId=$(this).children("a").attr("href");
+        //alert(sltedId);
+        $('.nav-sidebar li').removeAttr("class");//supprime les active
+        $(this).attr("class","active");//ajoute les active au li selectionne
+        //selection de tous les blocs ayant les articles
+       $("#lesblocs").children('[class*="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"]').attr("class","col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent");
+        //affichage du block selectionnes
+        $("#lesblocs "+sltedId).attr("class","col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main showSubMenuContent");
+    });
+});

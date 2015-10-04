@@ -191,7 +191,6 @@ LOGGING = {
 }
 
 INSTALLED_APPS = (
-    'suit',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -243,7 +242,7 @@ INSTALLED_BACKENDS = {
 
     "kannel-usb0-smsc" : {
         "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
-        "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
+        "sendsms_url": "http://127.0.0.1:14000/cgi-bin/sendsms",
         "sendsms_params": {"smsc": "usb0-modem",
                            "from": "+50934772370", # not set automatically by SMSC
                            "username": "rapidsms",
@@ -293,6 +292,6 @@ SUIT_CONFIG = {
 ADMIN_REORDER = (
     # Reorder app models
     {'app': 'base',  'label': 'Structure de base', 'models': ('base.Departement', 'base.Commune', 'base.SectionCommunale', 'base.SiteSentinelle', 'base.Poste', 'base.PersonneContact')},
-    {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique',)},
+    {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.UniteDeMesure',)},
     {'app': 'auth',  'label': 'Autorisation',},
 )
