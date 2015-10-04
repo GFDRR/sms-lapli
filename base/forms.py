@@ -71,7 +71,7 @@ class DepartementForm(forms.ModelForm):
     class Meta:
         #Added the fields of Departement manually for the validation test
         model = Departement
-        fields = ["departement", "description"]
+        fields = ["departement", "description", "id_code"]
 
     #Test input departement before validation
     def clean_departement(self):

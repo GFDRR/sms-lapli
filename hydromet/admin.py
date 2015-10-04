@@ -9,6 +9,7 @@ class StationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
     list_display = ("idSiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "typeStation")
+    search_fields = ["idSiteSeninnelle", "latitude", "longitude", "hauteur", "nomStation", "typeStation"]
     form = StationForm
 
 
@@ -16,6 +17,8 @@ class ObservationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
     list_display = ("quantitePluie", "dateDebut", "dateFin", "description", "valider")
+    list_filter = (('valider',))
+    search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
     form = ObservationForm
 
     #return id of the foreignkey(s) in list_display and it will show it
@@ -26,6 +29,7 @@ class ObservationAdmin(admin.ModelAdmin):
 class TypeStationAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
     list_display = ("typeStation", "description")
+    search_fields = ["typeStation"]
     form = TypeStationForm
 
 class UniteDeMesureAdmin(admin.ModelAdmin):
@@ -34,6 +38,7 @@ class UniteDeMesureAdmin(admin.ModelAdmin):
 
 class StationObserversAdmin(admin.ModelAdmin):
     list_display = ("station", "observer")
+    search_fields = ["station", "observer"]
     form = StationObserversForm
 
 # class ObservationTemperatureAdmin(admin.ModelAdmin):
