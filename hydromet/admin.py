@@ -31,6 +31,11 @@ class TypeStationAdmin(admin.ModelAdmin):
 class UniteDeMesureAdmin(admin.ModelAdmin):
     list_display = ("uniteMesure", "description")
     form = UniteDeMesureForm
+
+class StationObserversAdmin(admin.ModelAdmin):
+    list_display = ("station", "observer")
+    form = StationObserversForm
+
 # class ObservationTemperatureAdmin(admin.ModelAdmin):
 #
 #
@@ -44,6 +49,7 @@ admin.site.register(Station, StationAdmin)
 admin.site.register(TypeStation, TypeStationAdmin)
 admin.site.register(Observation, ObservationAdmin)
 admin.site.register(UniteDeMesure, UniteDeMesureAdmin)
+admin.site.register(StationObservers, StationObserversAdmin)
 
 # admin.site.register(ObservationTemperature)
 # admin.site.register(ObservationDirectionVent)
