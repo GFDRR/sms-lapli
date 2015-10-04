@@ -4,9 +4,9 @@
 	<head>
 		{% include "public/include/head.html" %}
 		<script src="{% static "public/leaflet/leaflet.js" %}"></script>
-		<script src="{% static "public/leaflet/cluster/leaflet.markercluster.js" %}"></script>
 		<link rel="stylesheet" type="text/css" href="{% static "public/leaflet/leaflet.css" %}">
-        <link rel="stylesheet" type="text/css" href="{% static "public/leaflet/cluster/MarkerCluster.css" %}">
+        <link rel="stylesheet" href="{% static "public/leaflet/markers/leaflet.awesome-markers.css" %}">
+        <script src="{% static "public/leaflet/markers/leaflet.awesome-markers.min.js" %}"></script>
 	</head>
 
 	<body>
@@ -16,6 +16,12 @@
 		width: 100%;
 		min-height: 500px;
 		}
+
+        .awesome-marker i {
+        font-size: 12px !important;
+        margin-top: 8px;
+    }
+
 	</style>
 		<!--===================================Menu Principal=======================================================-->
 	   {% include "public/include/menu.html" %}
@@ -55,18 +61,29 @@
   			type: 'json',
   			url: "/rapport/json_map/",
   			success : function(data) {
-				dataLen = data.stations.length;
-
-				var markers = new L.MarkerClusterGroup();
+				dataLen = data.stations_lst.length;
 
 				for(var i=0; i < dataLen; i++){
-					var marker = L.marker([ data.stations[i]['lat'], data.stations[i]['long'] ]);
-					marker.bindPopup(data.stations[i]['nomStation']);
 
-					markers.addLayer(marker);
+				    var basicIcon = L.icon({
+                    iconUrl: '{% static "public/leaflet/markers/check.png" %}',
+
+                    });
+
+                    html= "<h4>"+data.stations_lst[i]['nomStation']+"</h4>";
+                    html += "<h6>Type de station</h6>";
+                    html += "<input readonly='readonly' type='checkbox' checked='checked'> Pluviométrique : "+data.stations_lst[i]['qt']+" mm<br>";
+                    html += "<input readonly='readonly' type='checkbox'> Limnimétrique : -<br>";
+                    html += "<input readonly='readonly' type='checkbox'> Thermométrique : -<br>";
+
+					var marker = L.marker([ data.stations_lst[i]['latitude'], data.stations_lst[i]['longitude'] ], {icon : basicIcon}).addTo(map);
+					marker.bindPopup(html);
+
+
+
+
 				}
 
-				map.addLayer(markers);
 
   			}
 		})

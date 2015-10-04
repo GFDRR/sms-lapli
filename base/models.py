@@ -71,7 +71,7 @@ class PersonneContact(models.Model):
     isactif = models.BooleanField(verbose_name="Active")
 
     def __str__(self):              # __unicode__ on Python 2
-         return self.telephonePersonnel
+         return "%s %s" % (self.nomPersonne, self.prenomPersonne)
 
 # class AffectationSiteSentinelle(models.Model):
 #     PersonneContact_idPersonneContact = models.IntegerField(blank=False,null=False)
