@@ -1,6 +1,8 @@
 from django import forms
+from requests.packages.urllib3 import request
 from base.forms import ValidationInput
 from .models import *
+from django.contrib.auth.models import User, Permission, Group
 
 __author__ = 'esdras'
 
@@ -41,10 +43,19 @@ class TypeStationForm(forms.ModelForm):
         return dataInput
 
 class ObservationForm(forms.ModelForm):
+
+    #Test input Poste before validation
+    def clean_valider(self):
+         dataInput = self.cleaned_data.get('valider')
+         user = User.objects.all()
+         current_user = request.user
+
+
     class Meta:
         #Added the fields of Observation manually for the validation test
         model = Observation
         fields = ["quantitePluie", "dateDebut", "dateFin", "description", "idStation", "valider"]
+
 
 class UniteDeMesureForm(forms.ModelForm):
     class Meta:

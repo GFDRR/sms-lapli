@@ -28,6 +28,12 @@ class SmsGateway(AppBase):
             return True  # Return false because we don't want to answer an unknow number
                          # We must shut the default messge from the default app in this case
         else: # If this number is in the list, will work with the text message
+            # if msg.text == "daa":
+            #     a = Observation
+            #     for asd in a.objects.filter(dateDebut__lte=datetime.now):
+            #         x += asd.quantitePluie
+            #     msg.respond(str(x))
+            #     return True
             pat_zero = '0'
             matched = re.match(pat_zero, msg.text)
             if isFloat(msg.text):
@@ -38,24 +44,34 @@ class SmsGateway(AppBase):
                 val_float = float(msg.text)
                 #Ici operation avec les unites disponibles
                 dt = datetime.now()
-                datex = str(dt.year)+'-'+str(dt.month)+'-'+str(dt.day) # now date
+                dateFin = str(dt.year)+'-'+str(dt.month)+'-'+str(dt.day)
                 dtD=date.today() - timedelta(days=1)
-                dateD = str(dtD.year)+'-'+str(dtD.month)+'-'+str(dtD.day) # now date
+                dateDebut = str(dtD.year)+'-'+str(dtD.month)+'-'+str(dtD.day)
 
                 person = PersonneContact.objects.get(telephonePersonnel=tel)
                 station = StationObservers.objects.get(observer=person).station
 
-                o = Observation()
-                o.idStation = station
-                o.observer = person
-                o.timestamp = datetime.now()
-                o.quantitePluie = val_float
-                o.dateDebut = dateD
-                o.dateFin = datex
-                o.valider = False
-                o.save()
+                #id de la personne qui a envoye le sms
+                obs_id = PersonneContact.objects.filter(telephonePersonnel = tel).first().id
 
-                msg.respond('Donnees sauvegardees! Merci pour le service!')
+                recup_last_value = Observation.objects.filter(observer = obs_id, dateDebut = dateDebut).order_by('-id').first()
+                if recup_last_value:
+                    recup_last_value.quantitePluie = val_float
+                    recup_last_value.save()
+                    info = 'Donnee mise a jour'
+                else:
+                    o = Observation()
+                    o.idStation = station
+                    o.observer = person
+                    o.timestamp = datetime.now()
+                    o.quantitePluie = val_float
+                    o.dateDebut = dateDebut
+                    o.dateFin = dateFin
+                    o.valider = False
+                    o.save()
+                    info = 'Donnee sauvegardee. Merci!'
+
+                msg.respond(info)
                 return True
             else:
                 msg.respond("Verifier la valeur envoye SVP! On attend un nombre Ex: 12.9 ou 12")
