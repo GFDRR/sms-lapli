@@ -10,7 +10,7 @@ import json
 
 
 def rpluie(request):
-    return render(request, "public/temp_rapport.html", {})
+    return render(request, "public/rapports.html", {})
 
 
 def acc(request):
