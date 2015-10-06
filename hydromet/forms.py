@@ -1,5 +1,5 @@
 from django import forms
-from requests.packages.urllib3 import request
+#from requests.packages.urllib3 import request
 from base.forms import ValidationInput
 from .models import *
 from django.contrib.auth.models import User, Permission, Group
