@@ -71,7 +71,7 @@ class DepartementForm(forms.ModelForm):
     class Meta:
         #Added the fields of Departement manually for the validation test
         model = Departement
-        fields = ["departement", "description", "id_code"]
+        fields = ["departement", "id_code", "description"]
 
     #Test input departement before validation
     def clean_departement(self):
@@ -80,7 +80,7 @@ class DepartementForm(forms.ModelForm):
         valid = ValidationInput()
 
         if not valid.isValidInput(dataInput, 'False'):
-            raise forms.ValidationError("Departement invalid!")
+            raise forms.ValidationError("Departement incorrect!")
 
         return dataInput
 
@@ -90,7 +90,7 @@ class CommuneForm(forms.ModelForm):
     class Meta:
         #Added the fields of Commune manually for the validation test
         model = Commune
-        fields = ["departement", "commune", "description"]
+        fields = ["departement", "commune", "id_code", "description"]
 
     #Test input Commune before validation
     def clean_commune(self):
@@ -98,7 +98,7 @@ class CommuneForm(forms.ModelForm):
         valid = ValidationInput()
 
         if not valid.isValidInput(dataInput, 'False'):
-            raise forms.ValidationError("Commune invalid!")
+            raise forms.ValidationError("Commune incorrect!")
 
         return dataInput
 
@@ -107,7 +107,7 @@ class SectionCommunaleForm(forms.ModelForm):
     class Meta:
         #Added the fields of SectionCommunale manually for the validation test
         model = SectionCommunale
-        fields = ["commune", "sectionCommunale", "description"]
+        fields = ["commune", "sectionCommunale", "nomOfficiel", "id_code", "description"]
 
     #Test input SectionCommunale before validation
     def clean_sectionCommunale(self):
@@ -115,7 +115,7 @@ class SectionCommunaleForm(forms.ModelForm):
         valid = ValidationInput()
 
         if not valid.isValidInput(dataInput, "True"):
-            raise forms.ValidationError("Section communale invalide!")
+            raise forms.ValidationError("Section communale incorrect!")
 
         return dataInput
 

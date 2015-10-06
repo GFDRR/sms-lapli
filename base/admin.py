@@ -7,7 +7,7 @@ from .models import *
 
 class DepartementAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("departement", "description", "id_code")
+    list_display = ("departement", "id_code", "description")
     form = DepartementForm
 
 
@@ -15,7 +15,7 @@ class DepartementAdmin(admin.ModelAdmin):
 
 class CommuneAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("departement", "commune", "description")
+    list_display = ("departement", "commune", "id_code", "description")
     form = CommuneForm
 
 
@@ -23,7 +23,7 @@ class CommuneAdmin(admin.ModelAdmin):
 
 class SectionCommunaleAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
-    list_display = ("commune", "sectionCommunale", "description")
+    list_display = ("commune", "sectionCommunale", "nomOfficiel", "id_code", "description")
     form = SectionCommunaleForm
 
 
@@ -44,7 +44,7 @@ class PosteAdmin(admin.ModelAdmin):
 class PersonneContactAdmin(admin.ModelAdmin):
     list_display = ("nomPoste", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche", "isactif")
     list_filter = (('isactif',))
-    search_fields = ["nomPoste", "nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche"]
+    search_fields = ["nomPersonne", "prenomPersonne", "telephoneBureau", "telephonePersonnel", "emailPersonnel", "adressePersonnelle", "nif", "dateEmbauche"]
     form = PersonneContactForm
 
     #return the nomPoste of the foreignkey(s) in list_display and it will show it
