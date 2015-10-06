@@ -7,12 +7,17 @@
             <link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
             <link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
             <link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "public/leaflet/leaflet.css" %}">
+            <link rel="stylesheet" href="{% static "public/leaflet/markers/leaflet.awesome-markers.css" %}">
             <script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
-            <script src="{% static "bootstrap/dist/css/bootstrap-theme.min.css" %}"></script>
+            <!--<script src="{% static "bootstrap/dist/css/bootstrap-theme.min.css" %}"></script>-->
             <script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
             <script src="{% static "public/bootstrap/dist/js/bootstrap.min.js" %}"></script>
             <script src="{% static "public/jquery/datamaking.js" %}"></script>
             <script src="{% static "public/bootstrap/js/graphe.js" %}"></script>
+            <script src="{% static "public/leaflet/leaflet.js" %}"></script>
+
+            <script src="{% static "public/leaflet/markers/leaflet.awesome-markers.min.js" %}"></script>
             <script type="text/javascript">
                 $(document).ready(function(){
                     $("#myTab a").click(function(e){
@@ -51,6 +56,15 @@
                 /* add padding  */
                 .left-addon input  { padding-left:  30px; }
                 .right-addon input { padding-right: 30px; }
+                #Map {
+		        width: 640px;
+                min-height: 350px;
+                }
+
+                .awesome-marker i {
+                    font-size: 12px !important;
+                    margin-top: 8px;
+                }
             </style>
 
     </head>
@@ -228,6 +242,7 @@
                                     <div id="section" class="tab-pane fade">
                                             <h2 class="sub-header">Carte des enregistrements pluviometrique</h2>
                                             <div class="table-responsive" id="tablo">
+                                                <div id="Map"></div>
 
                                             </div>
                                             <div class="panel-group submen">
@@ -279,4 +294,64 @@
     </div>
 
 </body>
+<script>
+	$('document').ready(function(){
+
+
+
+
+
+		var map = L.map('Map').setView([18.834610, -72.288237], 2);
+
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
+
+		var cartoCdn = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {});
+
+		cartoCdn.addTo(map);
+
+		loadStations(map);
+
+
+
+	});
+
+	function loadStations(map) {
+		$.ajax({
+  			method: "GET",
+  			type: 'json',
+  			url: "/rapport/json_map/",
+  			success : function(data) {
+				dataLen = data.stations_lst.length;
+
+				for(var i=0; i < dataLen; i++){
+
+				    var basicIcon = L.icon({
+                    iconUrl: '{% static "public/leaflet/markers/check.png" %}',
+
+                    });
+
+                    html= "<h4>"+data.stations_lst[i]['nomStation']+"</h4>";
+                    html += "<h6>Type de station</h6>";
+                    html += "<input readonly='readonly' type='checkbox' checked='checked'> Pluviométrique : "+data.stations_lst[i]['qt']+" mm<br>";
+                    html += "<input readonly='readonly' type='checkbox'> Limnimétrique : -<br>";
+                    html += "<input readonly='readonly' type='checkbox'> Thermométrique : -<br>";
+
+					var marker = L.marker([ data.stations_lst[i]['latitude'], data.stations_lst[i]['longitude'] ], {icon : basicIcon}).addTo(map);
+					marker.bindPopup(html);
+
+
+
+
+				}
+
+
+  			}
+		})
+
+	}
+
+
+
+
+	</script>
 </html>

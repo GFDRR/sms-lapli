@@ -110,8 +110,12 @@ Submen Style
 */
 
 .submen{
-  width: 250px;
+  width: 254px;
   float:right;
+}
+.submen .panel-default{
+    width:220px;
+    margin-left: 30px;
 }
 
 #canvas{
@@ -129,15 +133,19 @@ Submen Style
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: #0D7BDA;
+    background-color: #ff;
     border: 1px solid #428BCA;
 }
-
+a.list-group-item, button.list-group-item {
+    color: #000;
+    font-style: bolder;
+}
 #tablo{
     width: 640px;
     height: 350px;
     border: 2px solid #428bca;
     float: left;
+    overflow: hidden;
 }
 
 .hidenSubMenuContent{
