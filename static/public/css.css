@@ -133,11 +133,11 @@ Submen Style
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: #0D7BDA;
+    background-color: #ff;
     border: 1px solid #428BCA;
 }
 a.list-group-item, button.list-group-item {
-    color: #FFF;
+    color: #000;
     font-style: bolder;
 }
 #tablo{
