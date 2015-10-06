@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.get('/json_graph',function(data,status){
+    $.get('/rapport/json_graph',function(data,status){
 				//alert(data);
             //alert(data.table[0].dep)
         var i;

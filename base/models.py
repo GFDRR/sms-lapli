@@ -11,7 +11,7 @@ from django.db import models
 class Departement(models.Model):
     departement = models.CharField(max_length=40, verbose_name="Departement")
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
-    id_code = models.TextField(max_length=2, unique=True, blank=True)
+    id_code = models.CharField(max_length=7, unique=True)
     # ihsi = models.CharField(max_length=10, verbose_name="Code IHSI")
 
     def __str__(self):              # __unicode__ on Python 2
@@ -22,7 +22,7 @@ class Commune(models.Model):
     departement = models.ForeignKey(Departement, verbose_name="Departement")
     commune = models.CharField(max_length=45, verbose_name="Commune", unique=True)
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
-    id_code = models.TextField(max_length=4, unique=True)
+    id_code = models.CharField(max_length=7, unique=True)
 
     def __str__(self):              # __unicode__ on Python 2
          return self.commune
@@ -33,7 +33,7 @@ class SectionCommunale(models.Model):
     sectionCommunale = models.CharField(max_length=45, verbose_name="Section Communale")
     nomOfficiel = models.CharField(max_length=45, blank=True)
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
-    id_code = models.TextField(max_length=7, unique=True, blank=True)
+    id_code = models.CharField(max_length=7, unique=True)
 
     def __str__(self):              # __unicode__ on Python 2
          return self.sectionCommunale

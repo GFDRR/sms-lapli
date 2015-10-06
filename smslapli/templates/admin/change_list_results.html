@@ -6,38 +6,6 @@
 {% endif %}
 
 
-{#{% if results %}#}
-{#<div class="results">#}
-{#<table id="result_list">#}
-{#<thead>#}
-{#<tr>#}
-{#{% for header in result_headers %}#}
-{#<th scope="col" {{ header.class_attrib }}>#}
-{#   {% if header.sortable %}#}
-{#     {% if header.sort_priority > 0 %}#}
-{#       <div class="sortoptions">#}
-{#         <a class="sortremove" href="{{ header.url_remove }}" title="{% trans "Remove from sorting" %}"></a>#}
-{#         {% if num_sorted_fields > 1 %}<span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}Sorting priority: {{ priority_number }}{% endblocktrans %}">{{ header.sort_priority }}</span>{% endif %}#}
-{#         <a href="{{ header.url_toggle }}" class="toggle {% if header.ascending %}ascending{% else %}descending{% endif %}" title="{% trans "Toggle sorting" %}"></a>#}
-{#       </div>#}
-{#     {% endif %}#}
-{#   {% endif %}#}
-{#   <div class="text">{% if header.sortable %}<a href="{{ header.url_primary }}">{{ header.text|capfirst }}</a>{% else %}<span>{{ header.text|capfirst }}</span>{% endif %}</div>#}
-{#   <div class="clear"></div>#}
-{#</th>{% endfor %}#}
-{#</tr>#}
-{#</thead>#}
-{#<tbody>#}
-{#{% for result in results %}#}
-{#{% if result.form.non_field_errors %}#}
-{#    <tr><td colspan="{{ result|length }}">{{ result.form.non_field_errors }}</td></tr>#}
-{#{% endif %}#}
-{#<tr class="{% cycle 'row1' 'row2' %}">{% for item in result %}{{ item }}{% endfor %}</tr>#}
-{#{% endfor %}#}
-{#</tbody>#}
-{#</table>#}
-{#</div>#}
-{#{% endif %}#}
 <div class="">
     <div class="clearfix"></div>
 
@@ -67,39 +35,34 @@
                 {% if results %}
                 <div class="x_content">
 
-                    <table id="example" class="table table-striped responsive-utilities jambo_table">
-{#                        <thead>#}
-{#                            <tr class="headings">#}
-{#                                <th>#}
-{#                                    <input type="checkbox" class="tableflat">#}
-{#                                </th>#}
-{#                                <th>Invoice </th>#}
-{#                                <th>Invoice Date </th>#}
-{#                                <th>Order </th>#}
-{#                                <th>Bill to Name </th>#}
-{#                                <th>Status </th>#}
-{#                                <th>Amount </th>#}
-{#                                <th class=" no-link last"><span class="nobr">Action</span>#}
-{#                                </th>#}
-{#                            </tr>#}
-{#                        </thead>#}
-{#                        <thead>#}
+                    <table id="example" class="table table-striped responsive-utilities jambo_table" style="overflow: scroll;">
                         <thead>
                             <tr class="headings">
                             {% for header in result_headers %}
-                                <th>
-                                    {% if header.sortable %}
-                                    {% if header.sort_priority > 0 %}
-{#                                    <div class="sortoptions">#}
-{#                                     <a class="sortremove" href="{{ header.url_remove }}" title="{% trans "Remove from sorting" %}"></a>#}
-{#                                     {% if num_sorted_fields > 1 %}<span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}Sorting priority: {{ priority_number }}{% endblocktrans %}">{{ header.sort_priority }}</span>{% endif %}#}
-{#                                     <a href="{{ header.url_toggle }}" class="toggle {% if header.ascending %}ascending{% else %}descending{% endif %}" title="{% trans "Toggle sorting" %}"></a>#}
-{#                                    </div>#}
-                                    {% endif %}
-                                    {% endif %}
-                                       <div class="text">{% if header.sortable %}<a href="{{ header.url_primary }}" style="color: #ffffff">{{ header.text|capfirst }}</a>{% else %}<span>{{ header.text|capfirst }}</span>{% endif %}</div>
-                                       <div class="clear"></div>
-                                </th>{% endfor %}
+                                <th style="border: 1px solid #666"  scope="col" {{ header.class_attrib }}>
+                                    <table>
+                                        <tr>
+                                            <td style="borber-left: 1px solid #777; width: 40%;">
+                                               <div class="text" style="width: 100%">{% if header.sortable %}<a href="{{ header.url_primary }}" style="color: #ffffff">{{ header.text|capfirst }}</a>{% else %}<span>{{ header.text|capfirst }}</span>{% endif %}</div>
+                                            </td>
+                                            <td>
+                                               {% if header.sortable %}
+                                                {% if header.sort_priority > 0 %}
+                                                    <td>
+                                                       <div class="sortoptions" style="margin: 5px; width: 100%; text-align: center">
+                                                            {% if num_sorted_fields > 1 %}
+                                                                <span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}Sorting priority: {{ priority_number }}{% endblocktrans %}" style="color: white;">{{ header.sort_priority }}</span>
+                                                            {% endif %}
+                                                             <a href="{{ header.url_toggle }}" class="{% if header.ascending %}glyphicon glyphicon-chevron-up{% else %}glyphicon glyphicon-chevron-down{% endif %}" title="{% trans "Toggle sorting" %}" style="color: white;"></a>
+                                                             <a class="glyphicon glyphicon-remove"href="{{ header.url_remove }}" title="{% trans "Remove from sorting" %}" style="color: white;"></a>
+                                                        </div>
+                                                    </td>
+                                                {% endif %}
+                                                {% endif %}
+                                        </tr>
+                                    </table>
+                                </th>
+                            {% endfor %}
                             </tr>
                         </thead>
                         <tbody>
@@ -110,29 +73,6 @@
                             <tr class="{% cycle 'row1' 'row2' %}">{% for item in result %}{{ item }}{% endfor %}</tr>
                         {% endfor %}
                         </tbody>
-{#                        <tbody>#}
-{#                            {% for result in results %}#}
-{#                                {% if result.form.non_field_errors %}#}
-{#                                    <tr><td colspan="{{ result|length }}">{{ result.form.non_field_errors }}</td></tr>#}
-{#                                {% endif %}#}
-{#                                <tr class="{% cycle 'row1' 'row2' %}">{% for item in result %}{{ item }}{% endfor %}</tr>#}
-{#                            {% endfor %}#}
-{#                            <tr class="even pointer">#}
-{#                                <td class="a-center ">#}
-{#                                    <input type="checkbox" class="tableflat">#}
-{#                                </td>#}
-{#                                <td class=" ">121000040</td>#}
-{#                                <td class=" ">May 23, 2014 11:47:56 PM </td>#}
-{#                                <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i>#}
-{#                                </td>#}
-{#                                <td class=" ">John Blank L</td>#}
-{#                                <td class=" ">Paid</td>#}
-{#                                <td class="a-right a-right ">$7.45</td>#}
-{#                                <td class=" last"><a href="#">View</a>#}
-{#                                </td>#}
-{#                            </tr>#}
-{#                        </tbody>#}
-
                     </table>
                 </div>
             {% endif %}
