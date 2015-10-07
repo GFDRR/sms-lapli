@@ -9,14 +9,14 @@ class TypeStation(models.Model):
     typeStation = models.CharField(max_length=45, primary_key=True, verbose_name="Type de Station")
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
 
-    def __unicode__(self):              # __unicode__ on Python 2
+    def __str__(self):              # __unicode__ on Python 2
         return self.typeStation
 
 class UniteDeMesure(models.Model):
     uniteMesure = models.CharField(max_length=7, unique=True, verbose_name="Unite de mesure")
     description = models.TextField(blank=True)
 
-    def __unicode__(self):              # __unicode__ on Python 2
+    def __str__(self):              # __unicode__ on Python 2
          return self.uniteMesure
 
 class Station(models.Model):
@@ -29,7 +29,7 @@ class Station(models.Model):
     idStation = models.CharField(max_length=5, blank=True)
     uniteMesure = models.ForeignKey(UniteDeMesure, verbose_name="Unite de mesure", null=True, blank=True)
 
-    def __unicode__(self):              # __unicode__ on Python 2
+    def __str__(self):              # __unicode__ on Python 2
         return self.nomStation
 
 class StationObservers(models.Model):
@@ -47,3 +47,4 @@ class Observation(models.Model):
     quantitePluie = models.DecimalField(max_digits=15, decimal_places=2, blank=True, verbose_name="Quantite de Pluie")
     description = models.TextField(max_length=100, blank=True)
     valider = models.BooleanField()
+
