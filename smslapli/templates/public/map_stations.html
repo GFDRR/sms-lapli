@@ -70,7 +70,7 @@
 	   {% include "public/include/menu.html" %}
 
  	<div id="Filter">
-		<select class="selectpicker" data-style="btn-info" multiple title="Selectionnez au moins un Departement" data-width="300px">
+		<select id="SelDept" class="selectpicker" data-style="btn-info" multiple title="Selectionnez au moins un Departement" data-width="300px">
 			<option data-hidden="true">Selectionnez au moins un Departement</option>
 			{% if departement_lst %}
 				{% for dept in departement_lst %}
@@ -127,6 +127,7 @@
   			method: "GET",
   			type: 'json',
   			url: "/rapport/json_map/",
+  			data: { 'sel_dept': $('#SelDept').val() },
   			success : function(data) {
 				dataLen = data.stations_lst.length;
 

@@ -40,7 +40,7 @@ class StationObservers(models.Model):
 class Observation(models.Model):
     idStation = models.ForeignKey(Station)
     observer = models.ForeignKey(PersonneContact)
-    timestamp = models.DateTimeField()
+    timestamp = models.DateTimeField(auto_now_add=True)
     dateDebut = models.DateField(verbose_name="Debut")
     dateFin = models.DateField(verbose_name="Fin")
     temperatureMax = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature max")

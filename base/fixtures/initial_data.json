@@ -7758,5 +7758,29 @@
     },
     "model": "base.sectioncommunale",
     "pk": 570
+  },
+  {
+    "fields": {
+      "nomPoste": "System",
+      "description": ""
+    },
+    "model": "base.poste",
+    "pk": 0
+  },
+  {
+    "fields": {
+      "nomPoste": 0,
+      "nomPersonne": "System",
+      "prenomPersonne": "Android",
+      "telephoneBureau": "00000000",
+      "telephonePersonnel": "00000000",
+      "emailPersonnel": "android.system@mail.org",
+      "adressePersonnelle": "",
+      "nif": "000-000-000-0",
+      "dateEmbauche": "2015-10-07",
+      "isactif": "1"
+    },
+    "model": "base.personnecontact",
+    "pk": 0
   }
 ]
