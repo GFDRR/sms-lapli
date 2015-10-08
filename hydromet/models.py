@@ -15,7 +15,12 @@ class TypeStation(models.Model):
 class UniteDeMesure(models.Model):
     uniteMesure = models.CharField(max_length=7, unique=True, verbose_name="Unite de mesure")
     description = models.TextField(blank=True)
+<<<<<<< HEAD
 
+=======
+    formule = models.TextField(verbose_name="Formule", blank="True")
+    
+>>>>>>> 2ca3662bda4ffc5c3985e026b3324305c40701bf
     def __str__(self):              # __unicode__ on Python 2
          return self.uniteMesure
 
@@ -40,10 +45,10 @@ class Observation(models.Model):
     idStation = models.ForeignKey(Station)
     observer = models.ForeignKey(PersonneContact)
     timestamp = models.DateTimeField()
-    dateDebut = models.DateField(verbose_name="Date de debut")
-    dateFin = models.DateField(verbose_name="Date de fin")
-    temperatureMax = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True)
-    temperatureMin = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True)
+    dateDebut = models.DateField(verbose_name="Debut")
+    dateFin = models.DateField(verbose_name="Fin")
+    temperatureMax = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature max")
+    temperatureMin = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature min")
     quantitePluie = models.DecimalField(max_digits=15, decimal_places=2, blank=True, verbose_name="Quantite de Pluie")
     description = models.TextField(max_length=100, blank=True)
     valider = models.BooleanField()

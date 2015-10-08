@@ -1,5 +1,5 @@
 from django import forms
-from requests.packages.urllib3 import request
+#from requests.packages.urllib3 import request
 from base.forms import ValidationInput
 from .models import *
 from django.contrib.auth.models import User, Permission, Group
@@ -11,7 +11,7 @@ class StationForm(forms.ModelForm):
     class Meta:
         #Added the fields of Station manually for the validation test
         model = Station
-        fields = ["latitude", "longitude", "hauteur", "uniteMesure", "idSiteSeninnelle", "nomStation", "typeStation"]
+        fields = ["latitude", "longitude", "hauteur", "uniteMesure", "idSiteSeninnelle", "nomStation", "typeStation", "idStation"]
 
     #Test input nomStation before validation
     def clean_nomStation(self):
@@ -45,22 +45,21 @@ class TypeStationForm(forms.ModelForm):
 class ObservationForm(forms.ModelForm):
 
     #Test input Poste before validation
-    def clean_valider(self):
-         dataInput = self.cleaned_data.get('valider')
-         user = User.objects.all()
-         current_user = request.user
-
+    # def clean_valider(self):
+    #      dataInput = self.cleaned_data.get('valider')
+    #      user = User.objects.all()
+    #      current_user = request.user
 
     class Meta:
         #Added the fields of Observation manually for the validation test
         model = Observation
-        fields = ["quantitePluie", "dateDebut", "dateFin", "description", "idStation", "valider"]
+        fields = ["idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider"]
 
 
 class UniteDeMesureForm(forms.ModelForm):
     class Meta:
         model = UniteDeMesure
-        fields = ["uniteMesure", "description"]
+        fields = ["uniteMesure", "formule", "description"]
 
 class StationObserversForm(forms.ModelForm):
     class Meta:
