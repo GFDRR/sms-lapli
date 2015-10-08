@@ -5,8 +5,6 @@
 		{% include "public/include/head.html" %}
 		<script src="{% static "public/leaflet/leaflet.js" %}"></script>
 		<link rel="stylesheet" type="text/css" href="{% static "public/leaflet/leaflet.css" %}">
-        <link rel="stylesheet" href="{% static "public/leaflet/markers/leaflet.awesome-markers.css" %}">
-        <script src="{% static "public/leaflet/markers/leaflet.awesome-markers.min.js" %}"></script>
 	</head>
 
 	<body>
@@ -18,75 +16,167 @@
 		}
 
         .awesome-marker i {
-        font-size: 12px !important;
-        margin-top: 8px;
-    }
+        	font-size: 12px !important;
+        	margin-top: 8px;
+		}
+
+		.infoBulle ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.infoBulle li {
+			margin: 1px 0;
+			padding: 5px 2px;
+			border-bottom: 1px solid rgb(240,240,240);
+		}
+
+		#Filter {
+			position: fixed;
+			top: 70px;
+			right: 10%;
+			z-index: 999;
+			opacity: .5;
+			background-color: rgba(255,255,255,.5);
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		#Filter .selectAll {
+			display: none;
+		}
+
+		#Filter:hover {
+			opacity: 1;
+		}
+
+		#Filter:hover .selectAll {
+			display: inline;
+		}
+
+		#Filter .btn {
+			cursor: pointer;
+		}
+
+		#Legend {
+		    background-color: rgb(250,250,250);
+		    padding: 10px;
+		}
+
 
 	</style>
 		<!--===================================Menu Principal=======================================================-->
 	   {% include "public/include/menu.html" %}
 
- <div id="Map">
-
-
- </div>
+ 	<div id="Filter">
+		<select id="SelDept" class="selectpicker" data-style="btn-info" multiple title="Selectionnez au moins un Departement" data-width="300px">
+			<option data-hidden="true">Selectionnez au moins un Departement</option>
+			{% if departement_lst %}
+				{% for dept in departement_lst %}
+					<option departement selected="selected">{{ dept.departement }}</option>
+				{% endfor %}
+			{% endif %}
+		</select>
+		&nbsp;<img class="btn" src='{% static "public/leaflet/reload.png" %}' title="Recharger"><br>
+		<span class="selectAll"><input type="checkbox" checked="checked" onchange="if( $(this).is(':checked') ) { nbrSel = 'selectAll' } else { nbrSel = 'deselectAll' } $('.selectpicker').selectpicker(nbrSel);"> Tout Selectionnez </span>
+	</div>
+	<div id="Map"></div>
+	<div id="Legend">
+	    <ul>
+	        <li><img src="{% static "public/leaflet/markers/high_activity.png" %}"> Station dont les données sont <strong>à jour</strong></li>
+	        <li><img src="{% static "public/leaflet/markers/low_activity.png" %}"> Station dont les données ont un <strong>retard de moins de 7 jours</strong></li>
+	        <li><img src="{% static "public/leaflet/markers/no_activity.png" %}"> Station dont les données ont un <strong>retard de plus de 7 jours</strong></li>
+	        <li><img src="{% static "public/leaflet/markers/off_activity.png" %}"> Station <strong>non en fonction</strong></li>
+	    </ul>
+	</div>
 
 
 
     {% include "public/include/footer.html" %}
 	<script>
-	$('document').ready(function(){
+	    var map;
+	    var greenIcon;
+	    var orangeIcon;
+	    var redIcon;
+	    var grayIcon;
+	    var blueIcon;
 
+		$('document').ready(function(){
 
+			$('.selectpicker').selectpicker();
 
+			map = L.map('Map').setView([18.834610, -72.288237], 8);
+			var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
+			var cartoCdn = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {});
+			cartoCdn.addTo(map);
 
+			greenIcon = L.icon({iconUrl: '{% static "public/leaflet/markers/high_activity.png" %}'});
+			orangeIcon = L.icon({iconUrl: '{% static "public/leaflet/markers/low_activity.png" %}'});
+			redIcon = L.icon({iconUrl: '{% static "public/leaflet/markers/no_activity.png" %}'});
+			grayIcon = L.icon({iconUrl: '{% static "public/leaflet/markers/off_activity.png" %}'});
 
-		var map = L.map('Map').setView([18.834610, -72.288237], 8);
-
-		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
-
-		var cartoCdn = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {});
-
-		cartoCdn.addTo(map);
-
-		loadStations(map);
+			loadStations();
 
 
 
 	});
 
-	function loadStations(map) {
+	function loadStations() {
 		$.ajax({
   			method: "GET",
   			type: 'json',
   			url: "/rapport/json_map/",
+  			data: { 'sel_dept': $('#SelDept').val() },
   			success : function(data) {
 				dataLen = data.stations_lst.length;
 
-				for(var i=0; i < dataLen; i++){
+				for(var i=0; i < dataLen; i++) {
 
-				    var basicIcon = L.icon({
-                    iconUrl: '{% static "public/leaflet/markers/check.png" %}',
+				    switch (data.stations_lst[i]['statut']) {
+				        case 'high_activity':
+                            zIndex = 30;
+                            basicIcon = greenIcon;
+                            break;
+                        case 'low_activity' :
+				            zIndex = 20;
+                            basicIcon = orangeIcon;
+                            break;
+				        case 'no_activity' :
+				            zIndex = 10;
+                            basicIcon = redIcon;
+                            break;
+                        case 'off_activity' :
+                        default :
+                            zIndex = 0;
+                            basicIcon = grayIcon;
+                            break;
+				    }
 
-                    });
 
-                    html= "<h4>"+data.stations_lst[i]['nomStation']+"</h4>";
-                    html += "<h6>Type de station</h6>";
-                    html += "<input readonly='readonly' type='checkbox' checked='checked'> Pluviométrique : "+data.stations_lst[i]['qt']+" mm<br>";
-                    html += "<input readonly='readonly' type='checkbox'> Limnimétrique : -<br>";
-                    html += "<input readonly='readonly' type='checkbox'> Thermométrique : -<br>";
 
-					var marker = L.marker([ data.stations_lst[i]['latitude'], data.stations_lst[i]['longitude'] ], {icon : basicIcon}).addTo(map);
+                    html= "<div class='infoBulle'>";
+                    html += "<h4>Station "+data.stations_lst[i]['nomStation']+"</h4>";
+                    html += "Date du dernier envoi : "+data.stations_lst[i]['dateUpdate'];
+                    html += "<h6>Données Disponible :</h6>";
+                    html += "<ul>";
+                    html += "<li><img src='{% static "public/leaflet/markers/check.png" %}'> Pluviométrique : "+data.stations_lst[i]['qt']+" mm</li>";
+                    html += "<li><img src='{% static "public/leaflet/markers/no_check.png" %}'> Limnimétrique : -</li>";
+                    html += "<li><img src='{% static "public/leaflet/markers/no_check.png" %}'> Thermométrique : -</li>";
+                    html += "</ul>";
+                    html += "</div>";
+
+					var marker = L.marker([ data.stations_lst[i]['latitude'], data.stations_lst[i]['longitude'] ], { icon : basicIcon, zIndexOffset : zIndex, riseOnHover: true, title: data.stations_lst[i]['nomStation'], opacity: 0.8 }).addTo(map);
 					marker.bindPopup(html);
 
-
-
-
-				}
-
-
+					marker.on('mouseover', function(e) {
+                        e.target.setOpacity(1);
+				    }).on('mouseout', function(e) {
+                        e.target.setOpacity(0.8);
+				    })
+  				}
   			}
-		})
+		});
 
 	}
 
