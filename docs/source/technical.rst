@@ -1,0 +1,5 @@
+.. _technical:
+
+=======================
+Technical Specification
+=======================
