@@ -7761,26 +7761,25 @@
   },
   {
     "fields": {
-      "nomPoste": "System",
-      "description": ""
+      "description": "System Admin"
     },
     "model": "base.poste",
-    "pk": 0
+    "pk": "System Admin"
   },
   {
     "fields": {
-      "nomPoste": 0,
-      "nomPersonne": "System",
-      "prenomPersonne": "Android",
-      "telephoneBureau": "00000000",
-      "telephonePersonnel": "00000000",
-      "emailPersonnel": "android.system@mail.org",
-      "adressePersonnelle": "",
-      "nif": "000-000-000-0",
-      "dateEmbauche": "2015-10-07",
-      "isactif": "1"
+      "nomPersonne": "Admin",
+      "isactif": true,
+      "emailPersonnel": "admin@admin.org",
+      "nif": "123-123-123-1",
+      "dateEmbauche": "2015-10-08",
+      "telephoneBureau": "",
+      "nomPoste": "System Admin",
+      "adressePersonnelle": "123 Admin Street",
+      "prenomPersonne": "Admin",
+      "telephonePersonnel": "123456"
     },
     "model": "base.personnecontact",
-    "pk": 0
+    "pk": 1
   }
 ]
