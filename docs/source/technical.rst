@@ -13,8 +13,10 @@ Project Architecture
 * Kannel
 * istSOS
 * Mobile Weather Station
-* Leaflet
+* Web Front End 
 * MapServer/GeoServer
+* Deployment
+* Backup and Recovery
 
 Django
 ------
@@ -31,8 +33,18 @@ Modules
 base
 ____
 
+models
+,,,,,,
+
 hydromet
 ________
+
+models
+,,,,,,
+
+views
+,,,,,
+
 
 PostgreSQL + PostGIS
 --------------------
@@ -88,5 +100,22 @@ ______________
 Software
 ++++++++
 
+Web Front End
+-------------
+
+Leaflet
++++++++
+
 MapServer/GeoServer
 -------------------
+
+Used to generate rainfall isoline chart etc
+
+Deployment
+----------
+
+Ansible
+
+Backup and Recovery
+-------------------
+
