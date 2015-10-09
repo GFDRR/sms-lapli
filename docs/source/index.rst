@@ -8,6 +8,11 @@ Welcome to SMS Lapli's documentation!
 
 Contents:
 
+ * :doc:`Manuel de guide d’utilisation <users_guide>`
+ * :doc:`Document de Conception et d'analyse <conception_analysis>`
+ * :doc:`Technical Specification <technical>`
+ * :doc:`Project Roadmap <roadmap>`
+
 .. toctree::
    :maxdepth: 2
 

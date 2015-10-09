@@ -7758,5 +7758,28 @@
     },
     "model": "base.sectioncommunale",
     "pk": 570
+  },
+  {
+    "fields": {
+      "description": "System Admin"
+    },
+    "model": "base.poste",
+    "pk": "System Admin"
+  },
+  {
+    "fields": {
+      "nomPersonne": "Admin",
+      "isactif": true,
+      "emailPersonnel": "admin@admin.org",
+      "nif": "123-123-123-1",
+      "dateEmbauche": "2015-10-08",
+      "telephoneBureau": "",
+      "nomPoste": "System Admin",
+      "adressePersonnelle": "123 Admin Street",
+      "prenomPersonne": "Admin",
+      "telephonePersonnel": "123456"
+    },
+    "model": "base.personnecontact",
+    "pk": 1
   }
 ]

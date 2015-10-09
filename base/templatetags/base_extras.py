@@ -9,7 +9,7 @@ register = template.Library()
 
 @register.filter
 def notification(texte):
-    nmbAgent = PersonneContact.objects.all().count();
+    nmbAgent = PersonneContact.objects.filter(isactif=False).count();
     msgNotValidate = Observation.objects.filter(valider = False).count()
     listQueryDash = {"nbAgent":str(nmbAgent), "msgNotValidate":str(msgNotValidate)}
     result = listQueryDash[texte]
