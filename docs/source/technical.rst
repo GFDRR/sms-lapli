@@ -19,6 +19,21 @@ Project Architecture
 Django
 ------
 
+Project Structure
++++++++++++++++++
+
+Settings
+++++++++
+
+Modules
++++++++
+
+base
+----
+
+hydromet
+--------
+
 PostgreSQL + PostGIS
 --------------------
 
