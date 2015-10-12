@@ -16,19 +16,17 @@ class StationAdmin(admin.ModelAdmin):
 class ObservationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
-<<<<<<< HEAD
-#<<<<<<< HEAD
+
     list_display = ("quantitePluie", "dateDebut", "dateFin", "description", "valider")
     list_filter = (('valider',))
     search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
-#=======
+
     list_display = ("idStation", "observer", "quantitePluie", "timestamp", "dateDebut", "dateFin", "description", "valider")
-#>>>>>>> cfc4fa8401980cc8091e38369d58dc7c6bcfbfd1
-=======
+
     list_filter = (('valider',))
     search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
     list_display = ("idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider")
->>>>>>> 2ca3662bda4ffc5c3985e026b3324305c40701bf
+
     form = ObservationForm
 
     #return id of the foreignkey(s) in list_display and it will show it
