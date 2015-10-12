@@ -9,16 +9,16 @@ from django.db import models
 
 
 DEPARTEMENTS_CHOICES = (
-    ('O', 'OUEST'),
-    ('N', 'NORD'),
-    ('No', 'NORD-OUEST'),
-    ('NES', 'NORD-EST'),
-    ('S', 'SUD'),
-    ('SE', 'SUD-EST'),
-    ('A', 'ARTIBONITE'),
-    ('NI', 'NIPPES'),
-    ('CE', 'CENTRE'),
-    ('NI', 'GRANDE D\'ANSE'),
+    ('Ouest', 'OUEST'),
+    ('Nord', 'NORD'),
+    ('Nordouest', 'NORD-OUEST'),
+    ('Nordest', 'NORD-EST'),
+    ('Sud', 'SUD'),
+    ('Sudest', 'SUD-EST'),
+    ('Artibonite', 'ARTIBONITE'),
+    ('Nippes', 'NIPPES'),
+    ('Centre', 'CENTRE'),
+    ('Grandanse', 'GRAND\'ANSE'),
 
 
 )

@@ -68,7 +68,7 @@ class ObservationAdmin(admin.ModelAdmin):
 
         else:
             message_bit = "%s Observation pluviometrique  were" % rows_updated
-        self.message_user(request, "%s successfully marked as Invalid." % message_bit)
+        self.message_user(request, "%s successfully marked as jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj Invalid." % message_bit)
 
     make_nonvalider.short_description = "Invalider les observations selectionnées"
 
