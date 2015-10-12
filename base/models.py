@@ -8,8 +8,24 @@ from django.db import models
 #  -------------------------------------------
 
 
+DEPARTEMENTS_CHOICES = (
+    ('O', 'OUEST'),
+    ('N', 'NORD'),
+    ('No', 'NORD-OUEST'),
+    ('NES', 'NORD-EST'),
+    ('S', 'SUD'),
+    ('SE', 'SUD-EST'),
+    ('A', 'ARTIBONITE'),
+    ('NI', 'NIPPES'),
+    ('CE', 'CENTRE'),
+    ('NI', 'GRANDE D\'ANSE'),
+
+
+)
+
+
 class Departement(models.Model):
-    departement = models.CharField(max_length=40, verbose_name="Departement")
+    departement = models.CharField(max_length=40, choices=DEPARTEMENTS_CHOICES,verbose_name="Departement")
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
     id_code = models.CharField(max_length=7, unique=True, verbose_name="Code")
     # ihsi = models.CharField(max_length=10, verbose_name="Code IHSI")

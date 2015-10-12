@@ -47,4 +47,4 @@ class Observation(models.Model):
     temperatureMin = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature min")
     quantitePluie = models.DecimalField(max_digits=15, decimal_places=2, blank=True, verbose_name="Quantite de Pluie")
     description = models.TextField(max_length=100, blank=True)
-    valider = models.BooleanField()
+    valider = models.BooleanField(default=False)
