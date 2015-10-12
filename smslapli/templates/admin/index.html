@@ -47,6 +47,11 @@
     <script>
         NProgress.start();
     </script>
+    <style type="text/css">
+        .tile-stats h3{
+            font-size: 1.2em;
+        }
+    </style>
     
     <!--[if lt IE 9]>
         <script src="../assets/js/ie8-responsive-file-warning.js"></script>
@@ -287,17 +292,16 @@
 
                 </div> -->
                 <!-- /top tiles -->
-
                 <div class="row top_tiles">
                         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="tile-stats">
                                 <div class="icon" >
-                                <i class="fa fa-user"></i>
+                                <i class="fa fa-users"></i>
                                 <!-- <img src="images/pluie.jpeg"/> -->
                                 </div>
                                 <div class="count">{{ "nbAgent"|notification }}</div>
 
-                                <h3> Agent inactif</h3>
+                                <h3>{% if "nbAgent"|notification < '2' %} Agent inactif {% else %} Agents inactifs {% endif %}</h3>
                                 <p>Observateur</p>
                             </div>
                         </div>
@@ -310,17 +314,17 @@
                                 <h3>Message non valide</h3>
                                 <p>Observation pluviometrique</p>
                             </div>
-                        </div>
-                        <!-- <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        </div><!-- personNotSentMsg -->
+                        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="tile-stats">
                                 <div class="icon"><i class="fa fa-sort-amount-desc"></i>
                                 </div>
-                                <div class="count">179</div>
+                                <div class="count">{{ "personNotSentMsg"|notification }}</div>
 
-                                <h3>New Sign ups</h3>
-                                <p>Lorem ipsum psdea itgum rixt.</p>
+                                <h3>{% if "personNotSentMsg"|notification < '2' %}Agent n'a pas envoye{% else %} Agents n'ont pas envoyes{% endif %}</h3>
+                                <p>Observation pluviometrique</p>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                 <div class="row">
