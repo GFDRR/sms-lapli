@@ -1,4 +1,4 @@
-Smslapli
+SMS-Lapli
 ========================
 
 Haiti Code for Resilience SMS Rainfall Data Collection Project based on RapidSMS
@@ -35,6 +35,11 @@ Then::
 Run migrate::
 
     python manage.py migrate
+
+Load Base Data::
+
+    python manage.py loaddata base/fixtures/initial_data.json
+    python manage.py loaddata hydromet/fixtures/initial_data.json
 
 You should now be able to run the development server::
 

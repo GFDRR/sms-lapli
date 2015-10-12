@@ -94,8 +94,6 @@ class SmsGateway(AppBase):
 
                     person = PersonneContact.objects.get(telephonePersonnel=tel)
                     station = StationObservers.objects.get(observer=person).station
-
-                    #id de la personne qui a envoye le sms
                     
 
                     recup_last_value = Observation.objects.filter(observer = obs_id, dateDebut = timezone.now().date() - timedelta(days=1)).order_by('-id').first()

@@ -8,10 +8,26 @@ from django.db import models
 #  -------------------------------------------
 
 
+DEPARTEMENTS_CHOICES = (
+    ('Ouest', 'OUEST'),
+    ('Nord', 'NORD'),
+    ('Nordouest', 'NORD-OUEST'),
+    ('Nordest', 'NORD-EST'),
+    ('Sud', 'SUD'),
+    ('Sudest', 'SUD-EST'),
+    ('Artibonite', 'ARTIBONITE'),
+    ('Nippes', 'NIPPES'),
+    ('Centre', 'CENTRE'),
+    ('Grandanse', 'GRAND\'ANSE'),
+
+
+)
+
+
 class Departement(models.Model):
-    departement = models.CharField(max_length=40, verbose_name="Departement")
+    departement = models.CharField(max_length=40, choices=DEPARTEMENTS_CHOICES,verbose_name="Departement")
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
-    id_code = models.CharField(max_length=7, unique=True)
+    id_code = models.CharField(max_length=7, unique=True, verbose_name="Code")
     # ihsi = models.CharField(max_length=10, verbose_name="Code IHSI")
 
     def __str__(self):              # __unicode__ on Python 2
@@ -22,7 +38,7 @@ class Commune(models.Model):
     departement = models.ForeignKey(Departement, verbose_name="Departement")
     commune = models.CharField(max_length=45, verbose_name="Commune", unique=True)
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
-    id_code = models.CharField(max_length=7, unique=True)
+    id_code = models.CharField(max_length=7, unique=True, verbose_name="Code")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.commune
@@ -31,9 +47,9 @@ class Commune(models.Model):
 class SectionCommunale(models.Model):
     commune = models.ForeignKey(Commune, verbose_name="Commune")
     sectionCommunale = models.CharField(max_length=45, verbose_name="Section Communale")
-    nomOfficiel = models.CharField(max_length=45, blank=True)
+    nomOfficiel = models.CharField(max_length=45, blank=True, verbose_name="Nom officiel")
     description = models.TextField(max_length=100, blank=True, verbose_name="Description")
-    id_code = models.CharField(max_length=7, unique=True)
+    id_code = models.CharField(max_length=7, unique=True, verbose_name="Code")
 
     def __str__(self):              # __unicode__ on Python 2
          return self.sectionCommunale

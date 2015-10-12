@@ -53,7 +53,7 @@ class ObservationForm(forms.ModelForm):
     class Meta:
         #Added the fields of Observation manually for the validation test
         model = Observation
-        fields = ["idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider"]
+        fields = ["idStation", "observer", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description"]
 
 
 class UniteDeMesureForm(forms.ModelForm):
