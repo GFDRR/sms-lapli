@@ -31,12 +31,12 @@ def json_rap(request):
         if qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.commune in foundCommune:  # getting the name of the communes
             ids = foundCommune.index(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.commune)
             numberFound[ids] = numberFound[ids] + 1  # increment the number of occurence of commune
-            sumOfRead[ids] = sumOfRead[ids] + float(float(qtt.quantite))
+            sumOfRead[ids] = sumOfRead[ids] + float(float(qtt.quantitePluie))
             datex.append(qtt.dateDebut)
         else:
             foundCommune.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.commune)
             numberFound.append(1)
-            sumOfRead.append(float(qtt.quantite))
+            sumOfRead.append(float(qtt.quantitePluie))
             dep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
             datex.append(qtt.dateDebut)
 
@@ -62,7 +62,7 @@ def json_graph(request):
     datas = Observation.objects.all()
     tous = []
     for info in datas:
-        tous.append({'dates': info.dateDebut, 'qtt': info.quantite})
+        tous.append({'dates': info.dateDebut, 'qtt': info.quantitePluie})
 
     responsJson = {'table': tous}
     return JsonResponse(responsJson)
