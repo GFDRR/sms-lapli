@@ -154,3 +154,14 @@ a.list-group-item, button.list-group-item {
 .showSubMenuContent{
 	display: block;
 }
+
+footer {
+    width: 100%;
+    position: fixed !important;
+    bottom: 0 !important;
+}
+
+.fullWidth {
+    display: inline-block;
+    width: 100%;
+}

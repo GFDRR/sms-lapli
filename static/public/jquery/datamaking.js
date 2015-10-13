@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function(){
-    $.get('/rapport/json_rap',function(data,status){
+    $.get('/rapport/json_rap/',function(data,status){
 				//alert(data);
             //alert(data.table[0].dep)
         var i;
