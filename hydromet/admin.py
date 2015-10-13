@@ -27,9 +27,21 @@ class StationAdmin(admin.ModelAdmin):
 class ObservationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
+
+    list_display = ("quantitePluie", "dateDebut", "dateFin", "description", "valider")
     list_filter = (('valider',))
     search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
+
+    list_display = ("idStation", "observer", "quantitePluie", "timestamp", "dateDebut", "dateFin", "description", "valider")
+
+    list_filter = (('valider',))
+    search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
+
+    list_display = ("idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider")
+
+
     list_display = ('pk',"idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider")
+
     form = ObservationForm
     # actions = [validate, unvalidate]
     actions = ['make_valider', 'make_nonvalider']
@@ -68,7 +80,7 @@ class ObservationAdmin(admin.ModelAdmin):
 
         else:
             message_bit = "%s Observation pluviometrique  were" % rows_updated
-        self.message_user(request, "%s successfully marked as jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj Invalid." % message_bit)
+        self.message_user(request, "%s successfully marked as Invalid." % message_bit)
 
     make_nonvalider.short_description = "Invalider les observations selectionnées"
 

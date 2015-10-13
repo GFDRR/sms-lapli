@@ -15,8 +15,8 @@ class TypeStation(models.Model):
 class UniteDeMesure(models.Model):
     uniteMesure = models.CharField(max_length=7, unique=True, verbose_name="Unite de mesure")
     description = models.TextField(blank=True)
+
     formule = models.TextField(verbose_name="Formule", blank="True")
-    
     def __str__(self):              # __unicode__ on Python 2
          return self.uniteMesure
 
@@ -47,4 +47,5 @@ class Observation(models.Model):
     temperatureMin = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature min")
     quantitePluie = models.DecimalField(max_digits=15, decimal_places=2, blank=True, verbose_name="Quantite de Pluie")
     description = models.TextField(max_length=100, blank=True)
+    valider = models.BooleanField()
     valider = models.BooleanField(default=False)
