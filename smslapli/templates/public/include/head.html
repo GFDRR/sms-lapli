@@ -6,13 +6,16 @@
 <link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "public/leaflet/leaflet.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "public/bootstrap/dist/css/bootstrap-theme.min.css" %}">
 <script src="{% static "public/bootstrap/dist/js/Chart.js" %}"></script>
-<script src="{% static "public/bootstrap/dist/css/bootstrap-theme.min.css" %}"></script>
 <script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
 <script src="{% static "public/bootstrap/dist/js/bootstrap.min.js" %}"></script>
 <script src="{% static "public/bootstrap/select/js/bootstrap-select.min.js" %}"></script>
 <script src="{% static "public/jquery/datamaking.js" %}"></script>
 <script src="{% static "public/bootstrap/js/graphe.js" %}"></script>
+<script src="{% static "public/leaflet/leaflet.js" %}"></script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 	    $("#myTab a").click(function(e){
@@ -24,7 +27,7 @@
 	 	});  
 		$('.hide-modal').click(function(){
 	    	$('#myModal').modal('hide');
-	 	}); 
+	 	});
 	});
 </script>
 
