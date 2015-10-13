@@ -192,7 +192,21 @@ Dans la structure de base qui se presente sous la forme d'un menu deroulant, les
 6. Personnes Contacts
 
 Chacun d'entre eux mene a une page respective, permettant soit d'ajouter, de modifier ou de supprimer les donnees les concernant. Cependant certains d'entre les liens sont pour ainsi dire relies entre eux parexemple on ne pourra ajouter une section communale sans pour autant ajouter la commune qui lui est attribuee.
-il faut alors suivre l'ordre tel qu'il est indique sous la structure de base. En premier lieu, ajouter les departements et ainsi de suite. Ce qui ne veut pas dire
+il faut alors suivre l'ordre tel qu'il est indique sous la structure de base. En premier lieu, ajouter les departements et ainsi de suite. Ce qui ne veut pas dire qu'un ajout quelconque ne peut se faire autrement.
+Dans le cas ou le lien precedant soit vide l'application elle meme vous fera voir qu'il va falloir ajouter tout d'abord dans ce dernier avant de pouvoir continuer.
+
+(IMAGE aJOUT NORMAL)
+
+.. image:: _static/.png
+   :align: center
+
+
+(IMAGE ajout avec erreur)
+
+.. image:: _static/.png
+   :align: center
+
+   
 
 
 
