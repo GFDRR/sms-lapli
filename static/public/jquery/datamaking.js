@@ -6,6 +6,7 @@ $(document).ready(function(){
     $.get('/rapport/json_rap/',function(data,status){
 				//alert(data);
             //alert(data.table[0].dep)
+            //alert("Je suis")
         var i;
         var objs =data.table
         for(i=0;i<objs.length;i++){
