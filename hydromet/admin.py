@@ -6,14 +6,14 @@ from .forms import *
 from .models import *
 
 
-def validate(modeladmin, request, queryset):
-    queryset.update(valider=1)
-validate.short_description = "Valider les observations selectionnées"
-
-def unvalidate(modeladmin, request, queryset):
-    queryset.update(valider=0)
-unvalidate.short_description = "Invalider les observations selectionnées"
-
+# def validate(modeladmin, request, queryset):
+#     queryset.update(valider=1)
+# validate.short_description = "Valider les observations selectionnées"
+#
+# def unvalidate(modeladmin, request, queryset):
+#     queryset.update(valider=0)
+# unvalidate.short_description = "Invalider les observations selectionnées"
+#
 
 class StationAdmin(admin.ModelAdmin):
 
@@ -23,6 +23,7 @@ class StationAdmin(admin.ModelAdmin):
     form = StationForm
 
 
+
 class ObservationAdmin(admin.ModelAdmin):
 
     #Called my form in the admin and set a column for each fields
@@ -30,11 +31,47 @@ class ObservationAdmin(admin.ModelAdmin):
     search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
     list_display = ('pk',"idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider")
     form = ObservationForm
-    actions = [validate, unvalidate]
+    # actions = [validate, unvalidate]
+    actions = ['make_valider', 'make_nonvalider']
+    def get_actions(self, request):
+        actions = super(ObservationAdmin, self).get_actions(request)
+        if not request.user.is_superuser:
+            if  'make_valider' in actions:
+                del actions['make_valider']
+            if 'make_nonvalider' in actions:
+                del actions['make_nonvalider']
+        return actions
+
+
 
     #return id of the foreignkey(s) in list_display and it will show it
     def Nom_station(self, instance):
         return instance.idStation.nomStation
+
+    def make_valider(self, request, queryset):
+        # rows_updated = queryset.update(status='v')
+        rows_updated = queryset.update(valider=True)
+        if rows_updated == 1:
+            message_bit = "1 Observation pluviometrique was"
+
+        else:
+            message_bit = "%s Observation pluviometrique  were" % rows_updated
+        self.message_user(request, "%s successfully marked as inValid." % message_bit)
+
+    make_valider.short_description = "Valider les observations selectionnées"
+
+    def make_nonvalider(self, request, queryset):
+        # rows_updated = queryset.update(status='v')
+        rows_updated = queryset.update(valider=False)
+        if rows_updated == 1:
+            message_bit = "1 Observation pluviometrique was"
+
+        else:
+            message_bit = "%s Observation pluviometrique  were" % rows_updated
+        self.message_user(request, "%s successfully marked as jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj Invalid." % message_bit)
+
+    make_nonvalider.short_description = "Invalider les observations selectionnées"
+
 
 
 class TypeStationAdmin(admin.ModelAdmin):
