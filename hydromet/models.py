@@ -48,3 +48,21 @@ class Observation(models.Model):
     quantitePluie = models.DecimalField(max_digits=15, decimal_places=2, blank=True, verbose_name="Quantite de Pluie")
     description = models.TextField(max_length=100, blank=True)
     valider = models.BooleanField(default=False)
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.idStation.nomStation + ' le '+ str(self.dateDebut)
+
+    @property
+    def log(self):
+        return Log.objects.filter(observation=self.pk).count()
+
+class Log(models.Model):
+    observation = models.ForeignKey(Observation, null=True, blank=True, default = None)
+    observer = models.ForeignKey(PersonneContact)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    temperatureMax = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature max")
+    temperatureMin = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Temperature min")
+    quantitePluie = models.DecimalField(max_digits=15, decimal_places=2, blank=True, verbose_name="Quantite de Pluie")
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.observer.nomPersonne + ' ' + self.observer.prenomPersonne
