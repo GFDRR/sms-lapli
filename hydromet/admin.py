@@ -29,7 +29,7 @@ class ObservationAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
     list_filter = (('valider',))
     search_fields = ["quantitePluie", "dateDebut", "dateFin", "description"]
-    list_display = ('pk',"idStation", "observer", "timestamp", "dateDebut", "dateFin",  "quantitePluie", "log", "description", "valider")
+    list_display = ('pk',"idStation", "observer", "timestamp", "dateDebut", "dateFin", "temperatureMax", "temperatureMin", "quantitePluie", "description", "valider")
     form = ObservationForm
     # actions = [validate, unvalidate]
     actions = ['make_valider', 'make_nonvalider']
@@ -89,11 +89,6 @@ class StationObserversAdmin(admin.ModelAdmin):
     search_fields = ["station"]
     form = StationObserversForm
 
-class LogAdmin(admin.ModelAdmin):
-    #Called my form in the admin and set a column for each fields
-    list_display = ("observation", "observer", "quantitePluie", "timestamp")
-    search_fields = ["observation.idStation"]
-
 # class ObservationTemperatureAdmin(admin.ModelAdmin):
 #
 #
@@ -108,7 +103,6 @@ admin.site.register(TypeStation, TypeStationAdmin)
 admin.site.register(Observation, ObservationAdmin)
 admin.site.register(UniteDeMesure, UniteDeMesureAdmin)
 admin.site.register(StationObservers, StationObserversAdmin)
-admin.site.register(Log, LogAdmin)
 
 # admin.site.register(ObservationTemperature)
 # admin.site.register(ObservationDirectionVent)
