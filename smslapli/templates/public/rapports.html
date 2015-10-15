@@ -57,8 +57,7 @@
                 .left-addon input  { padding-left:  30px; }
                 .right-addon input { padding-right: 30px; }
                 #Map {
-		        width: 640px;
-                min-height: 350px;
+                min-height: 450px;
                 }
 
                 .awesome-marker i {
@@ -99,201 +98,104 @@
     <div class="container-fluid">
 	      <div class="row">
                 <div class="col-sm-3 col-md-2 sidebar">
-                  <ul class="nav nav-sidebar">
-                    <li class="active">
-                        <a href="#bloc1">Aper&ccedil;u<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li><a href="#bloc2">Rapports</a></li>
-                    <li><a href="#bloc3">Export</a></li>
-                  </ul>
+                      <ul class="nav nav-sidebar">
+                        <li class="active">
+                            <a href="#bloc1">Aper&ccedil;u<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li><a href="#bloc2">Rapports</a></li>
+                        <li><a href="#bloc3">Export</a></li>
+                      </ul>
                 </div>
-                  <div id="lesblocs">
-                          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="bloc1">
+                <div id="lesblocs">
+                  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="bloc1">
+                        <div class="bs-example">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a href="#sectionA">Graphe</a></li>
+                                <li><a href="#sectionB">Tableau</a></li>
+                                <li><a href="#section">Carte</a></li>
+                            </ul>
+                            <!--Limit-->
+                            <!--Limit-->
 
-                            <div class="bs-example">
-                                <ul class="nav nav-tabs" id="myTab">
-                                    <li class="active"><a href="#sectionA">Graphe</a></li>
-                                    <li><a href="#sectionB">Tableau</a></li>
-                                    <li><a href="#section">Carte</a></li>
-                                </ul>
-                                <!--Limit-->
-
-                    <div class="bs-example">
-                        <!-- Modal HTML -->
-                        <div id="myModal" class="modal fade">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                  aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Login </h4>
-                              </div>
-                              <div class="modal-body">
-                                <form  action="/admin/" method="post" id="login-form" class="form-inline" role="form">{% csrf_token %}
-                                    <center>
-                                        <div class="form-group inner-addon left-addon">
-                                        <i class="glyphicon glyphicon-user"></i>
-                                          <input type="text" class="form-control" id="email" placeholder="Username">
-                                        </div>
-                                        <div class="form-group inner-addon left-addon">
-                                          <i class="glyphicon glyphicon-lock"></i>
-                                          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                                        </div>
-                                    </center>
-                                      <br />
-                                      <div class="modal-footer">
-                                        <input class="btn btn-success" type="submit" value="Connexion" id="submit">
-                                        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
-                                      </div>
-                                  </form>
-
-                              </div>
-                            </div>
-                            <!-- /.modal-content -->
-                          </div>
-                          <!-- /.modal-dialog -->
-                        </div>
-                        <!-- /.modal -->
-                      </div>                                <!--Limit-->
-
-                                <div class="tab-content">
-                                    <div id="sectionA" class="tab-pane fade in active">
-                                            <h2 class="sub-header">Graphe des donn&eacute;es pluviom&eacute;triques enregistr&eacute;es</h2>
-                                            <p><strong>Emplacement</strong>:(Nom Commune / departement)</p>
-                                            <div class="table-responsive">
-                                                <canvas id="canvas" height="450" width="750"></canvas>
-                                                <div class="panel-group submen">
-                                                <div class="panel panel-default">
-                                                    <a class="list-group-item" data-toggle="collapse" href="#dep">
-                                                        Departement
-                                                    </a>
-                                                    <div class="panel-collapse collapse" id="dep">
-                                                        <div class="panel-body">
-                                                            <a href="#" class="list-group-item">Nord</a>
-                                                            <a href="#" class="list-group-item">Sud</a>
-                                                            <a href="#" class="list-group-item">Est</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel panel-default">
-                                                        <a class="list-group-item" data-toggle="collapse" href="#com">
-                                                        Commune
-                                                         </a>
-                                                        <div class="panel-collapse collapse" id="com">
-                                                        <div class="panel-body">
-                                                            <a href="#" class="list-group-item">1</a>
-                                                            <a href="#" class="list-group-item">2</a>
-                                                            <a href="#" class="list-group-item">3</a>
-                                                        </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </div>
-
-
-                                        </div>
-                                    <!--Limit-->
-                                        <div id="sectionB" class="tab-pane fade">
-                            <h2 class="sub-header">Tableau des enregistrements pluviom&eacute;triques</h2>
-                            <div class="table-responsive" id="tablo">
-                                <table class="table table-striped">
-                                  <thead>
-                                    <tr>
-                                      <th>D&eacute;partements</th>
-                                      <th>Commune</th>
-                                      <th>Date</th>
-                                      <th>Quantit&eacute; de pluie moyenne</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                  </tbody>
-                                </table>
-                            </div>
-
-                            <div class="panel-group submen">
-                                <div class="panel panel-default">
-                                    <a class="list-group-item" data-toggle="collapse" href="#dep1">
-                                        D&eacute;partements
-                                    </a>
-                                    <div class="panel-collapse collapse" id="dep1">
-                                        <div class="panel-body">
-                                            <a href="#" class="list-group-item">Nord</a>
-                                            <a href="#" class="list-group-item">Sud</a>
-                                            <a href="#" class="list-group-item">Est</a>
-                                        </div>
+                        <div class="tab-content">
+                            <div id="sectionA" class="tab-pane fade in active">
+                                    <h2 class="sub-header">Graphe des donn&eacute;es pluviom&eacute;triques enregistr&eacute;es</h2>
+                                    <form class="form-inline" style="border-color: white;">
+                                        <label for="slct">Selection : </label>
+                                        <select id="slct" class="form-control btn">
+                                            <option value="">Ouest</option>
+                                            <option value="">Nord</option>
+                                            <option value="">Sud</option>
+                                            <option value="">Nord-Est</option>
+                                            <option value="">Nord-Ouest</option>
+                                            <option value="">Sud-Est</option>
+                                        </select>
+                                    </form><br />
+                                    <div class="table-responsive">
+                                        <canvas id="canvas" height="450" width="750"></canvas>
                                     </div>
-                                </div>
-                                <div class="panel panel-default">
-                                        <a class="list-group-item" data-toggle="collapse" href="#com1">
-                                        Communes
-                                         </a>
-                                        <div class="panel-collapse collapse" id="com1">
-                                        <div class="panel-body">
-                                            <a href="#" class="list-group-item">1</a>
-                                            <a href="#" class="list-group-item">2</a>
-                                            <a href="#" class="list-group-item">3</a>
-                                        </div>
-                                </div>
+                            </div><!--Fin sectionA-->
+                            <!--Limit-->
+                            <div id="sectionB" class="tab-pane fade">
+                                    <h2 class="sub-header">Tableau des enregistrements pluviom&eacute;triques</h2>
+                                    <form class="form-inline" style="border-color: white;">
+                                        <label for="slct">Selection : </label>
+                                        <select id="slct" class="form-control btn">
+                                            <option value="">Ouest</option>
+                                            <option value="">Nord</option>
+                                            <option value="">Sud</option>
+                                            <option value="">Nord-Est</option>
+                                            <option value="">Nord-Ouest</option>
+                                            <option value="">Sud-Est</option>
+                                        </select>
+                                    </form><br />
+                                    <div class="table-responsive" id="tablo">
+                                        <table class="table table-striped">
+                                          <thead>
+                                            <tr>
+                                              <th>D&eacute;partements</th>
+                                              <th>Commune</th>
+                                              <th>Date</th>
+                                              <th>Nombre de Stations(<em>par commune</em>)</th>
+                                              <th>Quantit&eacute; de pluie moyenne</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                            </div><!--Fin sectionB-->
+                            <!--Limit-->
+
+                            <div id="section" class="tab-pane fade">
+                                    <h2 class="sub-header">Carte des enregistrements pluviom&eacute;triques</h2>
+                                    <div class="table-responsive" id="tablo">
+                                        <div id="Map"></div>
+
+                                    </div>
                             </div>
+
+                        </div><!--Fin tab-content-->
+                        </div> <!--Fin bs-example dans bloc1-->
+                </div><!--Fin bloc1-->
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc2">
+                    <div class="jumbotron">
+                        <h3>Rapports</h3>
+                        <p>Documents autoris&eacute;s</p>
                     </div>
-                        </div>
-                                    <!--Limit-->
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc3">
+                    <div class="jumbotron">
+                        <h3>Exports</h3>
+                        <p>Documents autoris&eacute;s</p>
+                    </div>
+                </div>
+                </div><!--Fin lesblocs-->
+          </div><!--Fin row-->
 
-                                    <div id="section" class="tab-pane fade">
-                                            <h2 class="sub-header">Carte des enregistrements pluviom&eacute;triques</h2>
-                                            <div class="table-responsive" id="tablo">
-                                                <div id="Map"></div>
-
-                                            </div>
-                                            <div class="panel-group submen">
-                                                <div class="panel panel-default">
-                                                    <a class="list-group-item" data-toggle="collapse" href="#dep2">
-                                                        D&eacute;partements
-                                                    </a>
-                                                    <div class="panel-collapse collapse" id="dep2">
-                                                        <div class="panel-body">
-                                                            <a href="#" class="list-group-item">Nord</a>
-                                                            <a href="#" class="list-group-item">Sud</a>
-                                                            <a href="#" class="list-group-item">Est</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel panel-default">
-                                                        <a class="list-group-item" data-toggle="collapse" href="#com2">
-                                                        Communes
-                                                         </a>
-                                                        <div class="panel-collapse collapse" id="com2">
-                                                        <div class="panel-body">
-                                                            <a href="#" class="list-group-item">1</a>
-                                                            <a href="#" class="list-group-item">2</a>
-                                                            <a href="#" class="list-group-item">3</a>
-                                                        </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc2">
-                            <div class="jumbotron">
-                                <h3>Rapports</h3>
-                                <p>Documents autoris&eacute;s</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc3">
-                            <div class="jumbotron">
-                                <h3>Exports</h3>
-                                <p>Documents autoris&eacute;s</p>
-                            </div>
-                        </div>
-                  </div>
-          </div>
-
-    </div>
-
-</body>
+    </div><!--Fin container-fluid-->
+    {% include "public/include/footer.html" %}
+</body><!--Fin Body-->
 <script>
 	$('document').ready(function(){
 

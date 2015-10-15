@@ -119,10 +119,15 @@ Submen Style
 }
 
 #canvas{
-    width: 640px;
-    height: 350px;
+    width: 100%;
+    height: 450px;
     border: 2px solid #428bca;
-    float: left;
+    /* float: left; */
+}
+#tablo{
+    height: 450px;
+    border: 2px solid #428bca;
+    overflow: scroll;
 }
 /*
 Submen Style
@@ -139,13 +144,6 @@ Submen Style
 a.list-group-item, button.list-group-item {
     color: #000;
     font-style: bolder;
-}
-#tablo{
-    width: 640px;
-    height: 350px;
-    border: 2px solid #428bca;
-    float: left;
-    overflow: hidden;
 }
 
 .hidenSubMenuContent{
