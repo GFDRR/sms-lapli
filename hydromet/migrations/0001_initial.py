@@ -14,43 +14,43 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Log',
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
+                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('temperatureMax', models.DecimalField(max_digits=5, blank=True, null=True, decimal_places=3, verbose_name='Temperature max')),
-                ('temperatureMin', models.DecimalField(max_digits=5, blank=True, null=True, decimal_places=3, verbose_name='Temperature min')),
-                ('quantitePluie', models.DecimalField(max_digits=15, blank=True, decimal_places=2, verbose_name='Quantite de Pluie')),
+                ('temperatureMax', models.DecimalField(max_digits=5, decimal_places=3, verbose_name='Temperature max', blank=True, null=True)),
+                ('temperatureMin', models.DecimalField(max_digits=5, decimal_places=3, verbose_name='Temperature min', blank=True, null=True)),
+                ('quantitePluie', models.DecimalField(decimal_places=2, verbose_name='Quantite de Pluie', blank=True, max_digits=15)),
             ],
         ),
         migrations.CreateModel(
             name='Observation',
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
+                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
                 ('dateDebut', models.DateField(verbose_name='Debut')),
                 ('dateFin', models.DateField(verbose_name='Fin')),
-                ('temperatureMax', models.DecimalField(max_digits=5, blank=True, null=True, decimal_places=3, verbose_name='Temperature max')),
-                ('temperatureMin', models.DecimalField(max_digits=5, blank=True, null=True, decimal_places=3, verbose_name='Temperature min')),
-                ('quantitePluie', models.DecimalField(max_digits=15, blank=True, decimal_places=2, verbose_name='Quantite de Pluie')),
-                ('description', models.TextField(blank=True, max_length=100)),
+                ('temperatureMax', models.DecimalField(max_digits=5, decimal_places=3, verbose_name='Temperature max', blank=True, null=True)),
+                ('temperatureMin', models.DecimalField(max_digits=5, decimal_places=3, verbose_name='Temperature min', blank=True, null=True)),
+                ('quantitePluie', models.DecimalField(decimal_places=2, verbose_name='Quantite de Pluie', blank=True, max_digits=15)),
+                ('description', models.TextField(max_length=100, blank=True)),
                 ('valider', models.BooleanField(default=False)),
             ],
         ),
         migrations.CreateModel(
             name='Station',
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
+                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
                 ('latitude', models.FloatField()),
                 ('longitude', models.FloatField()),
-                ('hauteur', models.DecimalField(max_digits=8, decimal_places=2, default=0)),
-                ('nomStation', models.CharField(verbose_name='Nom de la Station', max_length=45)),
-                ('idStation', models.CharField(blank=True, max_length=5)),
-                ('idSiteSeninnelle', models.ForeignKey(blank=True, to='base.SiteSentinelle', verbose_name='Site Sentinelle', null=True)),
+                ('hauteur', models.DecimalField(default=0, max_digits=8, decimal_places=2)),
+                ('nomStation', models.CharField(max_length=45, verbose_name='Nom de la Station')),
+                ('idStation', models.CharField(max_length=5, blank=True)),
+                ('idSiteSeninnelle', models.ForeignKey(blank=True, null=True, verbose_name='Site Sentinelle', to='base.SiteSentinelle')),
             ],
         ),
         migrations.CreateModel(
             name='StationObservers',
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
+                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
                 ('observer', models.OneToOneField(to='base.PersonneContact')),
                 ('station', models.ForeignKey(to='hydromet.Station')),
             ],
@@ -58,28 +58,28 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TypeStation',
             fields=[
-                ('typeStation', models.CharField(primary_key=True, verbose_name='Type de Station', max_length=45, serialize=False)),
-                ('description', models.TextField(blank=True, max_length=100, verbose_name='Description')),
+                ('typeStation', models.CharField(serialize=False, primary_key=True, max_length=45, verbose_name='Type de Station')),
+                ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
             ],
         ),
         migrations.CreateModel(
             name='UniteDeMesure',
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False, verbose_name='ID', auto_created=True)),
-                ('uniteMesure', models.CharField(verbose_name='Unite de mesure', max_length=7, unique=True)),
+                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
+                ('uniteMesure', models.CharField(unique=True, max_length=7, verbose_name='Unite de mesure')),
                 ('description', models.TextField(blank=True)),
-                ('formule', models.TextField(blank='True', verbose_name='Formule')),
+                ('formule', models.TextField(verbose_name='Formule', blank='True')),
             ],
         ),
         migrations.AddField(
             model_name='station',
             name='typeStation',
-            field=models.ForeignKey(blank=True, to='hydromet.TypeStation', verbose_name='Type de la Station', null=True),
+            field=models.ForeignKey(blank=True, null=True, verbose_name='Type de la Station', to='hydromet.TypeStation'),
         ),
         migrations.AddField(
             model_name='station',
             name='uniteMesure',
-            field=models.ForeignKey(blank=True, to='hydromet.UniteDeMesure', verbose_name='Unite de mesure', null=True),
+            field=models.ForeignKey(blank=True, null=True, verbose_name='Unite de mesure', to='hydromet.UniteDeMesure'),
         ),
         migrations.AddField(
             model_name='observation',
@@ -94,7 +94,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='log',
             name='observation',
-            field=models.ForeignKey(blank=True, to='hydromet.Observation', null=True, default=None),
+            field=models.ForeignKey(null=True, blank=True, default=None, to='hydromet.Observation'),
         ),
         migrations.AddField(
             model_name='log',

@@ -24,6 +24,10 @@
                         e.preventDefault();
                         $(this).tab('show');
                     });
+                    $("#myTab_rapport a").click(function(e){
+                        e.preventDefault();
+                        $(this).tab('show');
+                    });
                     $('.show-modal').click(function(){
                         $('#myModal').modal('show');
                     });
@@ -103,11 +107,11 @@
                             <a href="#bloc1">Aper&ccedil;u<span class="sr-only">(current)</span></a>
                         </li>
                         <li><a href="#bloc2">Rapports</a></li>
-                        <li><a href="#bloc3">Export</a></li>
                       </ul>
                 </div>
                 <div id="lesblocs">
                   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="bloc1">
+                      <br /><br /><br />
                         <div class="bs-example">
                             <ul class="nav nav-tabs" id="myTab">
                                 <li class="active"><a href="#sectionA">Graphe</a></li>
@@ -150,7 +154,7 @@
                                         </select>
                                     </form><br />
                                     <div class="table-responsive" id="tablo">
-                                        <table class="table table-striped">
+                                        <table class="table table-striped table-bordered">
                                           <thead>
                                             <tr>
                                               <th>D&eacute;partements</th>
@@ -169,7 +173,7 @@
 
                             <div id="section" class="tab-pane fade">
                                     <h2 class="sub-header">Carte des enregistrements pluviom&eacute;triques</h2>
-                                    <div class="table-responsive" id="tablo">
+                                    <div class="table-responsive">
                                         <div id="Map"></div>
 
                                     </div>
@@ -179,15 +183,49 @@
                         </div> <!--Fin bs-example dans bloc1-->
                 </div><!--Fin bloc1-->
                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc2">
-                    <div class="jumbotron">
-                        <h3>Rapports</h3>
-                        <p>Documents autoris&eacute;s</p>
-                    </div>
-                </div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc3">
-                    <div class="jumbotron">
-                        <h3>Exports</h3>
-                        <p>Documents autoris&eacute;s</p>
+                    <br /><br /><br />
+                    <div class="bs-example">
+                        <ul class="nav nav-tabs" id="myTab_rapport">
+                            <li class="active"><a href="#rap1">Graphe de comparaison</a></li>
+                            <li><a href="#rap2">Donnees pluviometrique</a></li>
+                            <li><a href="#rap3">Efficacite des stations</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="rap1" class="tab-pane fade jumbotron in active">
+                                <h3>Graphe de comparaison de debit par departement</h3>
+                                <form class="form-inline" style="border-color: white;">
+                                        <label for="slct">Departement A: </label>
+                                        <select id="slct" class="form-control btn">
+                                            <option value="">Ouest</option>
+                                            <option value="">Nord</option>
+                                            <option value="">Sud</option>
+                                            <option value="">Nord-Est</option>
+                                            <option value="">Nord-Ouest</option>
+                                            <option value="">Sud-Est</option>
+                                        </select>
+                                        <label for="slct">Departement B : </label>
+                                        <select id="slct" class="form-control btn">
+                                            <option value="">Ouest</option>
+                                            <option value="">Nord</option>
+                                            <option value="">Sud</option>
+                                            <option value="">Nord-Est</option>
+                                            <option value="">Nord-Ouest</option>
+                                            <option value="">Sud-Est</option>
+                                        </select>
+                                        <button class="btn btn-primary">Comparer</button>
+                                    </form><br /> <button class="btn btn-lg" id="exp">Exporter</button>
+                                <canvas class="canvas"id="canvas2" height="450" width="750">adsfadsfasdfasdfasd</canvas>
+
+                            </div>
+                            <div id="rap2" class="tab-pane fade jumbotron">
+                                <h3>Rapports2</h3>
+                                <p>Documents autoris&eacute;s</p>
+                            </div>
+                            <div id="rap3" class="tab-pane fade jumbotron">
+                                <h3>Rapport3s</h3>
+                                <p>Documents autoris&eacute;s</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 </div><!--Fin lesblocs-->
