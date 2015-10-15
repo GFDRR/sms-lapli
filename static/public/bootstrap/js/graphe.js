@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.get('/rapport/json_graph',function(data,status){
-				alert(data);
-            alert(data.table[0].dep)
+				// alert(data);
+    //         alert(data.table[0].dep)
         var i;
         var objs = data.table
 

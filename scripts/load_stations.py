@@ -13,7 +13,11 @@ import csv
 
 with open('scripts/depFakeDatas.csv', 'r+') as csvfile:
     reader = csv.reader(csvfile)
+    va = 0
     for row in reader:
+        va+=1
+        if va == 1:
+            continue
         print(row[2])
         #dep = Departement(departement=row[2], description="Le departement du/de : "+row[2], id_code=row[1])
         #dep.scave()

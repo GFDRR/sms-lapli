@@ -49,7 +49,6 @@ class Observation(models.Model):
     description = models.TextField(max_length=100, blank=True)
     valider = models.BooleanField()
     valider = models.BooleanField(default=False)
-<<<<<<< HEAD
 
     def __str__(self):              # __unicode__ on Python 2
         return self.idStation.nomStation + ' le '+ str(self.dateDebut)
@@ -68,5 +67,3 @@ class Log(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         return self.observer.nomPersonne + ' ' + self.observer.prenomPersonne
-=======
->>>>>>> cf0fd66077cb8a4713fc0fcb7360cb8a4cbdfda0
