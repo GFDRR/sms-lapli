@@ -102,11 +102,7 @@ class SmsGateway(AppBase):
                         recup_last_value.quantitePluie = val_float
                         recup_last_value.save()
                         info = 'Donnee mise a jour'
-                        log.observation = recup_last_value
-                        log.observer = person
-                        log.quantitePluie = val_float
-                        log.timestamp = timezone.now().date()
-                        log.save()
+                        # logSave(log, recup_last_value, person, val_float)
                     else:
                         o = Observation()
                         o.idStation = station
@@ -118,7 +114,13 @@ class SmsGateway(AppBase):
                         o.valider = False
                         o.save()
                         info = 'Donnee sauvegardee. Merci!'
+                        # logSave(log, recup_last_value, person, val_float)
 
+                    log.observation = recup_last_value
+                    log.observer = person
+                    log.quantitePluie = val_float
+                    log.timestamp = timezone.now().date()
+                    log.save()
                     msg.respond(info)
                     return True
                 else:
@@ -126,3 +128,10 @@ class SmsGateway(AppBase):
                     return True
 
         return False
+
+def logSave(log, recup_last_value, person, val_float):
+    log.observation = recup_last_value
+    log.observer = person
+    log.quantitePluie = val_float
+    log.timestamp = timezone.now().date()
+    log.save()
