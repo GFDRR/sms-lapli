@@ -39,7 +39,7 @@
                         <thead>
                             <tr class="headings">
                             {% for header in result_headers %}
-                                <th style="border: 1px solid #666"  scope="col" {{ header.class_attrib }}>
+                                <th scope="col" {{ header.class_attrib }}>
                                     <table>
                                         <tr>
                                             <td style="borber-left: 1px solid #777; width: 40%;">
@@ -49,7 +49,7 @@
                                                {% if header.sortable %}
                                                 {% if header.sort_priority > 0 %}
                                                     <td>
-                                                       <div class="sortoptions" style="margin: 5px; width: 100%; text-align: center">
+                                                       <div class="sortoptions" style="margin: 1px; width: 70px; text-align: center;">
                                                             {% if num_sorted_fields > 1 %}
                                                                 <span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}Sorting priority: {{ priority_number }}{% endblocktrans %}" style="color: white;">{{ header.sort_priority }}</span>
                                                             {% endif %}

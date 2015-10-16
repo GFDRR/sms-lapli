@@ -12,81 +12,73 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ObservationDirectionVent',
+            name='Observation',
             fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
-                ('valider', models.IntegerField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='ObservationHumidite',
-            fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
-                ('valider', models.IntegerField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='ObservationPluviometrique',
-            fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
-                ('quantite', models.DecimalField(decimal_places=2, verbose_name='Quantite de Pluie', max_digits=15, blank=True)),
-                ('dateDebut', models.DateField(verbose_name='Date de debut')),
-                ('dateFin', models.DateField(verbose_name='Date de fin')),
+                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('timestamp', models.DateTimeField(auto_now_add=True)),
+                ('dateDebut', models.DateField(verbose_name='Debut')),
+                ('dateFin', models.DateField(verbose_name='Fin')),
+                ('temperatureMax', models.DecimalField(decimal_places=3, max_digits=5, null=True, blank=True, verbose_name='Temperature max')),
+                ('temperatureMin', models.DecimalField(decimal_places=3, max_digits=5, null=True, blank=True, verbose_name='Temperature min')),
+                ('quantitePluie', models.DecimalField(decimal_places=2, max_digits=15, blank=True, verbose_name='Quantite de Pluie')),
                 ('description', models.TextField(max_length=100, blank=True)),
-                ('numeroJour', models.IntegerField(verbose_name='Numero du Jour')),
-                ('valider', models.IntegerField(verbose_name='Validation')),
+                ('valider', models.BooleanField(default=False)),
             ],
         ),
         migrations.CreateModel(
-            name='ObservationTemperature',
+            name='Station',
             fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
-                ('temperatureMax', models.DecimalField(max_digits=5, decimal_places=3)),
-                ('temperatureMin', models.DecimalField(max_digits=5, decimal_places=3)),
-                ('valider', models.IntegerField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='StationPluviometrique',
-            fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
-                ('latitude', models.DecimalField(decimal_places=2, max_digits=8, default=0)),
-                ('longitude', models.DecimalField(decimal_places=2, max_digits=8, default=0)),
-                ('hauteur', models.DecimalField(decimal_places=2, max_digits=8, default=0)),
+                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('latitude', models.FloatField()),
+                ('longitude', models.FloatField()),
+                ('hauteur', models.DecimalField(decimal_places=2, default=0, max_digits=8)),
                 ('nomStation', models.CharField(max_length=45, verbose_name='Nom de la Station')),
-                ('idSiteSeninnelle', models.ForeignKey(verbose_name='Site Sentinelle', to='base.SiteSentinelle')),
+                ('idStation', models.CharField(max_length=5, blank=True)),
+                ('idSiteSeninnelle', models.ForeignKey(to='base.SiteSentinelle', blank=True, verbose_name='Site Sentinelle', null=True)),
             ],
         ),
         migrations.CreateModel(
-            name='TypeStationPluviometrique',
+            name='StationObservers',
             fields=[
-                ('typeStation', models.CharField(max_length=45, primary_key=True, verbose_name='Type de Station', serialize=False)),
-                ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
+                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('observer', models.OneToOneField(to='base.PersonneContact')),
+                ('station', models.ForeignKey(to='hydromet.Station')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='TypeStation',
+            fields=[
+                ('typeStation', models.CharField(serialize=False, primary_key=True, max_length=45, verbose_name='Type de Station')),
+                ('description', models.TextField(max_length=100, blank=True, verbose_name='Description')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='UniteDeMesure',
+            fields=[
+                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
+                ('uniteMesure', models.CharField(unique=True, max_length=7, verbose_name='Unite de mesure')),
+                ('description', models.TextField(blank=True)),
+                ('formule', models.TextField(blank='True', verbose_name='Formule')),
             ],
         ),
         migrations.AddField(
-            model_name='stationpluviometrique',
+            model_name='station',
             name='typeStation',
-            field=models.ForeignKey(verbose_name='Type de la Station', to='hydromet.TypeStationPluviometrique'),
+            field=models.ForeignKey(to='hydromet.TypeStation', blank=True, verbose_name='Type de la Station', null=True),
         ),
         migrations.AddField(
-            model_name='observationtemperature',
-            name='idStation',
-            field=models.ForeignKey(to='hydromet.StationPluviometrique'),
+            model_name='station',
+            name='uniteMesure',
+            field=models.ForeignKey(to='hydromet.UniteDeMesure', blank=True, verbose_name='Unite de mesure', null=True),
         ),
         migrations.AddField(
-            model_name='observationpluviometrique',
+            model_name='observation',
             name='idStation',
-            field=models.ForeignKey(verbose_name='Nom de la Station', to='hydromet.StationPluviometrique'),
+            field=models.ForeignKey(to='hydromet.Station'),
         ),
         migrations.AddField(
-            model_name='observationhumidite',
-            name='idStation',
-            field=models.ForeignKey(to='hydromet.StationPluviometrique'),
-        ),
-        migrations.AddField(
-            model_name='observationdirectionvent',
-            name='idStation',
-            field=models.ForeignKey(to='hydromet.StationPluviometrique'),
+            model_name='observation',
+            name='observer',
+            field=models.ForeignKey(to='base.PersonneContact'),
         ),
     ]
