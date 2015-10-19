@@ -74,7 +74,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='station',
             name='typeStation',
-            field=models.ForeignKey(to='hydromet.TypeStation', verbose_name='Type de la Station', blank=True, null=True),
+            field=models.ForeignKey(blank=True, null=True, verbose_name='Type de la Station', to='hydromet.TypeStation'),
+
         ),
         migrations.AddField(
             model_name='station',
