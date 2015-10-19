@@ -33,7 +33,7 @@
                         {% block object-tools-items %}
                         <li>
                             {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
-                            <a href="{% add_preserved_filters history_url %}" class="historylink pull-right btn btn-info">{% trans "History" %}</a>
+                            <a href="{% add_preserved_filters history_url %}" class="historylink pull-right btn-xs btn-info">{% trans "History" %}</a>
                         </li>
                         {% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
                         {% endblock %}
@@ -135,32 +135,11 @@
     </div>
 <style>
 
+li{
+    list-style: none;
+}
 
-/*.selector-filter label{
-{#    background-color: yellow;#}
-    width: 20px;
-}*/
-/*.selector-filter input{
-    width: 100px;
-    margin-bottom: 0;
-}*/
-   /* .form-style{
-{#        background: #DDD;#}
-        width: 700px;
-        margin: auto;
-        padding: 20px;
-
-    }*/
-    /*.form-style select{
-        width: 110px;
-        display: inline-block;
-        top: 0px;
-    }*/
-    li{
-        list-style: none;
-    }
-
-    .btn-custom {
+.btn-custom {
     display: inline-block;
     padding: 4px 12px;
     width: 140px;
@@ -213,70 +192,20 @@
     border-bottom: 1px solid #ddd;
 }
 .clockbox{
-    -webkit-box-shadow: 0px 0px 5px 0px #ddd;
-    -moz-box-shadow: 0px 0px 5px 0px #ddd;
-    box-shadow: 0px 0px 5px 0px #ddd;
+    -webkit-box-shadow: 0px 0px 5px 0px #999;
+    -moz-box-shadow: 0px 0px 5px 0px #999;
+    box-shadow: 0px 0px 5px 0px #999;
     border-radius: 5px;
     padding: 2px;
 }
 
 .calendar{
-    -webkit-box-shadow: 0px 0px 5px 0px #ddd;
-    -moz-box-shadow: 0px 0px 5px 0px #ddd;
-    box-shadow: 0px 0px 5px 0px #ddd;
+    -webkit-box-shadow: 0px 0px 5px 0px #999;
+    -moz-box-shadow: 0px 0px 5px 0px #999;
+    box-shadow: 0px 0px 5px 0px #999;
     border-radius: 5px;
     padding: 2px;
 }
-/*input, button, select, textarea {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-label, input, button, select, textarea {
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 18px;
-}
-label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
-    cursor: pointer;
-}
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    cursor: pointer;
-}
-button, input {
-    line-height: normal;
-}
-button, input, select, textarea {
-    margin: 0px;
-    font-size: 100%;
-    vertical-align: middle;
-}
-.save-box {
-    text-align: center;
-}
-.save-box .btn.btn-high {
-    width: 150px;
-    min-height: 40px;
-}
-.save-box .btn {
-    width: 150px;
-    margin-bottom: 10px;
-}
-.btn:focus {
-    outline: thin dotted #333;
-    outline-offset: -2px;
-}
-.btn:hover, .btn:focus {
-    color: #333;
-    text-decoration: none;
-    background-position: 0px -15px;
-    transition: background-position 0.1s linear 0s;
-}
-.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
-    color: #333;
-    background-color: #E6E6E6;
-}
-button.btn, input.btn[type="submit"] {
-}*/
-
 </style>
 {% endblock %}
 
