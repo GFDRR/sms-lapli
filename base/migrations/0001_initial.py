@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
                 ('commune', models.CharField(unique=True, max_length=45, verbose_name='Commune')),
                 ('description', models.TextField(max_length=100, blank=True, verbose_name='Description')),
                 ('id_code', models.CharField(unique=True, max_length=7, verbose_name='Code')),
+
             ],
         ),
         migrations.CreateModel(
@@ -28,19 +29,21 @@ class Migration(migrations.Migration):
                 ('departement', models.CharField(choices=[('Ouest', 'OUEST'), ('Nord', 'NORD'), ('Nordouest', 'NORD-OUEST'), ('Nordest', 'NORD-EST'), ('Sud', 'SUD'), ('Sudest', 'SUD-EST'), ('Artibonite', 'ARTIBONITE'), ('Nippes', 'NIPPES'), ('Centre', 'CENTRE'), ('Grandanse', "GRAND'ANSE")], max_length=40, verbose_name='Departement')),
                 ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
                 ('id_code', models.CharField(unique=True, max_length=7, verbose_name='Code')),
+
             ],
         ),
         migrations.CreateModel(
             name='PersonneContact',
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
+
                 ('nomPersonne', models.CharField(max_length=45, verbose_name='Nom')),
                 ('prenomPersonne', models.CharField(max_length=45, verbose_name='Prenom')),
                 ('telephoneBureau', models.CharField(max_length=45, verbose_name='Telephone (Bureau)', blank=True)),
-                ('telephonePersonnel', models.CharField(unique=True, max_length=45, verbose_name='Telephone (Personnel)')),
+                ('telephonePersonnel', models.CharField(max_length=45, verbose_name='Telephone (Personnel)', unique=True)),
                 ('emailPersonnel', models.CharField(max_length=45, verbose_name='Email (Personnel)', blank=True)),
                 ('adressePersonnelle', models.CharField(max_length=45, verbose_name='Adresse (Personnlle)', blank=True)),
-                ('nif', models.CharField(unique=True, max_length=45, verbose_name='NIF/CIN')),
+                ('nif', models.CharField(max_length=45, verbose_name='NIF/CIN', unique=True)),
                 ('dateEmbauche', models.DateField(verbose_name="Date d'embauche")),
                 ('isactif', models.BooleanField(verbose_name='Active')),
             ],
@@ -48,7 +51,6 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Poste',
             fields=[
-
                 ('nomPoste', models.CharField(unique=True, primary_key=True, max_length=45, verbose_name='Poste', serialize=False)),
                 ('description', models.CharField(max_length=45, verbose_name='Description')),
             ],

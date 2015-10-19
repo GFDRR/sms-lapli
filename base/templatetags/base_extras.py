@@ -18,7 +18,7 @@ def notification(texte):
     dtD=date.today() - timedelta(days=1)
     dateDebut = str(dtD.year)+'-'+str(dtD.month)+'-'+str(dtD.day)
     
-    personNotSentMsg = PersonneContact.objects.filter(isactif=True).count()-Observation.objects.filter(dateDebut=dateDebut, dateFin=dateFin).values('observer').distinct().count()
+    personNotSentMsg = PersonneContact.objects.all().count()-Observation.objects.filter(dateDebut=dateDebut, dateFin=dateFin).values('observer').distinct().count()
     
     listQueryDash = {"nbAgent":str(nmbAgent), "msgNotValidate":str(msgNotValidate), "personNotSentMsg":str(personNotSentMsg)}
     result = listQueryDash[texte]
