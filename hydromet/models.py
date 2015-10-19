@@ -15,13 +15,8 @@ class TypeStation(models.Model):
 class UniteDeMesure(models.Model):
     uniteMesure = models.CharField(max_length=7, unique=True, verbose_name="Unite de mesure")
     description = models.TextField(blank=True)
-<<<<<<< HEAD
     formule = models.DecimalField(max_digits=5, decimal_places=3, null=True, blank=True, verbose_name="Formule")
     
-=======
-
-    formule = models.TextField(verbose_name="Formule", blank="True")
->>>>>>> 96badc71c559efc888bfccc84c949f2dee468356
     def __str__(self):              # __unicode__ on Python 2
          return self.uniteMesure
 

@@ -1,4 +1,4 @@
-<fieldset class="module aligned {{ fieldset.classes }}">
+<fieldset class="module aligned {{ fieldset.classes }}" style="width: 100% !important;">
     {% if fieldset.name %}<h2>{{ fieldset.name }}</h2>{% endif %}
     {% if fieldset.description %}
         <div class="description">{{ fieldset.description|safe }}</div>
@@ -28,11 +28,58 @@
     {% endfor %}
 <style>
 
-    .fieldset-group div{
+/* ######################################### */
+
+.selector{
+    width: 100%;
+}
+.selector-available, .selector-chosen{
+    width: 40%;
+}
+
+/*.selector-available{
+    background-color: #f5f5f5;
+}
+.selector-chosen{
+    background-color: #DDD;
+}*/
+.selector-available select, .selector-chosen select{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #DDD;
+
+}
+
+.selector-filter{
+    width: 100%;
+    display: inline-block;
+    border-top: 1px solid #DDD !important;
+    border-radius: 5px 5px;
+}
+.selector-filter label{
+    background-color: #DDD;
+    background-image: linear-gradient(#fff, #DDD);
+    border: 1px solid #DDD;
+    padding: 7px 10px 10px 10px !important;
+    width: 35px !important;
+    height: 35px;
+    border-radius: 5px 0px 0px 5px;
+}
+.selector-filter input{
+    /*background: yellow;*/
+    width: 80% !important;
+
+}
+/* #################################### */
+
+
+
+.fieldset-group div{
         display: inline-block;
+        position: relative;
     }
 .fieldset-group input{
-    width: 400px;
+    width: 50%;
     height: 35px;
 }
 .fieldset-group input[type="checkbox"]{
@@ -70,10 +117,10 @@
     background: #DDD;
 }*/
 
-.selector div select{
+/*.selector div select{
     height: 50px;
     width: 120px;
-}
+}*/
 
 .fieldset-group{
     margin-bottom: 10px;
