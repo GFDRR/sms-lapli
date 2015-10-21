@@ -113,6 +113,19 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'smslapli.context_processors.get_infos',
+    'smslapli.context_processors.app_list',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -191,6 +204,7 @@ LOGGING = {
 }
 
 INSTALLED_APPS = (
+    # 'd',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -295,3 +309,4 @@ ADMIN_REORDER = (
     {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStation', 'hydromet.Station', 'hydromet.Observation', 'hydromet.UniteDeMesure', 'hydromet.StationObservers', 'hydromet.Log')},
     {'app': 'auth',  'label': 'Autorisation',},
 )
+

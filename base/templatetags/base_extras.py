@@ -2,9 +2,15 @@ from base.models import PersonneContact
 from hydromet.models import Observation
 from datetime import *
 
+from re import sub
+
+
 __author__ = 'esdras'
 
 from django import template
+
+
+
 
 register = template.Library()
 
