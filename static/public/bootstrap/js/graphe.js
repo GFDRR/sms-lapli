@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $.get('/rapport/json_graph',function(data,status){
+    $.get('/rapport/average',function(data,status){
 				// alert(data);
-    //         alert(data.table[0].dep)
+            //alert(data.table[0].dep);
         var i;
         var objs = data.table
 
@@ -9,8 +9,8 @@ $(document).ready(function(){
 		datasz = []
 
 		for(i=0;i<objs.length;i++){
-            labl.push(objs[i].dates)
-			datasz.push(objs[i].qtt)
+            labl.push(objs[i].dep)
+			datasz.push(objs[i].moy)
         }
 		var lineChartData = {
 			labels : labl,
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 		}
 		var ctx = $("#canvas").get(0).getContext("2d");
-		var myNewChart = new Chart(ctx).Line(lineChartData, {
+		var myNewChart = new Chart(ctx).Bar(lineChartData, {
 			bezierCurve: false
 		});
 

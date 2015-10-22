@@ -4,6 +4,7 @@
     <head>
             <title>Rapport</title>
             <link rel="stylesheet" type="text/css" href="{% static "public/bootstrap/dist/css/bootstrap.min.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "public/bootstrap/select/css/bootstrap-select.min.css" %}">
             <link rel="stylesheet" type="text/css" href="{% static "public/css.css" %}">
             <link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">
             <link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">
@@ -13,6 +14,7 @@
             <!--<script src="{% static "bootstrap/dist/css/bootstrap-theme.min.css" %}"></script>-->
             <script src="{% static "public/jquery/jquery-1.11.3.min.js" %}"></script>
             <script src="{% static "public/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+            <script src="{% static "public/bootstrap/select/js/bootstrap-select.min.js" %}"></script>
             <script src="{% static "public/jquery/datamaking.js" %}"></script>
             <script src="{% static "public/bootstrap/js/graphe.js" %}"></script>
             <script src="{% static "public/leaflet/leaflet.js" %}"></script>
@@ -103,10 +105,18 @@
 	      <div class="row">
                 <div class="col-sm-3 col-md-2 sidebar">
                       <ul class="nav nav-sidebar">
-                        <li class="active">
+                        <li class="active" id="overview">
                             <a href="#bloc1">Aper&ccedil;u<span class="sr-only">(current)</span></a>
                         </li>
-                        <li><a href="#bloc2">Rapports</a></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                              Rapports <span class="caret"></span>
+                            </a>
+                            <ul class="nav nav-sidebar dropdown-menu">
+                                <li><a href="#rap1">Comparaison par departement</a></li>
+                                <li><a href="#rap2">Rapport 2</a></li>
+                            </ul>
+                        </li>
                       </ul>
                 </div>
                 <div id="lesblocs">
@@ -124,17 +134,6 @@
                         <div class="tab-content">
                             <div id="sectionA" class="tab-pane fade in active">
                                     <h2 class="sub-header">Graphe des donn&eacute;es pluviom&eacute;triques enregistr&eacute;es</h2>
-                                    <form class="form-inline" style="border-color: white;">
-                                        <label for="slct">Selection : </label>
-                                        <select id="slct" class="form-control btn">
-                                            <option value="">Ouest</option>
-                                            <option value="">Nord</option>
-                                            <option value="">Sud</option>
-                                            <option value="">Nord-Est</option>
-                                            <option value="">Nord-Ouest</option>
-                                            <option value="">Sud-Est</option>
-                                        </select>
-                                    </form><br />
                                     <div class="table-responsive">
                                         <canvas id="canvas" height="450" width="750"></canvas>
                                     </div>
@@ -182,48 +181,38 @@
                         </div><!--Fin tab-content-->
                         </div> <!--Fin bs-example dans bloc1-->
                 </div><!--Fin bloc1-->
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="bloc2">
-                    <br /><br /><br />
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="rap1">
                     <div class="bs-example">
+                        <h3>Nom de rapport</h3>
                         <ul class="nav nav-tabs" id="myTab_rapport">
-                            <li class="active"><a href="#rap1">Graphe de comparaison</a></li>
-                            <li><a href="#rap2">Donnees pluviometrique</a></li>
-                            <li><a href="#rap3">Efficacite des stations</a></li>
+                            <li class="active"><a href="#opt1">Graphe</a></li>
+                            <li><a href="#opt2">Tableau</a></li>
+                            <li><a href="#opt3">Carte</a></li>
+                            <li><a href="#opt4">Exportation</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div id="rap1" class="tab-pane fade jumbotron in active">
-                                <h3>Graphe de comparaison de debit par departement</h3>
-                                <form class="form-inline" style="border-color: white;">
-                                        <label for="slct">Departement A: </label>
-                                        <select id="slct" class="form-control btn">
-                                            <option value="">Ouest</option>
-                                            <option value="">Nord</option>
-                                            <option value="">Sud</option>
-                                            <option value="">Nord-Est</option>
-                                            <option value="">Nord-Ouest</option>
-                                            <option value="">Sud-Est</option>
-                                        </select>
-                                        <label for="slct">Departement B : </label>
-                                        <select id="slct" class="form-control btn">
-                                            <option value="">Ouest</option>
-                                            <option value="">Nord</option>
-                                            <option value="">Sud</option>
-                                            <option value="">Nord-Est</option>
-                                            <option value="">Nord-Ouest</option>
-                                            <option value="">Sud-Est</option>
-                                        </select>
-                                        <button class="btn btn-primary">Comparer</button>
-                                    </form><br /> <button class="btn btn-lg" id="exp">Exporter</button>
-                                <canvas class="canvas"id="canvas2" height="450" width="750">adsfadsfasdfasdfasd</canvas>
+                            <div id="opt1" class="tab-pane fade in active">
+                                <br /><br />
+                                <select id="first-disabled2" class="selectpicker" multiple data-hide-disabled="true" data-size="5">
+                                    <option>Nord</option>
+                                    <option>Sud</option>
+                                    <option>Est</option>
+                                    <option>Ouest</option>
+                                  </select><br /><br />
+                                <canvas class="canvas" id="canvas2" height="450" width="750">adsfadsfasdfasdfasd</canvas>
 
                             </div>
-                            <div id="rap2" class="tab-pane fade jumbotron">
+                            <div id="opt2" class="tab-pane fade jumbotron">
                                 <h3>Rapports2</h3>
                                 <p>Documents autoris&eacute;s</p>
                             </div>
-                            <div id="rap3" class="tab-pane fade jumbotron">
+                            <div id="opt3" class="tab-pane fade jumbotron">
                                 <h3>Rapport3s</h3>
                                 <p>Documents autoris&eacute;s</p>
+                            </div>
+                            <div id="opt4" class="tab-pane fade jumbotron">
+                                <h3>Rapport3s</h3>
+                                <p>Module d'exportation non disponible</p>
                             </div>
                         </div>
                     </div>
@@ -232,7 +221,7 @@
           </div><!--Fin row-->
 
     </div><!--Fin container-fluid-->
-    {% include "public/include/footer.html" %}
+
 </body><!--Fin Body-->
 <script>
 	$('document').ready(function(){
