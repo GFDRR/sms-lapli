@@ -293,15 +293,15 @@ RAPIDSMS_HANDLERS = (
     'tut.myhandlers.SumHandler',
 )
 
-SUIT_CONFIG = {
-    'ADMIN_NAME': 'SMS Lapli',
-    'SEARCH_URL': '',
-    'MENU': (
-        {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
-        {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.Log',)},
-        {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
-    )
-}
+# SUIT_CONFIG = {
+#     'ADMIN_NAME': 'SMS Lapli',
+#     'SEARCH_URL': '',
+#     'MENU': (
+#         {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
+#         {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.Log',)},
+#         {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
+#     )
+# }
 
 ADMIN_REORDER = (
     # Reorder app models
@@ -309,4 +309,3 @@ ADMIN_REORDER = (
     {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStation', 'hydromet.Station', 'hydromet.Observation', 'hydromet.UniteDeMesure', 'hydromet.StationObservers', 'hydromet.Log')},
     {'app': 'auth',  'label': 'Autorisation',},
 )
-
