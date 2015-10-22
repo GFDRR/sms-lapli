@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^rapport/json_rap/', 'public.views.json_rap'),
     url(r'^rapport/json_graph/', 'public.views.json_graph'),
     url(r'^rapport/json_map/$', 'public.views.json_map'),
+    url(r'^rapport/average/$', 'public.views.json_average_by_dep'),
     url(r'^rapport/pluviometrie/station_map/$', 'public.views.station_map'),
 
     url(r'^test', 'public.views.imp'),
