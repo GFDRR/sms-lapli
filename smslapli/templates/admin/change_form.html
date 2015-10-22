@@ -44,7 +44,7 @@
 
                     <form class = "form-style" {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.model_name }}_form" novalidate style="width: 100%;">{% csrf_token %}{% block form_top %}{% endblock %}
                     <div class="row">
-                    <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="col-md-9 col-sm-12 col-xs-12" style="border-right: 2px inset #DDD;">
                     {% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1" />{% endif %}
                     {% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}" />{% endif %}
                     {% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
@@ -121,7 +121,15 @@
                             })(django.jQuery);
                         </script>
                     {% endblock %}
-
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            // var src = '{% static "images/icon_calendar.gif" %}';
+                            $('#calendarlink0 img').on("click", function(){
+                                alert("tout va tres bien!!!");
+                            });
+                            //zzalert(images);
+                        });
+                      </script>
                      <!-- JavaScript for prepopulated fields -->
                     {% prepopulated_fields_js %}
 
@@ -139,11 +147,12 @@ li{
     list-style: none;
 }
 
+
 .btn-custom {
     display: inline-block;
     padding: 4px 12px;
     width: 140px;
-    height: 50px;
+    min-height: 50px;
     margin-bottom: 10px;
     font-size: 12px;
     line-height: 18px;
@@ -175,17 +184,29 @@ li{
     background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);
     background-repeat: repeat-x;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
 }
 .btn-default{
     padding: 10px;
+    height: auto;
 }
-.btn-danger{
-    color: #FFF;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-    background-color: #49AFCD;
-    background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+.deletelink-box a{
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #333;
+    text-shadow: 0px 1px 1px rgba(4, 4, 4, 0.3);
+    overflow: justify;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-radius: 4px;
+    padding: 4px 12px;
 }
 
 .clockbox h2{
@@ -205,6 +226,7 @@ li{
     box-shadow: 0px 0px 5px 0px #999;
     border-radius: 5px;
     padding: 2px;
+    background-image: none;
 }
 </style>
 {% endblock %}
