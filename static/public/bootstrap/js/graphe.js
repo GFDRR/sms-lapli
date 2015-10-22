@@ -35,3 +35,10 @@ $(document).ready(function(){
 
     });
 });
+
+//Gestion de comparaison
+$(document).ready(function(){
+	$(".selectpicker").click(function(){
+		alert("Moi Alexis")
+	})
+});

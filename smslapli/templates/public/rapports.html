@@ -183,7 +183,7 @@
                 </div><!--Fin bloc1-->
                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidenSubMenuContent" id="rap1">
                     <div class="bs-example">
-                        <h3>Nom de rapport</h3>
+                        <h3>Comparaison des donnees pluviometrique par departement</h3>
                         <ul class="nav nav-tabs" id="myTab_rapport">
                             <li class="active"><a href="#opt1">Graphe</a></li>
                             <li><a href="#opt2">Tableau</a></li>
@@ -194,10 +194,11 @@
                             <div id="opt1" class="tab-pane fade in active">
                                 <br /><br />
                                 <select id="first-disabled2" class="selectpicker" multiple data-hide-disabled="true" data-size="5">
-                                    <option>Nord</option>
-                                    <option>Sud</option>
-                                    <option>Est</option>
-                                    <option>Ouest</option>
+                                    {% if dep_lst %}
+                                        {% for dept in dep_lst %}
+                                            <option>{{ dept.departement }}</option>
+                                        {% endfor %}
+                                    {% endif %}
                                   </select><br /><br />
                                 <canvas class="canvas" id="canvas2" height="450" width="750">adsfadsfasdfasdfasd</canvas>
 

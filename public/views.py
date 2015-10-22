@@ -9,7 +9,8 @@ from django.utils import formats
 
 
 def rpluie(request):
-    return render(request, "public/rapports.html", {})
+    departement_lst = Departement.objects.all();
+    return render(request, "public/rapports.html", {'dep_lst': departement_lst})
 
 
 def acc(request):
