@@ -89,19 +89,20 @@ class SmsGateway(AppBase):
                         msg.respond("Vous avez un nombre commencant par 0. Il n'y avait pas de pluie?")
                         return True
 
-                    val_float = float(msg.text)
 
                     person = PersonneContact.objects.get(telephonePersonnel=tel)
                     station = StationObservers.objects.get(observer=person).station
+                    id_station = StationObservers.objects.get(observer=person).station.id
+                    formule = UniteDeMesure.objects.get(id = id_station).formule
 
-                    #id de la personne qui a envoye le sms
+                    val_float = float(msg.text) * float(formule)
                     
                     log = Log()
                     recup_last_value = Observation.objects.filter(observer = obs_id, dateDebut = timezone.now().date() - timedelta(days=1)).order_by('-id').first()
                     if recup_last_value:
                         recup_last_value.quantitePluie = val_float
                         recup_last_value.save()
-                        info = 'Donnee mise a jour'
+                        info = 'Vous avez envoye : ' + str(val_float) + '. Donnee mise a jour'
                         # logSave(log, recup_last_value, person, val_float)
                     else:
                         o = Observation()
@@ -113,7 +114,7 @@ class SmsGateway(AppBase):
                         o.dateFin = timezone.now().date()
                         o.valider = False
                         o.save()
-                        info = 'Donnee sauvegardee. Merci!'
+                        info = 'Vous avez envoye : ' + str(val_float) + '. Donnee sauvegardee. Merci!'
                         # logSave(log, recup_last_value, person, val_float)
 
                     log.observation = recup_last_value
