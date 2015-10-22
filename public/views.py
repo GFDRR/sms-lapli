@@ -19,25 +19,30 @@ def acc(request):
 
 def json_average_by_dep(request):
     obsv = Observation.objects.select_related('idStation')  # getting all Observation entries in all relationship
-    foundDep = []  # list of all found Commune
-    numberFound = []  # occurence of a commune
-    sumOfRead = []  # store the sum of rain's quantity
-    dep = []
+    foundDep = {}  # list of all found Commune
+    numberFound = {}   # occurence of a commune
+    sumOfRead = {}   # store the sum of rain's quantity
+    dep = {}
     for qtt in obsv:
-        if qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement in foundDep:  # getting the name of the Departement
-            ids = foundDep.index(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
-            numberFound[ids] += 1  # increment the number of occurence of commune
-            sumOfRead[ids] += float(qtt.quantitePluie)
+        dept = qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement
+        print(dept.departement)
+        if dept.pk in foundDep:  # getting the name of the Departement
+            # ids = foundDep.index(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
+            numberFound[dept.pk] += 1  # increment the number of occurence of commune
+            sumOfRead[dept.pk] += float(qtt.quantitePluie)
         else:
-            foundDep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
-            numberFound.append(1)
-            sumOfRead.append(float(qtt.quantitePluie))
-            dep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
+            # foundDep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
+            dept = qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement
+            foundDep[dept.pk] = dept.departement
+            numberFound[dept.pk] = 1
+            sumOfRead[dept.pk] = float(qtt.quantitePluie)
+            # dep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
 
     overAll = []
-    for index in range(len(foundDep)):
-        overAll.append({'dep': dep[index],
-                        'moy': (sumOfRead[index] / numberFound[index])})  # lack of precision in the date
+    #for key, index in enumerate(foundDep):
+    for (key, value) in foundDep.items():
+        overAll.append({'dep': foundDep[key],
+                        'moy': (sumOfRead[key] / numberFound[key])})  # lack of precision in the date
     reponseJson = {'table': overAll}
     # hh = {'id': 1, 'personne': [{'nom': 'Alexis', 'prenom': 'Rulx Philome'}, {'nom': 'Philers beme', 'prenom': 'Chana'}]}
     # hh = {'f': foundCommune , 'nbr' : numberFound , 'sum' : sumOfRead, 'dep' : dep}
