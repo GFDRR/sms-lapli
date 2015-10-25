@@ -61,3 +61,5 @@ with open('scripts/sctComFakeDatas2.csv', 'r+') as csvfile:
 		sct.description = "Une section communale dependant de la commune ::"+sctCom[7]
 		sct.id_code = sctCom[2]
 		sct.save()
+unPost = Poste(nomPoste="Observateur",description="Assurer la lecture des pluviometres")
+unPost.save()
