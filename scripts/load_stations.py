@@ -46,8 +46,18 @@ with open('scripts/comFakeDatas.csv', 'r+') as csvfile:
         laCom.commune=commun
         laCom.save()
 
-# with open('scripts/sctComFakeDatas.csv', 'r+') as csvfile:
-#     reader = csv.reader(csvfile)
-#     for sctCom in \
-#             reader:
-#         print(sctCom[4])
+with open('scripts/sctComFakeDatas2.csv', 'r+') as csvfile:
+	reader = csv.reader(csvfile)
+	va=0
+	for sctCom in reader:
+		va += 1
+		if va == 1:
+			continue 
+		print(sctCom[4], sctCom[5], sctCom[3], sctCom[7])
+		sct= SectionCommunale()
+		sct.commune = Commune.objects.get(commune=sctCom[7])
+		sct.sectionCommunale = sctCom[4]
+		sct.nomOfficiel = sctCom[5]
+		sct.description = "Une section communale dependant de la commune ::"+sctCom[7]
+		sct.id_code = sctCom[2]
+		sct.save()
