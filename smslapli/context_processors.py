@@ -1,5 +1,5 @@
-from django.db.models.loading import get_models
-from piston_mini_client.validators import validate
+#from django.db.models.loading import get_models
+#from piston_mini_client.validators import validate
 from django import template
 __author__ = 'alexing'
 from django.utils.text import capfirst

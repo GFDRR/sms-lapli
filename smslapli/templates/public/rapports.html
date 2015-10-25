@@ -126,7 +126,7 @@
                             <ul class="nav nav-tabs" id="myTab">
                                 <li class="active"><a href="#sectionA">Graphe</a></li>
                                 <li><a href="#sectionB">Tableau</a></li>
-                                <li><a href="#section">Carte</a></li>
+                                <li onclick="setTimeout('map.invalidateSize()', 500)"><a href="#section">Carte</a></li>
                             </ul>
                             <!--Limit-->
                             <!--Limit-->
@@ -225,13 +225,14 @@
 
 </body><!--Fin Body-->
 <script>
+    var map;
 	$('document').ready(function(){
 
 
 
 
 
-		var map = L.map('Map').setView([18.834610, -72.288237], 2);
+		map = L.map('Map').setView([18.834610, -72.288237], 8);
 
 		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
 

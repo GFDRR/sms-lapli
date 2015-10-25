@@ -24,7 +24,7 @@ $(document).ready(function(){
         e.preventDefault()
         //alert("On m'a clique!!");
         var sltedId=$(this).children("a").attr("href");
-        alert(sltedId);
+        //alert(sltedId);
         $('.nav-sidebar li').removeAttr("class");//supprime les active
         $(this).attr("class","active");//ajoute les active au li selectionne
         //selection de tous les blocs ayant les articles

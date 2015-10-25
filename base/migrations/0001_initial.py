@@ -13,30 +13,25 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Commune',
             fields=[
-
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('commune', models.CharField(unique=True, max_length=45, verbose_name='Commune')),
-                ('description', models.TextField(max_length=100, blank=True, verbose_name='Description')),
-                ('id_code', models.CharField(unique=True, max_length=7, verbose_name='Code')),
-
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
+                ('commune', models.CharField(max_length=45, verbose_name='Commune', unique=True)),
+                ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
+                ('id_code', models.CharField(max_length=7, verbose_name='Code', unique=True)),
             ],
         ),
         migrations.CreateModel(
             name='Departement',
             fields=[
-
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
-                ('departement', models.CharField(choices=[('Ouest', 'OUEST'), ('Nord', 'NORD'), ('Nordouest', 'NORD-OUEST'), ('Nordest', 'NORD-EST'), ('Sud', 'SUD'), ('Sudest', 'SUD-EST'), ('Artibonite', 'ARTIBONITE'), ('Nippes', 'NIPPES'), ('Centre', 'CENTRE'), ('Grandanse', "GRAND'ANSE")], max_length=40, verbose_name='Departement')),
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
+                ('departement', models.CharField(max_length=40, verbose_name='Departement')),
                 ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
-                ('id_code', models.CharField(unique=True, max_length=7, verbose_name='Code')),
-
+                ('id_code', models.CharField(max_length=7, verbose_name='Code', unique=True)),
             ],
         ),
         migrations.CreateModel(
             name='PersonneContact',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
-
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('nomPersonne', models.CharField(max_length=45, verbose_name='Nom')),
                 ('prenomPersonne', models.CharField(max_length=45, verbose_name='Prenom')),
                 ('telephoneBureau', models.CharField(max_length=45, verbose_name='Telephone (Bureau)', blank=True)),
@@ -51,29 +46,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Poste',
             fields=[
-                ('nomPoste', models.CharField(unique=True, primary_key=True, max_length=45, verbose_name='Poste', serialize=False)),
+                ('nomPoste', models.CharField(max_length=45, primary_key=True, unique=True, verbose_name='Poste', serialize=False)),
                 ('description', models.CharField(max_length=45, verbose_name='Description')),
             ],
         ),
         migrations.CreateModel(
             name='SectionCommunale',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('sectionCommunale', models.CharField(max_length=45, verbose_name='Section Communale')),
                 ('nomOfficiel', models.CharField(max_length=45, verbose_name='Nom officiel', blank=True)),
                 ('description', models.TextField(max_length=100, verbose_name='Description', blank=True)),
-                ('id_code', models.CharField(unique=True, max_length=7, verbose_name='Code')),
+                ('id_code', models.CharField(max_length=7, verbose_name='Code', unique=True)),
                 ('commune', models.ForeignKey(to='base.Commune', verbose_name='Commune')),
             ],
         ),
         migrations.CreateModel(
             name='SiteSentinelle',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('localite', models.CharField(max_length=45, verbose_name='Localite')),
-                ('latitude', models.DecimalField(default=0, decimal_places=2, max_digits=8, verbose_name='Latitude')),
-                ('longitude', models.DecimalField(default=0, decimal_places=2, max_digits=8, verbose_name='Longitude')),
-                ('hauteur', models.DecimalField(default=0, decimal_places=2, max_digits=8, verbose_name='Hauteur')),
+                ('latitude', models.DecimalField(decimal_places=2, verbose_name='Latitude', default=0, max_digits=8)),
+                ('longitude', models.DecimalField(decimal_places=2, verbose_name='Longitude', default=0, max_digits=8)),
+                ('hauteur', models.DecimalField(decimal_places=2, verbose_name='Hauteur', default=0, max_digits=8)),
                 ('sectionCommunale', models.ForeignKey(to='base.SectionCommunale', verbose_name='Section Communale')),
             ],
         ),
