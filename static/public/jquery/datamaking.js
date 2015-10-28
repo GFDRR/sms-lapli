@@ -10,7 +10,7 @@ $(document).ready(function(){
         var i;
         var objs =data.table
         for(i=0;i<objs.length;i++){
-            $('tbody').append("<tr><td>"+objs[i].dep+"</td><td>"+objs[i].com+"</td><td>"+objs[i].date+"</td><td>!"+objs[i].nbr+"!</td><td>"+objs[i].moy+"</td></tr>")
+            $('#tablo table tbody').append("<tr><td>"+objs[i].dep+"</td><td>"+objs[i].com+"</td><td>"+objs[i].date+"</td><td>!"+objs[i].nbr+"!</td><td>"+objs[i].moy+"</td></tr>")
         }
     });
 });
