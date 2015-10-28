@@ -49,9 +49,14 @@ $(document).ready(function(){
                     stroke = ["rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)","rgba(4,39,28,0.5)"]
                     //les coulleurs
 
+                    for(i=0;i<objs.length;i++){
+
+                    }
+
 					datasz = []
 
 					for(i=0;i<objs.length;i++){
+                        $('#opt2 table tbody').append("<tr><td>"+objs[i].nomDep+"</td><td>"+data.jr[i]+"</td><td>"+objs[i].moyDep[i]+"</td></tr>");
 						datasz.push({
                                 label: "Graph for "+objs[i].nomDep,
 								fillColor : fill[i],
@@ -61,7 +66,7 @@ $(document).ready(function(){
 								pointHighlightFill : "#fff",
 								pointHighlightStroke : "rgba(101,178,200,1)",
 								data :objs[i].moyDep
-                        })
+                        });
 					}
 
 					var lineChartData = {
