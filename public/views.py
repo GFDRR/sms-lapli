@@ -25,7 +25,7 @@ def json_average_by_dep(request):
     dep = {}
     for qtt in obsv:
         dept = qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement
-        print(dept.departement)
+        #print(dept.departement)
         if dept.pk in foundDep:  # getting the name of the Departement
             # ids = foundDep.index(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
             numberFound[dept.pk] += 1  # increment the number of occurence of commune
@@ -47,6 +47,38 @@ def json_average_by_dep(request):
     # hh = {'id': 1, 'personne': [{'nom': 'Alexis', 'prenom': 'Rulx Philome'}, {'nom': 'Philers beme', 'prenom': 'Chana'}]}
     # hh = {'f': foundCommune , 'nbr' : numberFound , 'sum' : sumOfRead, 'dep' : dep}
     return JsonResponse(reponseJson)
+
+
+def compBDep(request):
+    import datetime
+    days = [] #Getting the dates of the week
+    #date = datetime.date.today()
+    date = datetime.datetime.strptime("2015-01-27", "%Y-%m-%d").date()
+    start_week = date - datetime.timedelta(date.weekday())
+    for i in range(7):
+        days.append(str(start_week + datetime.timedelta(i)))
+
+    def avr_calc(dep, jours):
+        avr = []
+        obsv = Observation.objects.select_related('idStation').filter(dateDebut__range=[start_week, jours[6]]).order_by('dateDebut')
+        for cal in jours:
+            qtObsv = 0
+            sumObsv = 0
+            for lect in obsv:
+                if lect.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement == dep and str(lect.dateDebut) == cal:
+                    qtObsv += 1
+                    sumObsv += float(lect.quantitePluie)
+            if qtObsv == 0:
+                avr.append(0.0)
+            else:
+                avr.append((sumObsv/qtObsv))
+        print(avr)
+        return avr
+    rsltF = []
+    deps = Departement.objects.all()
+    for dep in deps:
+        rsltF.append({'nomDep': dep.departement, 'moyDep': avr_calc(dep.departement, days)})
+    return JsonResponse({'jr': days, 'table':rsltF})
 
 
 def json_rap(request):
