@@ -1,11 +1,10 @@
-{% load i18n admin_urls admin_static admin_modify %}
-<div class="inline-group" id="{{ inline_admin_formset.formset.prefix }}-group">
+{% load i18n admin_urls admin_static admin_modify %}<div class="inline-group" id="{{ inline_admin_formset.formset.prefix }}-group">
   <div class="tabular inline-related {% if forloop.last %}last-related{% endif %}">
 {{ inline_admin_formset.formset.management_form }}
 <fieldset class="module">
    <h2>{{ inline_admin_formset.opts.verbose_name_plural|capfirst }}</h2>
    {{ inline_admin_formset.formset.non_form_errors }}
-   <table>
+   <table class="table">
      <thead><tr>
      {% for field in inline_admin_formset.fields %}
        {% if not field.widget.is_hidden %}
@@ -48,7 +47,7 @@
           {% for line in fieldset %}
             {% for field in line %}
               {% if not field.field.is_hidden %}
-              <td{% if field.field.name %} class="field-{{ field.field.name }}"{% endif %}>
+              <td{% if field.field.name %} class="field-{{ field.field.name }} fieldset-group"{% endif %}>
               {% if field.is_readonly %}
                   <p>{{ field.contents }}</p>
               {% else %}
@@ -70,14 +69,22 @@
 </fieldset>
   </div>
 </div>
-
 <script type="text/javascript">
 
 (function($) {
   $("#{{ inline_admin_formset.formset.prefix|escapejs }}-group .tabular.inline-related tbody tr").tabularFormset({
     prefix: "{{ inline_admin_formset.formset.prefix|escapejs }}",
-    addText: "{% filter escapejs %}{% blocktrans with inline_admin_formset.opts.verbose_name|capfirst as verbose_name %}Add another {{ verbose_name }}{% endblocktrans %}{% endfilter %}",
+    addText: "<span class = 'btn btn-primary btn-xs pull-right'> <i class='glyphicon glyphicon-plus'> </i>{% filter escapejs %}{% blocktrans with inline_admin_formset.opts.verbose_name|capfirst as verbose_name %}Add another {{ verbose_name }}{% endblocktrans %} {% endfilter %}</span>",
     deleteText: "{% filter escapejs %}{% trans 'Remove' %}{% endfilter %}"
   });
 })(django.jQuery);
 </script>
+<style type="text/css">
+  .inline-group .tabular tr.add-row td a{
+      background: none !important;
+  }
+  td.fieldset-group input{
+    width: 100%;
+  }
+
+</style>
