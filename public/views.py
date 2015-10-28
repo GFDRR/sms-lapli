@@ -52,8 +52,8 @@ def json_average_by_dep(request):
 def compBDep(request):
     import datetime
     days = [] #Getting the dates of the week
-    #date = datetime.date.today()
-    date = datetime.datetime.strptime("2015-01-27", "%Y-%m-%d").date()
+    date = datetime.date.today()
+    #date = datetime.datetime.strptime("2015-01-27", "%Y-%m-%d").date()
     start_week = date - datetime.timedelta(date.weekday())
     for i in range(7):
         days.append(str(start_week + datetime.timedelta(i)))
