@@ -33,7 +33,7 @@
                         {% block object-tools-items %}
                         <li>
                             {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
-                            <a href="{% add_preserved_filters history_url %}" class="historylink pull-right btn-xs btn-info">{% trans "History" %}</a>
+                            <a href="{% add_preserved_filters history_url %}" class="historylink pull-right btn-xs btn-info badge">{% trans "History" %}</a>
                         </li>
                         {% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
                         {% endblock %}
@@ -122,14 +122,13 @@
                         </script>
                     {% endblock %}
                     <script type="text/javascript">
-                        $(document).ready(function(){
-                            // var src = '{% static "images/icon_calendar.gif" %}';
-                            $('#calendarlink0 img').on("click", function(){
-                                alert("tout va tres bien!!!");
-                            });
-                            //zzalert(images);
-                        });
-                      </script>
+                        // $(document).ready(function(){
+                        //     // var src = '{% static "images/icon_calendar.gif" %}';
+                        //     $('.datetimeshortcuts #calendarlink0').append("calendartest");
+                        //     alert("Salut les zeros");
+                        //     //zzalert(images);
+                        // });
+                    </script>
                      <!-- JavaScript for prepopulated fields -->
                     {% prepopulated_fields_js %}
 
@@ -227,6 +226,30 @@ li{
     border-radius: 5px;
     padding: 2px;
     background-image: none;
+}
+
+.module.aligned h2{
+    color: #fff;
+    padding: 5px;
+    background: #2A3F54;
+    margin-top: 0;
+    border-radius: 10px 10px 0px 0px;
+   /* background-color: #49AFCD;
+    background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);*/
+}
+.module.aligned{
+    border: 1px solid #ddd;
+    padding-bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+}
+.selector h2{
+    font-size: 1em;
+    background-color: #49AFCD !important; 
+    background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4) !important;
+}
+
+fieldset{
+    margin-bottom: 10px;
 }
 </style>
 {% endblock %}

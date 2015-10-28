@@ -127,7 +127,7 @@
 <!-- ################################### -->
 
 <body class="nav-md">
-    <div class="container body">
+    <div class="container body" >
         <div class="main_container">
             {% block menu %}
             <div class="col-md-3 left_col">
@@ -190,49 +190,6 @@
                                                         </ul>
                                                    </li>
                                         {% endfor %}
-
-                                        {% else %}
-                                        <li><a><i class="fa fa-edit"></i>Structure de base<span class="fa fa-chevron-down"></span></a>
-                                                <ul class="nav child_menu" style="display: none">
-                                                    <li><a href="/admin/base/departement/">Departements</a>
-                                                    </li>
-                                                    <li><a href="/admin/base/commune/">Communes</a>
-                                                    </li>
-                                                    <li><a href="/admin/base/sectioncommunale/">Section communales</a>
-                                                    </li>
-                                                    <li><a href="/admin/base/sitesentinelle/">Sites sentinnelles</a>
-                                                    </li>
-                                                    <li><a href="/admin/base/poste/">Postes</a>
-                                                    </li>
-                                                    <li><a href="/admin/base/personnecontact/">Personne contacts</a>
-                                                    </li>
-                                                </ul>
-                                          </li>
-                                          <li><a><i class="fa fa-edit"></i>Collecte Pluviometrique<span class="fa fa-chevron-down"></span></a>
-                                                <ul class="nav child_menu" style="display: none">
-                                                    <li><a href="/admin/hydromet/typestation/">Type station pluviometrique</a>
-                                                    </li>
-                                                    <li><a href="/admin/hydromet/log/">Log</a>
-                                                    </li>
-                                                    <li><a href="/admin/hydromet/station/">Station pluviometriques</a>
-                                                    </li>
-                                                    <li><a href="/admin/hydromet/observation/">Observation pluviometriques</a>
-                                                    </li>
-                                                    <li><a href="/admin/hydromet/unitedemesure/">Unite de mesures</a>
-                                                    </li>
-                                                    <li><a href="/admin/hydromet/stationobservers/">Station observers</a>
-                                                    </li>
-
-                                                </ul>
-                                          </li>
-                                          <li><a><i class="fa fa-edit"></i>Autorisation<span class="fa fa-chevron-down"></span></a>
-                                                <ul class="nav child_menu" style="display: none">
-                                                    <li><a href="/admin/auth/group/">Groupes</a>
-                                                    </li>
-                                                    <li><a href="/admin/auth/user/">Utilisateurs</a>
-                                                    </li>
-                                                </ul>
-                                          </li>
                                     {% endif %}
                             </ul>
                         </div>
@@ -320,7 +277,7 @@
 
             <!-- page content -->
 
-            <div class="right_col" role="main">
+            <div class="right_col" role="main" >
                 {% block content1 %}
                 <div class="row top_tiles">
                         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -347,7 +304,7 @@
                         </div><!-- personNotSentMsg -->
                         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="tile-stats">
-                                <div class="icon"><i class="fa fa-sort-amount-desc"></i>
+                                <div class="icon"><canvas width="50" height="50" id="sleet"></canvas>
                                 </div>
                                 <div class="count">{{ "personNotSentMsg"|notification }}</div>
 
@@ -723,6 +680,23 @@
 
 
 
+    </script>
+    <script src="{% static "js/skycons/skycons.js" %}"></script>
+    <script>
+        var icons = new Skycons({
+                "color": "#73879C"
+            }),
+            list = [
+                "clear-day", "clear-night", "partly-cloudy-day",
+                "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+                "fog"
+            ],
+            i;
+
+        for (i = list.length; i--;)
+            icons.set(list[i], list[i]);
+
+        icons.play();
     </script>
 </body>
 
