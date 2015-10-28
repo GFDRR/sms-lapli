@@ -13,15 +13,12 @@ Contents:
  * :doc:`Technical Specification <technical>`
  * :doc:`Project Roadmap <roadmap>`
 
+=====================================
+
 .. toctree::
    :maxdepth: 2
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   users_guide
+   roadmap
+   conception_analysis
+   technical
