@@ -1,5 +1,5 @@
 from base.models import PersonneContact
-from hydromet.models import Observation
+from hydromet.models import Observation, StationObservers
 from datetime import *
 
 from re import sub
@@ -24,7 +24,7 @@ def notification(texte):
     dtD=date.today() - timedelta(days=1)
     dateDebut = str(dtD.year)+'-'+str(dtD.month)+'-'+str(dtD.day)
     
-    personNotSentMsg = PersonneContact.objects.all().count()-Observation.objects.filter(dateDebut=dateDebut, dateFin=dateFin).values('observer').distinct().count()
+    personNotSentMsg = StationObservers.objects.all().count()-Observation.objects.filter(dateDebut=dateDebut, dateFin=dateFin).values('observer').distinct().count()
     
     listQueryDash = {"nbAgent":str(nmbAgent), "msgNotValidate":str(msgNotValidate), "personNotSentMsg":str(personNotSentMsg)}
     result = listQueryDash[texte]
