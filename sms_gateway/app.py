@@ -29,7 +29,7 @@ class SmsGateway(AppBase):
             # msg.respond('TEst')
             msg.respond('Not in  '+msg.peer)
             return True  # Return false because we don't want to answer an unknow number
-                         # We must shut the default messge from the default app in this case
+            
         else: # If this number is in the list, will work with the text message
             obs_id = PersonneContact.objects.filter(telephonePersonnel = tel).first().id
             if msg.text == "data":
