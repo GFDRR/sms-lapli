@@ -190,6 +190,48 @@
                                                         </ul>
                                                    </li>
                                         {% endfor %}
+                                        {% else %}
+                                        <li><a><i class="fa fa-edit"></i>Structure de base<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu" style="display: none">
+                                                    <li><a href="/admin/base/departement/">Departements</a>
+                                                    </li>
+                                                    <li><a href="/admin/base/commune/">Communes</a>
+                                                    </li>
+                                                    <li><a href="/admin/base/sectioncommunale/">Section communales</a>
+                                                    </li>
+                                                    <li><a href="/admin/base/sitesentinelle/">Sites sentinnelles</a>
+                                                    </li>
+                                                    <li><a href="/admin/base/poste/">Postes</a>
+                                                    </li>
+                                                    <li><a href="/admin/base/personnecontact/">Personne contacts</a>
+                                                    </li>
+                                                </ul>
+                                          </li>
+                                          <li><a><i class="fa fa-edit"></i>Collecte Pluviometrique<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu" style="display: none">
+                                                    <li><a href="/admin/hydromet/typestation/">Type station</a>
+                                                    </li>
+                                                    <li><a href="/admin/hydromet/station/">Station</a>
+                                                    </li>
+                                                    <li><a href="/admin/hydromet/observation/">Observation pluviometriques</a>
+                                                    </li>
+                                                    <li><a href="/admin/hydromet/stationobservers/">Observateurs</a>
+                                                    </li>
+                                                    <li><a href="/admin/hydromet/unitedemesure/">Unite de mesures</a>
+                                                    </li>
+                                                    <li><a href="/admin/hydromet/log/">Log</a>
+                                                    </li>
+
+                                                </ul>
+                                          </li>
+                                          <li><a><i class="fa fa-edit"></i>Autorisation<span class="fa fa-chevron-down"></span></a>
+                                                <ul class="nav child_menu" style="display: none">
+                                                    <li><a href="/admin/auth/group/">Groupes</a>
+                                                    </li>
+                                                    <li><a href="/admin/auth/user/">Utilisateurs</a>
+                                                    </li>
+                                                </ul>
+                                          </li>
 
                                     {% endif %}
                             </ul>
@@ -303,7 +345,7 @@
                                 <p>Observation pluviometrique</p>
                             </div>
                         </div><!-- personNotSentMsg -->
-                        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <!-- <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="tile-stats">
                                 <div class="icon"><canvas width="50" height="50" id="sleet"></canvas>
                                 </div>
@@ -312,7 +354,7 @@
                                 <h3>{% if "personNotSentMsg"|notification < '2' %}Agent n'a pas envoye{% else %} Agents n'ont pas envoyes{% endif %}</h3>
                                 <p>Observation pluviometrique</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                 <div class="row">

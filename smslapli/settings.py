@@ -125,7 +125,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
     'smslapli.context_processors.get_infos',
-    'smslapli.context_processors.app_list',
+    #'smslapli.context_processors.app_list',
 )
 
 MIDDLEWARE_CLASSES = (
