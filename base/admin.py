@@ -24,7 +24,10 @@ class CommuneAdmin(admin.ModelAdmin):
 class SectionCommunaleAdmin(admin.ModelAdmin):
     #Called my form in the admin and set a column for each fields
     list_display = ("commune", "sectionCommunale", "nomOfficiel", "id_code", "description")
+    
+    search_fields = ["sectionCommunale"]
     form = SectionCommunaleForm
+
 
 
 

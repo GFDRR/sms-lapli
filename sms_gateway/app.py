@@ -27,7 +27,7 @@ class SmsGateway(AppBase):
         tel = msg.peer.strip("+")
         if tel not in valid_numbers:
             # msg.respond('TEst')
-            msg.respond('Not in  '+msg.peer)
+            # msg.respond('Not in  '+msg.peer)
             return True  # Return false because we don't want to answer an unknow number
             
         else: # If this number is in the list, will work with the text message
@@ -92,8 +92,9 @@ class SmsGateway(AppBase):
 
                     person = PersonneContact.objects.get(telephonePersonnel=tel)
                     station = StationObservers.objects.get(observer=person).station
-                    id_station = StationObservers.objects.get(observer=person).station.id
-                    formule = UniteDeMesure.objects.get(id = id_station).formule
+                    id_station = station.id
+                    formule = station.uniteMesure.formule
+                    # formule = UniteDeMesure.objects.get(id = id_station).formule
 
                     val_float = float(msg.text) * float(formule)
                     
