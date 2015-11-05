@@ -110,13 +110,6 @@ class LogAdmin(admin.ModelAdmin):
     search_fields = ["timestamp"]
     # form = LogForm
 
-# class ObservationTemperatureAdmin(admin.ModelAdmin):
-#
-#
-# class ObservationDirectionVentAdmin(admin.ModelAdmin):
-#
-# class ObservationHumiditeAdmin(admin.ModelAdmin):
-
 
 #Added all in the register
 admin.site.register(Station, StationAdmin)
@@ -125,7 +118,3 @@ admin.site.register(Observation, ObservationAdmin)
 admin.site.register(UniteDeMesure, UniteDeMesureAdmin)
 admin.site.register(StationObservers, StationObserversAdmin)
 admin.site.register(Log, LogAdmin)
-
-# admin.site.register(ObservationTemperature)
-# admin.site.register(ObservationDirectionVent)
-# admin.site.register(ObservationHumidite)

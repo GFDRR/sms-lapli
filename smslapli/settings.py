@@ -113,6 +113,19 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'smslapli.context_processors.get_infos',
+    #'smslapli.context_processors.app_list',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -191,6 +204,7 @@ LOGGING = {
 }
 
 INSTALLED_APPS = (
+    # 'd',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -279,15 +293,15 @@ RAPIDSMS_HANDLERS = (
     'tut.myhandlers.SumHandler',
 )
 
-SUIT_CONFIG = {
-    'ADMIN_NAME': 'SMS Lapli',
-    'SEARCH_URL': '',
-    'MENU': (
-        {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
-        {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.Log',)},
-        {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
-    )
-}
+# SUIT_CONFIG = {
+#     'ADMIN_NAME': 'SMS Lapli',
+#     'SEARCH_URL': '',
+#     'MENU': (
+#         {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
+#         {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.Log',)},
+#         {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
+#     )
+# }
 
 ADMIN_REORDER = (
     # Reorder app models

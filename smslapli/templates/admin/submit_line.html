@@ -1,18 +1,21 @@
 {% load i18n admin_urls %}
 <div class="submit-row login-content">
-{% if show_save %}<input type="submit" value="{% trans 'Save' %}" name="_save" class = "btn-custom btn-info"/>{% endif %}<br>
-{% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew" />{% endif %}<br>
-{% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother" class="btn-custom btn-default"/>{% endif %}<br>
-{% if show_save_and_continue %}<input type="submit" value="{% trans 'Save and continue editing' %}" name="_continue" class="btn-custom btn-default" />{% endif %}
+{% if show_save %}<input type="submit" value="{% trans 'Save' %}" name="_save" class = "btn-custom btn-info" style="margin-bottom: 10px;"/>{% endif %}
+{% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew" />{% endif %}
+{% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother" class="btn-custom btn-default" style="margin-bottom: 10px;" />{% endif %}
+{% if show_save_and_continue %}<input type="submit" style="margin-bottom: 10px;" value="{% trans 'Save and continue editing' %}" name="_continue" class="btn-custom btn-default" />{% endif %}
 {% if show_delete_link %}
     {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
-    <p class="deletelink-box" style="margin-left: 30%;"><a href="{% add_preserved_filters delete_url %}" class="deletelink" style="color: #994400;">{% trans "Delete" %}</a></p>
+    <p class="deletelink-box" style="width: 100%;"><a href="{% add_preserved_filters delete_url %}" class="btn-danger btn-xs" style="color: #994400;"><span class="glyphicon glyphicon-remove"></span> {% trans "Delete" %}</a></p>
 {% endif %}
 </div>
 <style>
     .submit-row{
         text-align: center;
         padding: 10px;
+        background: none;
+        border: none;
+        
     }
     .submit-row input{
         display: inline-block;

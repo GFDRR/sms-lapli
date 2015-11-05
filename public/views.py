@@ -9,11 +9,76 @@ from django.utils import formats
 
 
 def rpluie(request):
-    return render(request, "public/rapports.html", {})
+    departement_lst = Departement.objects.all();
+    return render(request, "public/rapports.html", {'dep_lst': departement_lst})
 
 
 def acc(request):
     return render(request, "public/accueil_rapport.html", {})
+
+
+def json_average_by_dep(request):
+    obsv = Observation.objects.select_related('idStation')  # getting all Observation entries in all relationship
+    foundDep = {}  # list of all found Commune
+    numberFound = {}   # occurence of a commune
+    sumOfRead = {}   # store the sum of rain's quantity
+    dep = {}
+    for qtt in obsv:
+        dept = qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement
+        #print(dept.departement)
+        if dept.pk in foundDep:  # getting the name of the Departement
+            # ids = foundDep.index(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
+            numberFound[dept.pk] += 1  # increment the number of occurence of commune
+            sumOfRead[dept.pk] += float(qtt.quantitePluie)
+        else:
+            # foundDep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
+            dept = qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement
+            foundDep[dept.pk] = dept.departement
+            numberFound[dept.pk] = 1
+            sumOfRead[dept.pk] = float(qtt.quantitePluie)
+            # dep.append(qtt.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement)
+
+    overAll = []
+    #for key, index in enumerate(foundDep):
+    for (key, value) in foundDep.items():
+        overAll.append({'dep': foundDep[key],
+                        'moy': (sumOfRead[key] / numberFound[key])})  # lack of precision in the date
+    reponseJson = {'table': overAll}
+    # hh = {'id': 1, 'personne': [{'nom': 'Alexis', 'prenom': 'Rulx Philome'}, {'nom': 'Philers beme', 'prenom': 'Chana'}]}
+    # hh = {'f': foundCommune , 'nbr' : numberFound , 'sum' : sumOfRead, 'dep' : dep}
+    return JsonResponse(reponseJson)
+
+
+def compBDep(request):
+    import datetime
+    days = [] #Getting the dates of the week
+    date = datetime.date.today()
+    #date = datetime.datetime.strptime("2015-01-27", "%Y-%m-%d").date()
+    start_week = date - datetime.timedelta(date.weekday())
+    for i in range(7):
+        days.append(str(start_week + datetime.timedelta(i)))
+
+    def avr_calc(dep, jours):
+        avr = []
+        obsv = Observation.objects.select_related('idStation').filter(dateDebut__range=[start_week, jours[6]]).order_by('dateDebut')
+        for cal in jours:
+            qtObsv = 0
+            sumObsv = 0
+            for lect in obsv:
+                if lect.idStation.idSiteSeninnelle.sectionCommunale.commune.departement.departement == dep and str(lect.dateDebut) == cal:
+                    qtObsv += 1
+                    sumObsv += float(lect.quantitePluie)
+            if qtObsv == 0:
+                avr.append(0.0)
+            else:
+                avr.append((sumObsv/qtObsv))
+        print(avr)
+        return avr
+    rsltF = []
+    deps = Departement.objects.all()
+    for dep in deps:
+        rsltF.append({'nomDep': dep.departement, 'moyDep': avr_calc(dep.departement, days)})
+    return JsonResponse({'jr': days, 'table':rsltF})
 
 
 def json_rap(request):
@@ -42,7 +107,7 @@ def json_rap(request):
 
     overAll = []
     for index in range(len(foundCommune)):
-        overAll.append({'dep': dep[index], 'com': foundCommune[index], 'date': datex[index],
+        overAll.append({'dep': dep[index], 'com': foundCommune[index], 'date': datex[index], 'nbr': numberFound[index],
                         'moy': (sumOfRead[index] / numberFound[index])})  # lack of precision in the date
     reponseJson = {'table': overAll}
     # hh = {'id': 1, 'personne': [{'nom': 'Alexis', 'prenom': 'Rulx Philome'}, {'nom': 'Philers beme', 'prenom': 'Chana'}]}
