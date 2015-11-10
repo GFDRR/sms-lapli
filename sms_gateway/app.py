@@ -1,84 +1,69 @@
 from rapidsms.apps.base import AppBase
-from base.models import *   # importing all models from Donnees_de_Base where data about Contacts are stored
+from base.models import *  # importing all models from Donnees_de_Base where data about Contacts are stored
 from hydromet.models import *
+from django.db.models import Avg, Min, Max
 from datetime import timedelta
-from django.utils import timezone
+from django.utils import timezone, formats
 from datetime import datetime, date
+
 import re
 
 
 def isFloat(val):
-        try:
-            float(val)
-            return True
-        except:
-            return False
+    try:
+        float(val)
+        return True
+    except:
+        return False
+
+
+def subtract_one_month(dt0):
+    dt1 = dt0.replace(days=1)
+    dt2 = dt1 - timedelta(days=1)
+    dt3 = dt2.replace(days=1)
+    return dt3
 
 
 class SmsGateway(AppBase):
-
-    def handle(self,msg):
-        valid_numbers = []  # An empty list
-
-        for tel in PersonneContact.objects.all():
-            valid_numbers.append(tel.telephonePersonnel)# Getting all personnal Phone
-
+    def handle(self, msg):
 
         tel = msg.peer.strip("+")
-        if tel not in valid_numbers:
-            # msg.respond('TEst')
-            # msg.respond('Not in  '+msg.peer)
+        today = datetime.now()
+
+        observer = Observateur.objects.filter(actif=True, personne__telephone_bureau=tel, personne__actif=True).first()
+
+        if not observer:
             return True  # Return false because we don't want to answer an unknow number
-            
-        else: # If this number is in the list, will work with the text message
-            obs_id = PersonneContact.objects.filter(telephonePersonnel = tel).first().id
+
+        else:  # If this number is in the list, will work with the text message
+            obs_id = observer.pk
             if msg.text == "data":
                 data_of_the_day = ""
-                for i in Observation.objects.filter(dateFin = datetime.now()):
-                    if i.observer.id == obs_id:
-                        data_of_the_day += str(i.dateDebut) + " : " + str(i.quantitePluie) + " "
+                observations = Observation.objects.filter(time_result__day=today.day, observateur=observer).first()
+
+                if observations:
+                    data_of_the_day += str(formats.date_format(observations.time_result, "SHORT_DATETIME_FORMAT")) + " : " + str(observations.value) + " "
+                else:
+                    data_of_the_day = "Vous n'avez pas encore envoyé de données aujourd'hui."
+
                 msg.respond(data_of_the_day)
                 return True
             elif msg.text == "data month":
-                month = datetime.now().month
-                year = datetime.now().year
-                if month in [1,3,5,7,8,10,12]:
-                    n_day = 31
-                elif month in [4,6,9,11]:
-                    n_day = 30
-                elif month == 2:
-                    if year % 4 == 0 or year % 400  == 0 and year % 100 != 0:
-                        n_day = 29
-                    else:
-                        n_day = 28
-                data = ""
-                max = min = 0
-                date_min = date_max = ""
-                first_loop = True
-                today = timezone.now().date()
-                MonthBeforeToday = timezone.now().date() - timedelta(days = n_day)
-                dataOfTheLastMonth = Observation.objects.filter(dateDebut__gt = MonthBeforeToday, dateDebut__lt = today)
-                for i in dataOfTheLastMonth:
-                    if i.observer.id == obs_id:
-                        if first_loop:
-                            max = min = i.quantitePluie
-                            first_loop = False
-                        if i.quantitePluie < min:
-                            min = i.quantitePluie
-                            date_min = i.dateDebut
-                        if i.quantitePluie > max:
-                            max = i.quantitePluie
-                            date_max = i.dateDebut
-                msg.respond("MAX : " + str(date_max) + " -> " + str(max) + " / " + "MIN : " + str(date_min) + " -> " + str(min))
+                month_before = today - timedelta(days=30) #subtract_one_month(today)
+                observations = Observation.objects.filter(time_result__gte=month_before, time_result__lte=today).aggregate(Avg('value'), Max('value'), Min('value'))
+                if observations:
+                    #msg.respond("MAX : " + str(observations.value__max) + " / " + "MIN : " + str(observations.value__min))
+                    msg.respond("Rapport pour les 30 derniers jours\nMAX : "+ str(observations['value__max']) + " | MIN : " + str(observations['value__min']) + " | MAX : "+ str(observations['value__avg']))
+                else:
+                    msg.respond("Vous n'avez pas encore envoyé de données aujourd'hui.")
                 return True
             elif msg.text == "data week":
-                today = timezone.now().date()
-                sevenDayBeforeToday = timezone.now().date() - timedelta(days=7)
-                dataOfTheSevenLastDays = Observation.objects.filter(dateDebut__gt = sevenDayBeforeToday, dateDebut__lt = today)
+                sevenDayBeforeToday = today.date() - timedelta(days=7)
+                dataOfTheSevenLastDays = Observation.objects.filter(time_result__gt=sevenDayBeforeToday,
+                                                                    time_result__lt=today, observer=observer)
                 data = ""
                 for i in dataOfTheSevenLastDays:
-                    if i.observer.id == obs_id:
-                        data += str(i.dateDebut) + " : " + str(i.quantitePluie) + " "
+                    data += str(i.time_result) + " : " + str(i.value) + " "
                 msg.respond(data)
                 return True
             else:
@@ -86,54 +71,52 @@ class SmsGateway(AppBase):
                 matched = re.match(pat_zero, msg.text)
                 if isFloat(msg.text):
                     if matched:
-                        msg.respond("Vous avez un nombre commencant par 0. Il n'y avait pas de pluie?")
+                        msg.respond("Vous avez un nombre commencant par 0. Il n'y avait pas de pluie ?")
                         return True
 
-
-                    person = PersonneContact.objects.get(telephonePersonnel=tel)
-                    station = StationObservers.objects.get(observer=person).station
-                    id_station = station.id
-                    formule = station.uniteMesure.formule
+                    # person = Personne.objects.get(telephonePersonnel=tel)
+                    station = observer.station
+                    # id_station = station.id
+                    # formule = station.uniteMesure.formule
                     # formule = UniteDeMesure.objects.get(id = id_station).formule
 
-                    val_float = float(msg.text) * float(formule)
-                    
+                    val_float = float(msg.text)  # * float(formule)
+
                     log = Log()
-                    recup_last_value = Observation.objects.filter(observer = obs_id, dateDebut = timezone.now().date() - timedelta(days=1)).order_by('-id').first()
-                    if recup_last_value:
-                        recup_last_value.quantitePluie = val_float
-                        recup_last_value.save()
-                        info = 'Vous avez envoye : ' + str(val_float) + '. Donnee mise a jour'
+
+                    last_value = Observation.objects.filter(observateur=observer, time_result__day=today.day).order_by(
+                        '-id').first()
+
+                    if last_value:
+                        last_value.quantitePluie = val_float
+                        last_value.save()
+                        info = 'Vous avez envoyé : ' + str(val_float) + '. Donnée mise à jour'
                         # logSave(log, recup_last_value, person, val_float)
                     else:
                         o = Observation()
-                        o.idStation = station
-                        o.observer = person
-                        o.timestamp = datetime.now()
-                        o.quantitePluie = val_float
-                        o.dateDebut = timezone.now().date() - timedelta(days=1)
-                        o.dateFin = timezone.now().date()
+                        o.station = station
+                        o.observateur = observer
+                        o.time_start = timezone.now().date() - timedelta(days=1)
+                        o.time_end = today
+                        o.time_result = today
+                        o.value = val_float
                         o.valider = False
                         o.save()
-                        info = 'Vous avez envoye : ' + str(val_float) + '. Donnee sauvegardee. Merci!'
+                        info = 'Vous avez envoyé : ' + str(val_float) + '. Donnée sauvegardée. Merci!'
                         # logSave(log, recup_last_value, person, val_float)
 
-                    log.observation = recup_last_value
-                    log.observer = person
-                    log.quantitePluie = val_float
-                    log.timestamp = timezone.now().date()
+                    log.observation = last_value
+                    log.observateur = observer
+                    log.value = val_float
+                    log.time_start = timezone.now().date() - timedelta(days=1)
+                    log.time_end = today
+                    log.time_result = today
                     log.save()
                     msg.respond(info)
                     return True
                 else:
-                    msg.respond("Verifier la valeur envoye SVP! On attend un nombre Ex: 12.9 ou 12")
+                    msg.respond("Verifier la valeur envoyé SVP! On attend un nombre Ex: 12.9 ou 12")
                     return True
 
         return False
 
-def logSave(log, recup_last_value, person, val_float):
-    log.observation = recup_last_value
-    log.observer = person
-    log.quantitePluie = val_float
-    log.timestamp = timezone.now().date()
-    log.save()

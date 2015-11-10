@@ -23,25 +23,25 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'smslapli.db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'base_lapli',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '3389',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': 'smslapli.db',
+    #     'USER': '',
+    #     'PASSWORD': '',
+    #     'HOST': '',
+    #     'PORT': '',
+    # }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'testbase',
-#         'USER': 'esdras',
-#         'PASSWORD': '',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -84,9 +84,10 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public', 'static')
 STATIC_URL = '/static/'
 
 # Additional locations of static files to collect
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+# STATICFILES_DIRS = (
+#     [],
+#     os.path.join(PROJECT_ROOT, 'static'),
+# )
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -115,6 +116,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
 
 )
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
@@ -204,15 +206,16 @@ LOGGING = {
 }
 
 INSTALLED_APPS = (
-    # 'd',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jet',
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.sitemaps',
+    'django.contrib.gis',
 
     # External apps
     'django_tables2',
@@ -232,6 +235,8 @@ INSTALLED_APPS = (
     # SMS Lapli Apps
     'base',
     'hydromet',
+    'public',
+    'rapport',
     'sms_gateway', #This is the one who will be used to handle sms
 
     # Must Be last
@@ -242,17 +247,6 @@ INSTALLED_BACKENDS = {
     "message_tester": {
         "ENGINE": "rapidsms.backends.database.DatabaseBackend",
     },
-    # "kannel-fake-smsc" : {
-    #     "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
-    #     "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
-    #     "sendsms_params": {"smsc": "FAKE",
-    #                        "from": "123", # not set automatically by SMSC
-    #                        "username": "esdras",
-    #                        "password": "esdras1995"}, # or set in localsettings.py
-    #     "coding": 0,
-    #     "charset": "ascii",
-    #     "encode_errors": "ignore", # strip out unknown (unicode) characters
-    #},
 
     "kannel-usb0-smsc" : {
         "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
@@ -266,22 +260,6 @@ INSTALLED_BACKENDS = {
         "encode_errors": "ignore", # strip out unknown (unicode) characters
     },
 }
-
-# INSTALLED_BACKENDS = {
-#     # ...
-#     # other backends, if any
-#     "kannel-fake-smsc" : {
-#         "ENGINE":  "rapidsms.backends.kannel.KannelBackend",
-#         "sendsms_url": "http://127.0.0.1:13013/cgi-bin/sendsms",
-#         "sendsms_params": {"smsc": "FAKE",
-#                            "from": "123", # not set automatically by SMSC
-#                            "username": "rapidsms",
-#                            "password": "CHANGE-ME"}, # or set in localsettings.py
-#         "coding": 0,
-#         "charset": "ascii",
-#         "encode_errors": "ignore", # strip out unknown (unicode) characters
-#     },
-# }
 
 DEFAULT_RESPONSE = "Message incorrect!"
 LOGIN_REDIRECT_URL = '/'
@@ -304,8 +282,14 @@ RAPIDSMS_HANDLERS = (
 # }
 
 ADMIN_REORDER = (
+    #'base',
+    #'base',
+    #'auth',
+
     # Reorder app models
-    {'app': 'base',  'label': 'Structure de base', 'models': ('base.Departement', 'base.Commune', 'base.SectionCommunale', 'base.SiteSentinelle', 'base.Poste', 'base.PersonneContact')},
-    {'app': 'hydromet',  'label': 'Collecte Pluviometrique', 'models': ('hydromet.TypeStation', 'hydromet.Station', 'hydromet.Observation', 'hydromet.UniteDeMesure', 'hydromet.StationObservers', 'hydromet.Log')},
+    {'app': 'base',  'label': 'Structure de base', 'models': ('base.TypeLimite', 'base.Limite', 'base.Poste', 'base.Personne')},
+    {'app': 'hydromet',  'label': 'Gestion des Données Pluviometriques',},
     {'app': 'auth',  'label': 'Autorisation',},
+    #{'app': 'auth',  'label': 'Autorisation',}
 )
+

@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<title>{% block title %}Acceuil{% endblock title %}</title>
+
+<link rel="stylesheet" type="text/css" href="{% static "public/js/bootstrap/css/bootstrap.min.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "public/js/select/css/bootstrap-select.min.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "public/css/standard.css" %}">
+<!--<link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">-->
+<!--<link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">-->
+<!--<link rel="stylesheet" type="text/css" href="{% static "public/js/bootstrap/css/bootstrap-theme.min.css" %}">-->
+
+<script src="{% static "public/js/jquery/jquery-1.11.3.min.js" %}"></script>
+<script src="{% static "public/js/bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "public/js/select/js/bootstrap-select.min.js" %}"></script>
+
+{% block headextrafiles %}
+
+<script src="{% static "public/js/Chart.js" %}"></script>
+<script src="{% static "public/js/datamaking.js" %}"></script>
+<script src="{% static "public/js/graphe.js" %}"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $("#myTab a").click(function(e){
+	    	e.preventDefault();
+	    	$(this).tab('show');
+	    });
+	    $('.show-modal').click(function(){
+	    	$('#myModal').modal('show');
+	 	});  
+		$('.hide-modal').click(function(){
+	    	$('#myModal').modal('hide');
+	 	});
+	});
+
+</script>
+{% endblock headextrafiles %}
+
+
