@@ -1,0 +1,34 @@
+{% load staticfiles %}
+{% load i18n %}
+<style type="text/css">
+	.vcenter {
+	    margin-top: 7px;
+	    margin-bottom: 7px;
+	}
+</style>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <center>
+      <img class="navbar-brand" src="{% static "public/img/logoMenu.png" %}">
+       <a class="navbar-brand" href="http://www.cnsa509.org/" TARGET="_blank"> CNSA</a>
+      </center>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/accueil/">Accueil</a></li>
+            <li><a href="/rapport/pluviometrie/">Pluviom&eacute;trie</a></li>
+            <li><a href="#">Prix du March&eacute;</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <a href="/admin/" class="vcenter btn nav-form btn-success navbar-right">ADMIN</a>
+    </div>
+  </div>
+</nav>
