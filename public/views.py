@@ -13,6 +13,10 @@ def home(request):
 def faq(request):
     return render(request, "public/faq.html", {'menu_active':'faq'})
 
+def pluviometrie(request):
+    departement_lst = Limite.objects.filter(typelimite__nom='Département');
+    return render(request, "public/pluviometrie.html", {'menu_active':'pluviometrie','dep_lst': departement_lst})
+
 def imp(request):
     recupAll = Observation.objects.select_related('idStation')
     dd = []

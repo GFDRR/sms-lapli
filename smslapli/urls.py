@@ -8,7 +8,7 @@ from rapidsms.backends.kannel.views import KannelBackendView
 
 urlpatterns = [
     url(r'^', include('public.urls', 'public')),
-    url(r'^rapport/', include('rapport.urls', 'rapport')),
+    #url(r'^rapport/', include('rapport.urls', 'rapport')),
     url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', include(admin.site.urls)),
 
