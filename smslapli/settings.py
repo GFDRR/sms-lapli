@@ -23,22 +23,20 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'base_lapli',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '3389',
+        'ENGINE': 'django.contrib.gis.db.backends.spatialite',
+        'NAME': 'smslapli.db',
     }
+
+    # Config for PostGIS
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': 'smslapli.db',
-    #     'USER': '',
-    #     'PASSWORD': '',
-    #     'HOST': '',
-    #     'PORT': '',
+    #     'ENGINE': 'django.contrib.gis.db.backends.postgis',
+    #     'NAME': 'base_lapli',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'postgres',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3389',
     # }
+
 }
 
 

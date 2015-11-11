@@ -1,0 +1,30 @@
+{% extends "public/base.html" %}
+{% load staticfiles %}
+
+{% block headextrafiles %}
+	<script src="{% static "public/js/Chart.js" %}"></script>
+    <script src="{% static "public/js/datamaking.js" %}"></script>
+    <script src="{% static "public/js/graphe.js" %}"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	        $("#myTab a").click(function(e){
+	    	e.preventDefault();
+	    	$(this).tab('show');
+	    });
+	    $('.show-modal').click(function(){
+	    	$('#myModal').modal('show');
+	 	});
+		$('.hide-modal').click(function(){
+	    	$('#myModal').modal('hide');
+	 	});
+	});
+
+    </script>
+{% endblock headextrafiles %}
+
+<style>
+.nav-sidebar li.active a {
+	background: url({% static "public/img/arowEnd.png" %}) no-repeat right rgb(66, 139, 202);
+	color: white;
+}
+</style>
