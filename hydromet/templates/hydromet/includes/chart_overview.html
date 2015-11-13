@@ -1,0 +1,106 @@
+{% load staticfiles %}
+
+<canvas id="Chart" class="chart"></canvas>
+
+<br><br>
+
+<script>
+    var chart;
+    var ctx = $("#Chart").get(0).getContext("2d");
+    var dataChart;
+    var optionsChart;
+
+	$('document').ready(function(){
+
+	     dataChart = {
+            labels: [],
+            datasets: []
+        };
+
+         optionsChart = {
+            //barValueSpacing : 20,
+            //barDatasetSpacing : 20,
+            //legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){ %><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){ %><%=datasets[i].label%><% } %></li><% } %></ul>"
+        }
+
+
+	    var ctx = $("#Chart").get(0).getContext("2d");
+	    chart = new Chart(ctx).Bar(dataChart);
+
+		loadDataChart();
+
+	});
+
+
+	function refreshChart(){
+        chart.destroy();
+        chart = new Chart(ctx).Bar(dataChart);
+        barsNbr = chart.datasets[0].bars.length;
+
+        for(i=0; i < barsNbr;i++){
+             var colors = getPseudoRandomColor();
+             chart.datasets[0].bars[i].fillColor = colors[i].fill;
+             chart.datasets[0].bars[i].strokeColor = colors[i].stroke;
+             chart.datasets[0].bars[i].highlightFill = colors[i].highlight;
+        }
+
+        chart.update();
+    }
+
+    function loadDataChart(){
+        $.ajax({
+			method: "POST",
+			type: 'json',
+			url: "/hydromet/chart_overview/",
+			data: { 'sel_dept': $('#SelDept').val() },
+			headers: { "X-CSRFToken":  Cookies.get("csrftoken") },
+			success : function(data) {
+			    var labelsVal = [];
+			    var datasetsVal = [];
+			    //var colors = getPseudoRandomColor();
+
+				dataLen = data.dept_lst.length;
+
+				for(var i=0; i < dataLen; i++) {
+				    labelsVal.push(data.dept_lst[i]['nom'])
+				    datasetsVal[i] = data.dept_lst[i]['val']
+				}
+
+				dataChart = {
+                    labels: labelsVal,
+                    datasets:  [
+                        {
+                            label: 'mois novembre 2015',
+                            fillColor: '#E5E5E5',
+                            strokeColor: '#B7B7B7',
+                            highlightFill: '#E2F2FF',
+                            data: datasetsVal
+                        }
+                    ]
+                };
+
+                refreshChart();
+
+            }
+		});
+
+    }
+
+
+    function getPseudoRandomColor() {
+        selectColors = [
+            {'fill': '#E5E5E5', 'stroke': '#B7B7B7', 'highlight': '#F4F4F4'},
+            {'fill': '#C9E6FF', 'stroke': '#82C8FF', 'highlight': '#E2F2FF'},
+            {'fill': '#FFA0A0', 'stroke': '#FF7C7C', 'highlight': '#FFBFBF'},
+            {'fill': '#FFB368', 'stroke': '#FFA251', 'highlight': '#FFC793'},
+            {'fill': '#7BB583', 'stroke': '#50AF5C', 'highlight': '#94B298'},
+            {'fill': '#BC7EB3', 'stroke': '#B761A7', 'highlight': '#BA9EB5'},
+            {'fill': '#A2F2E7', 'stroke': '#80EDDA', 'highlight': '#C9EFE9'},
+            {'fill': '#E8C07F', 'stroke': '#E5B05B', 'highlight': '#E2CEAE'},
+            {'fill': '#F2E2FF', 'stroke': '#CB9EFF', 'highlight': '#FBF7FF'},
+            {'fill': '#FFFFFF', 'stroke': '#E0E0E0', 'highlight': '#EDEDED'},
+        ];
+
+        return selectColors;
+    }
+</script>

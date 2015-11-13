@@ -8,7 +8,8 @@ from .models import TypeLimite, Limite, Poste, Personne
 
 class TypeLimiteAdmin(admin.ModelAdmin):
     # Called my form in the admin and set a column for each fields
-    list_display = ("nom", "description")
+    list_display = ("nom", "niveau", "description")
+    ordering = ['niveau']
     # form = PosteForm
 
 
@@ -39,7 +40,7 @@ class PersonneAdmin(admin.ModelAdmin):
 # Added all in the register
 admin.site.register(Poste)
 admin.site.register(Personne, PersonneAdmin)
-admin.site.register(TypeLimite)
+admin.site.register(TypeLimite, TypeLimiteAdmin)
 admin.site.register(Limite, LimiteAdmin)
 
 

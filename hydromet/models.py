@@ -40,6 +40,7 @@ class Station(models.Model):
                             help_text="Le code est optionnel.")
     typestation = models.ForeignKey(TypeStation, verbose_name="Type de la Station", null=True, blank=True)
     description = models.TextField(max_length=100, blank=True)
+    actif = models.BooleanField(default=True)
     timestamp_add = models.DateTimeField(auto_now_add=True)
     timestamp_update = models.DateTimeField(auto_now=True)
     objects = models.GeoManager()
@@ -76,7 +77,7 @@ class TypeObservation(models.Model):
     timestamp_update = models.DateTimeField(auto_now=True)
 
     def __str__(self):  # __unicode__ on Python 2
-        return self.nom
+        return "%s" % self.nom
 
 
 class TypeStationTypeObservation(models.Model):
@@ -90,6 +91,9 @@ class TypeStationTypeObservation(models.Model):
 
     class Meta:
         unique_together = ('typestation', 'typeobservation',)
+
+    def __str__(self):  # __unicode__ on Python 2
+        return "%s" % self.unitemesure
 
 
 class Observation(models.Model):

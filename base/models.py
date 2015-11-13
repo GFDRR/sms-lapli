@@ -12,6 +12,7 @@ from django.contrib.gis.db import models
 
 class TypeLimite(models.Model):
     nom = models.CharField(max_length=40)
+    niveau = models.IntegerField(default=0)
     description = models.TextField(max_length=100, blank=True)
     timestamp_add = models.DateTimeField(auto_now_add=True)
     timestamp_update = models.DateTimeField(auto_now=True)

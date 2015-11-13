@@ -5,6 +5,6 @@ from django.dispatch import receiver
 from django.conf import settings
 from hydromet.models import Observation
 
-@receiver(post_save, sender=Observation)
-def model_post_save(sender, **kwargs):
-    print('Saved: {}'.format(kwargs['instance'].__dict__))
+#@receiver(post_save, sender=Observation)
+#def model_post_save(sender, **kwargs):
+    #print('Saved: {}'.format(kwargs['instance'].__dict__))

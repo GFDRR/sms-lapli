@@ -1,0 +1,115 @@
+{% load staticfiles %}
+<span class="btn btn-default btn-xs pull-right" onclick="centerMap();">Exportrer</span>
+<span class="btn btn-default btn-xs pull-right" onclick="centerMap();">Recentrer la carte</span>
+
+	<div id="Map" class="map"></div>
+	<div id="Legend">
+	    <ul>
+	        <li><img src="{% static "public/js/leaflet/markers/high_activity.png" %}"> Station dont les données sont <strong>à jour</strong></li>
+	        <li><img src="{% static "public/js/leaflet/markers/low_activity.png" %}"> Station dont les données ont un <strong>retard de moins de 7 jours</strong></li>
+	        <li><img src="{% static "public/js/leaflet/markers/no_activity.png" %}"> Station dont les données ont un <strong>retard de plus de 7 jours</strong></li>
+	        <li><img src="{% static "public/js/leaflet/markers/off_activity.png" %}"> Station <strong>non en fonction</strong></li>
+	    </ul>
+	</div>
+
+<br><br>
+
+
+<script>
+	var map;
+	var greenIcon;
+	var orangeIcon;
+	var redIcon;
+	var grayIcon;
+	var blueIcon;
+	var markers = new L.FeatureGroup();
+	var centerPos = [18.834610, -72.288237];
+	var zoomVal = 8;
+
+	$('document').ready(function(){
+
+		map = L.map('Map').setView(centerPos, zoomVal);
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
+		var cartoCdn = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {});
+		cartoCdn.addTo(map);
+
+		greenIcon = L.icon({iconUrl: '{% static "public/js/leaflet/markers/high_activity.png" %}'});
+		orangeIcon = L.icon({iconUrl: '{% static "public/js/leaflet/markers/low_activity.png" %}'});
+		redIcon = L.icon({iconUrl: '{% static "public/js/leaflet/markers/no_activity.png" %}'});
+		grayIcon = L.icon({iconUrl: '{% static "public/js/leaflet/markers/off_activity.png" %}'});
+
+		loadStations();
+
+	});
+
+	function centerMap(){
+		map.setView(centerPos, zoomVal)
+	}
+
+
+	function loadStations() {
+		$.ajax({
+			method: "POST",
+			type: 'json',
+			url: "/hydromet/map_overview/",
+			data: { 'sel_dept': $('#SelDept').val() },
+			headers: { "X-CSRFToken":  Cookies.get("csrftoken") },
+			success : function(data) {
+				map.removeLayer(markers);
+				markers = new L.FeatureGroup();
+
+				dataLen = data.stations_lst.length;
+
+				for(var i=0; i < dataLen; i++) {
+
+					switch (data.stations_lst[i]['statut']) {
+						case 'high_activity':
+							zIndex = 30;
+							basicIcon = greenIcon;
+							break;
+						case 'low_activity' :
+							zIndex = 20;
+							basicIcon = orangeIcon;
+							break;
+						case 'no_activity' :
+							zIndex = 10;
+							basicIcon = redIcon;
+							break;
+						case 'off_activity' :
+						default :
+							zIndex = 0;
+							basicIcon = grayIcon;
+							break;
+					}
+
+
+
+					html= "<div class='infoBulle'>";
+					html += "<h4>Station "+data.stations_lst[i]['nomStation']+"</h4>";
+					html += "Date du dernier envoi : "+data.stations_lst[i]['dateUpdate'];
+					html += "<h6>Données Disponible :</h6>";
+					html += "<ul>";
+					html += "<li><img src='{% static "public/js/leaflet/markers/check.png" %}'> Pluviométrique : "+data.stations_lst[i]['qt']+" mm</li>";
+					html += "<li><img src='{% static "public/js/leaflet/markers/no_check.png" %}'> Limnimétrique : -</li>";
+					html += "<li><img src='{% static "public/js/leaflet/markers/no_check.png" %}'> Thermométrique : -</li>";
+					html += "</ul>";
+					html += "</div>";
+
+					var marker = L.marker([ data.stations_lst[i]['latitude'], data.stations_lst[i]['longitude'] ], { icon : basicIcon, zIndexOffset : zIndex, riseOnHover: true, title: data.stations_lst[i]['nomStation'], opacity: 0.8 })//.addTo(map);
+					markers.addLayer(marker);
+					marker.bindPopup(html);
+
+					marker.on('mouseover', function(e) {
+						e.target.setOpacity(1);
+					}).on('mouseout', function(e) {
+						e.target.setOpacity(0.8);
+					})
+				}
+
+				map.addLayer(markers);
+			}
+		});
+
+	}
+
+</script>
