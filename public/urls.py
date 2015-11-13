@@ -7,6 +7,7 @@ urlpatterns = patterns('public.views',
     url(r'^faq/$', 'faq'),
     #url(r'^faq/$', 'faq')
     url(r'rapport/pluviometrie/$', 'pluviometrie'),
+    url(r'rapport/pluviometrie/overview/$', 'pluviometrie'),
     #url(r'json_rap/', 'json_rap'),
     #url(r'json_graph/', 'json_graph'),
     #url(r'json_map/$', 'json_map'),

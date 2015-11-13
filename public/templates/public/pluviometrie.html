@@ -87,13 +87,14 @@
 
 </div>
 {% endcomment %}
+
 <div class="content container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Vue d'ensemble <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Comparatif entre les departements</a></li>
-                <li><a href="#">Analytics</a></li>
+                <li class="active"><a href="/rapport/pluviometrie/overview/">Vue d'ensemble <span class="sr-only">(current)</span></a></li>
+                <li><a href="/rapport/pluviometrie/overview/moyenne/">Moyenne Ponderée</a></li>
+                <li><a href="#">Alertes et Zones à risques</a></li>
                 <li><a href="#">Export</a></li>
             </ul>
         </div>
@@ -105,21 +106,20 @@
                     <option data-hidden="true">Selectionnez au moins un Département</option>
                     {% if dep_lst %}
                     {% for dept in dep_lst %}
-                    <option departement selected="selected">{{ dept.nom }}</option>
+                    <option departement selected="selected" value="{{ dept.pk }}">{{ dept.nom }}</option>
                     {% endfor %}
                     {% endif %}
                 </select>
-                &nbsp;<img class="btn" src='{% static "public/img/reload.png" %}' title="Recharger"><br>
+                &nbsp;<img class="btn btn-default" src='{% static "public/img/reload.png" %}' title="Recharger" onclick="loadStations(); loadDataChart();"><br>
                 <span class="selectAll"><input type="checkbox" checked="checked"
                                                onchange="if( $(this).is(':checked') ) { nbrSel = 'selectAll' } else { nbrSel = 'deselectAll' } $('.selectpicker').selectpicker(nbrSel);"> Tout Selectionnez </span>
             </div>
 
             <ul class="nav nav-tabs" id="myTab">
                 <li role="carte_interactive" class="active">
-                    <a href="#carte_interactive" aria-controls="carte_interactive" role="tab" data-toggle="tab">Carte
-                        Interactive</a>
+                    <a href="#carte_interactive" aria-controls="carte_interactive" role="tab" data-toggle="tab">Carte Interactive</a>
                 </li>
-                <li role="graphiques">
+                <li role="graphiques" onclick="setTimeout('refreshChart()', 500)">
                     <a href="#graphiques" aria-controls="graphiques" role="tab" data-toggle="tab">Graphiques</a>
                 </li>
                 <li role="tableau">
@@ -129,55 +129,27 @@
 
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="carte_interactive">
-                    <h2 class="sub-header">Graphe des donn&eacute;es pluviom&eacute;triques enregistr&eacute;es</h2>
+                    <h2 class="sub-header">Statuts des différents stations</h2>
+
+                    {% include "hydromet/includes/map_overview.html" %}
 
                     <div class="table-responsive">
-                        <canvas id="canvas" height="450" width="750"></canvas>
+                        <!-- <canvas id="canvas" height="450" width="750"></canvas>-->
                     </div>
                 </div>
                 <!--Fin sectionA-->
                 <!--Limit-->
                 <div role="tabpanel" class="tab-pane fade" id="graphiques">
-                    <h2 class="sub-header">Tableau des enregistrements pluviom&eacute;triques</h2>
-
-                    <form class="form-inline" style="border-color: white;">
-                        <label for="slct">Selection : </label>
-                        <select id="slct" class="form-control btn">
-                            <option value="">Ouest</option>
-                            <option value="">Nord</option>
-                            <option value="">Sud</option>
-                            <option value="">Nord-Est</option>
-                            <option value="">Nord-Ouest</option>
-                            <option value="">Sud-Est</option>
-                        </select>
-                    </form>
-                    <br/>
-
-                    <div class="table-responsive" id="tablo">
-                        <table class="table table-striped table-bordered">
-                            <thead>
-                            <tr>
-                                <th>D&eacute;partements</th>
-                                <th>Commune</th>
-                                <th>Date</th>
-                                <th>Nombre de Stations(<em>par commune</em>)</th>
-                                <th>Quantit&eacute; de pluie moyenne</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h2 class="sub-header">Moyenne des Précipitations pour le mois en cours</h2>
+                    {% include "hydromet/includes/chart_overview.html" %}
                 </div>
                 <!--Fin sectionB-->
                 <!--Limit-->
                 <div role="tabpanel" class="tab-pane fade" id="tableau">
                     <h2 class="sub-header">Carte des enregistrements pluviom&eacute;triques</h2>
+                    {% include "hydromet/includes/table_overview.html" %}
 
-                    <div class="table-responsive">
-                        <div id="Map"></div>
 
-                    </div>
                 </div>
 
             </div>
@@ -186,3 +158,5 @@
     </div>
 </div>
 {% endblock content %}
+{% block docready %}$('.selectpicker').selectpicker();{% endblock docready %}
+

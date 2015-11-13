@@ -1,85 +1,87 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Acceuil{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static "public/js/bootstrap/css/bootstrap.min.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "public/js/select/css/bootstrap-select.min.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "public/css/standard.css" %}">
-<!--<link rel="stylesheet" type="text/css" href="{% static "public/demo.css" %}">-->
-<!--<link rel="stylesheet" type="text/css" href="{% static "public/footer-basic-centered.css" %}">-->
-<!--<link rel="stylesheet" type="text/css" href="{% static "public/js/bootstrap/css/bootstrap-theme.min.css" %}">-->
-    <script src="{% static "public/js/jquery/jquery-1.11.3.min.js" %}"></script>
-    <script src="{% static "public/js/bootstrap/js/bootstrap.min.js" %}"></script>
-    <script src="{% static "public/js/select/js/bootstrap-select.min.js" %}"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Acceuil{% endblock title %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static "public/js/bootstrap/css/bootstrap.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "public/js/select/css/bootstrap-select.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "public/css/standard.css" %}">
 
-    {% block headextrafiles %}{% endblock headextrafiles %}
+        <script src="{% static "public/js/jquery/jquery-1.11.3.min.js" %}"></script>
+        <script src="{% static "public/js/bootstrap/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "public/js/select/js/bootstrap-select.min.js" %}"></script>
 
-    <style>
+        {% block headextrafiles %}{% endblock headextrafiles %}
 
-        .nav-sidebar li.active a {
-	        background: url({% static "public/img/arrowEnd.png" %}) no-repeat right rgb(66, 139, 202);
-        }
-    </style>
+        <style>
 
-</head>
-<body>
-<nav class="navbar big navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+            .nav-sidebar li.active a {
+                background: url({% static "public/img/arrowEnd.png" %}) no-repeat right rgb(66, 139, 202);
+            }
+        </style>
 
-            <div class="navbar-brand" href="http://www.cnsa509.org/" TARGET="_blank">
-                <img src="{% static "public/img/logoMenu.png" %}">
-                <h1>CNSA</h1>
-               <span class="subtitle">Coordination Nationale de Sécurité Alimentaire</span>
+    </head>
+    <body>
+        <nav class="navbar big navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+                    <div class="navbar-brand" href="http://www.cnsa509.org/" TARGET="_blank">
+                        <img src="{% static "public/img/logoMenu.png" %}">
+                        <h1>CNSA</h1>
+                       <span class="subtitle">Coordination Nationale de Sécurité Alimentaire</span>
+                    </div>
+
             </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul id="Menu" class="nav navbar-nav">
+                    <li class="accueil" class="active"><a href="/accueil/">Accueil</a></li>
+                    <li class="pluviometrie"><a href="/rapport/pluviometrie/">Pluviom&eacute;trie</a></li>
+                    <li class="marche"><a href="#">Prix du March&eacute;</a></li>
+                    <li class="telechargement"><a href="#">Espace de Téléchargement</a></li>
+                    <li class="faq"><a href="#">FAQ</a></li>
+                </ul>
+                <a href="/admin/" class="admin vcenter btn nav-form btn-success navbar-right">ADMIN</a>
+            </div>
+          </div>
+        </nav>
 
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-        <ul id="Menu" class="nav navbar-nav">
-            <li class="accueil" class="active"><a href="/accueil/">Accueil</a></li>
-            <li class="pluviometrie"><a href="/rapport/pluviometrie/">Pluviom&eacute;trie</a></li>
-            <li class="marche"><a href="#">Prix du March&eacute;</a></li>
-            <li class="telechargement"><a href="#">Espace de Téléchargement</a></li>
-            <li class="faq"><a href="#">FAQ</a></li>
-        </ul>
-        <a href="/admin/" class="admin vcenter btn nav-form btn-success navbar-right">ADMIN</a>
-    </div>
-  </div>
-</nav>
-
-{% block slideshow %}{% endblock slideshow %}
+        {% block slideshow %}{% endblock slideshow %}
 
 
-{% block content %}{% endblock content %}
+        {% block content %}{% endblock content %}
 
-<footer class="footer-basic-centered fixed">
-    <p class="footer-company-name">Copyright &copy; 2015 CNSA. Tous droits réservés</p>
-</footer>
-<script>
-    $('#document').ready(function(){
-        $('#Menu').find('li.{{ menu_active }}').addClass('active');
-    });
+        <footer class="footer-basic-centered fixed">
+            <p class="footer-company-name">Copyright &copy; 2015 CNSA. Tous droits réservés</p>
+        </footer>
 
-    $(window).scroll(function() {
-        if($(document).scrollTop() > 300) {
-            $('.navbar').removeClass('big');
-        }
-        else {
-            $('.navbar').addClass('big');
-        }
-    });
+        <script>
+            $('#document').ready(function(){
+                $('#Menu').find('li.{{ menu_active }}').addClass('active');
+                {% block docready %}{% endblock docready %}
+            });
+
+            {% block scriptfunc %}{% endblock scriptfunc %}
+
+            $(window).scroll(function() {
+                if($(document).scrollTop() > 300) {
+                    $('.navbar').removeClass('big');
+                }
+                else {
+                    $('.navbar').addClass('big');
+                }
+            });
 
 
-</script>
-</body>
+        </script>
+    </body>
 </html>

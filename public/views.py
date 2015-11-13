@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import *
-from base.models import *
-from hydromet.models import *
-from datetime import timedelta, datetime
-from django.utils import formats
+from base.models import Limite
+from django.template import Context
+from hydromet.models import Observation
+from django.template.loader import get_template
+#from xhtml2pdf import pisa
 
 # Create your views here.
 
@@ -23,6 +24,8 @@ def imp(request):
     for e in recupAll:
         dd.append(e)
     return render(request, "public/test.html", {'val': dd})
+
+
 
 
 

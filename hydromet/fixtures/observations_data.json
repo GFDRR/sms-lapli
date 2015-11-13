@@ -1,13 +1,12 @@
 [
-
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-01",
+      "time_start": "2015-01-01",
       "dateFin": "2015-01-02",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -15,12 +14,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-02",
+      "time_start": "2015-01-02",
       "dateFin": "2015-01-03",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -28,12 +27,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-03",
+      "time_start": "2015-01-03",
       "dateFin": "2015-01-04",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -41,12 +40,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-04",
+      "time_start": "2015-01-04",
       "dateFin": "2015-01-05",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -54,12 +53,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-05",
+      "time_start": "2015-01-05",
       "dateFin": "2015-01-06",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -67,12 +66,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-06",
+      "time_start": "2015-01-06",
       "dateFin": "2015-01-07",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -80,12 +79,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-07",
+      "time_start": "2015-01-07",
       "dateFin": "2015-01-08",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -93,12 +92,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-08",
+      "time_start": "2015-01-08",
       "dateFin": "2015-01-09",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -106,12 +105,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-09",
+      "time_start": "2015-01-09",
       "dateFin": "2015-01-10",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -119,12 +118,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-10",
+      "time_start": "2015-01-10",
       "dateFin": "2015-01-11",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "21",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "21",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -132,12 +131,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-11",
+      "time_start": "2015-01-11",
       "dateFin": "2015-01-12",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -145,12 +144,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-12",
+      "time_start": "2015-01-12",
       "dateFin": "2015-01-13",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -158,12 +157,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-13",
+      "time_start": "2015-01-13",
       "dateFin": "2015-01-14",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -171,12 +170,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-14",
+      "time_start": "2015-01-14",
       "dateFin": "2015-01-15",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -184,12 +183,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-15",
+      "time_start": "2015-01-15",
       "dateFin": "2015-01-16",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -197,12 +196,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-16",
+      "time_start": "2015-01-16",
       "dateFin": "2015-01-17",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -210,12 +209,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-17",
+      "time_start": "2015-01-17",
       "dateFin": "2015-01-18",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -223,12 +222,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-18",
+      "time_start": "2015-01-18",
       "dateFin": "2015-01-19",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -236,12 +235,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-19",
+      "time_start": "2015-01-19",
       "dateFin": "2015-01-20",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -249,12 +248,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-20",
+      "time_start": "2015-01-20",
       "dateFin": "2015-01-21",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -262,12 +261,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-21",
+      "time_start": "2015-01-21",
       "dateFin": "2015-01-22",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -275,12 +274,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-22",
+      "time_start": "2015-01-22",
       "dateFin": "2015-01-23",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -288,12 +287,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-23",
+      "time_start": "2015-01-23",
       "dateFin": "2015-01-24",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -301,12 +300,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-24",
+      "time_start": "2015-01-24",
       "dateFin": "2015-01-25",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -314,12 +313,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-25",
+      "time_start": "2015-01-25",
       "dateFin": "2015-01-26",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -327,12 +326,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-26",
+      "time_start": "2015-01-26",
       "dateFin": "2015-01-27",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "1.6",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "1.6",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -340,12 +339,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-27",
+      "time_start": "2015-01-27",
       "dateFin": "2015-01-28",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -353,12 +352,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-28",
+      "time_start": "2015-01-28",
       "dateFin": "2015-01-29",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -366,12 +365,12 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-29",
+      "time_start": "2015-01-29",
       "dateFin": "2015-01-30",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "0",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "0",
       "valider": 0
     },
     "model": "hydromet.observation",
@@ -379,16 +378,15 @@
   },
   {
     "fields": {
-      "idStation": "172",
+      "station": "82",
       "observer": 1,
-      "dateDebut": "2015-01-30",
+      "time_start": "2015-01-30",
       "dateFin": "2015-01-31",
-	"timestamp":  "2015-10-08 00:04:00",
-      "quantitePluie": "8.8",
+      "timestamp": "2015-10-08 00:04:00",
+      "value": "8.8",
       "valider": 0
     },
     "model": "hydromet.observation",
     "pk": null
   }
-
 ]
