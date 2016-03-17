@@ -1,30 +1,28 @@
-from django.contrib import admin
+from django.contrib.gis import admin
 
 # Register your models here.
 
-#from .forms import *
-from .models import TypeLimite, Limite, Poste, Personne
+from base.models import TypeLimite, Limite, Poste, Personne, Observatoire, ObservatoireLimite
+
+class ObservatoireLimiteInline(admin.StackedInline):
+    model = ObservatoireLimite
+    extra = 1
 
 
 class TypeLimiteAdmin(admin.ModelAdmin):
-    # Called my form in the admin and set a column for each fields
     list_display = ("nom", "niveau", "description")
     ordering = ['niveau']
-    # form = PosteForm
 
 
-class LimiteAdmin(admin.ModelAdmin):
-    # Called my form in the admin and set a column for each fields
-    list_display = ("typelimite", "nom", "code")
+class LimiteAdmin(admin.GeoModelAdmin):
+    list_display = ("departement", "commune", "section_communale", "typelimite", "nom", "code", )
     list_filter = ('typelimite',)
     search_fields = ["nom", "code"]
-    # form = PosteForm
+    ordering = ['code', 'nom']
 
 
 class PosteAdmin(admin.ModelAdmin):
-    # Called my form in the admin and set a column for each fields
     list_display = ("nom_poste", "description")
-    # form = PosteForm
 
 
 class PersonneAdmin(admin.ModelAdmin):
@@ -34,10 +32,18 @@ class PersonneAdmin(admin.ModelAdmin):
     list_filter = ('actif', "date_embauche",)
     search_fields = ["nom", "prenom", "telephone_bureau", "telephone_personnel", "email",
                      "adresse", "nif"]
-    #form = PersonneContactForm
+
+
+class ObservatoireAdmin(admin.ModelAdmin):
+    list_display = (
+        "limite", "nom", "actif")
+    list_filter = ('limite', 'actif',)
+    search_fields = ["nom"]
+    inlines = [ObservatoireLimiteInline]
 
 
 # Added all in the register
+admin.site.register(Observatoire, ObservatoireAdmin)
 admin.site.register(Poste)
 admin.site.register(Personne, PersonneAdmin)
 admin.site.register(TypeLimite, TypeLimiteAdmin)

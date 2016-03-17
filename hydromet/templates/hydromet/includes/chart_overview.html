@@ -1,9 +1,21 @@
 {% load staticfiles %}
 
+
+<style>
+    .chart  {
+	width: 100%;
+	height: 500px;
+	background-color: rgb(240,240,240);
+	border: 1px solid rgb(230,230,230);
+}
+</style>
+
 <canvas id="Chart" class="chart"></canvas>
 
 <br><br>
 
+<script src="{% static "public/js/Chart.js" %}"></script>
+<script src="{% static "public/js/js_cookie.js" %}"></script>
 <script>
     var chart;
     var ctx = $("#Chart").get(0).getContext("2d");
@@ -52,7 +64,7 @@
 			method: "POST",
 			type: 'json',
 			url: "/hydromet/chart_overview/",
-			data: { 'sel_dept': $('#SelDept').val() },
+			data: { 'sel_dept': $('#SelDept').val(), 'sel_month': $('#SelMonth').val() },
 			headers: { "X-CSRFToken":  Cookies.get("csrftoken") },
 			success : function(data) {
 			    var labelsVal = [];

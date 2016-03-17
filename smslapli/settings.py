@@ -203,13 +203,18 @@ LOGGING = {
     }
 }
 
+#JET_DEFAULT_THEME = 'green'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jet',
+    # 'mod_wsgi.server',
+    'suit',
+    #'jet.dashboard',
+    #'jet',
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.sitemaps',
@@ -218,6 +223,8 @@ INSTALLED_APPS = (
     # External apps
     'django_tables2',
     'selectable',
+    'geoposition',
+    'import_export',
 
     # RapidSMS
     'rapidsms',
@@ -235,6 +242,7 @@ INSTALLED_APPS = (
     'hydromet',
     'public',
     'rapport',
+    'prix_marche',
     'sms_gateway', #This is the one who will be used to handle sms
 
     # Must Be last
@@ -264,30 +272,42 @@ LOGIN_REDIRECT_URL = '/'
 
 RAPIDSMS_HANDLERS = (
     'rapidsms.contrib.echo.handlers.echo.EchoHandler',
-    #'rapidsms.contrib.echo.handlers.ping.PingHandler',
     'tut.myhandlers.HelpHandler',
     'tut.myhandlers.SumHandler',
 )
 
-# SUIT_CONFIG = {
-#     'ADMIN_NAME': 'SMS Lapli',
-#     'SEARCH_URL': '',
-#     'MENU': (
-#         {'app': 'donnees_de_base', 'label': 'Structure de base', 'icon': 'icon-road', 'models': ('departement', 'commune', 'sectioncommunale', 'sitesentinelle', 'poste', 'personnecontact')},
-#         {'app': 'donnees_hydrometeologique', 'label': 'Collecte Pluviometrique', 'icon': 'icon-filter', 'models': ('hydromet.TypeStationPluviometrique', 'hydromet.StationPluviometrique', 'hydromet.ObservationPluviometrique', 'hydromet.Log',)},
-#         {'app': 'auth', 'label': 'Autorisation', 'icon': 'icon-lock', 'models': ('GROUP')},
-#     )
-# }
-
 ADMIN_REORDER = (
-    #'base',
-    #'base',
-    #'auth',
-
-    # Reorder app models
-    {'app': 'base',  'label': 'Structure de base', 'models': ('base.TypeLimite', 'base.Limite', 'base.Poste', 'base.Personne')},
-    {'app': 'hydromet',  'label': 'Gestion des Données Pluviometriques',},
-    {'app': 'auth',  'label': 'Autorisation',},
-    #{'app': 'auth',  'label': 'Autorisation',}
+    ('auth'),
 )
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': '<img src="https://dl.dropboxusercontent.com/s/fjerjqw4hz1x6lk/LogoSMSLapli_small.png?dl=0" width="31" height="30" style="float: left;"> <span style="display:inline-block; margin-top: 5px;">SMS Lapli</span>',
+    'LIST_PER_PAGE': 20,
+    'SEARCH_URL': '',
+    'MENU': (
+
+        # Separator
+        '-',
+
+        # Rename app and set icon
+        {'app': 'hydromet', 'icon':'icon-tint', 'models': ({'label':'Rapport', 'url':'/admin/hydromet/rapport/'},'Observation', 'Station', 'ObservateurHydromet', 'TypeObservation', 'TypeStation', 'Log', 'Alerte')},
+
+        {'app': 'prix_marche', 'icon':'icon-briefcase', 'models': ('Marche', 'ObservateurPrixMarche', 'ObservationDePrix', 'Produit', 'TypeMarche', 'TypeProduit', 'NiveauOffre')},
+
+         # Separator
+        '-',
+
+        # Reorder app models
+        {'app': 'base', 'icon':'icon-th-list', 'models': ('Personne', 'Observatoire',  'Poste', 'UniteMesure',  'Limite', 'TypeLimite')},
+
+        # Reorder app models
+        {'app': 'auth', 'icon':'icon-user', 'label': 'Authentification et Droits', 'models': ('user', 'group')},
+
+        '-',
+        {'label':'Voir le site', 'icon':'icon-globe', 'url':'/'},
+        '-',
+
+
+    )
+}
 

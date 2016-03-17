@@ -1,0 +1,114 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+{% load staticfiles %}
+<script src="{% static "public/js/jquery/jquery-1.11.3.min.js" %}"></script>
+<script src="{% static "public/js/bootstrap/js/bootstrap.min.js" %}"></script>
+
+<div class="row-fluid">
+
+    <div class="span12">
+
+        <ul class="nav nav-tabs" id="myTab">
+            <li role="carte_interactive" class="active">
+                <a href="#carte_interactive" aria-controls="carte_interactive" role="tab" data-toggle="tab">Carte
+                    Interactive</a>
+            </li>
+            <li role="graphiques" onclick="setTimeout('refreshChart()', 500)">
+                <a href="#graphiques" aria-controls="graphiques" role="tab" data-toggle="tab">Graphiques</a>
+            </li>
+            <li role="tableau">
+                <a href="#tableau" aria-controls="tableau" role="tab" data-toggle="tab">Tableau</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" style="background-color: #FFFFFF; padding: 10px; margin-top:-18px; border-left: 1px solid #ddd">
+            <div role="tabpanel" class="tab-pane fade in active" id="carte_interactive">
+                <h2 class="sub-header">Statuts des différents stations</h2>
+
+                {% include "hydromet/includes/map_overview.html" %}
+
+                <div class="table-responsive">
+                    <!-- <canvas id="canvas" height="450" width="750"></canvas>-->
+                </div>
+            </div>
+            <!--Fin sectionA-->
+            <!--Limit-->
+            <div role="tabpanel" class="tab-pane fade" id="graphiques">
+                <h2 class="sub-header">Moyenne des Précipitations pour
+
+                    <select onchange="loadDataChart();" id="SelMonth" class="selectpicker" data-style="btn-default"
+                            title="le mois en cours" data-width="300px">
+                        {% for month in month_lst %}
+                        <option selected="selected" value="{{ month.key }}">{{ month.val }}</option>
+                        {% endfor %}
+                    </select>
+
+                </h2>
+               OOPSSSS
+            </div>
+            <!--Fin sectionB-->
+            <!--Limit-->
+            <div role="tabpanel" class="tab-pane fade" id="tableau">
+                <h2 class="sub-header">Carte des enregistrements pluviom&eacute;triques</h2>
+                OOPs
+
+
+            </div>
+
+        </div>
+
+        <h2>Alertes et Notifications <br>
+            <small>en fonction des critères définies dans la section "<a href="/admin/hydromet/alerte/">Alertes
+                Hydrométéorologie</a>"
+            </small>
+        </h2>
+        <div class="alert alert-success">
+            Aucune notification
+        </div>
+
+        <hr>
+
+        <h2>Suivi des Agents
+            <small>N/A</small>
+        </h2>
+        <div class="alert alert-success">
+            <span class="badge badge-success pull-right">12</span> <a href="#"
+                                                                      title="Voir la liste des agents concernés">Agents</a>
+            ayant déjà transmis leurs observations aujourd'hui
+        </div>
+
+        <div class="alert">
+            <span class="badge badge-warning pull-right">2</span> <a href="#"
+                                                                     title="Voir la liste des agents concernés">Agents</a>
+            n'ayant pas encore transmis leurs observations aujourd'hui
+        </div>
+
+        <div class="alert alert-error">
+            <span class="badge badge-important pull-right">1</span> <a href="#"
+                                                                       title="Voir la liste des agents concernés">Agents</a>
+            n'ayant transmis aucune observation depuis plus de deux jours
+        </div>
+
+        <hr>
+
+        <h2>Vue Rapide du réseau des stations
+            <small>N/A</small>
+        </h2>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+	    $(document).ready(function(){
+	        $("#myTab a").click(function(e){
+	    	e.preventDefault();
+	    	$(this).tab('show');
+	    });
+	});
+
+
+</script>
+
+
+{% endblock %}

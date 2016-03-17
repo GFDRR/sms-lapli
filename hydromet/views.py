@@ -1,13 +1,14 @@
 # -*- coding: latin-1 -*-
 
-from django.shortcuts import render
-from hydromet.models import *
 from datetime import timedelta, datetime
+
 from django.http import *
 from django.utils import formats
-from random import randint
 from django.db.models import Q
-from django.db.models import Avg, Min, Max
+from django.db.models import Avg
+
+from hydromet.models import Station, Observation, Limite
+from django.shortcuts import render
 
 
 # ObservationForm.fields['valider'].widget.attrs['readonly'] = True
@@ -59,19 +60,20 @@ def map_overview(request):
 
 
 def chart_overview(request):
-    today = datetime.now()
     dept_lst = request.POST.getlist('sel_dept[]')
+    sel_month = request.POST.get('sel_month');
+    time_selected = datetime.strptime(sel_month, "%Y-%m-%d");
 
     dept_list = []
-    today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-
-    limites = Limite.objects.filter(typelimite__niveau=1)
-
-    #observation = Observation.objects.filter(station=station).order_by('-pk').first()
 
     for limite in Limite.objects.filter(typelimite__niveau=1, pk__in=dept_lst):
-        value=Observation.objects.filter(typeobservation__nom__contains='précipitation', limite=limite, time_result__month=today.month).aggregate(Avg('value', default=0))
+        value=Observation.objects.filter(typeobservation__nom__contains='précipitation', limite=limite, time_result__month=time_selected.month).aggregate(Avg('value', default=0))
         dept_list.append(
             {'nom': limite.nom, 'val': value['value__avg'] })
 
     return JsonResponse({'dept_lst': dept_list})
+
+
+def rapport(request):
+
+    return render(request, "hydromet/rapport.html", { })

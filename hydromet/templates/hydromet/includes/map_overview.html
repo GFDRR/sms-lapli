@@ -1,10 +1,20 @@
 {% load staticfiles %}
-<span class="btn btn-default btn-xs pull-right" onclick="centerMap();">Exportrer</span>
+<link rel="stylesheet" type="text/css" href="{% static "public/js/leaflet/leaflet.css" %}">
+<style>
+    .map, .chart  {
+	width: 100%;
+	height: 500px;
+	background-color: rgb(240,240,240);
+	border: 1px solid rgb(230,230,230);
+}
+</style>
+
+<!--<span class="btn btn-default btn-xs pull-right" onclick="centerMap();">Exportrer</span>-->
 <span class="btn btn-default btn-xs pull-right" onclick="centerMap();">Recentrer la carte</span>
 
 	<div id="Map" class="map"></div>
 	<div id="Legend">
-	    <ul>
+	    <ul style="list-style: none; margin-top: 10px;">
 	        <li><img src="{% static "public/js/leaflet/markers/high_activity.png" %}"> Station dont les données sont <strong>à jour</strong></li>
 	        <li><img src="{% static "public/js/leaflet/markers/low_activity.png" %}"> Station dont les données ont un <strong>retard de moins de 7 jours</strong></li>
 	        <li><img src="{% static "public/js/leaflet/markers/no_activity.png" %}"> Station dont les données ont un <strong>retard de plus de 7 jours</strong></li>
@@ -13,8 +23,8 @@
 	</div>
 
 <br><br>
-
-
+<script src="{% static "public/js/js_cookie.js" %}"></script>
+<script src="{% static "public/js/leaflet/leaflet.js" %}"></script>
 <script>
 	var map;
 	var greenIcon;
@@ -23,7 +33,7 @@
 	var grayIcon;
 	var blueIcon;
 	var markers = new L.FeatureGroup();
-	var centerPos = [18.834610, -72.288237];
+	var centerPos = [18.934610, -72.988237];
 	var zoomVal = 8;
 
 	$('document').ready(function(){
