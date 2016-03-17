@@ -9,8 +9,8 @@ from rapidsms.backends.kannel.views import KannelBackendView
 urlpatterns = [
     url(r'^', include('public.urls', 'public')),
     url(r'^hydromet/', include('hydromet.urls', 'hydromet')),
-    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/hydromet/rapport/$', 'hydromet.views.rapport'),
 
     # RapidSMS base URLs
     url(r'^accounts/', include('rapidsms.urls.login_logout')),

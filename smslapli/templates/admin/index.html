@@ -1,0 +1,72 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+{% load staticfiles %}
+
+<div class="row-fluid">
+
+    <div class="span4" style="background-color: rgba(255,255,255,.9); padding: 10px; border-radius: 5px">
+            <img style="margin-right: 20px;" class="pull-left" src="{% static "public/img/weather-station.png" %}" width="100" hieght="100">
+            <h1 style="font-size: 5em; color: rgb(90,90,90); margin-top: 10px;">23<br><small>Stations Actives</small></h1>
+            <hr>
+            <p style="text-align: center; margin:0"><a href="/admin/hydromet/station/">Gestion des Stations</a> | <a href="/admin/hydromet/observation/">Gestion des Observations</a> | <a href="/admin/hydromet/log/">Log</a></p>
+    </div>
+    <div class="span4" style="background-color: rgba(255,255,255,.9); padding: 10px; border-radius: 5px">
+        <img class="pull-left"  src="{% static "public/img/market-price.png" %}" width="100" hieght="100">
+        <h1 style="font-size: 5em; color: rgb(90,90,90); margin-top: 10px;">23<br><small>Marchés Observés</small></h1>
+        <hr>
+            <p style="text-align: center; margin:0"><a href="/admin/prix_marche/marche/">Gestion des Marchés</a> | <a href="/admin/prix_marche/observationdeprix/">Gestion des Observations de Prix</a> </p>
+    </div>
+    <div class="span4" style="background-color: rgba(255,255,255,.9); padding: 10px; border-radius: 5px">
+        <img class="pull-left"  src="{% static "public/img/users.png" %}" width="100" hieght="100">
+        <h1 style="font-size: 5em; color: rgb(90,90,90); margin-top: 10px;">11<br><small>Personnes Ressources</small></h1>
+        <hr>
+            <p style="text-align: center; margin:0"><a href="/admin/base/personne/">Gestion des Personnes ressources</a> | <a href="/admin/base/observatoire/">Gestion des Observatoires</a></p>
+    </div>
+
+</div>
+<hr>
+
+<div class="row-fluid">
+
+    <div class="span6">
+        <h1>Hydrométéorologie <small></small></h1>
+        
+
+        <h2>Alertes et Notifications <br><small>en fonction des critères définies dans la section "<a href="/admin/hydromet/alerte/">Alertes Hydrométéorologie</a>"</small></h2>
+        <div class="alert alert-success">
+               Aucune notification
+        </div>
+
+        <hr>
+
+        <h2>Suivi des Agents <small>N/A</small></h2>
+        <div class="alert alert-success">
+                <span class="badge badge-success pull-right">12</span> <a href="#" title="Voir la liste des agents concernés">Agents</a> ayant déjà transmis leurs observations aujourd'hui
+        </div>
+
+        <div class="alert">
+                <span class="badge badge-warning pull-right">2</span> <a href="#" title="Voir la liste des agents concernés">Agents</a> n'ayant pas encore transmis leurs observations aujourd'hui
+        </div>
+
+        <div class="alert alert-error">
+                <span class="badge badge-important pull-right">1</span> <a href="#" title="Voir la liste des agents concernés">Agents</a> n'ayant transmis aucune observation depuis plus de deux jours
+        </div>
+
+        <hr>
+
+         <h2>Vue Rapide du réseau des stations  <small>N/A</small></h2>
+        {% include "hydromet/includes/map_overview.html" %}
+
+    </div>
+
+    <div class="span6">
+        <h1>Prix du Marché <small></small></h1>
+        <div class="alert alert-info">
+                123
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

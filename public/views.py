@@ -1,22 +1,31 @@
 from django.shortcuts import render
-from django.http import *
 from base.models import Limite
-from django.template import Context
 from hydromet.models import Observation
-from django.template.loader import get_template
-#from xhtml2pdf import pisa
+import datetime
 
 # Create your views here.
 
 def home(request):
     return render(request, "public/index.html", {'menu_active':'accueil'})
 
+
 def faq(request):
     return render(request, "public/faq.html", {'menu_active':'faq'})
 
+
 def pluviometrie(request):
     departement_lst = Limite.objects.filter(typelimite__nom='Département');
-    return render(request, "public/pluviometrie.html", {'menu_active':'pluviometrie','dep_lst': departement_lst})
+    month_lst = []
+    selDate = datetime.date.today()
+
+    for x in range(0,12):
+        first = selDate.replace(day=1)
+        last_month = first - datetime.timedelta(days=1)
+        month_lst.append({'key': last_month.strftime("%Y-%m-01"), 'val': last_month.strftime("%B %Y")})
+        selDate = last_month
+
+    return render(request, "public/pluviometrie.html", {'menu_active': 'pluviometrie','dep_lst': departement_lst, 'month_lst': month_lst })
+
 
 def imp(request):
     recupAll = Observation.objects.select_related('idStation')
